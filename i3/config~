@@ -210,7 +210,7 @@ bar {
 # If you don't like it - fuck off - and go make your own
 
 # gaps
-for_window [class="^.*"] border pixel 2 
+for_window [class="^.*"] border pixel 1 
 #smart_gaps on
 
 #set $default_gaps_inner 0

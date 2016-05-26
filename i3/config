@@ -1,9 +1,4 @@
-##### THIS IS MY CONFIG  
-### IF YOU DON'T LIKE IT - FUCK OFF - AND GO MAKE YOUR OWN
-###
-##
-#
-
+##### THIS IS MY CONFIG  - not yours - MINE
 
 set $mod Mod4
 set $alt Mod1
@@ -24,10 +19,11 @@ bindsym $mod+Shift+q kill
 # start dmenu
 bindsym $mod+d exec dmenu_run -l 15 -o 0.86 -fn fantasque-9:normal -x 750 -y 400 -w 400 -nb '#2F2F30' -nf '#7C7A3F' -sb '#283D48' -sf white
 bindsym $mod+Shift+d exec --no-startup-id j4-dmenu-desktop
-bindsym $mod+Ctrl+d exec rofi -show run -font "fantasque 9" -fg "#7C7A3F" -bg "#464542" -hlfg "#bebfc2" -hlbg "#464543"
+bindsym $mod+Ctrl+d exec rofi -show run
 
 #start some other programs
 bindsym $mod+x exec firefox
+bindsym $Mod1+n exec termite -e ncmpcpp
 
 # change focus
 bindsym $mod+j focus left
@@ -164,9 +160,7 @@ mode "resize" {
 # finds out, if available)
 bar {
         i3bar_command i3bar -t
-        #status_command i3status
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        #font pango:iosevka 8 
         font pango:tewi 7 
         workspace_buttons yes
         position top
@@ -179,12 +173,7 @@ bar {
              separator          $yellow
 
  
-#     separator 5
-#     background #00FF9F
-#     #background $transparent
-#     statusline #FFFFFFC
-#
-#                          BORDER       BACKGROUND   TEXT
+#                        BORDER       BACKGROUND   TEXT
       focused_workspace  $transparent $transparent #00FF9F
       inactive_workspace $transparent $transparent #747C84
       active_workspace   $transparent $transparent $white
@@ -196,17 +185,8 @@ bar {
 
 
 
-#                        border    background      text
-#     focused_workspace  #7F7F7F   #7F7F7F      #FFFFFF
-#     active_workspace   #4DFEFD   #586e75      #484848
-#     inactive_workspace #455057   #4D4D4D      #737373
-#     urgent_workspace   #ae4544   #ae4544      #ffffff
-#  }
-#}
-
-
 # user specific
-# This is mine
+# This is  mine - still not yours - but MINE
 # If you don't like it - fuck off - and go make your own
 
 # gaps
@@ -228,58 +208,33 @@ exec compton
 exec /home/penguin/scripts/notify.sh
 
 
-# Theme
-# #set bg-color             #1973D1
-#set bg-color             #1D2426
-#set $bg-color1 	         #2f343f
-#set $inactive-bg-color   #2f343f
-#set $text-color          #f3f4f5
-#set $text-color1         #C80000
-#set $inactive-text-color #676E7D
-#set $urgent-bg-color     #E53935
+
+#set $transparent       #1d202180
+#set $black       #212121
+#set $darkblack   #000000
+#set $red         #fb4934
+#set $darkred     #cc241d
+#set $green       #b8bb26
+#set $darkgreen   #98971a
+#set $yellow      #fabd2f
+#set $darkyellow  #d79921
+#set $blue        #83a598
+#set $darkblue    #458588
+#set $magenta     #d3869b
+#set $darkmagenta #b16286
+#set $cyan        #8ec07c
+#set $darkcyan    #689d6a
+#set $white       #ebdbb2
+#set $darkwhite   #a89984
+#set $background  #000000
 
 
-set $transparent       #1d202180
-set $black       #212121
-set $darkblack   #000000
-set $red         #fb4934
-set $darkred     #cc241d
-set $green       #b8bb26
-set $darkgreen   #98971a
-set $yellow      #fabd2f
-set $darkyellow  #d79921
-set $blue        #83a598
-set $darkblue    #458588
-set $magenta     #d3869b
-set $darkmagenta #b16286
-set $cyan        #8ec07c
-set $darkcyan    #689d6a
-set $white       #ebdbb2
-set $darkwhite   #a89984
-set $background  #000000
-
-
-# window colors
-#                       background          border              text                 indicator
-#client.focused          $bg-color          #80E154            $bg-color1             $AB4342
-#client.unfocused        $inactive-bg-color $1D2426          $inactive-text-color   $1D2426
-#client.focused_inactive $inactive-bg-color $1D2426          $inactive-text-color   $1D2426
-#client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color            $1D2426
-
-
-#                       BORDER      BACKGROUND  TEXT   INDICATOR   CHILD_BORDER
-#client.focused          80E154       $cyan       $black  $yellow     $yellow
-#client.unfocused        $black      $black      $white  $black      $darkyellow
-#client.focused_inactive $black      $black      $white  $black      $darkyellow
-#client.urgent           $darkred    $darkred    $black  $darkred    $darkred
-#client.background       $black
-
- 
+#                       BORDER       BACKGROUND     TEXT       INDICATOR   CHILD_BORDER 
 # Color settings
-client.focused          #747C84 #00FF9F #747C84 #00ff9F
-client.unfocused        #747C84 #747C84 #F3F4F5 #747C84
-client.focused_inactive #747C84 #747C84 #F3F4F5 #747C84
-client.urgent           #747C84 #747C84 #F3F4F5 #747C84
+client.focused          #747C84      #00FF9F      #747C84      #00ff9F
+client.unfocused        #747C84      #747C84      #F3F4F5      #747C84
+client.focused_inactive #747C84      #747C84      #F3F4F5      #747C84
+client.urgent           #747C84      #747C84      #F3F4F5      #747C84
                      
 
 
@@ -289,5 +244,6 @@ assign [class="(?i)thunar"] $WS3
 assign [class="(?!)mpv"] $WS4
 assign [class="(?!)atom"] $WS5
 assign [class="(?!)nitrogen"] $WS6
-assign [class="(?!)transmission-gtk"] $WS8
+assign [class="(?!)termite -e rtorrent"] $WS8
+assign [class="(?!)termite -e ncmpcpp"] $WS¤
 
