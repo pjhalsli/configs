@@ -1,0 +1,4 @@
+#!/bin/sh
+
+printf '%s %s\n' "/me is listening to" "$(mpc current --format "\"%title%\" by %artist% \[%album%\]")"
+
