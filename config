@@ -1,0 +1,58 @@
+[options]
+resize_grip = false
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = false
+visible_bell = false
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+#font = PragmataPro Nerdfont 9 
+#font = terminus 9 
+#font = tewi 9  
+font=SourceCodePro 9 
+scrollback_lines = 5000
+search_wrap = true
+cursor_blink = system
+cursor_shape = block
+browser = firefox
+
+
+
+
+[colors]
+# Base16 Tomorrow
+# Scheme: Chris Kempson (http://chriskempson.com)
+
+foreground      = #c5c8c6
+foreground_bold = #c5c8c6
+cursor          = #c5c8c6
+#background      = #1d1f21
+background      =rgba(29 ,31 ,33 ,  0.80)
+# 16 color space
+color0  = #1d1f21
+color1  = #cc6666
+color2  = #b5bd68
+color3  = #f0c674
+color4  = #81a2be
+color5  = #b294bb
+color6  = #8abeb7
+color7  = #c5c8c6
+color8  = #969896
+color9  = #cc6666
+color10 = #b5bd68
+color11 = #f0c674
+color12 = #81a2be
+color13 = #b294bb
+color14 = #8abeb7
+color15 = #ffffff
+
+# 256 color space
+color16 = #de935f
+color17 = #a3685a
+color18 = #282a2e
+color19 = #373b41
+color20 = #b4b7b4
+color21 = #e0e0e0
