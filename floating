@@ -1,0 +1,5 @@
+#! /bin/bash/env bash
+
+for attr in $(herbstclient complete 1 attr tags.by-name); do
+            herbstclient attr "$attr.floating" true
+    done
