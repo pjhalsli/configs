@@ -1,6 +1,4 @@
-
 #!/usr/bin/env bash
-
 
 #                                     ██
 # ██████                             ░██
@@ -10,10 +8,7 @@
 #░██░░░   ██░░░░██  ░██  ░██░██░░░░  ░██
 #░██     ░░████████ ███  ░██░░██████ ███
 #░░       ░░░░░░░░ ░░░   ░░  ░░░░░░ ░░░ 
-# written by Per-Johan Halsli a.k.a penguin1
-# if you need any help - ping me on IRC
-# channels I use on freenode - ##tilingwm #archlinux #herbstluftwm
-# happy hacking  
+  
 
 hc() { "${herbstclient_command[@]:-herbstclient}" "$@" ;}
 monitor=${1:-0}
@@ -141,13 +136,29 @@ hc pad $monitor $panel_height
         done
         echo -n "$separator"
         echo -n "^bg()^fg() ${windowtitle//^/^^}"
-        # small adjustments
+        
+	#Vol
+	vol=$(amixer -c 0 get Master | tail -n 1 | cut -d '[' -f 2 | sed 's/%.*//g' | sed -n 1p)
+	
+	#battery
+        bat=`cat /sys/class/power_supply/BAT0/capacity`
+        batstat=`cat /sys/class/power_supply/BAT1/status`
+        if (($batstat=='Charging'))
+        then
+        batico="^i(/usr/share/icons/stlarch_icons/ac10.xbm)"
+        else
+        batico="^i(/usr/share/icons/stlarch_icons/batt5full.xbm)"
+        fi
+	bat="^fg($xicon)$batico ^fg($xfg)$bat^fg($xext)%"
+
+
+	# small adjustments
 		cpu_temp=$(echo -n $(sensors | grep "Core" | cut -b 16-19))
 		mpc_current=$(mpc current)
-		right="♫ $mpc_current $separator^fg() $cpu_temp $separator^bg() $date $separator"
+		right="♫ $mpc_current $separator^bg() $vol $separator^() $cpu_temp $separator^bg() $bat $separator^bg() $date $separator"
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
         # get width of right aligned text.. and add some space..
-        width=$(txtw -f "$font" -F "$font2" "$right_text_only  ")
+        width=$(txtw -f "$font" "$right_text_only  ")
         echo -n "^pa($(($panel_width - $width)))$right"
         echo
 
