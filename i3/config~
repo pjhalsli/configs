@@ -17,7 +17,7 @@ bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
 
 
-# start launcher
+# start dmenu
 bindsym $mod+d exec rofi -show run -lines 10 -eh 1.5  -width 100 -padding 450 -opacity "80" -font "SourceCodePro 12"
 
 
@@ -140,22 +140,15 @@ mode "resize" {
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
         bindsym j resize shrink width 10 px or 10 ppt
-        bindsym i resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym i resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
-        bindsym Shift+j resize shrink width 50 px or 50 ppt
-        bindsym Shift+l resize grow width 50 px or 50 ppt
-	    bindsym Shift+i resize grow height 50 px or 50 ppt
-	    bindsym Shift+k resize shrink height 50 px or 50 ppt
-       # same bindings, but for the arrow keys
+
+        # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Shift+Left resize shrink width 50 px or 50 ppt
-        bindsym Up resize grow height 10 px or 10 ppt
-        bindsym Shift+Up resize grow height 50 px or 50 ppt
-        bindsym Down resize shrink height 10 px or 10 ppt
-        bindsym Shift+Down resize shrink height 50 px or 50 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
-        bindsym Shift+Right resize grow width 50 px or 50 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -168,8 +161,8 @@ mode "resize" {
 bar {
         i3bar_command i3bar -t
         status_command i3blocks -c ~/.config/i3blocks/config
-        font pango:lime 8+|, FontAwesome 7
-	    workspace_buttons yes
+        font pango:Hack, FontAwesome 9
+	workspace_buttons yes
         position top
         tray_output primary
 
@@ -181,7 +174,13 @@ bar {
 
 
 
+#       colors {
+#            statusline         $white
+#          #  background         $transparent
+#             background         #000000
+#             separator          $yellow
 
+ 
 #                        BORDER       BACKGROUND   TEXT
       focused_workspace  $transparent $transparent #00FF9F
       inactive_workspace $transparent $transparent #747C84

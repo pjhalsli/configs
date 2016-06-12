@@ -30,15 +30,10 @@ markup=none
 
 [focused window]
 command=xtitle -s -f
-min_width=960
+min_width=900
 align=center
 interval=persist
 
-# Weather
-instance=3133880
-interval=600
-#min_width=1100
-#align=center
 
 
 # Volume indicator

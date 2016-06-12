@@ -1,0 +1,233 @@
+#!/usr/bin/env bash
+# this is a simple config for herbstluftwm
+# 
+#  ██                     ██                ██    ██           ████   ██  
+# ░██                    ░██               ░██   ░██          ░██░   ░██  
+# ░██       █████  ██████░██       ██████ ██████ ░██ ██   ██ ██████ ██████
+# ░██████  ██░░░██░░██░░█░██████  ██░░░░ ░░░██░  ░██░██  ░██░░░██░ ░░░██░ 
+# ░██░░░██░███████ ░██ ░ ░██░░░██░░█████   ░██   ░██░██  ░██  ░██    ░██  
+# ░██  ░██░██░░░░  ░██   ░██  ░██ ░░░░░██  ░██   ░██░██  ░██  ░██    ░██  
+# ░██  ░██░░██████░███   ░██████  ██████   ░░██  ███░░██████  ░██    ░░██ 
+# ░░   ░░  ░░░░░░ ░░░    ░░░░░   ░░░░░░     ░░  ░░░  ░░░░░░   ░░      ░░  
+#                     ██                      ██                      ██  
+#                    ░██                     ░██                     ░██  
+#  ██████   ██   ██ ██████  ██████   ██████ ██████  ██████   ██████ ██████
+# ░░░░░░██ ░██  ░██░░░██░  ██░░░░██ ██░░░░ ░░░██░  ░░░░░░██ ░░██░░█░░░██░ 
+#  ███████ ░██  ░██  ░██  ░██   ░██░░█████   ░██    ███████  ░██ ░   ░██  
+# ██░░░░██ ░██  ░██  ░██  ░██   ░██ ░░░░░██  ░██   ██░░░░██  ░██     ░██  
+#░░████████░░██████  ░░██ ░░██████  ██████   ░░██ ░░████████░███     ░░██ 
+# ░░░░░░░░  ░░░░░░    ░░   ░░░░░░  ░░░░░░     ░░   ░░░░░░░░ ░░░       ░░  
+#
+                              
+
+
+
+hc() {
+    herbstclient "$@"
+}
+
+hc emit_hook reload
+
+xsetroot -solid '#5A8E3A'
+
+# remove all existing keybindings
+hc keyunbind --all
+
+# keybindings
+# if you have a super key you will be much happier with Mod set to Mod4
+#Mod=Mod1    # Use alt as the main modifier
+Mod=Mod4   # Use the super key as the main modifier
+
+# autostart
+hc spawn compton
+hc spawn nitrogen --restore
+hc spawn dunst
+
+hc keybind $Mod-Shift-q close
+hc keybind $Mod-Shift-r reload
+hc keybind $Mod-Shift-c quit
+
+
+# start favorite termnal
+hc keybind $Mod-Return spawn termite
+hc keybind $Mod-Shift-Return spawn urxvt
+
+# start rofi
+hc keybind $Mod-d spawn rofi -show run -lines 10 -eh 1.5  -width 100 -padding 450 -opacity "80" -font "SourceCodePro 12"
+
+
+# start some programs
+hc keybind $Mod-x spawn firefox
+hc keybind $Mod-Alt-g spawn gpick --pick 
+hc keybind $Mod-Shift-x spawn qutebrowser
+#hc keybind $Mod-d spawn dmenu_run -x 810 -y 540 -w 300 -h 25 -fn "tewi 9" 
+hc keybind $Mod-Alt-m spawn termite -e ncmpcpp
+hc keybind $Mod-Ctrl-r spawn termite -e ranger
+hc keybind $Mod-Alt-h spawn termite -e hangups
+hc keybind $Mod-Alt-r spawn termite -e rtv
+hc keybind $Mod-Alt-w spawn termite -e weechat
+hc keybind $Mod-Alt-t spawn termite -e tmux
+
+# basic movement
+# focusing clients
+hc keybind $Mod-Left  focus left
+hc keybind $Mod-Down  focus down
+hc keybind $Mod-Up    focus up
+hc keybind $Mod-Right focus right
+hc keybind $Mod-j     focus left
+hc keybind $Mod-k     focus down
+hc keybind $Mod-i     focus up
+hc keybind $Mod-l   focus right
+
+# moving clients
+hc keybind $Mod-Shift-Left  shift left
+hc keybind $Mod-Shift-Down  shift down
+hc keybind $Mod-Shift-Up    shift up
+hc keybind $Mod-Shift-Right shift right
+hc keybind $Mod-Shift-j     shift left
+hc keybind $Mod-Shift-k     shift down
+hc keybind $Mod-Shift-i     shift up
+hc keybind $Mod-Shift-l     shift right
+
+# splitting frames
+# create an empty frame at the specified direction
+hc keybind $Mod-u       split   bottom  0.5
+hc keybind $Mod-o       split   right   0.5
+# let the current frame explode into subframes
+hc keybind $Mod-Control-space split explode
+
+# resizing frames
+resizestep=0.05
+hc keybind $Mod-Control-j       resize left +$resizestep
+hc keybind $Mod-Control-k       resize down +$resizestep
+hc keybind $Mod-Control-i       resize up +$resizestep
+hc keybind $Mod-Control-l       resize right +$resizestep
+hc keybind $Mod-Control-Left    resize left +$resizestep
+hc keybind $Mod-Control-Down    resize down +$resizestep
+hc keybind $Mod-Control-Up      resize up +$resizestep
+hc keybind $Mod-Control-Right   resize right +$resizestep
+
+# tags
+tag_names=("  " "  " "  " "  " "  " "   " "   " "  " "  " "  " )
+#tag_names=("WEB" "TERM" "FILE" "MEDIA" "GIMP": "MISC" "CODE" "RRENT" "REDDIT" "CHAT")
+#tag_names=("I" "II" "III" "IV" "V" "VI" "VII" "VIII" "IX" "X")
+#tag_names=( {1..9} 0 )
+tag_keys=( {1..9} 0 )
+
+hc rename default "${tag_names[0]}" || true
+for i in ${!tag_names[@]} ; do
+    hc add "${tag_names[$i]}"
+    key="${tag_keys[$i]}"
+    if ! [ -z "$key" ] ; then
+        hc keybind "$Mod-$key" use_index "$i"
+        hc keybind "$Mod-Shift-$key" move_index "$i"
+    fi
+done
+
+
+# start all windows in floating mode
+for attr in $(herbstclient complete 1 attr tags.by-name); do
+	    herbstclient attr "$attr.floating" true
+    done
+
+
+# cycle through tags
+hc keybind $Mod-period use_index +1 --skip-visible
+hc keybind $Mod-comma  use_index -1 --skip-visible
+
+# layouting
+hc keybind $Mod-r remove
+hc keybind $Mod-s floating toggle
+hc keybind $Mod-f fullscreen toggle
+hc keybind $Mod-p pseudotile toggle
+# The following cycles through the available layouts within a frame, but skips
+# layouts, if the layout change wouldn't affect the actual window positions.
+# I.e. if there are two windows within a frame, the grid layout is skipped.
+hc keybind $Mod-space                                                           \
+            or , and . compare tags.focus.curframe_wcount = 2                   \
+                     . cycle_layout +1 vertical horizontal max vertical grid    \
+               , cycle_layout +1
+
+# mouse
+hc mouseunbind --all
+hc mousebind $Mod-Button1 move
+hc mousebind $Mod-Button2 zoom
+hc mousebind $Mod-Button3 resize
+
+# focus
+hc keybind $Mod-BackSpace   cycle_monitor
+hc keybind $Mod-Tab         cycle_all +1
+hc keybind $Mod-Shift-Tab   cycle_all -1
+hc keybind $Mod-c cycle
+hc keybind $Mod-Shift-u jumpto urgent
+
+# theme
+hc attr theme.tiling.reset 1
+hc attr theme.floating.reset 1
+hc set frame_border_active_color '#917154'
+#             ||
+# panel color \/
+hc set frame_border_normal_color '#222222'
+#hc set frame_bg_normal_color '#BDAE93'
+hc set framme_bg_normal_color '#FFFFFF'
+#blank window frame thing
+hc set frame_bg_active_color '#917154'
+hc set frame_border_width 0 
+hc set always_show_frame 0
+hc set frame_bg_transparent 1 
+hc set frame_transparent_width -2 
+hc set frame_gap 0
+
+#set selected 'window'and selected workspace through its attr
+hc attr theme.active.color '#AADB0F'
+#hc attr theme.active.color '#5BA4CB'
+#hc attr theme.active.color '#CDFF00'
+hc attr theme.normal.color '#151515'
+hc attr theme.urgent.color '#902727'
+hc attr theme.inner_width 1 
+hc attr theme.inner_color '#202020'
+hc attr theme.border_width 2 
+hc attr theme.floating.border_width 4
+hc attr theme.floating.outer_width 0
+hc attr theme.floating.outer_color '#202020'
+hc attr theme.active.inner_color '#404040'
+hc attr theme.active.outer_color '#151515'
+hc attr theme.background_color '#141414'
+
+hc set window_gap 0
+hc set frame_padding 0 
+hc set smart_window_surroundings 0  
+hc set smart_frame_surroundings 1 
+hc set mouse_recenter_gap 0
+
+# rules
+hc unrule -F
+#hc rule class=XTerm tag=3 # move all xterms to tag 3
+hc rule focus=on # normally focus new clients
+#hc rule focus=off # normally do not focus new clients
+# give focus to most common terminals
+#hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
+hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
+hc rule class~'termite --name nampcpp -e ncmpcpp' focus=on
+hc rule class=termite --name=termite -e ncmpcpp tag=
+# unlock, just to be sure
+hc unlock
+
+
+herbstclient set tree_style '╾│ ├└╼─┐'
+
+# do multi monitor setup here, e.g.:
+# hc set_monitors 1280x1024+0+0 1280x1024+1280+0
+# or simply:
+# hc detect_monitors
+
+# find the panel
+panel=~/.config/herbstluftwm/panel.sh
+[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
+for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
+    # start it on each monitor
+    "$panel" $monitor &
+done
+

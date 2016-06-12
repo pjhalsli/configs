@@ -5,14 +5,12 @@ scroll_on_keystroke = true
 audible_bell = false
 visible_bell = false
 mouse_autohide = false
-allow_bold = true
+allow_bold = false 
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-#font = PragmataPro Nerdfont 9 
 #font = terminus 9 
-#font = tewi 9  
-font=SourceCodePro 10 
+font= envypn 8 
 scrollback_lines = 5000
 search_wrap = true
 cursor_blink = system
@@ -20,38 +18,334 @@ cursor_shape = block
 browser = firefox
 
 
+## D R A C U L A
+#[colors]
+# special
+#foreground      = #f8f8f2
+#foreground_bold = #f8f8f2
+#cursor          = #f8f8f2
+background      = #40425
+# black
+#color0  = #44475a
+#color8  = #44475a
+# red
+#color1  = #FF3D7F
+#color9  = #FF3D7F
+# green
+#color2  = #50fa7d
+#color10 = #50fa7d
+# yellow
+#color3  = #f1fa8c
+#color11 = #f1fa8c
+# blue
+#color4  = #8be9fd
+#color12 = #FF7AC6
+# magenta
+#color5  = #FF7AC6
+#color13 = #FF7AC6
+# cyan
+#color6  = #00FFF0
+#color14 = #00FFF0
+# white
+#color7  = #707880
+#color15 = #c5c8c6
+
+
+## F R A Y
+[colors]
+# special
+foreground      = #ffffff
+foreground_bold = #ffffff
+cursor          = #ffffff
+#background      = #151515
+background       =rgba(21, 21, 21,  0.94)
+# black
+color0  = #202020
+color8  = #202020
+# red
+color1  = #f8f8f8
+color9  = #f8f8f8
+# green
+color2  = #aadb0f
+color10 = #aadb0f
+# yellow
+color3  = #f7f7f7
+color11 = #f7f7f7
+# blue
+color4  = #606060
+color12 = #606060
+# magenta
+color5  = #91ba0d
+color13 = #91ba0d
+# cyan
+color6  = #e2e2e2
+color14 = #e2e2e2
+# white
+color7  = #ffffff
+color15 = #ffffff
+
+
+
+
+
+# B U B B L E G U M
+#[colors]
+# special
+#foreground      = #d2d0d4
+#foreground_bold = #d2d0d4
+#cursor          = #d2d0d4
+#background      = #222024
+# black
+#color0  = #222024
+#color8  = #727074
+# red
+#color1  = #bc8ec9
+#color9  = #b469c9
+# green
+#color2  = #8ea6a4
+#color10 = #5aa6a0
+# yellow
+#color3  = #a7e3c0
+#color11 = #79e3a5
+# blue
+#color4  = #6c6ba4
+#color12 = #5452a4
+# magenta
+#color5  = #888097
+#color13 = #786897
+# cyan
+#color6  = #5f9398
+#color14 = #3d8888
+# white
+#color7  = #d2d0d4
+#color15 = #f2f0f4
+
+
+
+# G R U V B O X
+#[colors]
+# hard contrast: background = #1d2021
+#background = #282828
+# soft contrast: background = #32302f
+#foreground = #ebdbb2
+#foreground_bold = #ebdbb2
+# dark0 + gray
+#color0 = #282828
+#color8 = #928374
+# neutral_red + bright_red
+#color1 = #cc241d
+#color9 = #fb4934
+# neutral_green + bright_green
+#color2 = #98971a
+#color10 = #b8bb26
+# neutral_yellow + bright_yellow
+#color3 = #d79921
+#color11 = #fabd2f
+# neutral_blue + bright_blue
+#color4 = #458588
+#color12 = #83a598
+# neutral_purple + bright_purple
+#color5 = #b16286
+#color13 = #d3869b
+# neutral_aqua + faded_aqua
+#color6 = #689d6a
+#color14 = #8ec07c
+# light4 + light1
+#color7 = #a89984
+#color15 = #ebdbb2
+# vim: ft=dosini cms=#%s
+
+
+
+
 
 [colors]
+# Base16 Solarized
+# Scheme: Ethan Schoonover (http://ethanschoonover.com/solarized)
+
+#foreground      = #93a1a1
+#foreground_bold = #93a1a1
+#cursor          = #93a1a1
+#background      = #002b36
+
+# 16 color space
+#color0  = #002b36
+#color1  = #dc322f
+#color2  = #859900
+#color3  = #b58900
+#color4  = #268bd2
+#color5  = #6c71c4
+#color6  = #2aa198
+#color7  = #93a1a1
+#color8  = #657b83
+#color9  = #dc322f
+#color10 = #859900
+#color11 = #b58900
+#color12 = #268bd2
+#color13 = #6c71c4
+#color14 = #2aa198
+#color15 = #fdf6e3
+
+# 256 color space
+#color16 = #cb4b16
+#color17 = #d33682
+#color18 = #073642
+#color19 = #586e75
+#color20 = #839496
+#color21 = #eee8d5
+
+
+
+# S U L P H U R P O O L
+#[colors]
+# Base16 Atelier Sulphurpool
+# Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/sulphurpool)
+
+#foreground      = #979db4
+#foreground_bold = #979db4
+#cursor          = #979db4
+#background      = #202746
+
+# 16 color space
+#color0  = #202746
+#color1  = #c94922
+#color2  = #ac9739
+#color3  = #c08b30
+#color4  = #3d8fd1
+#color5  = #6679cc
+#color6  = #22a2c9
+#color7  = #979db4
+#color8  = #6b7394
+#color9  = #c94922
+#color10 = #ac9739
+#color11 = #c08b30
+#color12 = #3d8fd1
+#color13 = #6679cc
+#color14 = #22a2c9
+#color15 = #f5f7ff
+
+# 256 color space
+#color16 = #c76b29
+#color17 = #9c637a
+#color18 = #293256
+#color19 = #5e6687
+#color20 = #898ea4
+#color21 = #dfe2f1
+
+
+
+
+
+
+#[colors]
+# Base16 Paraiso
+# Scheme: Jan T. Sott
+
+#foreground      = #a39e9b
+#foreground_bold = #a39e9b
+#cursor          = #a39e9b
+#background      = #2f1e2e
+
+# 16 color space
+#color0  = #2f1e2e
+#color1  = #ef6155
+#color2  = #48b685
+#color3  = #fec418
+#color4  = #06b6ef
+#color5  = #815ba4
+#color6  = #5bc4bf
+#color7  = #a39e9b
+#color8  = #776e71
+#color9  = #ef6155
+#color10 = #48b685
+#color11 = #fec418
+#color12 = #06b6ef
+#color13 = #815ba4
+#color14 = #5bc4bf
+#color15 = #e7e9db
+
+# 256 color space
+#color16 = #f99b15
+#color17 = #e96ba8
+#color18 = #41323f
+#color19 = #4f424c
+#color20 = #8d8687
+#color21 = #b9b6b0
+
+
+
+
+
+
+#[colors]
 # Base16 Ocean
 # Scheme: Chris Kempson (http://chriskempson.com)
 
-foreground      = #c0c5ce
-foreground_bold = #c0c5ce
-cursor          = #c0c5ce
-background      = #2b303b
+#foreground      = #c0c5ce
+#foreground_bold = #c0c5ce
+#cursor          = #c0c5ce
+#background      = #2b303b
 
 # 16 color space
-color0  = #2b303b
-color1  = #bf616a
-color2  = #a3be8c
-color3  = #ebcb8b
-color4  = #8fa1b3
-color5  = #b48ead
-color6  = #96b5b4
-color7  = #c0c5ce
-color8  = #65737e
-color9  = #bf616a
-color10 = #a3be8c
-color11 = #ebcb8b
-color12 = #8fa1b3
-color13 = #b48ead
-color14 = #96b5b4
-color15 = #eff1f5
+#color0  = #2b303b
+#color1  = #bf616a
+#color2  = #a3be8c
+#color3  = #ebcb8b
+#color4  = #8fa1b3
+#color5  = #b48ead
+#color6  = #96b5b4
+#color7  = #c0c5ce
+#color8  = #65737e
+#color9  = #bf616a
+#color10 = #a3be8c
+#color11 = #ebcb8b
+#color12 = #8fa1b3
+#color13 = #b48ead
+#color14 = #96b5b4
+#color15 = #eff1f5
 
 # 256 color space
-color16 = #d08770
-color17 = #ab7967
-color18 = #343d46
-color19 = #4f5b66
-color20 = #a7adba
-color21 = #dfe1e8
+#color16 = #d08770
+#color17 = #ab7967
+#color18 = #343d46
+#color19 = #4f5b66
+#color20 = #a7adba
+#color21 = #dfe1e8
+
+
+
+
+#[colors]
+# Base16 Ashes
+# Scheme: Jannik Siebert (https://github.com/janniks)
+
+#foreground      = #C7CCD1
+#foreground_bold = #C7CCD1
+#cursor          = #C7CCD1
+#background      = #1C2023
+
+# 16 color space
+#color0  = #1C2023
+#color1  = #C7AE95
+#color2  = #95C7AE
+#color3  = #AEC795
+#color4  = #AE95C7
+#color5  = #C795AE
+#color6  = #95AEC7
+#color7  = #C7CCD1
+#color8  = #747C84
+#color9  = #C7AE95
+#color10 = #95C7AE
+#color11 = #AEC795
+#color12 = #AE95C7
+#color13 = #C795AE
+#color14 = #95AEC7
+#color15 = #F3F4F5
+
+# 256 color space
+#color16 = #C7C795
+#color17 = #C79595
+#color18 = #393F45
+#color19 = #565E65
+#color20 = #ADB3BA
+#color21 = #DFE2E5
