@@ -18,13 +18,13 @@ cursor_shape = block
 browser = firefox
 
 
-## D R A C U L A
+# D R A C U L A
 #[colors]
 # special
 #foreground      = #f8f8f2
 #foreground_bold = #f8f8f2
 #cursor          = #f8f8f2
-background      = #40425
+# background      = #40425
 # black
 #color0  = #44475a
 #color8  = #44475a
@@ -51,38 +51,41 @@ background      = #40425
 #color15 = #c5c8c6
 
 
-## F R A Y
-[colors]
+# F R A Y
+#[colors]
 # special
-foreground      = #ffffff
-foreground_bold = #ffffff
-cursor          = #ffffff
+#foreground      = #ffffff
+#foreground_bold = #ffffff
+#cursor          = #ffffff
 #background      = #151515
-background       =rgba(21, 21, 21,  0.94)
+#background       =rgba(21, 21, 21,  0.94)
 # black
-color0  = #202020
-color8  = #202020
+#color0  = #202020
+#color8  = #202020
 # red
-color1  = #f8f8f8
-color9  = #f8f8f8
+#color1  = #f8f8f8
+#color9  = #f8f8f8
 # green
-color2  = #aadb0f
-color10 = #aadb0f
+#color2  = #aadb0f
+#color10 = #aadb0f
 # yellow
-color3  = #f7f7f7
-color11 = #f7f7f7
+#color3  = #f7f7f7
+#color11 = #f7f7f7
 # blue
-color4  = #606060
-color12 = #606060
+#color4  = #606060
+#color12 = #606060
 # magenta
-color5  = #91ba0d
-color13 = #91ba0d
+#color5  = #91ba0d
+#color13 = #91ba0d
 # cyan
-color6  = #e2e2e2
-color14 = #e2e2e2
+#color6  = #e2e2e2
+#color14 = #e2e2e2
 # white
-color7  = #ffffff
-color15 = #ffffff
+#color7  = #ffffff
+#color15 = #ffffff
+
+
+
 
 
 
@@ -119,6 +122,150 @@ color15 = #ffffff
 # white
 #color7  = #d2d0d4
 #color15 = #f2f0f4
+
+
+#  C O O L
+[colors]
+# special
+foreground      = #deded6
+foreground_bold = #deded6
+cursor          = #deded6
+background      = #202328
+# black
+color0  = #2b3135
+color8  = #4c5356
+# red
+color1  = #8fa1b3
+color9  = #8fa1b3
+# green
+color2  = #769070
+color10 = #769070
+# yellow
+color3  = #4f5b66
+color11 = #4f5b66
+# blue
+color4  = #607a86
+color12 = #607a86
+# magenta
+color5  = #80757e
+color13 = #80757e
+# cyan
+color6  = #607086
+color14 = #607a86
+# white
+color7  = #deded6
+color15 = #deded6
+
+
+
+
+#  D U S K
+#[colors]
+
+# special
+#foreground      = #aaaaaa
+#foreground_bold = #aaaaaa
+#cursor          = #aaaaaa
+#background      = #222222
+# black
+#color0  = #4a4a4a
+#color8  = #5c5c5c
+# red
+#color1  = #cf4c66
+#color9  = #cf4c66
+# green
+#color2  = #41bb75
+#color10 = #41bb75
+# yellow
+#color3  = #e28436
+#color11 = #e28436
+# blue
+#color4  = #5d8aa8
+#color12 = #5d8aa8
+# magenta
+#color5  = #8268c4
+##color13 = #8268c4
+# cyan
+#color6  = #17b8a3
+#color14 = #17b8a3
+# white
+#color7  = #8f8f8f
+#color15 = #aaaaaa
+
+
+
+
+
+
+# N U T H A T C H
+#[colors]
+
+# special
+#foreground      = #525252
+#foreground_bold = #525252
+#cursor          = #525252
+#background      = #e8e8ea
+# black
+#color0  = #707070
+#color8  = #909090
+# red
+#color1  = #a7586c
+#color9  = #a7586c
+# green
+#color2  = #6ca758
+#color10 = #6ca758
+# yellow
+#color3  = #a79358
+#color11 = #a79358
+# blue
+#color4  = #586ca7
+#color12 = #586ca7
+# magenta
+#color5  = #9358a7
+#color13 = #9358a7
+# cyan
+#color6  = #58a793
+#color14 = #58a793
+# white
+#color7  = #aaaaaa
+#color15 = #c2c2c2
+
+
+
+
+
+# T W I L Y
+#[colors]
+
+# special
+#foreground      = #cecfd1
+#foreground_bold = #cecfd1
+#cursor          = #cecfd1
+#background      = #111113
+# black
+#color0  = #111113
+#color8  = #606163
+# red
+#color1  = #d54a56
+#color9  = #f66a79
+# green
+#color2  = #84bd3f
+#color10 = #a4e35a
+# yellow
+#color3  = #cb873d
+#color11 = #f4aa5c
+# blue
+#color4  = #6f67e6
+#color12 = #8c86fc
+# magenta
+#color5  = #d753a4
+#color13 = #ea75bc
+# cyan
+#color6  = #45b791
+#color14 = #68e0b8
+# white
+#color7  = #aaabad
+#color15 = #cecfd1
 
 
 
@@ -159,7 +306,7 @@ color15 = #ffffff
 
 
 
-[colors]
+# [colors]
 # Base16 Solarized
 # Scheme: Ethan Schoonover (http://ethanschoonover.com/solarized)
 
@@ -339,11 +486,11 @@ color15 = #ffffff
 #color11 = #AEC795
 #color12 = #AE95C7
 #color13 = #C795AE
-#color14 = #95AEC7
+#olor14 = #95AEC7
 #color15 = #F3F4F5
 
 # 256 color space
-#color16 = #C7C795
+#olor16 = #C7C795
 #color17 = #C79595
 #color18 = #393F45
 #color19 = #565E65
