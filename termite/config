@@ -5,7 +5,7 @@ scroll_on_keystroke = true
 audible_bell = false
 visible_bell = false
 mouse_autohide = false
-allow_bold = false 
+allow_bold = true 
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
@@ -18,73 +18,39 @@ cursor_shape = block
 browser = firefox
 
 
-# D R A C U L A
-#[colors]
-# special
-#foreground      = #f8f8f2
-#foreground_bold = #f8f8f2
-#cursor          = #f8f8f2
-# background      = #40425
-# black
-#color0  = #44475a
-#color8  = #44475a
-# red
-#color1  = #FF3D7F
-#color9  = #FF3D7F
-# green
-#color2  = #50fa7d
-#color10 = #50fa7d
-# yellow
-#color3  = #f1fa8c
-#color11 = #f1fa8c
-# blue
-#color4  = #8be9fd
-#color12 = #FF7AC6
-# magenta
-#color5  = #FF7AC6
-#color13 = #FF7AC6
-# cyan
-#color6  = #00FFF0
-#color14 = #00FFF0
-# white
-#color7  = #707880
-#color15 = #c5c8c6
-
 
 # F R A Y
-#[colors]
+[colors]
 # special
-#foreground      = #ffffff
-#foreground_bold = #ffffff
-#cursor          = #ffffff
-#background      = #151515
+foreground      = #ffffff
+foreground_bold = #ffffff
+cursor          = #ffffff
+background      = #151515
 #background       =rgba(21, 21, 21,  0.94)
 # black
-#color0  = #202020
-#color8  = #202020
+color0  = #202020
+color8  = #202020
 # red
-#color1  = #f8f8f8
-#color9  = #f8f8f8
+color1  = #f8f8f8
+color9  = #f8f8f8
 # green
-#color2  = #aadb0f
-#color10 = #aadb0f
+color2  = #aadb0f
+color10 = #aadb0f
 # yellow
-#color3  = #f7f7f7
-#color11 = #f7f7f7
+color3  = #f7f7f7
+color11 = #f7f7f7
 # blue
-#color4  = #606060
-#color12 = #606060
+color4  = #606060
+color12 = #606060
 # magenta
-#color5  = #91ba0d
-#color13 = #91ba0d
+color5  = #91ba0d
+color13 = #91ba0d
 # cyan
-#color6  = #e2e2e2
-#color14 = #e2e2e2
+color6  = #e2e2e2
+color14 = #e2e2e2
 # white
-#color7  = #ffffff
-#color15 = #ffffff
-
-
+color7  = #ffffff
+color15 = #ffffff
 
 
 
@@ -124,183 +90,80 @@ browser = firefox
 #color15 = #f2f0f4
 
 
-#  C O O L
-[colors]
-# special
-foreground      = #deded6
-foreground_bold = #deded6
-cursor          = #deded6
-background      = #202328
-# black
-color0  = #2b3135
-color8  = #4c5356
-# red
-color1  = #8fa1b3
-color9  = #8fa1b3
-# green
-color2  = #769070
-color10 = #769070
-# yellow
-color3  = #4f5b66
-color11 = #4f5b66
-# blue
-color4  = #607a86
-color12 = #607a86
-# magenta
-color5  = #80757e
-color13 = #80757e
-# cyan
-color6  = #607086
-color14 = #607a86
-# white
-color7  = #deded6
-color15 = #deded6
 
 
-
-
-#  D U S K
+# V C
 #[colors]
-
 # special
-#foreground      = #aaaaaa
-#foreground_bold = #aaaaaa
-#cursor          = #aaaaaa
-#background      = #222222
+#foreground      = #6d6b6e
+#foreground_bold = #6d6b6e
+#cursor          = #6d6b6e
+#background      = #000000
 # black
-#color0  = #4a4a4a
-#color8  = #5c5c5c
+#color0  = #14161a
+#color8  = #14161a
 # red
-#color1  = #cf4c66
-#color9  = #cf4c66
+#color1  = #4a4c4b
+#color9  = #4a4c4b
 # green
-#color2  = #41bb75
-#color10 = #41bb75
+#color2  = #4a4c4b
+#color10 = #3a3c3b
 # yellow
-#color3  = #e28436
-#color11 = #e28436
+#color3  = #a2a2a5
+#color11 = #4a4c4b
 # blue
-#color4  = #5d8aa8
-#color12 = #5d8aa8
+#color4  = #5d5b5e
+#color12 = #4a4c4b
 # magenta
-#color5  = #8268c4
-##color13 = #8268c4
+#color5  = #4a4c4b
+#color13 = #3a3c3b
 # cyan
-#color6  = #17b8a3
-#color14 = #17b8a3
+#color6  = #6d6b6f
+#color14 = #4a4c4b
 # white
-#color7  = #8f8f8f
-#color15 = #aaaaaa
+#color7  = #4a4c4b
+#color15 = #4a4c4b
 
 
 
 
-
-
-# N U T H A T C H
 #[colors]
+# Base16 Codeschool
+# Scheme: brettof86
 
-# special
-#foreground      = #525252
-#foreground_bold = #525252
-#cursor          = #525252
-#background      = #e8e8ea
-# black
-#color0  = #707070
-#color8  = #909090
-# red
-#color1  = #a7586c
-#color9  = #a7586c
-# green
-#color2  = #6ca758
-#color10 = #6ca758
-# yellow
-#color3  = #a79358
-#color11 = #a79358
-# blue
-#color4  = #586ca7
-#color12 = #586ca7
-# magenta
-#color5  = #9358a7
-#color13 = #9358a7
-# cyan
-#color6  = #58a793
-#color14 = #58a793
-# white
-#color7  = #aaaaaa
-#color15 = #c2c2c2
+#foreground      = #9ea7a6
+#foreground_bold = #9ea7a6
+#cursor          = #9ea7a6
+#background      = #232c31
 
+# 16 color space
+#color0  = #232c31
+#color1  = #2a5491
+#color2  = #237986
+#color3  = #a03b1e
+#color4  = #484d79
+#color5  = #c59820
+#color6  = #b02f30
+#color7  = #9ea7a6
+#color8  = #3f4944
+#color9  = #2a5491
+#color10 = #237986
+#color11 = #a03b1e
+#color12 = #484d79
+#color13 = #c59820
+#color14 = #b02f30
+#color15 = #b5d8f6
 
-
-
-
-# T W I L Y
-#[colors]
-
-# special
-#foreground      = #cecfd1
-#foreground_bold = #cecfd1
-#cursor          = #cecfd1
-#background      = #111113
-# black
-#color0  = #111113
-#color8  = #606163
-# red
-#color1  = #d54a56
-#color9  = #f66a79
-# green
-#color2  = #84bd3f
-#color10 = #a4e35a
-# yellow
-#color3  = #cb873d
-#color11 = #f4aa5c
-# blue
-#color4  = #6f67e6
-#color12 = #8c86fc
-# magenta
-#color5  = #d753a4
-#color13 = #ea75bc
-# cyan
-#color6  = #45b791
-#color14 = #68e0b8
-# white
-#color7  = #aaabad
-#color15 = #cecfd1
+# 256 color space
+#color16 = #43820d
+#color17 = #c98344
+#color18 = #1c3657
+#color19 = #2a343a
+#color20 = #84898c
+#color21 = #a7cfa3
 
 
 
-# G R U V B O X
-#[colors]
-# hard contrast: background = #1d2021
-#background = #282828
-# soft contrast: background = #32302f
-#foreground = #ebdbb2
-#foreground_bold = #ebdbb2
-# dark0 + gray
-#color0 = #282828
-#color8 = #928374
-# neutral_red + bright_red
-#color1 = #cc241d
-#color9 = #fb4934
-# neutral_green + bright_green
-#color2 = #98971a
-#color10 = #b8bb26
-# neutral_yellow + bright_yellow
-#color3 = #d79921
-#color11 = #fabd2f
-# neutral_blue + bright_blue
-#color4 = #458588
-#color12 = #83a598
-# neutral_purple + bright_purple
-#color5 = #b16286
-#color13 = #d3869b
-# neutral_aqua + faded_aqua
-#color6 = #689d6a
-#color14 = #8ec07c
-# light4 + light1
-#color7 = #a89984
-#color15 = #ebdbb2
-# vim: ft=dosini cms=#%s
 
 
 
@@ -340,84 +203,6 @@ color15 = #deded6
 #color19 = #586e75
 #color20 = #839496
 #color21 = #eee8d5
-
-
-
-# S U L P H U R P O O L
-#[colors]
-# Base16 Atelier Sulphurpool
-# Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/sulphurpool)
-
-#foreground      = #979db4
-#foreground_bold = #979db4
-#cursor          = #979db4
-#background      = #202746
-
-# 16 color space
-#color0  = #202746
-#color1  = #c94922
-#color2  = #ac9739
-#color3  = #c08b30
-#color4  = #3d8fd1
-#color5  = #6679cc
-#color6  = #22a2c9
-#color7  = #979db4
-#color8  = #6b7394
-#color9  = #c94922
-#color10 = #ac9739
-#color11 = #c08b30
-#color12 = #3d8fd1
-#color13 = #6679cc
-#color14 = #22a2c9
-#color15 = #f5f7ff
-
-# 256 color space
-#color16 = #c76b29
-#color17 = #9c637a
-#color18 = #293256
-#color19 = #5e6687
-#color20 = #898ea4
-#color21 = #dfe2f1
-
-
-
-
-
-
-#[colors]
-# Base16 Paraiso
-# Scheme: Jan T. Sott
-
-#foreground      = #a39e9b
-#foreground_bold = #a39e9b
-#cursor          = #a39e9b
-#background      = #2f1e2e
-
-# 16 color space
-#color0  = #2f1e2e
-#color1  = #ef6155
-#color2  = #48b685
-#color3  = #fec418
-#color4  = #06b6ef
-#color5  = #815ba4
-#color6  = #5bc4bf
-#color7  = #a39e9b
-#color8  = #776e71
-#color9  = #ef6155
-#color10 = #48b685
-#color11 = #fec418
-#color12 = #06b6ef
-#color13 = #815ba4
-#color14 = #5bc4bf
-#color15 = #e7e9db
-
-# 256 color space
-#color16 = #f99b15
-#color17 = #e96ba8
-#color18 = #41323f
-#color19 = #4f424c
-#color20 = #8d8687
-#color21 = #b9b6b0
 
 
 
