@@ -1,0 +1,31 @@
+# P A R E
+#[colors]
+# special
+#foreground      = #817d71
+#foreground_bold = #817d71
+#cursor          = #817d71
+#background      = #100f0d
+# black
+#color0  = #100f0d
+#color8  = #414e54
+# red
+#color1  = #573627
+#color9  = #573627
+# green
+#color2  = #474131
+#color10 = #474131
+# yellow
+#color3  = #ca814c
+#color11 = #ca814c
+# blue
+#color4  = #44392f
+#color12 = #44392f
+# magenta
+#color5  = #595548
+#color13 = #595548
+# cyan
+#color6  = #7c6f4f
+#color14 = #7c6f4f
+# white
+#color7  = #817d71
+#color15 = #817d71
