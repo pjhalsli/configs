@@ -18,3 +18,46 @@
 *color14: #74CADB
 *color15: #E8E5DC
 
+
+
+
+[colors]
+
+# special
+foreground      = #e8eaec
+foreground_bold = #e8eaec
+cursor          = #e8eaec
+background      = #212121
+
+# black
+color0  = #525252
+color8  = #707070
+
+# red
+color1  = #ef9a89
+color9  = #ef9a89
+
+# green
+color2  = #abd37c
+color10 = #abd37c
+
+# yellow
+color3  = #eec87c
+color11 = #eec87c
+
+# blue
+color4  = #7ca2ee
+color12 = #7ca2ee
+
+# magenta
+color5  = #9197bb
+color13 = #9197bb
+
+# cyan
+color6  = #74cadb
+color14 = #74cadb
+
+# white
+color7  = #e8e5dc
+color15 = #e8e5dc
+

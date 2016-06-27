@@ -22,3 +22,47 @@
 *color13: #D69D55
 *color14: #668574
 *color15: #AB9C71
+
+
+
+
+[colors]
+
+# special
+foreground      = #8fa388
+foreground_bold = #8fa388
+cursor          = #8fa388
+background      = #1d2426
+
+# black
+color0  = #39474a
+color8  = #4c5f63
+
+# red
+color1  = #986345
+color9  = #b07350
+
+# green
+color2  = #788249
+color10 = #869151
+
+# yellow
+color3  = #9b6a46
+color11 = #af6b42
+
+# blue
+color4  = #3e5951
+color12 = #567a6e
+
+# magenta
+color5  = #b9924a
+color13 = #d69d55
+
+# cyan
+color6  = #5d796a
+color14 = #668574
+
+# white
+color7  = #977d5e
+color15 = #ab9c71
+
