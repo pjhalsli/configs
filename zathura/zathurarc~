@@ -1,0 +1,42 @@
+set font                        "Inconsolatazi4 Regular 9.8"
+
+set selection-clipboard         "primary"
+
+set default-bg                  "#1d2426" 
+set default-fg                  "#977D5E"
+
+set statusbar-bg                "#bcbcbc"
+set statusbar-fg                "#444444"
+
+set inputbar-bg                 "#262626"
+set inputbar-fg                 "#bcbcbc"
+
+set notification-error-bg       "#444444"
+set notification-error-fg       "#bcbcbc"
+
+set notification-warning-bg     "#444444"
+set notification-warning-fg     "#ff8700"
+
+set highlight-color             "#444444"
+set highlight-active-color      "#5f87af"
+
+set completion-highlight-fg     "#444444"
+set completion-highlight-bg     "#bcbcbc"
+
+set completion-bg               "#262626"
+set completion-fg               "#bcbcbc"
+
+set notification-bg             "#262626"
+set notification-fg             "#444444"
+
+set recolor-darkcolor           "#bcbcbc"
+set recolor-lightcolor          "#262626"
+
+set recolor                     "true"
+set recolor-reverse-video       "true"
+
+map [normal]        j           scroll up
+map [fullscreen]    j           scroll up
+map [normal]        k           scroll down
+map [fullscreen]    k           scroll down
+unmap q 

@@ -1,0 +1,16 @@
+
+[General]
+col-scheme: solarized-dark
+date-format: < %a%d-%m-%y >
+time-format: (%H:%M:%S %p)
+
+[Keybindings]
+key-prev-tab: ctrl u
+key-next-tab: ctrl d
+key-close-tab: ctrl w
+key-quit: ctrl e
+key-menu: ctrl n
+key-up: k
+key-down: j
+
+[Notifications]
