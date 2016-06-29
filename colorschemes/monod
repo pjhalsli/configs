@@ -1,0 +1,31 @@
+# M O N O D
+#[colors]
+# special
+#foreground      = #c2c2c2
+#foreground_bold = #c2c2c2
+#cursor          = #c2c2c2
+#background      = #222222
+# black
+#color0  = #444444
+#color8  = #444444
+# red
+#color1  = #cf4c66
+#color9  = #cf4c66
+# green
+#color2  = #444444
+#color10 = #444444
+# yellow
+#color3  = #666666
+#color11 = #666666
+# blue
+#color4  = #888888
+#color12 = #888888
+# magenta
+#color5  = #888888
+#color13 = #888888
+# cyan
+#color6  = #aaaaaa
+#color14 = #aaaaaa
+# white
+#color7  = #aaaaaa
+#color15 = #aaaaaa

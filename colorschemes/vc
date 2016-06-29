@@ -1,0 +1,31 @@
+# V C
+#[colors]
+# special
+#foreground      = #6d6b6e
+#foreground_bold = #6d6b6e
+#cursor          = #6d6b6e
+#background      = #000000
+# black
+#color0  = #14161a
+#color8  = #14161a
+# red
+#color1  = #4a4c4b
+#color9  = #4a4c4b
+# green
+#color2  = #4a4c4b
+#color10 = #3a3c3b
+# yellow
+#color3  = #a2a2a5
+#color11 = #4a4c4b
+# blue
+#color4  = #5d5b5e
+#color12 = #4a4c4b
+# magenta
+#color5  = #4a4c4b
+#color13 = #3a3c3b
+# cyan
+#color6  = #6d6b6f
+#color14 = #4a4c4b
+# white
+#color7  = #4a4c4b
+#color15 = #4a4c4b

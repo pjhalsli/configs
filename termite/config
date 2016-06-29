@@ -10,11 +10,193 @@ dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
 #font = terminus 9 
-font= envypn 8 
+#font= lime 8 
+#font = hack 8
+#font = SourceCodePro 8
+font = envypn 8 
 scrollback_lines = 5000
 search_wrap = true
 cursor_blink = system
 cursor_shape = block
 browser = firefox
+
+
+
+# F R A Y
+#[colors]
+# special
+#foreground      = #ffffff
+#foreground_bold = #ffffff
+#cursor          = #ffffff
+#background      = #151515
+#background       =rgba(21, 21, 21,  0.84)
+# black
+#color0  = #202020
+#color8  = #202020
+# red
+#color1  = #f8f8f8
+#color9  = #f8f8f8
+# green
+#color2  = #aadb0f
+#color10 = #aadb0f
+# yellow
+#color3  = #f7f7f7
+#color11 = #f7f7f7
+# blue
+#color4  = #606060
+#color12 = #606060
+# magenta
+#color5  = #91ba0d
+#color13 = #91ba0d
+# cyan
+#color6  = #e2e2e2
+#color14 = #e2e2e2
+# white
+#color7  = #ffffff
+#color15 = #ffffff
+
+
+
+# V C
+#[colors]
+# special
+#foreground      = #6d6b6e
+#foreground_bold = #6d6b6e
+#cursor          = #6d6b6e
+#background      = #000000
+# black
+#color0  = #14161a
+#color8  = #14161a
+# red
+#color1  = #4a4c4b
+#color9  = #4a4c4b
+# green
+#color2  = #4a4c4b
+#color10 = #3a3c3b
+# yellow
+#color3  = #a2a2a5
+#color11 = #4a4c4b
+# blue
+#color4  = #5d5b5e
+#color12 = #4a4c4b
+# magenta
+#color5  = #4a4c4b
+#color13 = #3a3c3b
+# cyan
+#color6  = #6d6b6f
+#color14 = #4a4c4b
+# white
+#color7  = #4a4c4b
+#color15 = #4a4c4b
+
+
+
+# O W L
+#[colors]
+# special
+#foreground      = #e5e5e5
+#foreground_bold = #e5e5e5
+#cursor          = #e5e5e5
+#background      = #2f2b2c
+# black
+#color0  = #353031
+#color8  = #434041
+# red
+#color1  = #5a5a5a
+#color9  = #da5b2c
+# green
+#color2  = #656565
+#color10 = #da5b2c
+# yellow
+#color3  = #7f7f7f
+#color11 = #f7f7f7
+# blue
+#color4  = #989898
+#color12 = #989898
+# magenta
+#color5  = #b1b1b1
+#color13 = #b1b1b1
+# cyan
+#color6  = #cacaca
+#color14 = #cacaca
+# white
+#color7  = #e5e5e5
+#color15 = #ffffff
+
+
+
+# R E L I C
+[colors]
+# special
+foreground      = #8fa388
+foreground_bold = #8fa388
+cursor          = #8fa388
+background      = #1d2426
+# black
+color0  = #39474a
+color8  = #4c5f63
+# red
+color1  = #986345
+color9  = #b07350
+# green
+color2  = #788249
+color10 = #869151
+# yellow
+color3  = #9b6a46
+color11 = #af6b42
+# blue
+color4  = #3e5951
+color12 = #567a6e
+# magenta
+color5  = #b9924a
+color13 = #d69d55
+# cyan
+color6  = #5d796a
+color14 = #668574
+# white
+color7  = #977d5e
+color15 = #ab9c71
+
+
+
+# M O N O D
+#[colors]
+# special
+#foreground      = #c2c2c2
+#foreground_bold = #c2c2c2
+#cursor          = #c2c2c2
+#background      = #222222
+# black
+#color0  = #444444
+#color8  = #444444
+# red
+#color1  = #cf4c66
+#color9  = #cf4c66
+# green
+#color2  = #444444
+#color10 = #444444
+# yellow
+#color3  = #666666
+#color11 = #666666
+# blue
+#color4  = #888888
+#color12 = #888888
+# magenta
+#color5  = #888888
+#color13 = #888888
+# cyan
+#color6  = #aaaaaa
+#color14 = #aaaaaa
+# white
+#color7  = #aaaaaa
+#color15 = #aaaaaa
+
+
+
+
+
+
+
+
 
 
