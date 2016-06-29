@@ -1,0 +1,40 @@
+
+! Color-scheme : Symmetry                                                                 
+! Author       : zofos <thenephilim0@gmail.com>
+
+*background: #030508
+*foreground: #BDC6DA 
+*cursorColor: #FF8E31
+
+!black
+*color0:  #19253E
+*color8:  #304573
+
+!red
+*color1: #FF3131
+*color9: #FF6262
+ 
+!green
+*color2: #28D428
+*color10: #51D251
+
+!yellow
+*color3: #FF8E31
+*color11: #FFA962
+
+!blue
+*color4:  #335BB8
+*color12: #5270B5
+
+!magenta
+*color5:  #852BB7
+*color13: #904CB5
+
+!cyan
+*color6:  #20A8A8
+*color14: #40A6A6
+
+!white
+*color7:  #BDC6DA
+*color15: #D7DEED
+

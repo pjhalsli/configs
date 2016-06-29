@@ -1,0 +1,26 @@
+urxvt*background:       #2d2d2d
+urxvt*foreground:       #F5F5F5
+
+ *color0:  #2d2d2d
+ *color8: #dedede
+!red
+ *color1:  #dedede
+ *color9:  #dedede
+!green
+ *color2:  #51c4d4
+ *color10: #dedede
+!yellow
+ *color3:  #dedede
+ *color11: #dedede
+!blue
+ *color4:  #51c4d4
+ *color12: #51c4d4
+!magenta
+ *color5:  #dedede
+ *color13: #dedede
+!cyan
+ *color6:  #dedede
+ *color14: #dedede
+!white
+ *color7:  #dedede
+ *color15: #dedede

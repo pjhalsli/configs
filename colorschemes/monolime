@@ -1,0 +1,29 @@
+
+#bgfg
+URxvt*foreground: #FFFFFF
+URxvt*background: #111111
+#black
+URxvt*color0: #202020
+URxvt*color8: #202020
+#red
+URxvt*color1: #F8F8F8
+URxvt*color9: #F8F8F8
+#green
+URxvt*color2: #AADB0F
+URxvt*color10: #AADB0F
+#yellow
+URxvt*color3: #F7F7F7
+URxvt*color11: #F7F7F7
+#blue
+URxvt*color4: #606060
+URxvt*color12: #606060
+#magenta
+URxvt*color5: #91BA0D
+URxvt*color13: #91BA0D
+#cyan
+URxvt*color6: #E2E2E2
+URxvt*color14: #E2E2E2
+#white
+URxvt*color7: #FFFFFF
+URxvt*color15: #FFFFFF
+

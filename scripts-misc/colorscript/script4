@@ -1,0 +1,20 @@
+#!/usr/bin/env lua
+
+function cl(e)
+	return string.format('\27[%sm', e)
+end
+
+function print_fg(bg, pre)
+	for fg = 30,37 do
+		fg = pre..fg
+		io.write(cl(bg), cl(fg), string.format(' %6s ', fg), cl(0))
+	end
+end
+
+for bg = 40,47 do
+	io.write(cl(0), ' ', bg, ' ')
+	print_fg(bg, ' ')
+	io.write('\n    ')
+	print_fg(bg, '1;')
+	io.write('\n\n')
+end

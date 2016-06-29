@@ -1,0 +1,38 @@
+
+! [ terminal colors ]
+!   black / dark gray
+URxvt*color0: #1E1E1E
+URxvt*color8: #5F5A60
+!   red
+URxvt*color1: #CF6A4C
+URxvt*color9: #CF6A4C
+!   green
+URxvt*color2: #8F9D6A
+URxvt*color10: #8F9D6A
+!   yellow
+URxvt*color3: #F9EE98
+URxvt*color11:#F9EE98
+!   blue
+URxvt*color4: #7587A6
+URxvt*color12: #7587A6
+!   magenta
+URxvt*color5: #9B859D
+URxvt*color13: #9B859D
+!   cyan
+URxvt*color6: #AFC4DB
+URxvt*color14: #AFC4DB
+!   light gray / white
+URxvt*color7: #A7A7A7
+URxvt*color15: #FFFFFF
+
+! [ urxvt ]
+URxvt*.depth: 32
+URxvt*.font: xft:Hack:size=16
+URxvt*background: [95]#1E1E1E
+URxvt*foreground: #A7A7A7
+URxvt*cursorColor: #A7A7A7
+URxvt.scrollstyle: plain
+URxvt*.geometry: 80x25
+
+x
+

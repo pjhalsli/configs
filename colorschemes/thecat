@@ -1,0 +1,71 @@
+f=3 b=4
+for j in f b; do
+  for i in {0..7}; do
+    printf -v $j$i %b "\e[${!j}${i}m"
+  done
+done
+bld=$'\e[1m'
+rst=$'\e[0m'
+inv=$'\e[7m'
+
+cat << EOF
+
+▄█▀          ▄         
+$f7      █     █          █           ▄                   ███          
+$f7     ███  ▄██   █▄   ███ ▄     ▄███                    ███ 
+$f7    █████ ███  ████ ███████  █████              ███    ███          ▄▄▄    
+$f7   ██████████████████████████████               ███    ███        ███████ 
+$f7   █████████████████████████████             █████████ ████████  ███   ███
+$f7   █████████████████████████████                ███    ███   ███ ███   ██
+$f7    ███████████████████████████                 ███    ███   ███ ███████
+$f7     ██████████████████████████                 ███    ███   ███ ██
+$f7     ██████████████████████████                 ███    ███   ███ ██
+$f7     ██████████████████████████                 ▀████  ███   ███  ▀██████
+$f7    ████████ ███████████ ███████                
+$f7   █████████ ███████████ ████████              $f1                             ███
+$f7   ██████████████████████████████              $f1                             ███
+$f7     ██████████████████████████             $f1███████████   ████████████  ████████████
+$f7       ██████████████████████               $f1████                   ███      ███
+$f7         ██████▀▀▀▀▀▀██████                 $f1███                    ███      ███
+$f7           ██▀▀▀▀▀▀▀▀▀▀▀██                  $f1██                     ███      ███
+$f1               ▄▄▄▄▄▄                       ██              ██████████      ███
+$f1                ████                        ██             ████    ███      ███
+$f1                 ██                         ██            ███      ███      ███
+$f1                 ██                         ███           ███      ███      ███
+$f1                 ██                         ████          ███      ███      ███
+$f1                ▄██                         ███████████   ████████████       ████████
+$f1                ███ 
+$f1               ▄███
+$f1               ████  
+
+
+                                              
+$f7                                                  
+$f7                    .c0N.   .'c.                  
+$f7         'Okdl:'  ;OMMMMKOKNMMW:;o0l  .'.         
+$f7         ;MMMMMMWWMMMMMMMMMMMMMMMMMXKWMMK         
+$f7         'MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMK         
+$f7          NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMO         
+$f7          dMMMMMMMMMMMMMMMMMMMMMMMMMMMMM:         
+$f7          'MMMMMMMMMMMMMMMMMMMMMMMMMMMMM.         
+$f7          'MMMMMMMMMMMMMMMMMMMMMMMMMMMMM;         
+$f7          lMMMMM  MMMMMMMMMM  MMMMMMMMMM,         
+$f7          KMMMMM  MMMMMMMMMM  MMMMMMMMMM.         
+$f7         ;WMMMMMkNMMMMMMMMMMONMMMMMMMMMW:         
+$f7       oNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMO        
+$f7      .,cxKWMMMMMMMMMMMMMMMMMMMMMMMMMMMXdxo       
+$f7         ;kWMMMMMMMMMMMMMMMMMMMMMMMMMMMM:         
+$f7        .::,. .;ok0NMMMMWNK0kdoc;'..'cxK0         
+$f1                   .:cc:;;.                       
+$f1                   .o0MMMK'                       
+$f1                     xMMM:                        
+$f1                     KMMMl                        
+$f1                    .MMMMo                        
+$f1                    ,MMMMx                        
+$f1                    oMMMMx                        
+$f1                    OMMMMO                        
+$f1                    .OMMMd                        
+$f1                      :Nl       
+
+
+EOF
