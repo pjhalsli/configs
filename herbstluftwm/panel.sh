@@ -1,14 +1,26 @@
 #!/usr/bin/env bash
 
-#                                     ██
-# ██████                             ░██
-#░██░░░██  ██████   ███████   █████  ░██
-#░██  ░██ ░░░░░░██ ░░██░░░██ ██░░░██ ░██
-#░██████   ███████  ░██  ░██░███████ ░██
-#░██░░░   ██░░░░██  ░██  ░██░██░░░░  ░██
-#░██     ░░████████ ███  ░██░░██████ ███
-#░░       ░░░░░░░░ ░░░   ░░  ░░░░░░ ░░░ 
-  
+#                                      ██
+#  ██████                             ░██
+# ░██░░░██  ██████   ███████   █████  ░██
+# ░██  ░██ ░░░░░░██ ░░██░░░██ ██░░░██ ░██
+# ░██████   ███████  ░██  ░██░███████ ░██
+# ░██░░░   ██░░░░██  ░██  ░██░██░░░░  ░██
+# ░██     ░░████████ ███  ░██░░██████ ███
+# ░░       ░░░░░░░░ ░░░   ░░  ░░░░░░ ░░░ 
+#
+#       ██                          ████ 
+#      ░██                         █░░░░█
+#      ░██ ██████  █████  ███████ ░░   ░█
+#   ██████░░░░██  ██░░░██░░██░░░██   ███ 
+#  ██░░░██   ██  ░███████ ░██  ░██  █░░  
+# ░██  ░██  ██   ░██░░░░  ░██  ░██ █░    
+# ░░██████ ██████░░██████ ███  ░██░██████
+#  ░░░░░░ ░░░░░░  ░░░░░░ ░░░   ░░ ░░░░░░ 
+
+
+
+
 
 hc() { "${herbstclient_command[@]:-herbstclient}" "$@" ;}
 monitor=${1:-0}
@@ -42,6 +54,7 @@ else
     echo "This script requires the textwidth tool of the dzen2 project."
     exit 1
 fi
+
 ####
 # true if we are using the svn version of dzen2
 # depending on version/distribution, this seems to have version strings like
@@ -65,6 +78,8 @@ else
       awk '$0 != l { print ; l=$0 ; fflush(); }' "$@"
     }
 fi
+
+####
 # My Functions
 
 
@@ -72,11 +87,13 @@ hc pad $monitor $panel_height
 
 
 {
-    ### Event generator ###
+
+	### Event generator ###
     # based on different input data (mpc, date, hlwm hooks, ...) this generates events, formed like this:
     #   <eventname>\t<data> [...]
     # e.g.
     #   date    ^fg(#efefef)18:33^fg(#909090), 2013-10-^fg(#efefef)29
+
 
     #mpc idleloop player &
     while true ; do
@@ -97,7 +114,8 @@ hc pad $monitor $panel_height
     windowtitle=""
     while true ; do
 
-        ### Output ###
+
+	### Output ###
         # This part prints dzen data based on the _previous_ data handling run,
         # and then waits for the next event to happen.
 
@@ -137,9 +155,11 @@ hc pad $monitor $panel_height
         echo -n "$separator"
         echo -n "^bg()^fg() ${windowtitle//^/^^}"
         
+
 	#Vol
-	vol=$(amixer -c 0 get Master | tail -n 1 | cut -d '[' -f 2 | sed 's/%.*//g' | sed -n 1p)
+	vol=$(pamixer -c 0 get Master | tail -n 1 | cut -d '[' -f 2 | sed 's/%.*//g' | sed -n 1p)
 	
+
 	#battery
         bat=`cat /sys/class/power_supply/BAT0/capacity`
         batstat=`cat /sys/class/power_supply/BAT1/status`
@@ -152,25 +172,30 @@ hc pad $monitor $panel_height
 	bat="^fg($xicon)$batico ^fg($xfg)$bat^fg($xext)%"
 
 
+
 	# small adjustments
 		cpu_temp=$(echo -n $(sensors | grep "Core" | cut -b 16-19))
 		mpc_current=$(mpc current)
-		right="♫ $mpc_current $separator^bg() $vol $separator^() $cpu_temp $separator^bg() $bat $separator^bg() $date $separator"
+		right="^fg() ♫ ^fg() $mpc_current $separator^fg() $cpu_temp $separator^fg() $bat $separator^bg() $date $separator"
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
-        # get width of right aligned text.. and add some space..
+
+	
+	# get width of right aligned text.. and add some space..
         width=$(txtw -f "$font" "$right_text_only  ")
         echo -n "^pa($(($panel_width - $width)))$right"
         echo
 
-        ### Data handling ###
+
+	### Data handling ###
         # This part handles the events generated in the event loop, and sets
         # internal variables based on them. The event and its arguments are
         # read into the array cmd, then action is taken depending on the event
-        # name.
+        # name.http://vglive.no/#match=10013601
         # "Special" events (quit_panel/togglehidepanel/reload) are also handled
         # here.
 
-        # wait for next event
+
+	# wait for next event
         IFS=$'\t' read -ra cmd || break
         # find out event origin
         case "${cmd[0]}" in
@@ -213,6 +238,8 @@ hc pad $monitor $panel_height
         esac
     done
 
+
+    
     ### dzen2 ###
     # After the data is gathered and processed, the output of the previous block
     # gets piped to dzen2...or is it conky? If this ceases to work at any point
