@@ -33,6 +33,10 @@ xsetroot -solid '#5A8E3A'
 # remove all existing keybindings
 hc keyunbind --all
 
+
+# close tray if reloading
+killall stalonetray
+
 # keybindings
 # if you have a super key you will be much happier with Mod set to Mod4
 #Mod=Mod1    # Use alt as the main modifier
@@ -42,6 +46,8 @@ Mod=Mod4   # Use the super key as the main modifier
 hc spawn compton
 hc spawn nitrogen --restore
 hc spawn dunst
+hc spawn dropbox
+hc spawn nm-applet
 
 hc keybind $Mod-Shift-q close
 hc keybind $Mod-Shift-r reload
@@ -53,7 +59,7 @@ hc keybind $Mod-Return spawn termite
 hc keybind $Mod-Shift-Return spawn urxvt
 
 # start rofi
-hc keybind $Mod-d spawn rofi -show run -lines 10 -eh 1.5  -width 100 -padding 450 -opacity "80" -font "SourceCodePro 12"
+hc keybind $Mod-d spawn rofi -modi "run,window" -show run -lines 10 -eh 1.5  -width 100 -padding 450 -opacity "80" -font "SourceCodePro 12"
 
 
 # start some programs
@@ -67,6 +73,12 @@ hc keybind $Mod-Alt-h spawn termite -e hangups
 hc keybind $Mod-Alt-r spawn termite -e rtv
 hc keybind $Mod-Alt-w spawn termite -e weechat
 hc keybind $Mod-Alt-t spawn termite -e tmux
+
+
+# volume control
+hc keybind XF86AudioRaiseVolume spawn pulsemixer --id 2 --change-volume +5 
+hc keybind XF86AudioLowerVolume spawn pulsemixer --id 2 --change-volume -5 
+hc keybind XF86AudioMute        spawn pulsemixer --id 2 --toggle-mute 
 
 # basic movement
 # focusing clients
@@ -108,10 +120,10 @@ hc keybind $Mod-Control-Up      resize up +$resizestep
 hc keybind $Mod-Control-Right   resize right +$resizestep
 
 # tags
-tag_names=("  " "  " "  " "  " "  " "   " "   " "  " "  " "  " )
+#tag_names=("  " "  " "  " "  " "  " "   " "   " "  " "  " "  " )
 #tag_names=("WEB" "TERM" "FILE" "MEDIA" "GIMP": "MISC" "CODE" "RRENT" "REDDIT" "CHAT")
 #tag_names=("I" "II" "III" "IV" "V" "VI" "VII" "VIII" "IX" "X")
-#tag_names=( {1..9} 0 )
+tag_names=( {1..9} 0 )
 tag_keys=( {1..9} 0 )
 
 hc rename default "${tag_names[0]}" || true
@@ -164,36 +176,41 @@ hc keybind $Mod-Shift-u jumpto urgent
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc set frame_border_active_color '#917154'
+hc set frame_border_active_color '#151515'
 #             ||
 # panel color \/
-hc set frame_border_normal_color '#222222'
-#hc set frame_bg_normal_color '#BDAE93'
-hc set framme_bg_normal_color '#FFFFFF'
+hc set frame_border_normal_color '#151515'
+hc set frame_bg_normal_color '#252525'
+#hc set framme_bg_normal_color '#ffffff'
 #blank window frame thing
-hc set frame_bg_active_color '#917154'
-hc set frame_border_width 0 
+#hc set frame_bg_active_color '#917154'
+hc set frame_bg_active_color '#303030'
+hc set frame_border_width 1 
 hc set always_show_frame 0
 hc set frame_bg_transparent 1 
 hc set frame_transparent_width 0
-hc set frame_gap 0
+hc set frame_gap -1 
 
 #set selected 'window'and selected workspace through its attr
-hc attr theme.active.color '#ffffff'
-#hc attr theme.active.color '#5BA4CB'
-#hc attr theme.active.color '#CDFF00'
-hc attr theme.normal.color '#151515'
-hc attr theme.urgent.color '#74944E'
-hc attr theme.inner_width 1 
+#hc attr theme.active.color '#0fdbd9'
+#hc attr theme.active.color '#cd749c'
+#hc attr theme.active.color '#00C0C0'
+hc attr theme.active.color '#bbbbbb'
+hc attr theme.normal.color  '#353535'
+hc attr theme.urgent.color '#ffffff'
+hc attr theme.inner_width 2 
+hc attr theme.outer_width 2
 #hc attr theme.inner_color '#202020'
-hc attr theme.inner_color '#222024'
-hc attr theme.border_width 4 
-hc attr theme.floating.border_width 4 
-hc attr theme.floating.outer_width 0 
-hc attr theme.floating.outer_color '#202020'
-hc attr theme.active.inner_color '#404040'
-hc attr theme.active.outer_color '#151515'
-hc attr theme.background_color '#141414'
+hc attr theme.inner_color '#252525'
+hc attr theme.border_width 6 
+hc attr theme.floating.border_width 6 
+hc attr theme.floating.outer_width 2
+hc attr theme.floating.inner_width  2 
+hc attr theme.floating.outer_color '#252525'
+hc attr theme.floating.inner_color  '#252525'
+hc attr theme.active.inner_color '#252525'
+hc attr theme.active.outer_color '#252525'
+hc attr theme.background_color '#202020'
 
 hc set window_gap 0
 hc set frame_padding 0 
@@ -207,7 +224,7 @@ hc unrule -F
 #hc rule class=XTerm tag=3 # move all xterms to tag 3
 hc rule focus=on # normally focus new clients
 #hc rule focus=off # normally do not focus new clients
-# give focus to most common terminals
+# give focus to most common terminalsy
 #hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
@@ -232,4 +249,4 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     # start it on each monitor
     "$panel" $monitor &
 done
-
+herbstclient chain $cmds&

@@ -36,9 +36,11 @@ panel_width=${geometry[2]}
 panel_height=16
 #font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
 #font="-*-tewi-medium-*-normal-*-17-120-*-*-*-*-*-1"
-font2="-misc-fontawesome-medium-r-normal--0-0-0-9-p-0-iso10646-1"
+#font2="-misc-fontawesome-medium-r-normal--0-0-0-9-p-0-iso10646-1"
 #use xorg-xfontsel to pick a new font :3
-font="-*-terminesspowerline-medium-*-normal-*-10-*-*-*-*-*-*-*"
+#font="-*-terminesspowerline-medium-*-normal-*-10-*-*-*-*-*-*-*"
+font="-Gohu-GohuFont-Medium-R-Normal--11-80-100-100-C-60-ISO10646-1"
+#font2="-misc-stlarch-medium-r-normal--10-100-75-75-c-80-iso10646-1"
 bgcolor=$(hc get frame_border_normal_color)
 selbg=$(hc get window_border_active_color)
 selfg='#101010'
@@ -145,8 +147,8 @@ hc pad $monitor $panel_height
                 echo -n "^ca(1,\"${herbstclient_command[@]:-herbstclient}\" "
                 echo -n "focus_monitor \"$monitor\" && "
                 echo -n "\"${herbstclient_command[@]:-herbstclient}\" "
-#                echo -n "use \"${i:1}\") ${i:1} ^ca()"
-                echo -n "use \"${i:1}\") ^fn(FontAwesome:size=8)${i:1}^fn() ^ca()"
+                echo -n "use \"${i:1}\") ${i:1} ^ca()"
+#                echo -n "use \"${i:1}\") ^fn(FontAwesome:size=8)${i:1}^fn() ^ca()"
             else
                 # non-clickable tags if using older dzen
                 echo -n " ${i:1} "
@@ -156,9 +158,6 @@ hc pad $monitor $panel_height
         echo -n "^bg()^fg() ${windowtitle//^/^^}"
         
 
-	#Vol
-	vol=$(pamixer -c 0 get Master | tail -n 1 | cut -d '[' -f 2 | sed 's/%.*//g' | sed -n 1p)
-	
 
 	#battery
         bat=`cat /sys/class/power_supply/BAT0/capacity`
@@ -247,5 +246,9 @@ hc pad $monitor $panel_height
 
 } 2> conky | dzen2 -w $panel_width -x $x -y $y -fn "$font" -h $panel_height \
     -e 'button3=;button4=exec:herbstclient use_index -1;button5=exec:herbstclient use_index +1' \
-    -ta l -bg "$bgcolor" -fg '#efefef'
+    -ta l -bg "$bgcolor" -fg '#efefef'  &
+
+#wait 2 seconds then load the stand alone tray
+sleep 2
+stalonetray
  
