@@ -1,0 +1,32 @@
+# fray-red-ish
+#[colors]
+# special
+#foreground      = #ffffff
+#foreground_bold = #ffffff
+#cursor          = #ffffff
+#background      = #151515
+#background       =rgba(21, 21, 21,  0.84)
+# black
+#color0  = #252525
+#color8  = #252525
+# red
+#color1  = #f8f8f8
+#color9  = #f8f8f8
+# green
+#color2  = #ac2827
+#color10 = #ac2827
+# yellow
+#color3  = #f7f7f7
+#color11 = #f7f7f7
+# blue
+#color4  = #606060
+#color12 = #606060
+# magenta
+#color5  = #ac2827
+#color13 = #ac2827
+# cyan
+#color6  = #e2e2e2
+#color14 = #e2e2e2
+# white
+#color7  = #ffffff
+#color15 = #ffffff
