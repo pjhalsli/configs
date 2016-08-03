@@ -1,0 +1,31 @@
+# vc2
+[colors]
+## special
+foreground      = #6d6b6e
+foreground_bold = #6d6b6e
+cursor          = #6d6b6e
+background      = #111313
+# black
+color0  = #111313
+color8  = #15171b
+# red
+color1  = #4a4b4c
+color9  = #4a4b4c
+# green
+color2  = #4a4b4c
+color10 = #3a3b3c
+# yellow
+color3  = #a2a2a5
+color11 = #4a4b4c
+# blue
+color4  = #5d5b5e
+color12 = #4a4b4c
+# magenta
+color5  = #4a4b4c
+color13 = #3a3b3c
+# cyan
+color6  = #6d6b6f
+color14 = #4a4b4c
+# white
+color7  = #4a4b4c
+color15 = #4a4b4c
