@@ -1,0 +1,31 @@
+# nihtvision
+#[colors]
+# special
+#foreground      = #3f3f3f
+#foreground_bold = #3f3f3f
+#cursor          = #3f3f3f
+#background      = #111010
+# black
+#color0  = #111010
+#color8  = #222020
+# red
+#color1  = #f44444
+#color9  = #492929
+# green
+#color2  = #f44444
+#color10 = #424338
+# yellow
+#color3  = #483b32
+#color11 = #483b32
+# blue
+#color4  = #606060
+#color12 = #f44444
+# magenta
+#color5  = #3c353e
+#color13 = #3c353e
+# cyan
+#color6  = #3c4242
+#color14 = #3c4242
+# white
+#color7  = #383a3b
+#color15 = #383a3b

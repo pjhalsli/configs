@@ -1,0 +1,31 @@
+#custom
+#[colors]
+# special
+#foreground      = #ebdbb2
+#foreground_bold = #ebdbb2
+#cursor          = #ebdbb2
+#background      = #151515
+# black
+#color0  = #151515
+#color8  = #928374
+# red
+#color1  = #e0b373
+#color9  = #8a8a8a
+# green
+#color2  = #e0b373
+#color10 = #ebdbb2
+# yellow
+#color3  = #555555
+#color11 = #555555
+# blue
+#color4  = #928374
+#color12 = #e0b373
+# magenta
+#color5  = #666666
+#color13 = #666666
+# cyan
+#color6  = #8a8a8a
+#color14 = #8a8a8a
+# white
+#color7  = #a89984
+#color15 = #ebdbb2
