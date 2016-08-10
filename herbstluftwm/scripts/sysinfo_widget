@@ -1,0 +1,82 @@
+#!/bin/bash
+
+## Init
+# x and width don't matter yet
+x=$(xdotool getmouselocation | cut -d ' ' -f 1 | cut -d ':' -f 2  )
+y=28
+width=75
+height=24
+font="-*-fixed-medium-*-*-*-13-*-*-*-*-*-*-*"
+bgcolor='#333333'
+fgcolor='#efefef'
+# extract colors from color file
+colorfile="$HOME/.config/herbstluftwm/colors.txt"
+eins=$(sed '1q;d' "$colorfile")
+zwei=$(sed '2q;d' "$colorfile")
+drei=$(sed '3q;d'  "$colorfile")
+vier=$(sed '4q;d'  "$colorfile")
+fuenf=$(sed '5q;d'  "$colorfile")
+sechs=$(sed '6q;d'  "$colorfile")
+sieben=$(sed '7q;d'  "$colorfile")
+acht=$(sed '8q;d'  "$colorfile")
+
+function CPU() {
+	ps -eo pcpu \
+		| awk '
+			BEGIN { sum = 0.0f }
+			{ sum += $1 }
+			END { print sum }
+			'
+}
+
+function RAM() {
+	IFS=' '
+	read total free <<< `grep -E 'Mem(Total|Free)' /proc/meminfo \
+		| awk '{ print $2 }' \
+		| tr '\n' ' ' \
+		`
+	read buffers cached <<< `grep -E '^(Buffers|Cached)' /proc/meminfo \
+		| awk '{print $2}' \
+		| tr '\n' ' ' \
+		`
+
+	echo "100 * ($total - $free - $buffers - $cached) / $total" | bc
+}
+
+function Uptime() {
+	uptime \
+		| awk '{ print $3 }' \
+		| tr -d ','
+}
+
+## Output Widget
+line0="sysinfo"
+line1="host: $(uname -n)"
+line2="kernel: $(uname -r)"
+line3="cpu: $(CPU)%"
+line4="ram: $(RAM)%"
+line5="uptime: $(Uptime) days"
+width1=$(( $(dzen2-textwidth "$font" "$line1") + 8 ))
+width2=$(( $(dzen2-textwidth "$font" "$line2") + 8 ))
+width3=$(( $(dzen2-textwidth "$font" "$line3") + 8 ))
+width4=$(( $(dzen2-textwidth "$font" "$line4") + 8 ))
+width5=$(( $(dzen2-textwidth "$font" "$line5") + 8 ))
+
+max_width=0
+widths=($width1 $width2 $width3 $width4 $width5)
+for width in "${widths[@]}"
+do
+	#echo $width
+	(( width > max_width )) && max_width=$width
+done
+#echo $max_width
+
+x=$(( $x - $width / 2 ))
+
+echo -e "$line0\n$line1\n$line2\n$line3\n$line4\n$line5" \
+	| dzen2 -p 7 -l 5 -u \
+		-e "onstart=uncollapse;enterslave=stick;leaveslave=unstick;button2=exit:0" \
+		-x "$x" -y "$y" \
+		-w "$max_width" -h "$height" \
+		-fn "$font" \
+-bg "$bgcolor" -fg "$fgcolor"

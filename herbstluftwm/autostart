@@ -1,14 +1,6 @@
 #!/usr/bin/env bash
 # this is a simple config for herbstluftwm
-# 
-#  ██                     ██                ██    ██           ████   ██  
-# ░██                    ░██               ░██   ░██          ░██░   ░██  
-# ░██       █████  ██████░██       ██████ ██████ ░██ ██   ██ ██████ ██████
-# ░██████  ██░░░██░░██░░█░██████  ██░░░░ ░░░██░  ░██░██  ░██░░░██░ ░░░██░ 
-# ░██░░░██░███████ ░██ ░ ░██░░░██░░█████   ░██   ░██░██  ░██  ░██    ░██  
-# ░██  ░██░██░░░░  ░██   ░██  ░██ ░░░░░██  ░██   ░██░██  ░██  ░██    ░██  
-# ░██  ░██░░██████░███   ░██████  ██████   ░░██  ███░░██████  ░██    ░░██ 
-# ░░   ░░  ░░░░░░ ░░░    ░░░░░   ░░░░░░     ░░  ░░░  ░░░░░░   ░░      ░░  
+#
 #                     ██                      ██                      ██  
 #                    ░██                     ░██                     ░██  
 #  ██████   ██   ██ ██████  ██████   ██████ ██████  ██████   ██████ ██████
@@ -48,11 +40,14 @@ hc spawn nitrogen --restore
 hc spawn dunst
 hc spawn dropbox
 hc spawn nm-applet
+#hc spawn xfce4-panel
+
 
 hc keybind $Mod-Shift-q close
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c quit
 hc keybind $Mod-Alt-l spawn lock -gpf SourceCodePro
+hc keybind Alt-b spawn herbstpaneltoogle
 
 # start favorite termnal
 hc keybind $Mod-Return spawn termite
@@ -60,7 +55,6 @@ hc keybind $Mod-Shift-Return spawn urxvt
 
 # start rofi
 hc keybind $Mod-d spawn rofi -modi "run,window" -show run -lines 10 -eh 1.5  -width 100 -padding 450 -opacity "80" -font "SourceCodePro 12"
-
 
 # start some programs
 hc keybind $Mod-x spawn firefox
@@ -76,9 +70,9 @@ hc keybind $Mod-Alt-t spawn termite -e tmux
 
 
 # volume control
-hc keybind XF86AudioRaiseVolume spawn pulsemixer --id 2 --change-volume +5 
-hc keybind XF86AudioLowerVolume spawn pulsemixer --id 2 --change-volume -5 
-hc keybind XF86AudioMute        spawn pulsemixer --id 2 --toggle-mute 
+#hc keybind XF86AudioRaiseVolume spawn pulsemixer --id 2 --change-volume +5 
+#hc keybind XF86AudioLowerVolume spawn pulsemixer --id 2 --change-volume -5 
+#hc keybind XF86AudioMute        spawn pulsemixer --id 2 --toggle-mute 
 
 # basic movement
 # focusing clients
@@ -122,8 +116,8 @@ hc keybind $Mod-Control-Right   resize right +$resizestep
 # tags
 #tag_names=("  " "  " "  " "  " "  " "   " "   " "  " "  " "  " )
 #tag_names=("WEB" "TERM" "FILE" "MEDIA" "GIMP": "MISC" "CODE" "RRENT" "REDDIT" "CHAT")
-#tag_names=("I" "II" "III" "IV" "V" "VI" "VII" "VIII" "IX" "X")
-tag_names=( {1..9} 0 )
+tag_names=("I" "II" "III" "IV" "V" "VI" "VII" "VIII" "IX" "X")
+#tag_names=( {1..9} 0 )
 tag_keys=( {1..9} 0 )
 
 hc rename default "${tag_names[0]}" || true
@@ -138,9 +132,9 @@ done
 
 
 # start all windows in floating mode
-for attr in $(herbstclient complete 1 attr tags.by-name); do
-	    herbstclient attr "$attr.floating" true
-    done
+#for attr in $(herbstclient complete 1 attr tags.by-name); do
+#	    herbstclient attr "$attr.floating" true
+#    done
 
 
 # cycle through tags
@@ -177,33 +171,28 @@ hc keybind $Mod-Shift-u jumpto urgent
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
 hc set frame_border_active_color '#151515'
-#             ||
-# panel color \/
-hc set frame_border_normal_color '#151515'
-hc set frame_bg_normal_color '#252525'
-#hc set framme_bg_normal_color '#ffffff'
-#blank window frame thing
-#hc set frame_bg_active_color '#917154'
+             
+# panel color 
+
+hc set frame_bg_normal_color '#900900'
+hc set frame_border_normal_color '#111313'
+# blank window frame thing
 hc set frame_bg_active_color '#303030'
-hc set frame_border_width 1 
-hc set always_show_frame 0
+hc set frame_border_width 0 
+hc set always_show_frame 1
 hc set frame_bg_transparent 1 
 hc set frame_transparent_width 0
-hc set frame_gap -1 
+hc set frame_gap 1 
 
 #set selected 'window'and selected workspace through its attr
-#hc attr theme.active.color '#0fdbd9'
-#hc attr theme.active.color '#cd749c'
-#hc attr theme.active.color '#00C0C0'
-hc attr theme.active.color '#bbbbbb'
+hc attr theme.active.color '#5f8787'
 hc attr theme.normal.color  '#353535'
 hc attr theme.urgent.color '#ffffff'
 hc attr theme.inner_width 2 
 hc attr theme.outer_width 2
-#hc attr theme.inner_color '#202020'
 hc attr theme.inner_color '#252525'
 hc attr theme.border_width 6 
-hc attr theme.floating.border_width 6 
+hc attr theme.floating.border_width 8 
 hc attr theme.floating.outer_width 2
 hc attr theme.floating.inner_width  2 
 hc attr theme.floating.outer_color '#252525'
@@ -229,8 +218,8 @@ hc rule focus=on # normally focus new clients
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
-hc rule class~'termite --name nampcpp -e ncmpcpp' focus=on
-hc rule class=termite --name=termite -e ncmpcpp tag=
+hc rule class 'termite --name ncmpcpp -e ncmpcpp' focus=on
+hc rule instance=ncmpcpp tag=4 pseudotile=on  # move all ncmpcpp to tag 4
 # unlock, just to be sure
 hc unlock
 

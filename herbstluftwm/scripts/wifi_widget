@@ -1,0 +1,79 @@
+#!/bin/bash
+
+## Init
+# x and width don't matter yet
+x=$(xdotool getmouselocation | cut -d ' ' -f 1 | cut -d ':' -f 2  )
+y=28
+width=75
+height=24
+font="-*-fixed-medium-*-*-*-13-*-*-*-*-*-*-*"
+bgcolor='#333333'
+fgcolor='#efefef'
+# extract colors from color file
+colorfile="$HOME/.config/herbstluftwm/colors.txt"
+eins=$(sed '1q;d' "$colorfile")
+zwei=$(sed '2q;d' "$colorfile")
+drei=$(sed '3q;d'  "$colorfile")
+vier=$(sed '4q;d'  "$colorfile")
+fuenf=$(sed '5q;d'  "$colorfile")
+sechs=$(sed '6q;d'  "$colorfile")
+sieben=$(sed '7q;d'  "$colorfile")
+acht=$(sed '8q;d'  "$colorfile")
+
+function wlan() {
+	cmd=${1:-quality}
+
+	if [ "$cmd" = "quality" ]
+	then
+		grep wlan0 /proc/net/wireless \
+			| awk '{ print int($3 * 100 / 70) }'
+	elif [ "$cmd" = "network" ]
+	then
+		iw dev wlan0 link \
+			| grep SSID \
+			| cut -d " " -f 2-
+	fi
+}
+
+## Get Info
+quality=$(wlan quality)
+network=$(wlan network)
+
+if [ "$quality" -ge 80 ]
+then
+	color="#00ff00"
+elif [ "$quality" -ge 60 ]
+then
+	color="#3fbf00"
+elif [ "$quality" -ge 40 ]
+then
+	color="#7f7f00"
+elif [ "$quality" -ge 20 ]
+then
+	color="#bf3f00"
+else
+	color="#ff0000"
+fi
+
+
+## Output Widget
+line0="wifi"
+line1="strength: ^fg($color)$quality^fg()%"
+line2="network: $network"
+width1=$(( $(dzen2-textwidth "$font" "strength: $quality%") + 16 ))
+width2=$(( $(dzen2-textwidth "$font" "$line2") + 16 ))
+if [ $width1 -ge $width2 ]
+then
+	width=$width1
+else
+	width=$width2
+fi
+x=$(( $x - $width / 2 ))
+
+echo -e "$line0\n$line1\n$line2" \
+	| dzen2 -p 3 -l 2 -u \
+		-e "onstart=uncollapse;button2=exit:0" \
+		-x "$x" -y "$y" \
+		-w "$width" -h "$height" \
+		-fn "$font" \
+-bg "$bgcolor" -fg "$fgcolor"
