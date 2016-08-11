@@ -1,0 +1,22 @@
+pacman -Qqe    =  pkg.list
+pacman -Qqm    = pkg.aur-list
+
+
+alias pacrem='pacaur -Rns'
+alias pacrep='pacaur -Si'
+alias paceps='pacaur -Ss'
+alias pacloc='pacaur -Qi'
+alias pacloc='pacaur -Qs'
+alias paclst='pacaur -Qe'
+alias pacorph='pacaur -Qtd'
+alias pacupg='pacaur -Syu --devel --needed --noedit'
+alias pacin='pacaur -S'
+alias pacins='pacaur -U'
+alias pacre='pacaur -R'
+alias pacrem='pacaur -Rns'
+alias pacrep='pacaur -Si'
+alias pacreps='pacaur -Ss'
+alias pacloc='pacaur -Qi'
+alias paclocs='pacaur -Qs'
+alias paclstorphans='pacaur -Qdt'
+alias pacrmorphans='pacaur -Rns $(pacman -Qtdq)'
