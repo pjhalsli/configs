@@ -1,0 +1,32 @@
+# purple
+#[colors]
+# special
+#foreground      = #666666
+#foreground_bold = #666666
+#cursor          = #666666
+#background      = #222222
+# black
+#color0  = #222222
+#color8  = #373b41
+# red
+#color1  = #aa33ff
+#color9  = #bb44ee
+# green
+#color2  = #79378e
+#color10 = #a559be
+# yellow
+#color3  = #e90eb2
+#color11 = #ff0093
+# blue
+#color4  = #73299d
+#color12 = #9836cf
+# magenta
+#color5  = #a53acd
+#color13 = #9e21cd
+# cyan
+#color6  = #8a4a9f
+#color14 = #590070
+# white
+#color7  = #723780
+#color15 = #a53acd
+
