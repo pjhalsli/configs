@@ -1,0 +1,4 @@
+#!/bin/sh
+
+printf "$(mpc current --format "\%title%\ by %artist% \[%album%\]")"
+
