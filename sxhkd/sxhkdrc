@@ -17,20 +17,22 @@ super + Return
 
 # program launcher
 super + d
-#	dmenu_run
         rofi -modi "run,window" -show run -lines 10 -eh 1.5 -width 100 -padding 450 -opacity "80" -font "envypn 8"
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
 
+# lock screen
+super + alt + l 
+        lock -gpf SourceCodePro 
 
 #
 # bspwm hotkeys
 #
 
 # quit bspwm normally
-super + shift + c
+super + shift + x 
 	bspc quit
 
 # close and kill
