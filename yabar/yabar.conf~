@@ -12,7 +12,7 @@ topbar: {
     position: "top";
     height: 18;
 
-    background-color-argb: 0xff080808;
+    background-color-argb: 0xD0212121;
     background-color-nowindow-argb: 0xff888888;
     underline-size: 0;
     overline-size: 0;

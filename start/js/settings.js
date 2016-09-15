@@ -12,7 +12,7 @@ $(document).ready(function() {
 	// Enable/disable various search engines
 	google = true;
 	yahoo = false;
-	wikipedia = false;
+	wikipedia = true;
 	flickr = false;
 	deviantart = false;
 
