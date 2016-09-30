@@ -1,0 +1,45 @@
+
+# Gotham
+
+[colors]
+# special
+foreground      = #ffffff
+foreground_bold = #ffffff
+cursor          = #ffffff
+background      = #101218
+
+# black
+color0  = #101218
+color8  = #7780a1
+
+# red
+color1  = #ee829f
+color9  = #ee829f
+
+# green
+color2  = #a5ffe1
+color10 = #a5ffe1
+
+# yellow
+color3  = #ffefcc
+color11 = #ffefcc
+
+# blue
+color4  = #97bbf7
+color12 = #97bbf7
+
+# magenta
+color5  = #c0b7f9
+color13 = #c0b7f9
+
+# cyan
+color6  = #97e0ff
+color14 = #97e0ff
+
+# white
+color7  = #d1d4e0
+color15 = #ffffff
+
+
+
+
