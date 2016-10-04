@@ -12,7 +12,7 @@ topbar: {
     position: "top";
     height: 18;
 
-    background-color-argb: 0xD0212121;
+    background-color-argb: 0xff080808;
     background-color-nowindow-argb: 0xff888888;
     underline-size: 0;
     overline-size: 0;
@@ -59,9 +59,9 @@ topbar: {
 	fixed-size: 450;
 	type: "periodic";
 	interval: 1;
-	underline-color-rgb:0x5F005F;
+	underline-color-rgb:0x8FA1B3;
 	foreground-color-rgb:0x111313;
-        background-color-rgb:0x5F8787;
+        background-color-rgb:0x8FA1B3;
         variable-size: true
    }
 
@@ -78,7 +78,7 @@ battery: {
         type: "periodic";
         interval: 3;
 
-        background-color-rgb: 0x999999;
+        background-color-rgb: 0x769070;
         foreground-color-rgb: 0x111313;
 	underline-color-rgb: 0x33691E;
 
@@ -96,7 +96,7 @@ battery: {
         type: "periodic";
         interval: 2;
 
-        background-color-rgb: 0x5F8787;
+        background-color-rgb: 0x4F5B66;
         foreground-color-rgb: 0x111313;
 	underline-color-rgb: 0xEF6C00;
 
@@ -113,7 +113,7 @@ battery: {
         type: "periodic";
         interval: 1;
 
-        background-color-rgb: 0x666666;
+        background-color-rgb: 0x607A86:;
         foreground-color-rgb: 0x111313;
 	underline-color-rgb: 0xE65100;
 
@@ -132,7 +132,7 @@ battery: {
         type: "periodic";
         interval: 2;
 
-        background-color-rgb: 0x737373;
+        background-color-rgb: 0x80757E;
         foreground-color-rgb: 0x111313;
 	underline-color-rgb: 0x00838F;
 
@@ -149,7 +149,7 @@ battery: {
         type: "periodic";
         interval: 1;
 
-        background-color-rgb: 0xaaaaaa;
+        background-color-rgb: 0x60867f;
         foreground-color-rgb: 0x111313;
 	underline-color-rgb: 0x006064;
 

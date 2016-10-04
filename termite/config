@@ -20,60 +20,27 @@ dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
 #font = terminus 8 
-font= envypn 8 
-#font = PragmataPro Nerdfont 8
+#font= envypn 8 
+font = PragmataPro Nerdfont 8
 #font = SourceCodePro 8
 #font = dweep 8 
 scrollback_lines = 5000
 search_wrap = true
 cursor_blink = system
 cursor_shape = block
-browser = qutebrowser
+#browser = qutebrowser
+browser = google-chrome-unstable
 
 
 
-# F R A Y
-#[colors]
-# special
-#foreground      = #ffffff
-#foreground_bold = #ffffff
-#cursor          = #ffffff
-#background      = #151515
-#background       =rgba(21, 21, 21,  0.94)
-# black
-#color0  = #151515
-#color8  = #777777
-# red
-#color1  = #f8f8f8
-#color9  = #f8f8f8
-# green
-#color2  = #aadb0f
-#color10 = #aadb0f
-# yellow
-#color3  = #aadb0f
-#color11 = #f7f7f7
-# blue
-#color4  = #aadb0f
-#color12 = #aadb0f
-# magenta
-#color5  = #91ba0d
-#color13 = #91ba0d
-# cyan
-#color6  = #BEF624 
-#color14 = #e2e2e2
-# white
-#color7  = #D7FF54
-#color15 = #ffffff
 
-
-
-# vc2
+# VC2 
 #[colors]
 # special
 #foreground      = #6d6b6e
 #foreground_bold = #6d6b6e
 #cursor          = #6d6b6e
-#background      = #222222
+#background      = #101218
 # black
 #color0  = #777777
 #color8  = #353535
@@ -102,81 +69,78 @@ browser = qutebrowser
 
 
 
-# tudurom solar
-#[colors]
-# special
-#foreground      = #67828d
-#foreground_bold = #67828d
-#cursor          = #67828d
-#background      = #00222b
-#background      =rgba(0, 34, 43,  0.94) 
-# black
-#color0  = #00222b
-#color8  = #003b4f
-# red
-#color1  = #85a5b3
-#color9  = #85a5b3
-# green
-#color2  = #25485d
-#color10 = #25485d
-# yellow
-#color3  = #0f3341
-#color11 = #0f3341
-# blue
-#color4  = #5c8298
-#color12 = #5c8298
-# magenta
-#color5  = #044655
-#color13 = #044655
-# cyan
-#color6  = #3d637d
-#color14 = #3d637d
-# white
-#color7  = #b0b9b8
-#color15 = #b0b9b8
 
 
 
-
-
-# blaque magick
 [colors]
 # special
-foreground      = #4c4c4c
-foreground_bold = #c2c2b0
-cursor          = #c2c2b0
-#background      = #121212
-background      =rgba(18, 18, 18,  0.90)
+foreground      = #bbbbbb
+foreground_bold = #bbbbbb
+cursor          = #bbbbbb
+#background     = #101218
+background      =rgba(16, 18, 24,  0.83)
 # black
-color0  = #151515
-color8  = #121212
+color0  = #2b3135
+#color0  = #101218 
+color8  = #4c5356
 # red
-color1  = #5f8787
-color9  = #5f8787
+color1  = #8fa1b3
+color9  = #8fa1b3
 # green
-color2  = #5f8787
-color10 = #444444
+color2  = #769070
+color10 = #769070
 # yellow
-color3  = #666666
-color11 = #666666
+color3  = #4f5b66
+color11 = #4f5b66
 # blue
-color4  = #888888
-color12 = #888888
+color4  = #607a86
+color12 = #607a86
 # magenta
-color5  = #999999
-color13 = #999999
+color5  = #80757e
+color13 = #80757e
 # cyan
-color6  = #aaaaaa
-color14 = #aaaaaa
+color6  = #60867f
+color14 = #60867f
 # white
-color7  = #737373
-color15 = #737373
+color7  = #deded6
+color15 = #deded6
 
 
 
 
 
+[colors]
+# Base16 IR Black
+# Scheme: Timothée Poisot (http://timotheepoisot.fr)
 
+foreground      = #b5b3aa
+foreground_bold = #b5b3aa
+cursor          = #b5b3aa
+background      = #000000
 
+# 16 color space
+color0  = #000000
+color1  = #ff6c60
+color2  = #a8ff60
+color3  = #ffffb6
+color4  = #96cbfe
+color5  = #ff73fd
+color6  = #c6c5fe
+color7  = #b5b3aa
+color8  = #6c6c66
+color9  = #ff6c60
+color10 = #a8ff60
+color11 = #ffffb6
+color12 = #96cbfe
+color13 = #ff73fd
+color14 = #c6c5fe
+color15 = #fdfbee
 
+# 256 color space
+color16 = #e9c062
+color17 = #b18a3d
+color18 = #242422
+color19 = #484844
+color20 = #918f88
+color21 = #d9d7cc
 
