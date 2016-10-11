@@ -32,115 +32,34 @@ cursor_shape = block
 browser = google-chrome-unstable
 
 
-
-
-# VC2 
+# nitevision  (yes I know it's spelled wrong)
 #[colors]
 # special
-#foreground      = #6d6b6e
-#foreground_bold = #6d6b6e
-#cursor          = #6d6b6e
+#foreground      = #3f3f3f
+#foreground_bold = #3f3f3f
+#cursor          = #3f3f3f
 #background      = #101218
 # black
-#color0  = #777777
-#color8  = #353535
+#color0  = #101218
+#color8  = #222020
 # red
-#color1  = #4a4b4c
-#color9  = #4a4b4c
-# ggreen
-#color2  = #4a4b4c
-#color10 = #3a3b3c
-# yellow
-#color3  = #a2a2a5
-#color11 = #4a4b4c
-# blue
-#color4  = #5d5b5e
-#color12 = #4a4b4c
-# magenta
-#color5  = #4a4b4c
-#color13 = #3a3b3c
-# cyan
-#color6  = #6d6b6f
-#color14 = #4a4b4c
-# white
-#color7  = #4a4b4c
-#color15 = #4a4b4c
-
-
-
-
-
-
-
-[colors]
-# special
-foreground      = #bbbbbb
-foreground_bold = #bbbbbb
-cursor          = #bbbbbb
-#background     = #101218
-background      =rgba(16, 18, 24,  0.83)
-# black
-color0  = #2b3135
-#color0  = #101218 
-color8  = #4c5356
-# red
-color1  = #8fa1b3
-color9  = #8fa1b3
+#color1  = #f44444
+#color9  = #492929
 # green
-color2  = #769070
-color10 = #769070
+#color2  = #f44444
+#color10 = #424338
 # yellow
-color3  = #4f5b66
-color11 = #4f5b66
+#color3  = #483b32
+#color11 = #483b32
 # blue
-color4  = #607a86
-color12 = #607a86
+#color4  = #606060
+#color12 = #f44444
 # magenta
-color5  = #80757e
-color13 = #80757e
+#color5  = #3c353e
+#color13 = #3c353e
 # cyan
-color6  = #60867f
-color14 = #60867f
+#color6  = #3c4242
+#color14 = #3c4242
 # white
-color7  = #deded6
-color15 = #deded6
-
-
-
-
-
-[colors]
-# Base16 IR Black
-# Scheme: Timothée Poisot (http://timotheepoisot.fr)
-
-foreground      = #b5b3aa
-foreground_bold = #b5b3aa
-cursor          = #b5b3aa
-background      = #000000
-
-# 16 color space
-color0  = #000000
-color1  = #ff6c60
-color2  = #a8ff60
-color3  = #ffffb6
-color4  = #96cbfe
-color5  = #ff73fd
-color6  = #c6c5fe
-color7  = #b5b3aa
-color8  = #6c6c66
-color9  = #ff6c60
-color10 = #a8ff60
-color11 = #ffffb6
-color12 = #96cbfe
-color13 = #ff73fd
-color14 = #c6c5fe
-color15 = #fdfbee
-
-# 256 color space
-color16 = #e9c062
-color17 = #b18a3d
-color18 = #242422
-color19 = #484844
-color20 = #918f88
-color21 = #d9d7cc
-
+#color7  = #383a3b
+#color15 = #383a3b

@@ -1,0 +1,32 @@
+# # brown-ish
+#[colors]
+# special
+# foreground      = #8e8b86
+# foreground_bold = #8e8b86
+# cursor          = #8e8b86
+# background      = #323639
+# # black
+# color0  = #202426
+# color8  = #323639
+# # red
+# color1  = #555a5e
+# color9  = #748080
+# # green
+# color2  = #64605d
+# color10 = #7a7677
+# # yellow
+# color3  = #6a5456
+# color11 = #a38583
+# # blue
+# color4  = #2e313a
+# color12 = #9e7549
+# # magenta
+# color5  = #494546
+# color13 = #55585d
+# # cyan
+# color6  = #46495c
+# color14 = #676c7f
+# # white
+# color7  = #583a38
+# color15 = #845948
+

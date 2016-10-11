@@ -1,0 +1,32 @@
+
+# wombat
+#[colors]
+# special
+#foreground      = #f6f3e8
+#foreground_bold = #f6f3e8
+#cursor          = #f6f3e8
+#background      = #101218
+# black
+#color0  = #111111
+#color8  = #999999
+# red
+#color1  = #e5786d
+#color9  = #ff1212
+# green
+#color2  = #5c90d3
+#color10 = #4a9be0
+# yellow
+#color3  = #6db3a0
+#color11 = #359fee
+# blue
+#color4  = #5e6a7b
+#color12 = #e98bee
+# magenta
+#color5  = #7e8ea3
+#color13 = #5dce49
+# cyan
+#color6  = #8dadd9
+#color14 = #48ea57
+# white
+#color7  = #5c616c
+#color15 = #ce59bc
