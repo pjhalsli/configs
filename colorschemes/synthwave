@@ -1,34 +1,33 @@
-#define bg    [97]#312e39
-#define blk   #33303b
-#define fg    #c0a79a
-#define bblk  #4f4b58
-#define red   #87404f
-#define grn   #4c9882
-#define ylw   #71949a
-#define blu   #615772
-#define mag   #783e57
-#define cyn   #554757
-#define wht   #c0a79a
 
-
-! Colors
-*background:   bg
-*foreground:   fg
-*cursorColor:  cyn
-
-*color0:      blk
-*color8:      bblk
-*color1:      red
-*color9:      red
-*color2:      grn
-*color10:     grn
-*color3:      ylw
-*color11:     ylw
-*color4:      blu
-*color12:     blu
-*color5:      mag
-*color13:     mag
-*color6:      cyn
-*color14:     cyn
-*color7:      wht
-*color15:     wht
+# synthwave
+#[colors]
+# special
+#foreground      = #c0a79a
+#foreground_bold = #c0a79a
+#cursor          = #c0a79a
+#background      = #312e39
+#background      = rgba(49, 46, 57,   0.96)
+# black
+#color0  = #33303b
+#color8  = #4f4b58
+# red
+#color1  = #87404f
+#color9  = #87404f
+# green
+#color2  = #4c9882
+#color10 = #4c9882
+# yellow
+#color3  = #71949a
+#color11 = #71949a
+# blue
+#color4  = #615772
+#color12 = #615772
+# magenta
+#color5  = #783e57
+#color13 = #783e57
+# cyan
+#color6  = #554757
+#color14 = #554757
+# white
+#color7  = #c0a79a
+#color15 = #c0a79a
