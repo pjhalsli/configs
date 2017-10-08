@@ -1,0 +1,215 @@
+; mintyleaf polybar config
+
+[colors]
+background = #101010
+background-alt = #444
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #ffffff
+secondary = #323232
+alert = #900900
+
+[bar/def]
+width = 100%
+height = 23
+fixed-center = true
+override-redirect = true
+wm-restack = bspwm
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = #f00
+
+border-size = 4
+border-top-size = 2
+border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin = 0
+
+font-0 = ypn envypnd:pixelsize=7;1
+font-1 = FontAwesome:pixelsize=9;2
+font-2 = siji:pixelsize=10;2
+
+modules-left = bspwm xwindow
+modules-center = mpd
+modules-right = volume xkeyboard memory cpu date
+;modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
+; icons   
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:50:...%
+label-padding = 3
+
+[module/xkeyboard]
+type = internal/xkeyboard
+
+blacklist-0 = num lock
+blacklist-1 = scroll lock
+;blacklist-2 = caps lock
+
+format-prefix = "  "
+label-layout = %layout%
+format-background = #303030
+format-padding = 3
+
+[module/bspwm]
+type = internal/bspwm
+
+ws-icon-0 = browser;
+ws-icon-1 = mpd;
+ws-icon-2 = term;
+ws-icon-3 = code;
+ws-icon-4 = files;
+ws-icon-5 = chat;
+ws-icon-6 = reddit;
+ws-icon-7 = photo;
+ws-icon-8 = torrent;
+ws-icon-default =  
+
+label-focused = %icon%
+label-focused-background = #85FCC0
+label-focused-padding = 3
+
+label-occupied-background = #353535
+label-occupied = %icon%
+label-occupied-padding = 3
+
+label-urgent = %icon%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 3
+
+label-empty = %icon% 
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 3
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+label-mode-padding = 0
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-background = ${module/bspwm.label-focused-background}
+label-focused-underline = ${module/bspwm.label-focused-underline}
+label-focused-padding = ${module/bspwm.label-focused-padding}
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${module/bspwm.label-urgent-background}
+label-urgent-padding = ${module/bspwm.label-urgent-padding}
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song>   <label-time>
+format-stopped = 0:00/0:00
+;label-song-padding = 3
+
+bar-progress-width = 25
+bar-progress-indicator = 
+bar-progress-indicator-font = 2
+bar-progress-fill = ─
+bar-progress-fill-font = 2
+bar-progress-empty = ─
+bar-progress-empty-font = 2
+bar-progress-empty-foreground = ${colors.foreground-alt}
+
+icon-prev =  
+icon-stop =  
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song = %artist% - %title% 
+label-song-maxlen = 70 
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =  %d.%m
+
+time = %H:%M
+
+label-background = #454545
+label-padding = 3
+label =   %date%  %time% 
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume>   <label-volume>
+label-muted-foreground = ${colors.foreground}
+label-volume-foreground = ${colors.foreground}
+format-volume-background = #252525
+format-volume-padding = 3
+format-muted-padding = 3
+format-muted-background = #800080
+
+;format-muted-prefix = "──── %{F-}x "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = " x"
+
+
+ramp-volume-0 =
+ramp-volume-1 =
+ramp-volume-2 =
+ramp-volume-3 =
+
+bar-volume-width = 11
+bar-volume-foreground-0 = #dfdfdf
+bar-volume-gradient = false
+bar-volume-indicator = 
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-background = #404040
+label-background = #404040
+label-padding = 3
+label = %percentage%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = ""  
+format-prefix-background = #353535
+label-background = #353535
+label-padding = 3
+label = %percentage_used%%
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
