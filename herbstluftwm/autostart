@@ -27,7 +27,7 @@ hc keyunbind --all
 
 
 # close tray if reloading
-killall stalonetray
+#killall stalonetray
 
 # keybindings
 # if you have a super key you will be much happier with Mod set to Mod4

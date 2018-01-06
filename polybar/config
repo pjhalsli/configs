@@ -1,215 +1,271 @@
-; mintyleaf polybar config
+;---------------------------------------
+;		COLORS
+;---------------------------------------
 
 [colors]
-background = #101010
-background-alt = #444
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffffff
-secondary = #323232
-alert = #900900
+nord0 = #2E3440
+nord1 = #3B4252
+nord2 = #434C5E
+nord3 = #4C566A
+nord4 = #D8DEE9
+nord5 = #E5E9F0
+nord6 = #ECEFF4
+nord7 = #8FBCBB
+nord8 = #88C0D0
+nord9 = #81A1C1
+nord10 = #5E81AC
+nord11 = #BF616A
+nord12 = #D08770
+nord13 = #EBCB8B
+nord14 = #A3BE8C
+nord15 = #B48EAD
 
-[bar/def]
+;---------------------------------------
+;		GLOBAL
+;---------------------------------------
+
+[bar/nord]
 width = 100%
-height = 23
-fixed-center = true
-override-redirect = true
-wm-restack = bspwm
+height = 16
+top = true
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+;offset-x = 1%
+;offset-y = 1%
 
-line-size = 0
-line-color = #f00
+radius = 6.0
+fixed-center = false
+line-size = 1
 
-border-size = 4
-border-top-size = 2
-border-color = #00000000
+border-size = 2
+border-color = ${colors.nord10}
 
-padding-left = 0
-padding-right = 0
+background = ${colors.nord3}
+foreground = ${colors.nord5}
 
-module-margin = 0
 
-font-0 = ypn envypnd:pixelsize=7;1
-font-1 = FontAwesome:pixelsize=9;2
-font-2 = siji:pixelsize=10;2
+;---------------------------------------
+;		FONTS
+;---------------------------------------
 
-modules-left = bspwm xwindow
+;font-0 = Hack:size=10;3
+;font-1 = FontAwesome:size=10;3
+font-1 = FontAwesome:pixelsize 8;1
+font-0 = ypn envypn:pixelsize 7;1
+font-2 = Wuncon Siji:pixelsize=8;1
+;---------------------------------------
+;	     MODULES LAYOUT
+;---------------------------------------
+
+modules-left = bspwm RightArrow1 xwindow RightArrow2
 modules-center = mpd
-modules-right = volume xkeyboard memory cpu date
-;modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
-; icons   
-scroll-up = bspwm-desknext
-scroll-down = bspwm-deskprev
+modules-right = date LeftArrow volume xbacklight battery
 
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:50:...%
-label-padding = 3
-
-[module/xkeyboard]
-type = internal/xkeyboard
-
-blacklist-0 = num lock
-blacklist-1 = scroll lock
-;blacklist-2 = caps lock
-
-format-prefix = "  "
-label-layout = %layout%
-format-background = #303030
-format-padding = 3
+;---------------------------------------
+;	      BSPWM MODULE
+;---------------------------------------
 
 [module/bspwm]
 type = internal/bspwm
 
-ws-icon-0 = browser;
-ws-icon-1 = mpd;
-ws-icon-2 = term;
-ws-icon-3 = code;
-ws-icon-4 = files;
-ws-icon-5 = chat;
-ws-icon-6 = reddit;
-ws-icon-7 = photo;
-ws-icon-8 = torrent;
-ws-icon-default =  
+format = <label-state>
 
-label-focused = %icon%
-label-focused-background = #85FCC0
-label-focused-padding = 3
+label-focused-occupied = 
+label-focused-occupied-foreground = ${colors.nord6}
+label-focused-occupied-background = ${colors.nord8}
+label-focused-occupied-padding = 1
 
-label-occupied-background = #353535
-label-occupied = %icon%
-label-occupied-padding = 3
+label-focused-urgent = 
+label-focused-urgent-foreground = ${colors.nord6}
+label-focused-urgent-background = ${colors.nord8}
+label-focused-urgent-padding = 1
 
-label-urgent = %icon%
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 3
+label-focused-empty = 
+label-focused-empty-foreground = ${colors.nord6}
+label-focused-empty-background = ${colors.nord8}
+label-focused-empty-padding = 1
 
-label-empty = %icon% 
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 3
+label-occupied = 
+label-occupied-foreground = ${colors.nord1}
+label-occupied-background = ${colors.nord8}
+label-occupied-padding = 1
 
-[module/i3]
-type = internal/i3
-format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
+label-urgent = 
+label-urgent-foreground = ${colors.nord13}
+label-urgent-background = ${colors.nord8}
+label-urgent-padding = 1
 
-label-mode-padding = 0
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-empty = 
+label-empty-foreground = ${colors.nord1}
+label-empty-background = ${colors.nord8}
+label-empty-padding = 1
 
-; focused = Active workspace on focused monitor
-label-focused = %index%
-label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-padding = ${module/bspwm.label-focused-padding}
+;---------------------------------------
+;	      TEXT MODULES
+;---------------------------------------
 
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
-label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+[module/RightArrow1]
+type = custom/text
+content = " "
+content-foreground = ${colors.nord8}
+content-background = ${colors.nord1}
 
-; visible = Active workspace on unfocused monitor
-label-visible = %index%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
+[module/RightArrow2]
+type = custom/text
+content = ""
+content-foreground = ${colors.nord1}
+content-background = ${colors.nord3}
 
-; urgent = Workspace with urgency hint set
-label-urgent = %index%
-label-urgent-background = ${module/bspwm.label-urgent-background}
-label-urgent-padding = ${module/bspwm.label-urgent-padding}
+[module/LeftArrow]
+type = custom/text
+content = ""
+content-foreground = ${colors.nord1}
+content-background = ${colors.nord3}
 
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>   <label-time>
-format-stopped = 0:00/0:00
-;label-song-padding = 3
+;---------------------------------------
+;	   XWINDOW MODULE
+;---------------------------------------
 
-bar-progress-width = 25
-bar-progress-indicator = 
-bar-progress-indicator-font = 2
-bar-progress-fill = ─
-bar-progress-fill-font = 2
-bar-progress-empty = ─
-bar-progress-empty-font = 2
-bar-progress-empty-foreground = ${colors.foreground-alt}
+[module/xwindow]
+type = internal/xwindow
 
-icon-prev =  
-icon-stop =  
-icon-play = 
-icon-pause = 
-icon-next = 
+format-foreground = ${colors.nord5}
+format-background = ${colors.nord1}
+format-padding = 1
 
-label-song = %artist% - %title% 
-label-song-maxlen = 70 
+label =  %title%
+label-maxlen = 30
+
+;---------------------------------------
+;	   XBACKLIGHT MODULE
+;---------------------------------------
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label>
+format-foreground = ${colors.nord5}
+format-background = ${colors.nord1}
+
+label = " %percentage%"
+
+;---------------------------------------
+;	   DATE MODULE
+;---------------------------------------
 
 [module/date]
 type = internal/date
-interval = 5
 
-date =  %d.%m
+interval = 60
+
+date = %a %d
 
 time = %H:%M
 
-label-background = #454545
-label-padding = 3
-label =   %date%  %time% 
+label =   %date%   %time%
+
+format-foreground = ${colors.nord5}
+format-background = ${colors.nord3}
+format-padding = 1
+
+;---------------------------------------
+;	   VOLUME MODULE
+;---------------------------------------
 
 [module/volume]
 type = internal/volume
 
-format-volume = <ramp-volume>   <label-volume>
-label-muted-foreground = ${colors.foreground}
-label-volume-foreground = ${colors.foreground}
-format-volume-background = #252525
-format-volume-padding = 3
-format-muted-padding = 3
-format-muted-background = #800080
+master-soundcard = hw:1
+speaker-soundcard = hw:1
+headphone-soundcard = hw:1
+mapped = true
 
-;format-muted-prefix = "──── %{F-}x "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = " x"
+format-volume = <ramp-volume><label-volume>
+format-volume-foreground = ${colors.nord5}
+format-volume-background = ${colors.nord1}
+
+label-volume = "%percentage% "
+label-volume-foreground = ${colors.nord5}
+label-volume-background = ${colors.nord1}
+label-muted = "  muted "
+label-muted-foreground = ${colors.nord5}
+label-muted-background = ${colors.nord1}
+
+ramp-volume-0 = "  "
+ramp-volume-0-foreground = ${colors.nord5}
+ramp-volume-0-background = ${colors.nord1}
+ramp-volume-1 = "  "
+ramp-volume-1-foreground = ${colors.nord5}
+ramp-volume-1-background = ${colors.nord1}
+ramp-volume-2 = "  "
+ramp-volume-2-foreground = ${colors.nord5}
+ramp-volume-2-background = ${colors.nord1}
+ramp-volume-3 = "  "
+ramp-volume-3-foreground = ${colors.nord5}
+ramp-volume-3-background = ${colors.nord1}
+
+;---------------------------------------
+;	   BATTERY MODULE
+;---------------------------------------
+
+[module/battery]
+type = internal/battery
+
+battery = BAT0
+adapter = AC
+
+full-at = 98
+
+format-charging = <label-charging>
+format-charging-foreground = ${colors.nord5}
+format-charging-background = ${colors.nord1}
+
+format-full = <label-full>
+format-full-foreground = ${colors.nord5}
+format-full-background = ${colors.nord1}
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-foreground = ${colors.nord5}
+format-discharging-background = ${colors.nord1}
+
+label-charging = "  %percentage% "
+label-discharging = "%percentage% "
+label-discharging-foreground = ${colors.nord5}
+label-full = "  %percentage% "
+
+ramp-capacity-0 = " "
+ramp-capacity-0-foreground = ${colors.nord11}
+ramp-capacity-1 = " "
+ramp-capacity-1-foreground = ${colors.nord11}
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
 
 
-ramp-volume-0 =
-ramp-volume-1 =
-ramp-volume-2 =
-ramp-volume-3 =
 
-bar-volume-width = 11
-bar-volume-foreground-0 = #dfdfdf
-bar-volume-gradient = false
-bar-volume-indicator = 
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+;---------------------------------------
+;	   NCMPCPP
+;---------------------------------------
 
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = " "
-format-prefix-background = #404040
-label-background = #404040
-label-padding = 3
-label = %percentage%%
+[module/mpd]
+type = internal/mpd
+format-online = <label-song>   <label-time>
+<icon-prev> <icon-stop> <toggle> <icon-next>
+format-stoppped:0:00/0:00
+label-foreground = ${colors.nord5}
+label-background = ${colors.nord1}
 
-[module/memory]
-type = internal/memory
-interval = 2
-format-prefix = ""  
-format-prefix-background = #353535
-label-background = #353535
-label-padding = 3
-label = %percentage_used%%
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
 
-[settings]
-screenchange-reload = true
+label-song-maxlen = 50
+label-song-ellipsis = true
+
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 1
+margin-bottom = 1
+
+; vim:ft=dosini
