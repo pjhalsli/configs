@@ -1,0 +1,141 @@
+# Mythos, created by urukrama (09-2008, updated 01-2015)
+
+# Window geometry
+padding.width: 2
+padding.height: 1
+window.client.padding.width: 1
+window.client.padding.height: 1
+window.handle.width: 0
+
+border.width: 1
+osd.border.width: 1
+menu.border.width: 1
+
+menu.separator.width: 1
+menu.separator.padding.width: 6
+menu.separator.padding.height: 2
+
+menu.overlap.x: -4
+menu.overlap.y: 0
+
+# Border colors
+window.active.border.color: #18191A
+window.inactive.border.color: #18191A
+
+window.active.title.separator.color:  #08090a
+window.inactive.title.separator.color: #08090a
+
+window.active.client.color: #08090a
+window.inactive.client.color: #08090a
+
+osd.border.color: #08090a
+menu.border.color: #08090a
+
+
+# Text shadows
+window.active.label.text.font: shadow=n
+window.inactive.label.text.font: shadow=n
+menu.items.font: shadow=n
+menu.title.text.font: shadow=n
+
+# Title justification
+window.label.text.justify: center
+menu.title.text.justify: center
+
+# Menus
+menu.title.bg: flat solid
+menu.title.bg.color: #08090a
+menu.title.bg.text.color: #08090a
+
+menu.items.bg: flat solid
+menu.items.bg.color: #08090a
+menu.items.text.color: #4b5261
+menu.items.disabled.text.color: #242831
+
+menu.items.active.bg: flat solid
+menu.items.active.bg.color: #08090a
+menu.items.active.text.color: #8b99b5
+menu.items.active.disabled.text.color: #242831
+
+menu.separator.color: #1A222A
+
+# Active window
+window.active.title.bg: flat solid
+window.active.title.bg.color: #08090a
+
+window.active.label.bg: Parentrelative
+window.active.label.text.color: #8b99b5
+
+window.active.handle.bg: Flat solid
+window.active.handle.bg.color: #08090a
+
+window.active.grip.bg: Flat solid
+window.active.grip.bg.color: #08090a
+
+window.active.button.unpressed.bg: Parentrelative
+window.active.button.unpressed.image.color: #4b5261
+
+window.active.button.pressed.bg: parentrelative
+window.active.button.pressed.image.color: #E6EAF0
+
+window.active.button.disabled.bg: Parentrelative
+window.active.button.disabled.image.color: #08090a
+
+window.active.button.toggled.unpressed.bg: Parentrelative
+window.active.button.toggled.unpressed.image.color: #4b5261
+
+window.active.button.toggled.pressed.bg: parentrelative
+window.active.button.toggled.pressed.image.color: #E6EAF0
+
+window.active.button.toggled.hover.bg: parentrelative
+window.active.button.toggled.hover.image.color: #8b99b5
+
+window.active.button.hover.bg: parentrelative
+window.active.button.hover.image.color: #8b99b5
+
+# Inactive windows
+window.inactive.title.bg: flat solid
+window.inactive.title.bg.color: #08090a
+
+window.inactive.label.bg: Parentrelative
+window.inactive.label.text.color: #08090a
+
+window.inactive.handle.bg: Flat solid
+window.inactive.handle.bg.color: #08090a
+
+window.inactive.grip.bg: Flat solid	
+window.inactive.grip.bg.color: #08090a
+
+window.inactive.button.unpressed.bg: Parentrelative
+window.inactive.button.unpressed.image.color: #08090a
+
+window.inactive.button.pressed.bg: parentrelative
+window.inactive.button.pressed.image.color: #08090a
+
+window.inactive.button.disabled.bg: Parentrelative
+window.inactive.button.disabled.image.color: #08090a
+
+window.inactive.button.toggled.unpressed.bg: Parentrelative
+window.inactive.button.toggled.unpressed.image.color: #08090a
+
+window.inactive.button.toggled.pressed.bg: parentrelative
+window.inactive.button.toggled.pressed.image.color: #08090a
+
+window.inactive.button.toggled.hover.bg: parentrelative
+window.inactive.button.toggled.hover.image.color: #8b99b5
+
+window.inactive.button.hover.bg: parentrelative
+window.inactive.button.hover.image.color: #8b99b5
+
+#OSD
+osd.bg: flat solid
+osd.bg.color:  #08090a
+
+osd.label.bg: parentrelative
+osd.label.text.color: #8b99b5
+
+osd.hilight.bg: flat solid
+osd.hilight.bg.color: #8b99b5
+
+osd.unhilight.bg: flat solid
+osd.unhilight.bg.color: #4b5261

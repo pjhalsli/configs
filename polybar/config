@@ -1,17 +1,27 @@
-; mintyleaf polybar config
+; minty polybar config
 
 [colors]
-background = #101010
+background = #08090A
 background-alt = #444
-foreground = #dfdfdf
+foreground = #b3bac7
 foreground-alt = #555
 primary = #ffffff
 secondary = #323232
 alert = #900900
 
+;background = #0F3341
+;background-alt = #044655
+;foreground = #ffffff
+;foreground-alt = #dddddd
+;primary = #ffffff
+;secondary = #323232
+;alert = #900900
+
+
+
 [bar/def]
 width = 100%
-height = 23
+height = 25
 fixed-center = true
 override-redirect = true
 wm-restack = bspwm
@@ -22,18 +32,18 @@ foreground = ${colors.foreground}
 line-size = 0
 line-color = #f00
 
-border-size = 4
-border-top-size = 2
-border-color = #00000000
+border-size = 2 
+border-top-size = 1
+border-color = #0A0713
 
 padding-left = 0
 padding-right = 0
 
 module-margin = 0
 
-font-0 = ypn envypn:pixelsize=7;1
-font-1 = FontAwesome:pixelsize=8;1
-font-2 = Wuncon Siji:pixelsize=8;1
+font-0 = envypn:pixelsize= 9;1
+font-1 = FontAwesome:pixelsize=9;1
+font-2 = Wuncon Siji:pixelsize=9;1
 
 modules-left = bspwm xwindow
 modules-center = mpd
@@ -57,38 +67,40 @@ blacklist-1 = scroll lock
 
 format-prefix = "  "
 label-layout = %layout%
-format-background = #303030
-format-padding = 3
+format-background = #202020
+format-padding = 2
 
 [module/bspwm]
 type = internal/bspwm
 
-ws-icon-0 = browser;
-ws-icon-1 = mpd;
-ws-icon-2 = term;
-ws-icon-3 = code;
-ws-icon-4 = files;
-ws-icon-5 = chat;
-ws-icon-6 = reddit;
-ws-icon-7 = photo;
-ws-icon-8 = torrent;
-ws-icon-default =  
+ws-icon-0 = I;
+ws-icon-1 = IV;
+ws-icon-2 = II;
+ws-icon-3 = V;
+ws-icon-4 = III;
+ws-icon-5 = VI; 
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
+ws-icon-8 = IX; 
+ws-icon-9 = X; 
+
 
 label-focused = %icon%
-label-focused-background = #85FCC0
-label-focused-padding = 3
+label-focused-background = #4b555e
+label-focused-padding = 2
+label-focused-foreground = #000000
 
-label-occupied-background = #353535
+label-occupied-background = #151515
 label-occupied = %icon%
-label-occupied-padding = 3
+label-occupied-padding = 2
 
 label-urgent = %icon%
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 3
+label-urgent-padding = 2
 
 label-empty = %icon% 
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 3
+label-empty-padding = 2
 
 [module/i3]
 type = internal/i3
@@ -125,7 +137,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 type = internal/mpd
 format-online = <label-song>   <label-time>
 format-stopped = 0:00/0:00
-;label-song-padding = 3
+;label-song-padding = 2
 
 bar-progress-width = 25
 bar-progress-indicator = 
@@ -149,13 +161,13 @@ label-song-maxlen = 70
 type = internal/date
 interval = 5
 
-date =  %d.%m
-
-time = %H:%M
-
-label-background = #454545
-label-padding = 3
-label =   %date%  %time% 
+date =
+date-alt = %a %d.%m
+time =%H:%M
+time-alt =
+label-background = #151515
+label-padding = 2 
+label =  %date% %time% 
 
 [module/volume]
 type = internal/volume
@@ -163,9 +175,9 @@ type = internal/volume
 format-volume = <ramp-volume>   <label-volume>
 label-muted-foreground = ${colors.foreground}
 label-volume-foreground = ${colors.foreground}
-format-volume-background = #252525
-format-volume-padding = 3
-format-muted-padding = 3
+format-volume-background = #151515
+format-volume-padding = 2
+format-muted-padding = 2
 format-muted-background = #800080
 
 ;format-muted-prefix = "──── %{F-}x "
@@ -192,20 +204,20 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-background = #404040
-label-background = #404040
-label-padding = 3
+format-prefix = "  "
+format-prefix-background = #202020
+label-background = #202020
+label-padding = 2
 label = %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = ""  
-format-prefix-background = #353535
-label-background = #353535
-label-padding = 3
-label = %percentage_used%%
+format-prefix = "  "  
+format-prefix-background = #252525
+label-background = #252525
+label-padding = 2
+label =  %percentage_used%%
 
 [settings]
 screenchange-reload = true
