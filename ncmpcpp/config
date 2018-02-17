@@ -18,7 +18,7 @@ ncmpcpp_directory = ~/.ncmpcpp
 ## MPD clients (eg. ncmpc) also use that location.
 ##
 #
-lyrics_directory = ~/.lyrics
+#lyrics_directory = ~/.lyrics
 #
 ##### connection settings #####
 #
@@ -30,9 +30,9 @@ mpd_connection_timeout = 5
 #
 ## Needed for tag editor and file operations to work.
 ##
-mpd_music_dir = "/home/penguin/Musikk" 
+mpd_music_dir = "~/Musikk" 
 #
-#mpd_crossfade_time = 5
+mpd_crossfade_time = "3"
 #
 ##### music visualizer #####
 ##
@@ -80,11 +80,11 @@ mpd_music_dir = "/home/penguin/Musikk"
 #
 ## Available values: spectrum, wave, wave_filled, ellipse.
 ##
-#visualizer_type = wave
+#visualizer_type = spectrum
 #
 #visualizer_look = ●▮
 #
-#visualizer_color = blue, cyan, green, yellow, magenta, red
+visualizer_color = blue, cyan, green, yellow, magenta, red
 #
 ## Alternative subset of 256 colors for terminals that support it.
 ##
@@ -183,9 +183,11 @@ mpd_music_dir = "/home/penguin/Musikk"
 ##
 #
 #song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
-song_list_format = " $5%a $2•  $8%t"
+#song_list_format = " $5%a $2•  $8%t"
+song_list_format = " $0%n $1• $8%t $R$0%A "
 #song_status_format = {{%a{ "%b"{ (%y)}} - }{%t}}|{%f}
-song_status_format = " $6%a  $7%t  $5%b "
+#song_status_format = " $6%a  $7%t  $5%b "
+song_status_format = " $3%t $0 "
 #song_library_format = {%n - }{%t}|{%f}
 #
 #alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
@@ -201,7 +203,8 @@ song_status_format = " $6%a  $7%t  $5%b "
 #current_item_inactive_column_suffix = $/r$(end)
 #
 #now_playing_prefix = $b
-now_playing_prefix = "$b$2> "
+#now_playing_prefix = "$b$2> "
+now_playing_prefix = "$3>>"
 #now_playing_suffix = $/b
 now_playing_suffix = "$8$/b"
 #browser_playlist_prefix = "$2playlist$9 "
@@ -359,7 +362,7 @@ progressbar_look = "—▬—"
 #
 fetch_lyrics_for_current_song_in_background = yes
 #
-store_lyrics_in_song_dir = yes
+#store_lyrics_in_song_dir = yes
 #
 #generate_win32_compatible_filenames = yes
 #
@@ -541,4 +544,12 @@ store_lyrics_in_song_dir = yes
 #window_border_color = green
 #
 #active_window_border = red
-#
+
+
+
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_sync_interval = "30" 
+visualizer_in_stereo = "yes"
+visualizer_type = "wave" (spectrum/wave)
+visualizer_look = "∙▋"

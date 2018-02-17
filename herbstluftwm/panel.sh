@@ -1,16 +1,5 @@
 #!/usr/bin/env bash
 
-#                                      ██
-#  ██████                             ░██
-# ░██░░░██  ██████   ███████   █████  ░██
-# ░██  ░██ ░░░░░░██ ░░██░░░██ ██░░░██ ░██
-# ░██████   ███████  ░██  ░██░███████ ░██
-# ░██░░░   ██░░░░██  ░██  ░██░██░░░░  ░██
-# ░██     ░░████████ ███  ░██░░██████ ███
-# ░░       ░░░░░░░░ ░░░   ░░  ░░░░░░ ░░░ 
-#
-
-
 hc() { "${herbstclient_command[@]:-herbstclient}" "$@" ;}
 monitor=${1:-0}
 geometry=( $(herbstclient monitor_rect "$monitor") )
@@ -18,22 +7,15 @@ if [ -z "$geometry" ] ;then
     echo "Invalid monitor $monitor"
     exit 1
 fi
-
 # geometry has the format W H X Y
 x=${geometry[0]}
 y=${geometry[1]}
 panel_width=${geometry[2]}
 panel_height=16
-#font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
-#font="-*-tewi-medium-*-normal-*-17-120-*-*-*-*-*-1"
-font2="-misc-fontawesome-medium-r-normal--0-0-0-8-p-0-iso10646-1"
-#use xorg-xfontsel to pick a new font :3
-#font="-*-terminesspowerline-medium-*-normal-*-10-*-*-*-*-*-*-*"
-font="-Gohu-GohuFont-Medium-R-Normal--9-80-100-100-C-60-ISO10646-1"
-#font2="-misc-stlarch-medium-r-normal--10-100-75-75-c-80-iso10646-1"
+font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
 bgcolor=$(hc get frame_border_normal_color)
-#selbg=$(hc get window_border_active_color)
-selbg='#5f8787'
+selbg=$(hc get window_border_active_color)
+selfg='#101010'
 
 ####
 # Try to find textwidth binary.
@@ -46,7 +28,6 @@ else
     echo "This script requires the textwidth tool of the dzen2 project."
     exit 1
 fi
-
 ####
 # true if we are using the svn version of dzen2
 # depending on version/distribution, this seems to have version strings like
@@ -71,30 +52,21 @@ else
     }
 fi
 
-####
-# My Functions
-
-
 hc pad $monitor $panel_height
 
-
 {
-
-	### Event generator ###
+    ### Event generator ###
     # based on different input data (mpc, date, hlwm hooks, ...) this generates events, formed like this:
     #   <eventname>\t<data> [...]
     # e.g.
     #   date    ^fg(#efefef)18:33^fg(#909090), 2013-10-^fg(#efefef)29
 
-
     #mpc idleloop player &
     while true ; do
         # "date" output is checked once a second, but an event is only
         # generated if the output changed compared to the previous run.
-        #date +$'date\t^fg(#efefef)%H:%M^fg(#909090), %Y-%m-^fg(#efefef)%d'
-	date +$'date\t^fg(#efefef)%R, %d %b %Y'
-	#date +$'date\t^fg(#efefef)%H:%M^fg(#909090), %a.^fg(#efefef)%d-^fg(#909090)%m-%Y'
-	sleep 1 || break
+        date +$'date\t^fg(#efefef)%H:%M^fg(#909090), %Y-%m-^fg(#efefef)%d'
+        sleep 1 || break
     done > >(uniq_linebuffered) &
     childpid=$!
     hc --idle
@@ -106,8 +78,7 @@ hc pad $monitor $panel_height
     windowtitle=""
     while true ; do
 
-
-	### Output ###
+        ### Output ###
         # This part prints dzen data based on the _previous_ data handling run,
         # and then waits for the next event to happen.
 
@@ -138,7 +109,6 @@ hc pad $monitor $panel_height
                 echo -n "focus_monitor \"$monitor\" && "
                 echo -n "\"${herbstclient_command[@]:-herbstclient}\" "
                 echo -n "use \"${i:1}\") ${i:1} ^ca()"
- #               echo -n "use \"${i:1}\") ^fn(FontAwesome:size=8)${i:1}^fn() ^ca()"
             else
                 # non-clickable tags if using older dzen
                 echo -n " ${i:1} "
@@ -146,45 +116,23 @@ hc pad $monitor $panel_height
         done
         echo -n "$separator"
         echo -n "^bg()^fg() ${windowtitle//^/^^}"
-        
-
-
-	#battery
-        bat=`cat /sys/class/power_supply/BAT0/capacity`
-        batstat=`cat /sys/class/power_supply/BAT1/status`
-        if (($batstat=='Charging'))
-        then
-        batico="^i(/usr/share/icons/stlarch_icons/ac10.xbm)"
-        else
-        batico="^i(/usr/share/icons/stlarch_icons/batt5full.xbm)"
-        fi
-	bat="^fg($xicon)$batico ^fg($xfg)$bat^fg($xext)%"
-
-
-
-	# small adjustments
-		cpu_temp=$(echo -n $(sensors | grep "Core" | cut -b 16-19))
-		mpc_current=$(mpc current)
-		right="^fg() ♫ ^fg() $mpc_current $separator^fg() $cpu_temp $separator^fg() $bat $separator^bg() $date $separator"
+        # small adjustments
+        right="$separator^bg() $date $separator"
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
-
-	
-	# get width of right aligned text.. and add some space..
-        width=$(txtw -f "$font" "$right_text_only  ")
+        # get width of right aligned text.. and add some space..
+        width=$($textwidth "$font" "$right_text_only    ")
         echo -n "^pa($(($panel_width - $width)))$right"
         echo
 
-
-	### Data handling ###
+        ### Data handling ###
         # This part handles the events generated in the event loop, and sets
         # internal variables based on them. The event and its arguments are
         # read into the array cmd, then action is taken depending on the event
-        # name.http://vglive.no/#match=10013601
+        # name.
         # "Special" events (quit_panel/togglehidepanel/reload) are also handled
         # here.
 
-
-	# wait for next event
+        # wait for next event
         IFS=$'\t' read -ra cmd || break
         # find out event origin
         case "${cmd[0]}" in
@@ -227,17 +175,10 @@ hc pad $monitor $panel_height
         esac
     done
 
-
-    
     ### dzen2 ###
     # After the data is gathered and processed, the output of the previous block
-    # gets piped to dzen2...or is it conky? If this ceases to work at any point
-	# try changing 'conky' to '/dev/null'
+    # gets piped to dzen2.
 
-} 2> conky | dzen2 -w $panel_width -x $x -y $y -fn "$font" -h $panel_height \
+} 2> /dev/null | dzen2 -w $panel_width -x $x -y $y -fn "$font" -h $panel_height \
     -e 'button3=;button4=exec:herbstclient use_index -1;button5=exec:herbstclient use_index +1' \
-    -ta l -bg "$bgcolor" -fg '#efefef'  &
-
-sleep 1
-stalonetray
- 
+    -ta l -bg "$bgcolor" -fg '#efefef'
