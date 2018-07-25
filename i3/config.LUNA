@@ -1,0 +1,112 @@
+#
+# Settings
+#
+
+font -*-dina-medium-r-*-*-8-*-*-*-*-*-*-*
+
+set $ws1 i
+set $ws2 ii
+set $ws3 iii
+set $ws4 iv
+set $ws5 v
+set $ws6 vi
+
+set $mod Mod4
+
+gaps inner 26
+gaps outer 0
+
+for_window [class="^.*"] border normal 0
+for_window [class=".*"] title_format " >_ %title "
+
+#                         border  bg      text    indicat child_border
+client.focused            #232323 #232f3b #d0f3eb #4F4F4F #212a33
+client.focused_inactive   #1A1A1A #232f3b #536d73 #121212 #212a33
+client.unfocused          #030706 #232f3b #636d73 #4F4F4F #212a33
+client.urgent             #1A1A1A #232f3b #a5a5a5 #1A1A1A #212a33
+client.background         #1b2026
+
+#
+# Shortcut
+#
+
+bindsym $mod+Shift+C reload
+bindsym $mod+Shift+R restart
+bindsym $mod+Shift+E exit
+bindsym $mod+Z kill
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+Tab workspace back_and_forth
+
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym Ctrl+$mod+l split h
+bindsym Ctrl+$mod+j split v
+
+bindsym $mod+s floating toggle
+
+mode "resize" {
+    bindsym Left resize shrink width 1 px or 1 ppt
+    bindsym Down resize grow height 1 px or 1 ppt
+    bindsym Up resize shrink height 1 px or 1 ppt
+    bindsym Right resize grow width 1 px or 1 ppt
+
+    bindsym h resize shrink width 1 px or 1 ppt
+    bindsym j resize grow height 1 px or 1 ppt
+    bindsym k resize shrink height 1 px or 1 ppt
+    bindsym l resize grow width 1 px or 1 ppt
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+#
+# Personal Shortcut
+#
+
+bindsym $mod+space exec /usr/bin/rofi -show run
+bindsym $mod+Return exec /usr/bin/termite
+
+bindsym Mod1+Ctrl+Up exec mpc volume +2
+bindsym Mod1+Ctrl+Down exec mpc volume -2
+bindsym Mod1+Ctrl+Left exec mpc prev
+bindsym Mod1+Ctrl+Right exec mpc next
+bindsym Mod1+Shift+d exec mpc del 0
+
+bindsym Mod5+F7 exec pkill -USR1 redshift
+bindsym Mod5+F8 exec xbacklight -dec 2 
+bindsym Mod5+F9 exec xbacklight -inc 2 
+#bindsym Mod5+f exec termite -e ranger
+#bindsym Mod5+n exec termite -e ncmpcpp
+#bindsym Mod5+ exec \"vivaldi -incognito --proxy-server=\"http://localhost:39901\" --host-resolver-rules=\"MAP * 0.0.0.0,EXCLUDE localhost\"\"
+
+#
+# Wm Layout
+# 
+
+# xprop command for find class name
+for_window [class="Lxappearance"] floating enable
+for_window [class="Sxiv|feh"] floating enable
+for_window [class="mpv"] floating enable
+for_window [class="XFontSel"] floating enable
+for_window [class="Gimp"] floating enable
+for_window [class="Zathura"] floating enable
+
+assign [class="Gimp"] → $ws5

@@ -21,49 +21,37 @@ nord14 = #A3BE8C
 nord15 = #B48EAD
 
 
-background = #17181A
-background-alt = #444
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #000000D
-secondary = #C02A4C
-alert = #bd2c40
-menu = #ffffff
 ;---------------------------------------
 ;		GLOBAL
 ;---------------------------------------
 
 [bar/nord]
 width = 100%
-height = 20 
+height = 20
 top = true
 
-;offset-x = 5%
-offset-y = 1 
-override-redirect = false 
+;offset-x = 1%
+;offset-y = 1%
+
 radius = 6.0
-fixed-center = false 
+fixed-center = false
 line-size = 1
 
-border-size = 2
-;border-color = ${colors.nord10}
-border-color = #101010
+border-size = 0
+border-color = ${colors.nord10}
 
-;background = ${colors.nord3}
-;background = #252525
-;foreground = ${colors.nord5}
+background = ${colors.nord3}
+foreground = ${colors.nord5}
 
-background = ${colors.background}
-foreground = ${colors.foreground}
 
 ;---------------------------------------
 ;		FONTS
 ;---------------------------------------
 
+;font-0 = Hack:size=10;3
 font-1 = FontAwesome:pixelsize 8;1
-font-0 = ypn envypn:pixelsize=11
+font-0 = ypn envypn:pixelsize 11;1
 font-2 = Wuncon Siji:pixelsize=8;1
-;font-0 = scientifica:size=13
 
 
 ;---------------------------------------
@@ -72,7 +60,7 @@ font-2 = Wuncon Siji:pixelsize=8;1
 
 modules-left = bspwm RightArrow1 xwindow RightArrow2
 modules-center = mpd
-modules-right = LeftArrow date volume cpu memory wlan updates battery
+modules-right = date LeftArrow volume cpu memory xbacklight updates battery
 
 
 ;---------------------------------------
@@ -86,38 +74,32 @@ format = <label-state>
 
 label-focused-occupied = 
 label-focused-occupied-foreground = ${colors.nord6}
-;label-focused-occupied-background = ${colors.nord8}
-label-focused-occupied-background = #151515
+label-focused-occupied-background = ${colors.nord8}
 label-focused-occupied-padding = 1
 
 label-focused-urgent = 
 label-focused-urgent-foreground = ${colors.nord6}
-;label-focused-urgent-background = ${colors.nord8}
-label-focused-urgent-background = #151515
+label-focused-urgent-background = ${colors.nord8}
 label-focused-urgent-padding = 1
 
 label-focused-empty = 
 label-focused-empty-foreground = ${colors.nord6}
-;label-focused-empty-background = ${colors.nord8}
-label-focused-empty-background = #151515
+label-focused-empty-background = ${colors.nord8}
 label-focused-empty-padding = 1
 
 label-occupied = 
 label-occupied-foreground = ${colors.nord1}
-;label-occupied-background = ${colors.nord8}
-label-occupied-background = #151515
+label-occupied-background = ${colors.nord8}
 label-occupied-padding = 1
 
 label-urgent = 
 label-urgent-foreground = ${colors.nord13}
-;label-urgent-background = ${colors.nord8}
-label-urgent-background = #151515
+label-urgent-background = ${colors.nord8}
 label-urgent-padding = 1
 
 label-empty = 
 label-empty-foreground = ${colors.nord1}
-;label-empty-background = ${colors.nord8}
-label-empty-background = #151515
+label-empty-background = ${colors.nord8}
 label-empty-padding = 1
 
 
@@ -128,25 +110,21 @@ label-empty-padding = 1
 [module/RightArrow1]
 type = custom/text
 content = " "
-content-foreground = #151515 
-;content-background = ${colors.nord1}
-content-background = #353535
+content-foreground = ${colors.nord8}
+content-background = ${colors.nord1}
 
 [module/RightArrow2]
 type = custom/text
 content = ""
-;content-foreground = ${colors.nord1}
-content-foreground = #353535
-;content-background = ${colors.nord3}
-content-background = #252525
+content-foreground = ${colors.nord1}
+content-background = ${colors.nord3}
 
 [module/LeftArrow]
 type = custom/text
 content = ""
-;content-foreground = ${colors.nord1}
-content-foreground = #353535
-;content-background = ${colors.nord3}
-content-background = #252525
+content-foreground = ${colors.nord1}
+content-background = ${colors.nord3}
+
 
 ;---------------------------------------
 ;	   XWINDOW MODULE
@@ -156,8 +134,7 @@ content-background = #252525
 type = internal/xwindow
 
 format-foreground = ${colors.nord5}
-;format-background = ${colors.nord1}
-format-background = #353535
+format-background = ${colors.nord1}
 format-padding = 1
 
 label =  %title%
@@ -172,8 +149,8 @@ type = internal/xbacklight
 
 format = <label>
 format-foreground = ${colors.nord5}
-;format-background = ${colors.nord1}
-format-background = #353535
+format-background = ${colors.nord1}
+
 label = " %percentage%"
 
 [module/backlight-acpi]
@@ -195,11 +172,10 @@ date = %a %d
 
 time = %H:%M
 
-label =   %date%   %time%
+label =   %date%   %time%
 
 format-foreground = ${colors.nord5}
-;format-background = ${colors.nord3}
-format-background = #353535
+format-background = ${colors.nord3}
 format-padding = 1
 
 
@@ -217,38 +193,28 @@ mapped = true
 
 format-volume = <ramp-volume><label-volume>
 format-volume-foreground = ${colors.nord5}
-;format-volume-background = ${colors.nord1}
-format-volume-background = #353535
+format-volume-background = ${colors.nord1}
 
 label-volume = "%percentage% "
 label-volume-foreground = ${colors.nord5}
-;label-volume-background = ${colors.nord1}
-label-volume-background = #353535
-
-label-muted = "   muted "
+label-volume-background = ${colors.nord1}
+label-muted = "  muted "
 label-muted-foreground = ${colors.nord5}
-;label-muted-background = ${colors.nord1}
-label-muted-background = #353535
+label-muted-background = ${colors.nord1}
 
-ramp-volume-0 = "   "
+ramp-volume-0 = "  "
 ramp-volume-0-foreground = ${colors.nord5}
-;ramp-volume-0-background = ${colors.nord1}
-ramp-volume-0-background = #353535
-
-ramp-volume-1 = "   "
+ramp-volume-0-background = ${colors.nord1}
+ramp-volume-1 = "  "
 ramp-volume-1-foreground = ${colors.nord5}
-;ramp-volume-1-background = ${colors.nord1}
-ramp-volume-1-background = #353535
-
-ramp-volume-2 = "   "
+ramp-volume-1-background = ${colors.nord1}
+ramp-volume-2 = "  "
 ramp-volume-2-foreground = ${colors.nord5}
-;ramp-volume-2-background = ${colors.nord1}
-ramp-volume-2-background = #353535
-
-ramp-volume-3 = "   "
+ramp-volume-2-background = ${colors.nord1}
+ramp-volume-3 = "  "
 ramp-volume-3-foreground = ${colors.nord5}
-;ramp-volume-3-background = ${colors.nord1}
-ramp-volume-3-background = #353535
+ramp-volume-3-background = ${colors.nord1}
+
 
 
 ;---------------------------------------
@@ -259,8 +225,7 @@ ramp-volume-3-background = #353535
 type = internal/cpu
 interval = 2
 label-foreground = ${colors.nord5}
-;label-background = ${colors.nord1}
-label-background  = #353535
+label-background = ${colors.nord1}
 label-padding = 2
 label =    %percentage%%
 
@@ -273,8 +238,7 @@ label =    %percentage%%
 type = internal/memory
 interval = 2
 label-foreground = ${colors.nord5}
-;label-background = ${colors.nord1}
-label-background = #353535
+label-background = ${colors.nord1}
 label-padding = 2
 label =    %percentage_used%%
 
@@ -293,31 +257,28 @@ full-at = 98
 
 format-charging = <label-charging>
 format-charging-foreground = ${colors.nord5}
-;format-charging-background = ${colors.nord1}
-format-charging-background = #353535
+format-charging-background = ${colors.nord1}
 
 format-full = <label-full>
 format-full-foreground = ${colors.nord5}
-;format-full-background = ${colors.nord1}
-format-full-background = #353535
+format-full-background = ${colors.nord1}
 
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-foreground = ${colors.nord5}
-;format-discharging-background = ${colors.nord1}
-format-discharging-background = #353535
+format-discharging-background = ${colors.nord1}
 
-label-charging = "   %percentage%% "
-label-discharging = "  %percentage%% "
+label-charging = "   %percentage% "
+label-discharging = "  %percentage% "
 label-discharging-foreground = ${colors.nord5}
-label-full = "   %percentage%% "
+label-full = "   %percentage% "
 
-ramp-capacity-0 = "  "
+ramp-capacity-0 = " "
 ramp-capacity-0-foreground = ${colors.nord11}
-ramp-capacity-1 = "  "
+ramp-capacity-1 = " "
 ramp-capacity-1-foreground = ${colors.nord11}
-ramp-capacity-2 = "  "
-ramp-capacity-3 = "  "
-ramp-capacity-4 = "  "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
 
 
 ;----------------------------------------
@@ -330,8 +291,7 @@ interval = 600
 format = <label>
 label = "  %output:0:30%"
 label-foreground = ${colors.nord5}
-;label-background = ${colors.nord1}
-label-background = #353535
+label-background = ${colors.nord1}
 exec = ~/.config/polybar/updates.sh
 
 
@@ -355,30 +315,6 @@ icon-next = 
 
 label-song-maxlen = 50
 label-song-ellipsis = true
-
-;-----------------------------------
-;            WLAN
-;----------------------------------
-  2 type = internal/network
-  3 interface = wlp3s0
-  4 interval = 3.0
-  5 
-  6 format-connected = <ramp-signal> <label-connected>
-  7 format-connected-underline = #9f78e1
-  8 label-connected = %essid%
-  9 
- 10 format-disconnected =
- 11 ;format-disconnected = <label-disconnected>
- 12 ;format-disconnected-underline = ${self.format-connected-underline}
- 13 ;label-disconnected = %ifname% disconnected
- 14 ;label-disconnected-foreground = ${colors.foreground-alt}
- 15 
- 16 ramp-signal-0 = 
- 17 ramp-signal-1 = 
- 18 ramp-signal-2 = 
- 19 ramp-signal-3 = 
- 20 ramp-signal-4 = 
- 21 ramp-signal-foreground = ${colors.foreground-alt}
 
 
 [global/wm]

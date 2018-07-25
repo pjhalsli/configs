@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+import platform, subprocess, re
+
+subprocess.run('clear')
+
+uname = platform.uname()
+xid = subprocess.getoutput('xprop -root -notype _NET_SUPPORTING_WM_CHECK')
+xid=xid[-8:]
+
+BOLD = '\033[1m'
+END = '\033[0m'
+
+
+host = subprocess.getoutput('whoami')+"@"+uname[1]
+
+distro = subprocess.getoutput('cat /etc/os-release')
+distro = re.findall(r'_NAME=\"(.*)\"', distro)[0].lower()
+
+kernel = subprocess.getoutput('uname').lower()+' '+subprocess.getoutput('uname --kernel-release')
+
+wm = subprocess.getoutput('xprop -id '+xid+' -notype -len 100 -f _NET_WM_NAME 8t')
+wm = re.findall(r'_NET_WM_NAME = \"(\w+)\"', wm)
+if len(wm) > 0:
+    wm = wm[0].lower()
+else:
+    wm = 'none'
+
+uptime = subprocess.getoutput('uptime -p').replace('up ','')
+if uptime == '':
+    uptime = 'meow'
+
+
+print(''' ┌────────────────────┐''')
+print(''' │ >_                 │  {}'''.format(BOLD+host+END))
+print(''' │                    │  {}'''.format('-'*len(host)))
+print(''' │                    │  {}'''.format(BOLD+'distro: '+END+distro))
+print(''' │                    │  {}'''.format(BOLD+'kernel: '+END+kernel))
+print(''' │                    │  {}'''.format(BOLD+'wm: '+END+wm))
+print(''' │                    │  {}'''.format(BOLD+'uptime: '+END+uptime))
+print(''' │                    │''')
+print(''' └────────────────────┘\n''')
+ 

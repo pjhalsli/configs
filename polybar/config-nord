@@ -58,7 +58,8 @@ font-2 = Wuncon Siji:pixelsize=8;1
 
 modules-left = bspwm RightArrow1 xwindow RightArrow2
 modules-center = mpd
-modules-right = date LeftArrow volume xbacklight battery
+modules-right = date LeftArrow volume LeftArrow memory cpu LeftArrow xbacklight battery
+;modules-right = date LeftArrow volume xbacklight battery
 
 ;---------------------------------------
 ;	      BSPWM MODULE
@@ -147,6 +148,38 @@ format-foreground = ${colors.nord5}
 format-background = ${colors.nord1}
 
 label = " %percentage%"
+
+
+;---------------------------------------
+;          C P U
+;---------------------------------------
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "   "
+format-prefix-background = #202020
+label-background = #202020
+label-padding = 2
+label = %percentage%%
+
+
+;---------------------------------------
+;          MEMORY
+;---------------------------------------
+ 
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "  "
+format-prefix-background = #252525
+label-background = #252525
+label-padding = 2
+label =  %percentage_used%%
+
+
+
+
 
 ;---------------------------------------
 ;	   DATE MODULE

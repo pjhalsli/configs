@@ -1,0 +1,114 @@
+#   ██                              ██   ██          
+#  ░██                             ░░   ░██          
+# ██████  █████  ██████ ██████████  ██ ██████  █████ 
+#░░░██░  ██░░░██░░██░░█░░██░░██░░██░██░░░██░  ██░░░██
+#  ░██  ░███████ ░██ ░  ░██ ░██ ░██░██  ░██  ░███████
+#  ░██  ░██░░░░  ░██    ░██ ░██ ░██░██  ░██  ░██░░░░ 
+#  ░░██ ░░██████░███    ███ ░██ ░██░██  ░░██ ░░██████
+#   ░░   ░░░░░░ ░░░    ░░░  ░░  ░░ ░░    ░░   ░░░░░░ 
+#
+#
+
+[options]
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = false
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+#font = Misc Ohsnap Regular 11 
+font = lucy tewi 11
+#font = Gohu Gohufont 10
+scrollback_lines = 10000
+search_wrap = true
+cursor_blink = on
+cursor_shape = block
+browser = tor browser-en
+filter_unmatched_urls = true
+
+
+#[colors]
+# CUSTOM
+# special
+#foreground      = #b3bac7
+#foreground_bold = #b3bac7
+#cursor          = #b3bac7
+# background      = #04060c
+#background = #08090A
+
+# black
+#color0  = #04060c
+#color8  = #7d828b
+# red
+#color1  = #4a586f
+#color9  = #4a586f
+# green
+#color2  = #536179
+#color10 = #536179
+# yellow
+#color3  = #923b4a
+#color11 = #923b4a
+# blue
+#color4  = #596a86
+#color12 = #596a86
+# magenta
+#color5  = #5b6488
+#color13 = #5b6488
+# cyan
+#color6  = #687691
+#color14 = #687691
+# white
+#color7  = #b3bac7
+#color15 = #b3bac7
+
+
+[colors]
+#frost
+# special
+foreground      = #9bbbc6
+foreground_bold = #9bbbc6
+cursor          = #9bbbc6
+background      = #1c1c23
+
+# black
+color0  = #323246
+color8  = #323246
+# red
+color1  = #5a7882
+color9  = #5a7882
+# green
+color2  = #8c8ca0
+color10 = #8c8ca0
+# yellow
+color3  = #1e828c
+color11 = #1e828c
+# blue
+color4  = #3c788c
+color12 = #3c788c
+# magenta
+color5  = #6ea0b4
+color13 = #6ea0b4
+# cyan
+color6  = #6e8ca0
+color14 = #6e8ca0
+# white
+color7  = #96bec8
+color15 = #96bec8
+
+
+[hints]
+#font = envypn 8
+#foreground = #dcdccc
+#background = #3f3f3f
+#active_foreground = #e68080
+#active_background = #3f3f3f
+#padding = 2
+#border = #3f3f3f
+#border_width = 1.5
+#roundness = 2.0
+
+# vim: ft=dosini cms=#%s
+
+

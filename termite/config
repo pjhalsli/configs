@@ -18,8 +18,9 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
+font = scientifica 11
 #font = Misc Ohsnap Regular 11 
-font = lucy tewi 11
+#font = lucy tewi 11
 #font = Gohu Gohufont 10
 scrollback_lines = 10000
 search_wrap = true
@@ -27,6 +28,107 @@ cursor_blink = on
 cursor_shape = block
 browser = tor browser-en
 filter_unmatched_urls = true
+
+
+
+#[colors]
+# Base16 Grayscale
+
+#foreground      = #b9b9b9
+#foreground_bold = #b9b9b9
+#cursor          = #b9b9b9
+#background      = #101010
+
+# 16 color space
+#color0  = #101010
+#color1  = #7c7c7c
+#color2  = #8e8e8e
+#color3  = #a0a0a0
+#color4  = #686868
+#color5  = #747474
+#color6  = #868686
+#color7  = #b9b9b9
+#color8  = #525252
+#color9  = #7c7c7c
+#color10 = #8e8e8e
+#color11 = #a0a0a0
+#color12 = #686868
+#color13 = #747474
+#color14 = #868686
+#color15 = #f7f7f7
+
+# 256 color space
+#color16 = #999999
+#color17 = #5e5e5e
+#color18 = #252525
+#color19 = #464646
+#color20 = #ababab
+#color21 = #e3e3e3
+
+
+
+
+# blaque magick
+[colors]
+# special
+foreground      = #c2c2b0
+foreground_bold = #c2c2b0
+cursor          = #c2c2b0
+background      = #121212
+
+# black
+color0  = #121212
+color8  = #121212
+# red
+color1  = #5f8787
+color9  = #5f8787
+# green
+color2  = #5f8787
+color10 = #444444
+# yellow
+color3  = #666666
+color11 = #666666
+# blue
+color4  = #888888
+color12 = #888888
+# magenta
+color5  = #999999
+color13 = #999999
+# cyan
+color6  = #aaaaaa
+color14 = #aaaaaa
+# white
+color7  = #c1c1c1
+color15 = #c1c1c1
+
+
+
+# NORD
+#[colors]
+#foreground = #D8DEE9
+#background = #2E3440
+#foreground_bold = #D8DEE9
+#cursor = #D8DEE9
+#cursor_foreground = #2E3440
+#highlight = #4C566A
+
+#color0  = #3B4252
+#color1  = #BF616A
+#color2  = #A3BE8C
+#color3  = #EBCB8B
+#color4  = #81A1C1
+#color5  = #B48EAD
+#color6  = #88C0D0
+#color7  = #E5E9F0
+#color8  = #4C566A
+#color9  = #BF616A
+#color10 = #A3BE8C
+#color11 = #EBCB8B
+#color12 = #81A1C1
+#color13 = #B48EAD
+#color14 = #8FBCBB
+#color15 = #ECEFF4
+
 
 
 #[colors]
@@ -65,37 +167,77 @@ filter_unmatched_urls = true
 
 
 #[colors]
-#frost
+# WIP
 # special
-#foreground      = #9bbbc6
-#foreground_bold = #9bbbc6
-#cursor          = #9bbbc6
-#background      = #1c1c23
+#foreground      = #aaaaaa
+#foreground_bold = #aaaaaa
+#cursor          = #aaaaaa
+#background      = #111313
 
 # black
-#color0  = #323246
-#color8  = #323246
-## red
-#color1  = #5a7882
-#color9  = #5a7882
-## green
-#color2  = #8c8ca0
-#color10 = #8c8ca0
+#color0  = #222222
+#color8  = #444444
+# red
+#color1  = #456585
+#color9  = #456585
+# green
+#color2  = #444444
+#color10 = #444444
 # yellow
-#color3  = #1e828c
-#color11 = #1e828c
+#color3  = #3c6868
+#color11 = #3c6868
 # blue
-#color4  = #3c788c
-#color12 = #3c788c
+#color4  = #666666
+#color12 = #666666
 # magenta
-#color5  = #6ea0b4
-#color13 = #6ea0b4
+#color5  = #959555
+#color13 = #959555
 # cyan
-#color6  = #6e8ca0
-#color14 = #6e8ca0
+#color6  = #888888
+#color14 = #888888
 # white
-#color7  = #96bec8
-#color15 = #96bec8
+#color7  = #aaaaaa
+#color15 = #aaaaaa
+
+
+
+
+
+#[colors]
+#monochrome  W I P
+# special
+#foreground      = #b4babe
+#foreground_bold = #b4babe
+#cursor          = #b4babe
+#background      = #0c0f13
+
+# black
+#color0  = #0c0f13
+#color8  = #7d8285
+# red
+#color1  = #394446
+#color9  = #394446
+# green
+#color2  = #4c5150
+#color10 = #4c5150
+# yellow
+#color3  = #5f635c
+#color11 = #5f635c
+# blue
+#color4  = #5b6566
+#color12 = #5b6566
+# magenta
+#color5  = #6a7270
+#color13 = #6a7270
+# cyan
+#color6  = #757c7e
+#color14 = #757c7e
+# white
+#color7  = #b4babe
+#color15 = #b4babe
+
+
+
 
 
 [hints]

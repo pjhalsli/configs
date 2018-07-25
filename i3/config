@@ -1,254 +1,340 @@
+# i3 version 4.12-8-gd7fd3c0 (2016-03-09, branch "gaps-next") © 2009 Michael Stapelberg and contributors
+# i3 config file.
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-##### THIS IS MY CONFIG  - not yours - MINE
+
+
+
+##################################
+#Personal configs
+################################
+
+Nitrogen --restore 
+
+
+
+#************  Startup apps ***********************
+
+# Bar startup
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+
+
+
+#*************** Keybindings ******************
 
 set $mod Mod4
-set $alt Mod1
 
-
-# Use Mouse+$mod to drag floating windows
-floating_modifier $mod
-
-
-# start a terminal
+# Start a terminal
 bindsym $mod+Return exec termite
 
-
-# kill focused window
+# Kill focused window
 bindsym $mod+Shift+q kill
 
+# Quit i3
+bindsym $mod+Shift+Escape exec i3-msg exit
 
-# start launcher
-bindsym $mod+d exec rofi -show run -lines 10 -eh 1.5  -width 100 -padding 450 -opacity "80" -font "SourceCodePro 12"
+# Start dmenu (a program launcher)
+#bindsym $mod+d exec --no-startup-id dmenu_run -b -lh 24 -x 10 -y 10 -w 1347 -nf "#586e75" -sb "#268bd2" -sf "#dfddd5" -nb "#dfddd5" -fn "Iosevka-9"
 
+# Start Rofi (a program launcher, ssh, window switcher)
+# https://davedavenport.github.io/rofi/
+ bindsym $mod+d exec --no-startup-id rofi "run window" -show run
 
-#start some other programs
-#bindsym $mod+x exec firefox
-bindsym $Mod1+n exec termite -e ncmpcpp
-
-# change focus
+# Change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+i focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
+# Alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
+# Move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+i move up
 bindsym $mod+Shift+l move right
 
-# alternatively, you can use the cursor keys:
+# Alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-
-# split in horizontal orientation
+# Split in horizontal orientation
 bindsym $mod+v split h
 
-# split in vertical orientation
+# Split in vertical orientation
 bindsym $mod+h split v
 
-# enter fullscreen mode for the focused container
+# Enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
+# Change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-# toggle tiling / floating
+# Toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
+# Change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
+# Focus the parent container
 bindsym $mod+a focus parent
 
-# focus the child container
+# Focus the child container
 #bindsym $mod+d focus child
 
+# Initialize workspace
+#list of icons to use with i3bar requires fontawesome
+#                      
+set $w1 1
+set $w2 2 
+set $w3 3 
+set $w4 4 
+set $w5 5
+set $w6 6
+set $w7 7
+set $w8 8
+set $w9 9
+set $w10 10
+ 
+# Switch to workspace
+bindsym $mod+1 workspace $w1
+bindsym $mod+2 workspace $w2
+bindsym $mod+3 workspace $w3
+bindsym $mod+4 workspace $w4
+bindsym $mod+5 workspace $w5
+bindsym $mod+6 workspace $w6
+bindsym $mod+7 workspace $w7
+bindsym $mod+8 workspace $w8
+bindsym $mod+9 workspace $w9
+bindsym $mod+0 workspace $w10
+bindsym $mod+Tab workspace back_and_forth
 
-# customize workspace names
-set $WS1 " 1:   "
-set $WS2 " 2:   "
-set $WS3 " 3:   "
-set $WS4 " 4:   "
-set $WS5 " 5:   "
-set $WS6 " 6:   "
-set $WS7 " 7:   "
-set $WS8 " 8:   "
-set $WS9 " 9:   "
-set $WS0 " 10:   "
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $w1
+bindsym $mod+Shift+2 move container to workspace $w2
+bindsym $mod+Shift+3 move container to workspace $w3
+bindsym $mod+Shift+4 move container to workspace $w4
+bindsym $mod+Shift+5 move container to workspace $w5
+bindsym $mod+Shift+6 move container to workspace $w6
+bindsym $mod+Shift+7 move container to workspace $w7
+bindsym $mod+Shift+8 move container to workspace $w8
+bindsym $mod+Shift+9 move container to workspace $w9
+bindsym $mod+Shift+0 move container to workspace $w10
 
-#####
-##  extra icons
-######
-
-#              
-
-
-# switch to workspace
-bindsym $mod+1 workspace $WS1
-bindsym $mod+2 workspace $WS2
-bindsym $mod+3 workspace $WS3
-bindsym $mod+4 workspace $WS4
-bindsym $mod+5 workspace $WS5
-bindsym $mod+6 workspace $WS6
-bindsym $mod+7 workspace $WS7
-bindsym $mod+8 workspace $WS8
-bindsym $mod+9 workspace $WS9
-bindsym $mod+0 workspace $WS0
-
-# move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $WS1
-bindsym $mod+Shift+2 move container to workspace $WS2
-bindsym $mod+Shift+3 move container to workspace $WS3
-bindsym $mod+Shift+4 move container to workspace $WS4
-bindsym $mod+Shift+5 move container to workspace $WS5
-bindsym $mod+Shift+6 move container to workspace $WS6
-bindsym $mod+Shift+7 move container to workspace $WS7
-bindsym $mod+Shift+8 move container to workspace $WS8
-bindsym $mod+Shift+9 move container to workspace $WS9
-bindsym $mod+Shift+0 move container to workspace $WS0
-
-
-# reload the configuration file
+# Reload the configuration file
 bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Are you sure you want to quit you lazy fuck?!' -b 'Fuck off' 'i3-msg exit'"
 
-
-bindsym $mod+r mode "resize"
-
-# resize window (you can also use the mouse for that)
+# Resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
+         Pressing left will shrink the window’s width.
+         Pressing right will grow the window’s width.
+         Pressing up will shrink the window’s height.
+         Pressing down will grow the window’s height.
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym i resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
-        bindsym Shift+j resize shrink width 50 px or 50 ppt
-        bindsym Shift+l resize grow width 50 px or 50 ppt
-	    bindsym Shift+i resize grow height 50 px or 50 ppt
-	    bindsym Shift+k resize shrink height 50 px or 50 ppt
-       # same bindings, but for the arrow keys
+
+        # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Shift+Left resize shrink width 50 px or 50 ppt
-        bindsym Up resize grow height 10 px or 10 ppt
-        bindsym Shift+Up resize grow height 50 px or 50 ppt
-        bindsym Down resize shrink height 10 px or 10 ppt
-        bindsym Shift+Down resize shrink height 50 px or 50 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
-        bindsym Shift+Right resize grow width 50 px or 50 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        i3bar_command i3bar -t
-        status_command i3blocks -c ~/.config/i3blocks/config
-        font pango:lime 8+|, FontAwesome 7
-	    workspace_buttons yes
-        position top
-        tray_output primary
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
 
+#  i3-gaps settings 
+#  More info visit: https://github.com/Airblader/i3
 
-       colors {
-            statusline         $white
-	    background         $transparent
-	    separator          $transparent
+#smart_gaps on     
+smart_borders on
 
+# Global gaps size
+gaps inner 4
+gaps outer 4
+	
 
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
 
-
-#                        BORDER       BACKGROUND   TEXT
-      focused_workspace  $transparent $transparent #00FF9F
-      inactive_workspace $transparent $transparent #747C84
-      active_workspace   $transparent $transparent $white
-      urgent_workspace   $darkred     $darkred     $transparent
-      binding_mode       $transparent $transparent $yellow
-      }
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
 }
-          
 
-# user specific
-# This is  mine - still not yours - but MINE
-# If you don't like it - fuck off - and go make your own
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
 
-# Font for windows
-font pango: Inconsolata for Powerline Regular 11
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
 
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
 
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
 
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
 
-# gaps
-for_window [class="^.*"] border pixel 4 
-smart_gaps on
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
 
-#set $default_gaps_inner 0
-#set $default_gaps_outer 0
-#gaps inner $default_gaps_inner
-#gaps outer $default_gaps_outer
-gaps inner 10 
-gaps outer 5
-#smart_borders off
+# Specify gaps for specific workspace
+# workspace $w1 gaps outer 15
+# workspace $w2 gaps outer 15
+# workspace $w5 gaps outer 15
+# workspace $w8 gaps outer 15
 
+bindsym $mod+r mode "resize"
 
-# autostart
-exec nitrogen --restore
-exec compton
-exec /home/penguin/scripts/notify.sh
-# exec_always yabar
+# Lock screen
+set $Locker i3lock-fancy
 
+# Shutdwon, Restart, Logout, Suspend, Hibernate, Reboot, Lock
+# set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+# mode "$mode_system" {
+#     bindsym l exec --no-startup-id $Locker, mode "default"
+#     bindsym e exec --no-startup-id i3-msg exit, mode "default"
+#     bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+#     bindsym h exec --no-startup-id $Locker && systemctl hibernate,mode "default"
+#     bindsym r exec --no-startup-id systemctl reboot, mode "default"
+#     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
 
-set $back               #1d1F21
-set $black              #282A2E
-set $grey               #373B41
-set $lightgrey          #707880
-set $white              #C5C8C6
-set $yellow             #F0C674
-set $red                #CC6666
-set $darkred            #A54242
-set $green              #B5BD56
-set $default            #18FFD2
-
-
-
-# border colors:        border: bg:     text:   indicator:
-#client.focused         #493757 #453452 #FFFFFF #523445
-client.focused          #f1fa8c #394042 #FFFFFF #009688
-client.focused_inactive #4F4E43 #49483E #BFBFBF #49483E
-client.unfocused        #000000 #000000 #888888 #000000
-client.urgent           #662B32 #58252B #F4BF75 #58252B
-
-
-assign [class="(?i)firefox"] $WS1
-assign [class="(?i)thunar"] $WS3
-assign [class="(?!)mpv"] $WS4
-assign [class="(?!)atom"] $WS5
-assign [class="(?!)nitrogen"] $WS6
-assign [class="(?!)termite -e rtorrent"] $WS8
-assign [class="(?!)termite -e ncmpcpp"] $WS¤
+#     # back to normal: Enter or Escape
+#     bindsym Return mode "default"
+#     bindsym Escape mode "default"
+# }
 
 
+
+# Volume control
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+
+# Brightness control
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+
+
+# Screenshot with scrot
+bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Skrivebord/screenshots' && notify-send "Screenshot Taken"
+
+# Kill screencast
+bindsym $mod+x  exec --no-startup-id pkill -f 'x11grab'
+
+# View Todo List
+#bindsym $mod+F10 exec --no-startup-id ~/.config/popups/todo/todo
+
+# My apps shortcut
+bindsym $mod+p exec --no-startup-id pcmanfm 
+#bindsym $mod+b exec --no-startup-id luakit
+
+
+
+gaps inner 6
+gaps outer 6
+
+
+#  window color            border  bg      text    indicat child_border
+client.focused            #0859F9 #281d2a #848474 #4F4F4F #101110
+client.focused_inactive   #231417 #141d24 #636357 #121212 #101110
+client.unfocused          #231417 #17212a #68685b #4F4F4F #101107
+client.urgent             #23181a #4a3d31 #6c777a #1A1A1A #1f1515
+client.background         #231417
+
+
+
+#Start i3bar to display a workspace bar
+#Uncomment to use the default i3bar status
+# bar {      
+#    
+#           status_command  $HOME/.local/bin/conkyi3.sh     
+#           position top
+#           font xft:tewi, FontAwesome 8
+#           strip_workspace_numbers yes
+#          
+#           colors {
+#               separator          #161615
+#               background         #020202
+#               statusline         #111111
+#              
+#               # Bar colors       border    background    text 
+#               focused_workspace  #07090d   #020202       #5E468C
+#               active_workspace   #07090d   #020202       #268bd2
+#               inactive_workspace #07090d   #020202       #899CA1
+#               urgent_workspace   #07090d   #020202       #287373
+#          }
+# }
+
+
+# Fancy title bar
+font pango:envypn 10
+#for_window [class=".*"] title_format "<span font='tewi 8'> ➤ %title</span>"
+for_window [class=".*"] title_format "<span font='tewi 8'> </span>"
+
+
+
+
+#*************  Other settings  *********************
+
+# Set per-application border
+for_window [class="^.*"] border pixel 2 
+
+# Enable or disable floating
+for_window [class="Arandr"] floating enable
+for_window [class="Lxappearance"] floating enable
+for_window [class="Nitrogen"] floating enable
+for_window [class="feh"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [class="Pavucontrol"] floating enable
+#for_window [class="^.*"] floating enable
+
+# Starting apps on a specific workspace
+assign [class="^Tor Browser$"]           $w1
+assign [class="^Firefox$"]               $w1
+assign [class="^Zathura"]                $w5
+assign [class="^mpv$"]                   $w4
+assign [class="^Gimp$"]                  $w8
+assign [class="^Pcmanfm"]                $w3
+
+
+# vim:filetype=i3
