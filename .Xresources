@@ -1,0 +1,118 @@
+!URXVT SETTINGS
+!
+#include ".Xresources.d/colors"
+
+URxvt*.scrollBar: false
+!URxvt*.font:iosevka:pixelsize:10
+URxvt*font            : xft:OperatorMono:style=BoldItalic:pixelsize=10
+
+!#define nord0 #2E3440
+!#define nord1 #3B4252
+!#define nord2 #434C5E
+!#define nord3 #4C566A
+!#define nord4 #D8DEE9
+!#define nord5 #E5E9F0
+!#define nord6 #ECEFF4
+!#define nord7 #8FBCBB
+!#define nord8 #88C0D0
+!#define nord9 #81A1C1
+!#define nord10 #5E81AC
+!#define nord11 #BF616A
+!#define nord12 #D08770
+!#define nord13 #EBCB8B
+!#define nord14 #A3BE8C
+!#define nord15 #B48EAD
+
+!*.foreground:   nord4
+!*.background:   nord0
+!*.cursorColor:  nord4
+!*.fading: 35
+!*.fadeColor: nord3
+!*.highlightColor: #3c4350
+
+!*.color0: nord1
+!*.color1: nord11
+!*.color2: nord14
+!*.color3: nord13
+!*.color4: nord9
+!*.color5: nord15
+!*.color6: nord8
+!*.color7: nord5
+!*.color8: nord3
+!*.color9: nord11
+!*.color10: nord14
+!*.color11: nord13
+!*.color12: nord9
+!*.color13: nord15
+!*.color14: nord7
+!*.color15: nord6
+
+! Xclock colors.
+XClock*foreground: #C9BEB4
+XClock*background: #272e38
+XClock*majorColor:  rgba:c9/be/b4/ff
+XClock*minorColor:  rgba:c9/be/b4/ff
+XClock*hourColor:   rgba:c9/be/b4/ff
+XClock*minuteColor: rgba:c9/be/b4/ff
+XClock*secondColor: rgba:c9/be/b4/ff
+
+! Set depth to make transparency work.
+URxvt*depth: 32
+
+! R O F I
+rofi.modi:                           window,run
+rofi.width:                          26
+rofi.lines:                          15
+rofi.columns:                        1
+rofi.font:                           lucy tewi 10
+rofi.bw:                             4
+rofi.location:                       0
+rofi.padding:                        5
+rofi.fixed-num-lines:                true
+rofi.show-icons:                     false
+rofi.terminal:                       rofi-sensible-terminal
+rofi.levenshtein-sort:               false
+rofi.case-sensitive:                 false
+rofi.cycle:                          true
+rofi.sidebar-mode:                   false
+rofi.hide-scrollbar:                 true
+rofi.fullscreen:                     false
+rofi.fake-transparency:              false
+rofi.scroll-method:                  0
+
+! NORD
+true.color-enabled: true
+! State:           'bg',     'fg',     'bgalt',  'hlbg',   'hlfg'
+rofi.color-normal: #292D3E,  #9590cb,  #292D3E,  #89DDFF,  #000000
+rofi.color-urgent: #292D3E,  #959DCB,  #292D3E,  #89DDFF,  #000000
+rofi.color-active: #292D3E,  #ffffff,  #292D3E,  #89DDFF,  #000000
+!                  'background', 'border', 'separator'
+rofi.color-window: #292D3E,      #82AAFF,   #82AAFF
+
+! Rofi
+! Blaque Magic theme
+!true.color-enabled: true
+!                      bg,          fg,       bgalt,        hlbg,   hlfg
+!rofi.color-normal: argb:ff121212, #b2b2c0, argb:ff121212, #5f8787,#000000
+!rofi.color-urgent: argb:ff121212, #c2c2c2, argb:ff121212, #900900,#dddddd
+!rofi.color-active: argb:ff121212, #ffffff, argb:ff121212, #5f8787,#ffffff
+!rofi.color-window: argb:ff121212, #000,#fbdeff
+
+! Rofi
+! Gotham theme
+!true.color-enabled: true
+!rofi.color-window: #0a0f14, #0a0f14, #26a98b
+!rofi.color-normal: #0a0f14, #98d1ce, #0a0f14, #26a98b, #0a0f14
+!rofi.color-active: #0a0f14, #98d1ce, #0a0f14, #26a98b, #0a0f14
+!rofi.color-urgent: #0a0f14, #d26939, #0a0f14, #d26939, #98d1ce
+
+! Rofi
+! DRACULA
+!true.color-enabled: true
+!                      bg,          fg,       bgalt,        hlbg,   hlfg
+!rofi.color-normal: argb:ff1e1f29, #e6e6e6, argb:ff1e1f29, #BD93F9,#000000
+!rofi.color-urgent: argb:ff1e1f29, #e6e6e6, argb:ff1e1f29, #b44136,#000000
+!rofi.color-active: argb:ff1e1f29, #FF79C6, argb:ff1e1f29, #ff79c6,#000000
+!rofi.color-window: argb:ff1e1f29, #bebebe,#bebebe
+
+#include ".Xresources.d/colors"
