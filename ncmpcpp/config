@@ -11,7 +11,7 @@ ncmpcpp_directory = ~/.ncmpcpp
 # MPD clients (eg. ncmpc) also use that location.
 #
 
-lyrics_directory = ~/.lyrics
+#lyrics_directory = ~/.lyrics
 
 ##### connection settings #####
 
@@ -75,13 +75,13 @@ visualizer_sync_interval = 30
 ##
 visualizer_type = wave
 #
-visualizer_look = "+|"
+visualizer_look = ""
 #
-visualizer_color = blue, cyan, green, yellow, magenta, red
+#visualizer_color = blue, cyan, green, yellow, magenta, red
 #
 ## Alternative subset of 256 colors for terminals that support it.
 ##
-visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
+#visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
 #
 ##### system encoding #####
 ##
@@ -175,7 +175,8 @@ visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
 ## Note: colors can be nested.
 ##
 #
-song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
+#song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
+song_list_format = $8%t $R$2%a
 #
 song_status_format = {{%a{ "%b"{ (%y)}} - }{%t}}|{%f}
 #
@@ -185,7 +186,7 @@ alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
 #
 alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
 #
-current_item_prefix = $(yellow)$r
+current_item_prefix = $(red)$r
 #
 current_item_suffix = $/r$(end)
 #
@@ -193,7 +194,7 @@ current_item_inactive_column_prefix = $(white)$r
 #
 current_item_inactive_column_suffix = $/r$(end)
 #
-now_playing_prefix = $b
+now_playing_prefix = "  $b "
 #
 now_playing_suffix = $/b
 #
@@ -284,7 +285,7 @@ playlist_separate_albums = no
 ##
 ## Note: Possible display modes: classic, columns.
 ##
-playlist_display_mode = columns
+playlist_display_mode = classic
 #
 browser_display_mode = classic
 #
@@ -294,7 +295,7 @@ playlist_editor_display_mode = classic
 #
 discard_colors_if_item_is_selected = yes
 #
-show_duplicate_tags = true
+show_duplicate_tags = yes
 #
 incremental_seeking = yes
 #
@@ -310,7 +311,7 @@ centered_cursor = no
 ## Note: You can specify third character which will be used to build 'empty'
 ## part of progressbar.
 ##
-progressbar_look = =>
+progressbar_look = ━━─
 #
 ## Available values: database, playlist.
 ##
@@ -537,9 +538,9 @@ active_window_border = red
 
 
 
-visualizer_fifo_path = "/tmp/mpd.fifo"
-visualizer_output_name = "my_fifo"
-visualizer_sync_interval = "30" 
-visualizer_in_stereo = "yes"
-visualizer_type = "spectrum"
-visualizer_look = "+|"
+#visualizer_fifo_path = "/tmp/mpd.fifo"
+#visualizer_output_name = "my_fifo"
+#visualizer_sync_interval = "30" 
+#visualizer_in_stereo = "yes"
+#visualizer_type = "spectrum"
+#visualizer_look = "+|"
