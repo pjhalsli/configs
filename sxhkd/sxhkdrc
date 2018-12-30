@@ -3,6 +3,10 @@
 # wm independent hotkeys
 #
 
+# lockscreen
+alt + shift + x
+    betterlockscreen -l dim
+
 # terminal emulator
 super + Return
 	termite
@@ -121,3 +125,30 @@ super + alt + shift + {j,k,i,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+# PERSONAL SHIT
+
+# send time & battery status
+super + d
+    notify-send "$(date "+%H:%M") /$(acpi | cut -d, -f2)"
+
+
+# screenshot
+Insert
+    scrot; notify-send "screenshot captured"
+
+
+# brightness
+XF86MonBrightnessDown
+    xbacklight -dec 10%
+
+XF86MonBrightnessUp
+    xbacklight -inc 10%
+
+# volume
+XF86AudioRaiseVolume
+    pactl set-sink-volume 0 +5%
+
+XF86AudioLowerVolume
+    pactl set-sink-volume 0 -5%
