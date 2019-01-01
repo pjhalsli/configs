@@ -4,7 +4,7 @@
 sxhkd &
 compton &
 dunst &
-feh --bg-fill Bilder/WP/night_bench_park_trees_stars_full_moon_sky_light_darkness_62340_1920x1080.jpg
+feh --bg-fill Bilder/
 #yabar &
 $HOME/.config/polybar/launch.sh
 
