@@ -1,7 +1,7 @@
 set relativenumber
 filetype plugin on
 syntax on
-colorscheme default
+colorscheme noctu
 set background=dark
 
 
