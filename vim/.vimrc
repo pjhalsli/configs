@@ -4,6 +4,22 @@ syntax on
 colorscheme noctu
 set background=dark
 
+"lightline stuff
+set laststatus=2
+set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'PaperColor',
+      \ }
+
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name'
+      \ },
+      \ }
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -12,8 +28,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 
-
 call plug#begin('~/.vim/plugged')
+Plug 'itchyny/vim-gitbranch'
+Plug 'itchyny/lightline.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'KeitaNakamura/neodark.vim'
 Plug 'kaicataldo/material.vim'
@@ -34,6 +51,7 @@ endif
 if (has("termguicolors"))
   set termguicolors
 endif
+
 
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
