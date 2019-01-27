@@ -4,7 +4,7 @@
 
 URxvt*.scrollBar: false
 !URxvt*.font:iosevka:pixelsize:10
-URxvt*font            : xft:OperatorMono:style=BoldItalic:pixelsize=10
+URxvt*font              xft:SourceCodePro:style=Regular:pixelsize=10
 
 !#define nord0 #2E3440
 !#define nord1 #3B4252

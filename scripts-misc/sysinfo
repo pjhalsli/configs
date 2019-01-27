@@ -29,9 +29,10 @@ cpuspe=$(grep 'model name' /proc/cpuinfo| sed 1q|sed 's/^.*:\ *//')
 system=$(cat /etc/os-release | sed '2,$d;s/NAME="//;s/"//')
 
 if [ -n "$DISPLAY" ]; then
-    wmname=$(wmctrl -m | grep -i name | awk '{print $2}')
-    termfn=$(xrdb -query | awk '/URxvt.font/ {print $2}' | sed 's/xft://;s/:pixelsize//;s/=/\ /')
-    #termfn=$(grep font $HOME/.config/termite/config | head -1 | cut -d "=" -f 2 | tail -c +2)
+    #wmname=$(wmctrl -m | grep -i name | awk '{print $2}')
+    wmname=bspwm
+    #termfn=$(xrdb -query | awk '/URxvt.font/ {print $2}' | sed 's/xft://;s/:pixelsize//;s/=/\ /')
+    termfn=$(grep font $HOME/.config/termite/config | head -1 | cut -d "=" -f 2 | tail -c +2)
 	systfn=$(sed -n 's/^[gtk].*font.*"\(.*\)".*$/\1/p' ~/.gtkrc-2.0)
 else
     wmname="none"
