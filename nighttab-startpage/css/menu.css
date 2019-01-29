@@ -1,0 +1,137 @@
+.menu {
+  background-color: rgb(var(--gray-01));
+  border-radius: var(--radius);
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  width: calc(100vw - 2em);
+  max-height: calc(80vh - 2em);
+  overflow-y: scroll;
+  transform: translateY(calc(-100% - 2em));
+  transition: transform var(--animation-speed-fast) ease-in-out;
+  z-index: var(--z-index-menu);
+}
+
+.menu:focus {
+  outline: none;
+}
+
+.is-menu-open .menu {
+  transform: translateY(0);
+}
+
+.menu-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.menu-nav-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-nav-area-grow {
+  flex-grow: 1;
+}
+
+.menu-nav:not(:last-child) {
+  margin: 0;
+}
+
+.menu-nav-item {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.menu-nav-item:not(:last-child) {
+  margin: 0;
+}
+
+.menu-content {
+  padding: 2em;
+}
+
+.menu-content-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2em;
+}
+
+.menu-item {
+  padding-bottom: 2em;
+  border-bottom: var(--line-width) solid rgb(var(--gray-04));
+}
+
+.menu-item:last-child,
+.menu-item:nth-last-child(2):nth-child(odd) {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.menu-close {
+  background-color: transparent;
+  margin: 0;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  border-radius: 0;
+}
+
+.menu-nav-button {
+  background-color: transparent;
+  margin: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 0;
+}
+
+.menu-nav-button [class^="icon-"],
+.menu-nav-button [class*=" icon-"] {
+  line-height: 1;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+@media (min-width: 550px) {
+  .menu {
+    max-height: inherit;
+  }
+
+  .menu-content {
+    padding: 2em;
+    max-height: 70vh;
+    overflow-y: scroll;
+  }
+
+  .menu-nav {
+    flex-direction: row;
+  }
+
+  .menu-nav-area {
+    flex-direction: row;
+  }
+
+  .menu-content-area {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 10vh;
+  }
+}
+
+@media (min-width: 900px) {
+  .menu {
+    width: calc(60vw - 2em);
+    max-height: calc(100vh - 2em);
+    max-width: 40em;
+  }
+}
+
+@media (min-width: 1100px) {
+  .menu {
+    width: calc(50vw - 2em);
+    max-width: 50em;
+  }
+}

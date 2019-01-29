@@ -1,0 +1,114 @@
+:root {
+  --black: 0, 0, 0;
+  --white: 255, 255, 255;
+  --gray-01: 38, 40, 49;
+  --gray-02: 47, 51, 62;
+  --gray-03: 57, 62, 75;
+  --gray-04: 67, 73, 88;
+  --gray-05: 77, 84, 101;
+  --gray-06: 87, 95, 114;
+  --gray-07: 97, 106, 127;
+  --gray-08: 107, 117, 140;
+  --gray-09: 117, 128, 153;
+  --gray-10: 127, 139, 166;
+  --gray-11: 137, 151, 180;
+  --gray-12: 149, 162, 187;
+  --gray-13: 162, 173, 195;
+  --gray-14: 174, 184, 203;
+  --gray-15: 187, 195, 211;
+  --gray-16: 199, 206, 218;
+  --gray-17: 212, 217, 226;
+  --gray-18: 224, 228, 234;
+  --gray-19: 237, 239, 242;
+  --gray-20: 250, 250, 250;
+  --accent: 0, 255, 0;
+  --root-font-size: 14px;
+  --radius: 0.2em;
+  --line-width: 0.2em;
+  --background: rgb(var(--gray-01));
+  --gutter: 0.5em;
+  --animation-speed-fast: 0.2s;
+  --animation-speed-medium: 0.4s;
+  --animation-speed-slow: 0.6s;
+  --font-regular: "Open Sans Regular", sans-serif;
+  --font-bold: "Open Sans Bold", sans-serif;
+  --font-light: "Open Sans Light", sans-serif;
+  --font-fjalla: "Fjalla One Regular", sans-serif;
+  --z-index-background: 1000;
+  --z-index-link: 2000;
+  --z-index-header: 3000;
+  --z-index-tip: 4000;
+  --z-index-shade: 5000;
+  --z-index-modal: 6000;
+  --z-index-menu: 7000;
+  --background-image: none;
+  --background-opacity: 1;
+  --background-accent-opacity: 0;
+  --background-blur: 0;
+  /* breakpoint reference */
+  /* can not be used in @media as of yet */
+  --breakpoint-sm: 550px;
+  --breakpoint-md: 700px;
+  --breakpoint-lg: 900px;
+  --breakpoint-xl: 1100px;
+  --breakpoint-xxl: 1600px;
+}
+
+:root.is-link-block {
+  --link-height: 7em;
+  --url-height: 20%;
+  --edit-height: 30%;
+}
+
+:root.is-link-list {
+  --link-height: 4em;
+  --url-height: 30%;
+  --edit-height: 50%;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --root-font-size: 16px;
+  }
+
+  :root.is-link-block {
+    --link-height: 9em;
+  }
+}
+
+::selection {
+  background-color: rgb(var(--accent));
+  color: rgb(var(--white));
+}
+
+html {
+  font-size: var(--root-font-size);
+}
+
+body {
+  background-color: var(--background);
+  color: rgb(var(--white));
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: var(--font-regular);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.is-alignment-vertical-top body {
+  justify-content: flex-start;
+}
+
+.is-alignment-vertical-center body {
+  justify-content: center;
+}
+
+.is-alignment-vertical-bottom body {
+  justify-content: flex-end;
+}
+
+.is-link body {
+  display: inherit;
+  height: inherit;
+}
