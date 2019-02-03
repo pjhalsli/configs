@@ -1,18 +1,12 @@
-#
-#
-# wm independent hotkeys
-#
-
-# lockscreen
-alt + shift + x
-    betterlockscreen -l dim
-
+[WM INDEPENDENT HOTKEYS]
 # terminal emulator
 super + Return
 	termite
 
-
 # program launcher
+super + Delete
+        kupfer
+
 super + r
 	rofi -modi "run,window" -show run 
 
@@ -20,10 +14,8 @@ super + r
 super + Escape
 	pkill -USR1 -x sxhkd
 
-#
-# bspwm hotkeys
-#
 
+[BSPWM HOTKEYS]
 # quit bspwm normally
 super + alt + Escape
 	bspc quit
@@ -44,10 +36,9 @@ super + y
 super + g
 	bspc node -s biggest
 
-#
-# state/flags
-#
 
+
+[STATE/FLAGS]
 # set the window state
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
@@ -56,10 +47,9 @@ super + {t,shift + t,s,f}
 super + ctrl + {x,y,z}
 	bspc node -g {locked,sticky,private}
 
-#
-# focus/swap
-#
 
+
+[FOCUS/SWAP]
 # focus the node in the given direction
 super + {_,shift + }{j,k,i,l}
 	bspc node -{f,s} {west,south,north,east}
@@ -90,10 +80,9 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-#
-# preselect
-#
 
+
+[PRESELECTION]
 # preselect the direction
 super + ctrl + {j,k,i,l}
 	bspc node -p {west,south,north,east}
@@ -110,10 +99,9 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-#
-# move/resize
-#
 
+
+[MOVE/RESIZE]
 # expand a window by moving one of its side outward
 super + alt + {j,k,i,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
@@ -127,28 +115,36 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 
-# PERSONAL SHIT
 
+[PERSONAL SHIT]
+super + F1
+    urxvt -geometry 170x30 -name urxvt_keys_help -e ~/.config/sxhkd/keybinds.sh
+    
 # send time & battery status
 super + d
     notify-send "$(date "+%H:%M") /$(acpi | cut -d, -f2)"
 
-
 # screenshot
 Insert
-    scrot; notify-send "screenshot captured"
+    scrot -cd 5; notify-send "Taking screenshot in 5..4..3..2..1
+screenshot captured"
 
-
-# brightness
+# brightness down
 XF86MonBrightnessDown
     xbacklight -dec 10%
 
+# brightness up
 XF86MonBrightnessUp
     xbacklight -inc 10%
 
-# volume
+# volume up
 XF86AudioRaiseVolume
     pactl set-sink-volume 0 +5%
 
+# volume down
 XF86AudioLowerVolume
     pactl set-sink-volume 0 -5%
+
+# lockscreen
+alt + shift + x
+     i3lock-fancy -p -f Source-Code-Pro-Medium

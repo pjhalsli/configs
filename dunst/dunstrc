@@ -1,15 +1,15 @@
 [global]
- ### Display ###
+    ### Display ###
 
- # Which monitor should the notifications be displayed on.
- monitor = 0
+    # Which monitor should the notifications be displayed on.
+    monitor = 0
 
- # Display notification on focused monitor.  Possible modes are:
- #   mouse: follow mouse pointer
- #   keyboard: follow window with keyboard focus
- #   none: don't follow anything
- #
- # "keyboard" needs a window manager that exports the
+    # Display notification on focused monitor.  Possible modes are:
+    #   mouse: follow mouse pointer
+    #   keyboard: follow window with keyboard focus
+    #   none: don't follow anything
+    #
+    # "keyboard" needs a window manager that exports the
     # _NET_ACTIVE_WINDOW property.
     # This should be the case for almost all modern window managers.
     #
@@ -29,42 +29,43 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "350x5-25+50"
+    geometry = "0x5-20+60"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
-    shrink = false
+    shrink = no
 
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
     transparency = 0
 
+
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
     # to the font height and padding.
-    notification_height = 0
+    notification_height = 75 
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 2
+    separator_height = 4
 
     # Padding between text and separator.
-    padding = 10
+    padding = 2
 
     # Horizontal padding.
-    horizontal_padding = 10
+    horizontal_padding = 8
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 4
+    frame_width = 6
 
     # Defines color of the frame around the notification window.
-    frame_color = "#5e81ac"
+    frame_color = "#dadada"
 
     # Define a color for the separator.
     # possible values are:
@@ -80,15 +81,16 @@
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
     # Set to 0 to disable.
+    # Transient notifications ignore this setting.
     idle_threshold = 120
 
     ### Text ###
 
-    font = Iosevka 10
+    font = SourceCodePro Black 12
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
-    line_height = 5
+    line_height = 0
 
     # Possible values are:
     # full: Allow a small subset of html markup in notifications:
@@ -122,12 +124,13 @@
     #   %I  iconname (without its path)
     #   %p  progress value if set ([  0%] to [100%]) or nothing
     #   %n  progress value if set without any extra characters
+    #   %%  Literal %
     # Markup is allowed
     format = "<b>%s</b>\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = left
+    alignment = center
 
     # Show age of message if message is older than show_age_threshold
     # seconds.
@@ -137,6 +140,10 @@
     # Split notifications into multiple lines if they don't fit into
     # geometry.
     word_wrap = yes
+
+    # When word_wrap is set to no, specify where to ellipsize long lines.
+    # Possible values are "start", "middle" and "end".
+    ellipsize = middle
 
     # Ignore newlines '\n' in notifications.
     ignore_newline = no
@@ -153,13 +160,13 @@
     ### Icons ###
 
     # Align icons left/right/off
-    icon_position = off
+    icon_position = left
 
     # Scale larger icons down to this size, set to 0 to disable
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
     ### History ###
 
@@ -176,10 +183,10 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/firefox -new-tab
+    browser = /usr/bin/qutebrowser -new-tab
 
     # Always run rule-defined scripts, even if the notification is suppressed
-    always_run_script = true
+    xalways_run_script = true
 
     # Define the title of the windows spawned by dunst
     title = Dunst
@@ -190,7 +197,7 @@
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
-    startup_notification = false
+    startup_notification = true
 
     ### Legacy
 
@@ -237,84 +244,451 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    # IMPORTANT: colors have to be defined in quotation marks.
-    # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#08090A"
-    foreground = "#b3bac7"
-    timeout = 10
-    # Icon for notifications with low urgency, uncomment to enable
-    #icon = /path/to/icon
+#    # IMPORTANT: colors have to be defined in quotation marks.
+#    # Otherwise the "#" and following would be interpreted as a comment.
+#    background = "#05040A"
+#    foreground = "#ffffff"
+#    timeout = 10
+#    # Icon for notifications with low urgency, uncomment to enable
+#    #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#08090A"
-    foreground = "#b3bac7"
-    timeout = 10
-    # Icon for notifications with normal urgency, uncomment to enable
-    #icon = /path/to/icon
+#    background = "#05040A"
+#    foreground = "#ffffff"
+#    timeout = 10
+#    # Icon for notifications with normal urgency, uncomment to enable
+#    #icon = /path/to/icon
 
 [urgency_critical]
-    background = "#08090A"
-    foreground = "#ffffff"
-    frame_color = "#4B555E"
-    timeout = 0
-    # Icon for notifications with critical urgency, uncomment to enable
-    #icon = /path/to/icon
+#    background = "#05040A"
+#    foreground = "#ffffff"
+#    frame_color = "#353535"
+#    timeout = 0
+#    # Icon for notifications with critical urgency, uncomment to enable
+#    #icon = /path/to/icon
 
-# Every section that isn't one of the above is interpreted as a rules to
-# override settings for certain messages.
-# Messages can be matched by "appname", "summary", "body", "icon", "category",
-# "msg_urgency" and you can override the "timeout", "urgency", "foreground",
-# "background", "new_icon" and "format".
-# Shell-like globbing will get expanded.
-#
-# SCRIPTING
-# You can specify a script that gets run when the rule matches by
-# setting the "script" option.
-# The script will be called as follows:
-#   script appname summary body icon urgency
-# where urgency can be "LOW", "NORMAL" or "CRITICAL".
-#
-# NOTE: if you don't want a notification to be displayed, set the format
-# to "".
-# NOTE: It might be helpful to run dunst -print in a terminal in order
-# to find fitting options for rules.
 
-#[espeak]
-#    summary = "*"
-#    script = dunst_espeak.sh
-
-#[script-test]
-#    summary = "*script*"
-#    script = dunst_test.sh
-
-#[ignore]
-#    # This notification will not be displayed
-#    summary = "foobar"
-#    format = ""
-
-#[history-ignore]
-#    # This notification will not be saved in history
-#    summary = "foobar"
-#    history_ignore = yes
-
-#[signed_on]
-#    appname = Pidgin
-#    summary = "*signed on*"
-#    urgency = low
-#
-#[signed_off]
-#    appname = Pidgin
-#    summary = *signed off*
-#    urgency = low
-#
-#[says]
-#    appname = Pidgin
-#    summary = *says*
-#    urgency = critical
-#
-#[twitter]
-#    appname = Pidgin
-#    summary = *twitter.com*
-#    urgency = normal
-#
 # vim: ft=cfg
+
+frame_color = "#dddddd"
+separator_color = "#b9b9b9"
+
+frame_color = "#dddddd"
+separator_color = "#959DCB"
+
+frame_color = "#dddddd"
+separator_color = "#959DCB"
+
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#EEFFFF"
+separator_color = "#EEFFFF"
+
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#abb2bf"
+separator_color = "#abb2bf"
+
+frame_color = "#D0D0FA"
+separator_color = "#D0D0FA"
+
+frame_color = "#bcbabe"
+separator_color = "#bcbabe"
+
+frame_color = "#bcbabe"
+separator_color = "#bcbabe"
+
+frame_color = "#D0D0FA"
+separator_color = "#D0D0FA"
+
+frame_color = "#abb2bf"
+separator_color = "#abb2bf"
+
+frame_color = "#dcdccc"
+separator_color = "#dcdccc"
+
+frame_color = "#939599"
+separator_color = "#939599"
+
+frame_color = "#e9e9f4"
+separator_color = "#e9e9f4"
+
+frame_color = "#c1c1c1"
+separator_color = "#c1c1c1"
+
+frame_color = "#d0d0d0"
+separator_color = "#d0d0d0"
+
+frame_color = "#c5c8c6"
+separator_color = "#c5c8c6"
+
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#b5b3aa"
+separator_color = "#b5b3aa"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#e9e9f4"
+separator_color = "#e9e9f4"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#b9b9b9"
+separator_color = "#b9b9b9"
+
+frame_color = "#b9b9b9"
+separator_color = "#b9b9b9"
+
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#b9b9b9"
+separator_color = "#b9b9b9"
+
+frame_color = "#b9b9b9"
+separator_color = "#b9b9b9"
+
+frame_color = "#b9b9b9"
+separator_color = "#b9b9b9"
+
+frame_color = "#b9b9b9"
+separator_color = "#b9b9b9"
+
+frame_color = "#095b67"
+separator_color = "#095b67"
+
+frame_color = "#e9e9f4"
+separator_color = "#e9e9f4"
+
+frame_color = "#b9b9b9"
+separator_color = "#b9b9b9"
+
+frame_color = "#b9b9b9"
+separator_color = "#b9b9b9"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#C7CCD1"
+separator_color = "#C7CCD1"
+
+frame_color = "#095b67"
+separator_color = "#095b67"
+
+frame_color = "#b9b9b9"
+separator_color = "#b9b9b9"
+
+frame_color = "#dab997"
+separator_color = "#dab997"
+
+frame_color = "#d5c4a1"
+separator_color = "#d5c4a1"
+
+frame_color = "#d5c4a1"
+separator_color = "#d5c4a1"
+
+frame_color = "#d5c4a1"
+separator_color = "#d5c4a1"
+
+frame_color = "#E5E9F0"
+separator_color = "#E5E9F0"
+
+frame_color = "#CDD3DE"
+separator_color = "#CDD3DE"
+
+frame_color = "#EEFFFF"
+separator_color = "#EEFFFF"
+
+frame_color = "#CDD3DE"
+separator_color = "#CDD3DE"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#EEFFFF"
+separator_color = "#EEFFFF"
+
+frame_color = "#dab997"
+separator_color = "#dab997"
+
+frame_color = "#CDD3DE"
+separator_color = "#CDD3DE"
+
+frame_color = "#d0d0d0"
+separator_color = "#d0d0d0"
+
+frame_color = "#A89984"
+separator_color = "#A89984"
+
+frame_color = "#b5b3aa"
+separator_color = "#b5b3aa"
+
+frame_color = "#e9e9f4"
+separator_color = "#e9e9f4"
+
+frame_color = "#EEFFFF"
+separator_color = "#EEFFFF"
+
+frame_color = "#EEFFFF"
+separator_color = "#EEFFFF"
+
+frame_color = "#B0BEC5"
+separator_color = "#B0BEC5"
+
+frame_color = "#EEFFFF"
+separator_color = "#EEFFFF"
+
+frame_color = "#abb2bf"
+separator_color = "#abb2bf"
+
+frame_color = "#D0D0FA"
+separator_color = "#D0D0FA"
+
+frame_color = "#c0c5ce"
+separator_color = "#c0c5ce"
+
+frame_color = "#C0C5CE"
+separator_color = "#C0C5CE"
+
+frame_color = "#383a42"
+separator_color = "#383a42"
+
+frame_color = "#a39e9b"
+separator_color = "#a39e9b"
+
+frame_color = "#b8bbc2"
+separator_color = "#b8bbc2"
+
+frame_color = "#5f574f"
+separator_color = "#5f574f"
+
+frame_color = "#e6e1dc"
+separator_color = "#e6e1dc"
+
+frame_color = "#d0d0d0"
+separator_color = "#d0d0d0"
+
+frame_color = "#f1eff8"
+separator_color = "#f1eff8"
+
+frame_color = "#d6d6d6"
+separator_color = "#d6d6d6"
+
+frame_color = "#eff0eb"
+separator_color = "#eff0eb"
+
+frame_color = "#A6AFB8"
+separator_color = "#A6AFB8"
+
+frame_color = "#102015"
+separator_color = "#102015"
+
+frame_color = "#a3a3a3"
+separator_color = "#a3a3a3"
+
+frame_color = "#D0D0D0"
+separator_color = "#D0D0D0"
+
+frame_color = "#4d4d4c"
+separator_color = "#4d4d4c"
+
+frame_color = "#c5c8c6"
+separator_color = "#c5c8c6"
+
+frame_color = "#d9d8d8"
+separator_color = "#d9d8d8"
+
+frame_color = "#a7a7a7"
+separator_color = "#a7a7a7"
+
+frame_color = "#bcbabe"
+separator_color = "#bcbabe"
+
+frame_color = "#cabcb1"
+separator_color = "#cabcb1"
+
+frame_color = "#939599"
+separator_color = "#939599"
+
+frame_color = "#dcdccc"
+separator_color = "#dcdccc"
+
+frame_color = "#a5a2a2"
+separator_color = "#a5a2a2"
+
+frame_color = "#81B5AC"
+separator_color = "#81B5AC"
+
+frame_color = "#C7CCD1"
+separator_color = "#C7CCD1"
+
+frame_color = "#8a8986"
+separator_color = "#8a8986"
+
+frame_color = "#b7b8b9"
+separator_color = "#b7b8b9"
+
+frame_color = "#f1eff8"
+separator_color = "#f1eff8"
+
+frame_color = "#b9b9b9"
+separator_color = "#b9b9b9"
+
+frame_color = "#d5c4a1"
+separator_color = "#d5c4a1"
+
+frame_color = "#d5c4a1"
+separator_color = "#d5c4a1"
+
+frame_color = "#d5c4a1"
+separator_color = "#d5c4a1"
+
+frame_color = "#dab997"
+separator_color = "#dab997"
+
+frame_color = "#f1eff8"
+separator_color = "#f1eff8"
+
+frame_color = "#EEFFFF"
+separator_color = "#EEFFFF"
+
+frame_color = "#CDD3DE"
+separator_color = "#CDD3DE"
+
+frame_color = "#959DCB"
+separator_color = "#959DCB"
+
+frame_color = "#464646"
+separator_color = "#464646"
+
+frame_color = "#b9b9b9"
+separator_color = "#b9b9b9"
+
+frame_color = "#b9b9b9"
+separator_color = "#b9b9b9"
+
+[base16_low]
+    msg_urgency = low
+    background = "#252525"
+    foreground = "#525252"
+
+[base16_normal]
+    msg_urgency = normal
+    background = "#464646"
+    foreground = "#b9b9b9"
+
+[base16_critical]
+    msg_urgency = critical
+    background = "#7c7c7c"
+    foreground = "#e3e3e3"
