@@ -30,8 +30,8 @@ dist=$(cat /etc/*-release | grep -i name | cut -d'=' -d'"' -f2 | sed -n 1p)
 bit=$(uname -m)
 
 # WM version
-wm=$(wmctrl -m | grep -i name | awk '{print $2}')
-
+#wm=$(wmctrl -m | grep -i name | awk '{print $2}')
+wm=bspwm
 # Other
 UPT=`uptime | awk -F'( |,)' '{print $2}' | awk -F ":" '{print $1}'`
 uptime=$(uptime | sed 's/.*up \([^,]*\), .*/\1/')
