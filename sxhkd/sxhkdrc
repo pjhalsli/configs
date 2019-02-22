@@ -1,4 +1,5 @@
 [WM INDEPENDENT HOTKEYS]
+
 # terminal emulator
 super + Return
 	termite
@@ -47,12 +48,24 @@ super + {t,shift + t,s,f}
 super + ctrl + {x,y,z}
 	bspc node -g {locked,sticky,private}
 
+# blank space:wq
+super + alt + space
+	{smartsplit ; bspc node -i,\
+	for i in $(bspc query -N -n .leaf.!window.local); do bspc node $i -k; done}
+
+## Move window infront or behind other windows
+super + {_,shift} + v
+	bspc node -l {above,below}
 
 
 [FOCUS/SWAP]
 # focus the node in the given direction
 super + {_,shift + }{j,k,i,l}
 	bspc node -{f,s} {west,south,north,east}
+
+## Move window infront or behind other windows
+super + {_,shift} + v
+	bspc node -l {above,below}
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
@@ -80,7 +93,9 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-
+# Go to a blank desktop
+alt + shift + q
+	bspc desktop -f 11
 
 [PRESELECTION]
 # preselect the direction
@@ -113,6 +128,13 @@ super + alt + shift + {j,k,i,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+# move a floating window
+super + shift + {Left,Down,Up,Right}
+        bspc node -v {-50 0,0 50,0 -50,50 0}
+
+# rotate a window
+alt + e
+	bspc node @/ -R 90
 
 
 
@@ -123,6 +145,7 @@ super + F1
 # send time & battery status
 super + d
     notify-send "$(date "+%H:%M") /$(acpi | cut -d, -f2)"
+
 
 # screenshot
 Insert

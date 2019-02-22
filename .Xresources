@@ -1,47 +1,61 @@
 !URXVT SETTINGS
-!
-#include ".Xresources.d/colors"
+
+URxvt*font: xft:OfficeCodeProD:size=10
+URxvt.internalBorder: 10
+URxvt.scrollBar: false
+URxvt.geometry: 55x15
+URxvt.saveLines: 0
+URxvt.scrollWithBuffer: false
+URxvt*skipScroll: true
+URxvt*.scrollBar: false
+!URxvt*.font:    xft:TamzenForPowerline:pixelsize:14
+!URxvt*font      xft:TamzenForPowerline:pixelsize=13
+
+! DPI/Font
+!Xft.dpi: 102
+Xft.autohint: 0
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
 
 ! special
-*.foreground:   #67828d
-*.background:   #00222b
-*.cursorColor:  #67828d
+*.foreground:   #aebec5
+*.background:   #0d0e11
+*.cursorColor:  #aebec5
 
 ! black
-*.color0:       #0a2c35
-*.color8:       #003b4f
+*.color0:       #0d0e11
+*.color8:       #798589
 
 ! red
-*.color1:       #85a5b3
-*.color9:       #85a5b3
+*.color1:       #384750
+*.color9:       #384750
 
 ! green
-*.color2:       #25485d
-*.color10:      #25485d
+*.color2:       #3b5067
+*.color10:      #3b5067
 
 ! yellow
-*.color3:       #0f3341
-*.color11:      #0f3341
+*.color3:       #4d5d68
+*.color11:      #4d5d68
 
 ! blue
-*.color4:       #5c8298
-*.color12:      #5c8298
+*.color4:       #994047
+*.color12:      #994047
 
 ! magenta
-*.color5:       #044655
-*.color13:      #044655
+*.color5:       #395d86
+*.color13:      #395d86
 
 ! cyan
-*.color6:       #3d637d
-*.color14:      #3d637d
+*.color6:       #637887
+*.color14:      #637887
 
 ! white
-*.color7:       #b0b9b8
-*.color15:      #b0b9b8
-
-URxvt*.scrollBar: false
-!URxvt*.font:    xft:Iosevka:pixelsize:12
-URxvt*font      xft:HackNerdFont:pixelsize=12
+*.color7:       #aebec5
+*.color15:      #aebec5
 
 ! Xclock colors.
 XClock*foreground: #C9BEB4
@@ -59,19 +73,19 @@ URxvt*depth: 32
 ! "Enabled modi" Set from: Default
 rofi.modi:                           window,run
 ! "Window width" Set from: Default
-! rofi.width:                          50
+rofi.width:                          100%
 ! "Number of lines" Set from: Default
-! rofi.lines:                          15
+rofi.lines:                          15
 ! "Number of columns" Set from: Default
 rofi.columns:                         1
 ! "Font to use" Set from: Default
-rofi.font:                           SourceCodePro 12
+rofi.font:                           Gomme Regular 12
 ! "Border width" Set from: Default
 rofi.bw:                             6
 ! "Location on screen" Set from: Default
 ! rofi.location:                       0
 ! "Padding" Set from: Default
-rofi.padding:                        15
+rofi.padding:                      600
 ! "Y-offset relative to location" Set from: Default
 rofi.yoffset:                        0
 ! "X-offset relative to location" Set from: Default
@@ -141,13 +155,13 @@ rofi.sidebar-mode:                    true
 ! "Separator style (none, dash, solid) *DEPRECATED*" Set from: File
 rofi.separator-style:                dash
 ! "Hide scroll-bar *DEPRECATED*" Set from: Default
-rofi.hide-scrollbar:                 tru
+rofi.hide-scrollbar:                 true
 ! "Fullscreen" Set from: Default
-! rofi.fullscreen:                     false
+!rofi.fullscreen:                     false
 ! "Fake transparency *DEPRECATED*" Set from: Default
 ! rofi.fake-transparency:              false
 ! "DPI" Set from: Default
-! rofi.dpi:                            -1
+ rofi.dpi:                            -2
 ! "Threads to use for string matching" Set from: Default
 ! rofi.threads:                        0
 ! "Scrollbar width *DEPRECATED*" Set from: Default
@@ -162,16 +176,6 @@ rofi.scrollbar-width:                0
 ! rofi.click-to-exit:                  true
 ! "Indicate how it match by underlining it." Set from: Default
 ! rofi.show-match:                     true
-! "New style theme file" Set from: Default
-! rofi.theme:                          
-! "Color scheme for normal row" Set from: File
-#rofi.color-normal:                   #3a3c4e, #e9e9f4, #3a3c4e, #3a3c4e, #f7f7fb
-! "Color scheme for urgent row" Set from: File
-#rofi.color-urgent:                   #3a3c4e, #ea51b2, #3a3c4e, #3a3c4e, #ea51b2
-! "Color scheme for active row" Set from: File
-#rofi.color-active:                   #3a3c4e, #62d6e8, #3a3c4e, #3a3c4e, #62d6e8
-! "Color scheme window" Set from: File
-#rofi.color-window:                   #3a3c4e, #3a3c4e, #282936
 ! "Max history size (WARNING: can cause slowdowns when set to high)." Set from: Default
 ! rofi.max-history-size:               25
 ! "Hide the prefix mode prefix on the combi view." Set from: Default
@@ -338,11 +342,20 @@ rofi.scrollbar-width:                0
 ! rofi.me-accept-custom:               Control+MouseDPrimary
 
 ! DRACULAi colors
-!true.color-enabled: true
+true.color-enabled: true
 !                      bg,          fg,       bgalt,        hlbg,   hlfg
-!rofi.color-normal: argb:ff1e1f29, #e6e6e6, argb:ff1e1f29, #BD93F9,#000000
-!rofi.color-urgent: argb:ff1e1f29, #e6e6e6, argb:ff1e1f29, #b44136,#000000
-!rofi.color-active: argb:ff1e1f29, #FF79C6, argb:ff1e1f29, #ff79c6,#000000
-!rofi.color-window: argb:ff1e1f29, #bebebe,#bebebe
+!rofi.color-normal:  #212221, #e6e6e6, argb:ff1e1f29, #BD93F9,#000000
+!rofi.color-urgent:  #212221, #e6e6e6, argb:ff1e1f29, #b44136,#000000
+!rofi.color-active:  #212221, ##80A0FF, argb:ff1e1f29, #ff79c6,#000000
+!rofi.color-window:  #212221, #bebebe,#bebebe
+
+!rofi.color-normal: #00000000, #a9a9a9, #00000000, #00000000, #b9b9b9
+!rofi.color-urgent: #00000000, #a9a9a9, #00000000, #00000000, #b9b9b9
+!rofi.color-active: #00000000, #1c1c23, #00000000, #00000000, #b9b9b9
+!rofi.color-window: #CC101010
+rofi.color-normal: argb:00000000, #a5c3bb, argb:00000000, #12252d, #a5c3bb
+rofi.color-window: #0e0e10, #000000, #832757
 
 #include ".Xresources.d/colors"
+!include ".Xresources.d/colors"
+!#include ".Xresources.d/colors"

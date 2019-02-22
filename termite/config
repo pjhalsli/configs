@@ -17,17 +17,31 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-#font = Tamzen Regular 13
-#font = ProFont for Powerline Regular 13
-#font = Operator Mono Medium 12
-#font = Office Code Pro D Regular 12
-font = SourceCodePro ExtraLight 12
+
+font = undefined medium  12
+#font = Operator Mono Regular 11
+#font =  GohuFont Regular 12
+#font = TamzenForPowerline Regular 13
+#font = Office Code Pro D Regular 10
+#font = UW Ttyp0 Regular 12
+#font = ProFont for Powerline Light 12
+#font = Gomme Regular 12
+#font = k knxt Regular 10 
+#font = CtrlD Regular 12
+#font = xos4 Terminess Powerline Regular 11
+#font  = NovaMono for Powerline Regular 11
+#font = Monofur for Powerline 12
+#font = Fantasque Sans Mono 11
 #font = HackNerdFont Regular 12
+#font = Noto Mono for Powerline Regular 10 
+#font = Spleen Regular 13
+#font = SGI Screen Regular 12
+
 scrollback_lines = 10000
 search_wrap = true
 filter_unmatched_urls = true
 
-[hints]
+[hint]
 
 [colors]
 # Base16 Grayscale Dark
