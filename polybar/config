@@ -16,11 +16,11 @@
 [color]
 
 trans = #00000000
-white = #FFFFFF
+white = #dddddd
 black = #000000
 
-bg = #1F1F1F
-fg = #FFFFFF
+bg = #2e3440
+fg = #e5e9f0
 fg-alt = #A9ABB0
 
 acolor = #FFFFFF
@@ -28,7 +28,7 @@ curgent = #EF5350
 coccupied = #42A5F5
 
 shade1 = #212121
-shade2 = #424242
+shade2 = #2e3440
 shade3 = #616161
 shade4 = #757575
 shade5 = #9E9E9E
@@ -93,8 +93,10 @@ scroll-down = i3wm-wsprev
 
 modules-left = arch xwindow
 modules-center = bspwm
-modules-right = mpd volume battery xbacklight wlan date
+modules-right = mpd volume xbacklight wlan date
  
+; xtra mods =    battery mail updates weather bitcoin
+
 ;== Modules ========================================================
 
 [module/arch]
@@ -112,8 +114,8 @@ click-right = rmenu_wi_1
 type = internal/xwindow
 label =  %title:0:25:...%
 label-padding = 2
-label-background = ${color.shade2}
-;label-foreground = ${color.}
+label-background = ${color.bg}
+;label-foreground = ${color.fg}
 
 
 [module/bspwm]
@@ -149,12 +151,11 @@ label-focused-padding = 1
 label-urgent-padding = 1
 label-occupied-padding = 1
 
-label-empty-foreground = #616161
-label-focused-foreground = #ffffff
-label-urgent-foreground = #900900
-label-occupied-foreground = #adadad
+label-empty-foreground = #3B4252
+label-focused-foreground = #A3BE8C
+label-urgent-foreground = #BF616A
+label-occupied-foreground = #81A1C1
 
-/
 
 ;==========================================================
 
@@ -163,14 +164,14 @@ type = internal/mpd
 format-online = <toggle> <label-song> 
 ;format-online =  <label-song> 
 ;alt icons =   
-format-online-foreground = ${color.ashade8}
-format-online-background = ${color.shade8}
+format-online-foreground = ${color.fg}
+format-online-background = ${color.bg}
 format-online-padding = 2
 
 icon-play = 喇
 icon-pause = 
-
-label-song-maxlen = 25
+i
+label-song-maxlen = 35
 label-song-ellipsis = true
 
 ;==========================================================
@@ -178,9 +179,10 @@ label-song-ellipsis = true
 [module/pkg]
 type = custom/script
 exec = updates.sh
-format-background = ${color.shade7}
+format-background = ${color.bg}
 format-padding = 2
 tail = true
+
 
 [module/battery]
 type = internal/battery
@@ -189,15 +191,18 @@ time-format = %H:%M
 battery = BAT1
 adapter = AC
 format-charging = <animation-charging> <label-charging>
-format-charging-background = ${color.shade5}
+format-charging-background = ${color.bg}
 format-charging-padding = 2
 label-charging = %percentage%%
+label-charging-background = ${color.bg}
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-background = ${color.shade5}
+format-discharging-background = ${color.bg}
 format-discharging-padding = 2
-label-discharging = %percentage%%
+label-discharging = %percentage%% 
 format-full = <label-full>
-
+format-full-background = ${color.bg}
+label-padding = 2
+label-charging-padding = 2
 format-full-prefix = " "
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -229,10 +234,11 @@ animation-charging-framerate = 750
 type = internal/alsa
 format-volume = <ramp-volume> <label-volume>
 format-volume-padding = 2
-format-volume-background = ${color.shade6}
+format-volume-background = ${color.bg}
+format-volume-foreground = ${color.fg}
 label-volume = %percentage%%
 label-muted = "婢"
-label-muted-background = ${color.shade6}
+label-muted-background = ${color.bg}
 label-muted-padding = 2
 
 ramp-volume-0 = 奄
@@ -249,10 +255,10 @@ ramp-volume-6 = 墳
 type = internal/xbacklight
 format = <label>
 format-foreground = ${color.fg}
-format-background = ${color.shade4}
+format-background = ${color.bg}
 ;format-padding = 2
 label = " %percentage%"
-label-background = ${color.shade4} 
+label-background = ${color.bg} 
 label-padding = 2
 
 
@@ -260,14 +266,14 @@ label-padding = 2
 type = internal/network
 interface = wlp3s0
 interval = 3.0
-format-connected-background = ${color.shade3}
+format-connected-background = ${color.bg}
 format-padding = 2
 tail = true
 label-background =${color.shade3}
 
 format-connected = <ramp-signal> <label-connected>
 label-connected = %essid%
-label-connected-background = ${color.shade3}
+label-connected-background = ${color.bg}
 ;format-disconnected =
 ramp-signal-0 =
 label-connected-padding = 2
@@ -278,7 +284,7 @@ type = internal/date
 interval = 30
 label =  %time%
 label-padding = 2
-label-background = ${color.shade2}
+label-background = ${color.bg}
 time =  %H:%M
 time-alt =  %d-%m-%Y
 
