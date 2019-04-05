@@ -46,7 +46,7 @@ bspc config pointer_follows_focus false
 bspc config center_pseudo_tiled true
 
 # Automatic Splitting Settings
-bspc config automatic_scheme	longest_side
+bspc config automatic_scheme	spiral
 bspc config initial_polarity	second_child
 
 bspc config top_padding 41 
