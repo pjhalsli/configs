@@ -4,10 +4,10 @@
 super + Return
 	termite
 
-# program launcher
+# launch kupfer
 super + Delete
         kupfer
-
+# launch rofi
 super + r
 	rofi -modi "run,window" -show run 
 
@@ -48,7 +48,7 @@ super + {t,shift + t,s,f}
 super + ctrl + {x,y,z}
 	bspc node -g {locked,sticky,private}
 
-# blank space:wq
+# blank space
 super + alt + space
 	{smartsplit ; bspc node -i,\
 	for i in $(bspc query -N -n .leaf.!window.local); do bspc node $i -k; done}
@@ -93,9 +93,6 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-# Go to a blank desktop
-alt + shift + q
-	bspc desktop -f 11
 
 [PRESELECTION]
 # preselect the direction

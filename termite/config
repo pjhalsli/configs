@@ -18,24 +18,18 @@ dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
 
-font = undefined medium  12
-#font = Operator Mono Regular 11
-#font =  GohuFont Regular 12
+font = undefined medium 11
+#font = Anka/Coder Condensed 11
+#font = Mensch Regular 11
+#font = hermit light Regular 11
+#font = PragmataPro Regular 12
+#font = Operator Mono Light Italic 12
 #font = TamzenForPowerline Regular 13
 #font = Office Code Pro D Regular 10
 #font = UW Ttyp0 Regular 12
 #font = ProFont for Powerline Light 12
-#font = Gomme Regular 12
-#font = k knxt Regular 10 
-#font = CtrlD Regular 12
-#font = xos4 Terminess Powerline Regular 11
-#font  = NovaMono for Powerline Regular 11
 #font = Monofur for Powerline 12
-#font = Fantasque Sans Mono 11
-#font = HackNerdFont Regular 12
-#font = Noto Mono for Powerline Regular 10 
-#font = Spleen Regular 13
-#font = SGI Screen Regular 12
+#font = HackNerdFont Regular 10
 
 scrollback_lines = 10000
 search_wrap = true
@@ -43,52 +37,46 @@ filter_unmatched_urls = true
 
 [hint]
 
+#highlight = #4c566a
+
 [colors]
-# Base16 Grayscale Dark
-# Author: Alexandre Gavioli (https://github.com/Alexx2/)
+# blaquebeard
+# special
+foreground      = #c2c2b0
+foreground_bold = #c2c2b0
+cursor          = #c2c2b0
+background      = #222222
 
-foreground          = #b9b9b9
-foreground_bold     = #e3e3e3
-cursor              = #e3e3e3
-cursor_foreground   = #101010
-background          = rgba(16, 16, 16)
+# black
+color0  = #222222
+color8  = #222222
 
-# 16 color space
+# red
+color1  = #924650
+color9  = #924650
 
-# Black, Gray, Silver, White
-color0  = #101010
-color8  = #525252
-color7  = #b9b9b9
-color15 = #f7f7f7
+# green
+color2  = #666666
+color10 = #666666
 
-# Red
-color1  = #7c7c7c
-color9  = #7c7c7c
+# yellow
+color3  = #ba9864
+color11 = #ba9864
 
-# Green
-color2  = #8e8e8e
-color10 = #8e8e8e
+# blue
+color4  = #888888
+color12 = #888888
 
-# Yellow
-color3  = #a0a0a0
-color11 = #a0a0a0
+# magenta
+color5  = #4f8396
+color13 = #4f8396
 
-# Blue
-color4  = #686868
-color12 = #686868
+# cyan
+color6  = #777777
+color14 = #777777
 
-# Purple
-color5  = #747474
-color13 = #747474
+# white
+color7  = #c2c2b0
+color15 = #c2c2b0
 
-# Teal
-color6  = #868686
-color14 = #868686
 
-# Extra colors
-color16 = #999999
-color17 = #5e5e5e
-color18 = #252525
-color19 = #464646
-color20 = #ababab
-color21 = #e3e3e3

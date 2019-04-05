@@ -19,8 +19,8 @@ trans = #00000000
 white = #dddddd
 black = #000000
 
-bg = #2e3440
-fg = #e5e9f0
+bg = #222222
+fg = #C2C2B0
 fg-alt = #A9ABB0
 
 acolor = #FFFFFF
@@ -151,10 +151,10 @@ label-focused-padding = 1
 label-urgent-padding = 1
 label-occupied-padding = 1
 
-label-empty-foreground = #3B4252
-label-focused-foreground = #A3BE8C
-label-urgent-foreground = #BF616A
-label-occupied-foreground = #81A1C1
+label-empty-foreground = #666666
+label-focused-foreground = #BA9864
+label-urgent-foreground = #924650
+label-occupied-foreground = #777777
 
 
 ;==========================================================
@@ -184,7 +184,51 @@ format-padding = 2
 tail = true
 
 
+[module/battery]
+type = internal/battery
+full-at = 99
+time-format = %H:%M
+battery = BAT1
+adapter = AC
+format-charging = <animation-charging> <label-charging>
+format-charging-background = ${color.bg}
+format-charging-padding = 2
+label-charging = %percentage%%
+label-charging-background = ${color.bg}
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-background = ${color.bg}
+format-discharging-padding = 2
+label-discharging = %percentage%% 
+format-full = <label-full>
+format-full-background = ${color.bg}
+label-padding = 2
+label-charging-padding = 2
+format-full-prefix = " "
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
 
+ramp-capacity-0-foreground = ${color.red}
+ramp-capacity-1-foreground = ${color.red}
+ramp-capacity-foreground   = ${color.fg}
+bar-capacity-width = 10
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-6 = 
+
+animation-charging-framerate = 750
 
 [module/volume]
 type = internal/alsa
@@ -253,5 +297,5 @@ content-foreground = ${color.fg}
 click-left = pmenu_1
 click-right = pmenu_1
 
-
+;== EOF ========================================================
 
