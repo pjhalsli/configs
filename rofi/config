@@ -1,0 +1,14 @@
+
+! Enable the extended coloring options
+rofi.color-enabled: true
+
+! Property Name     BG       Border   Separator
+rofi.color-window:  #071820, #031619, #021012
+
+! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
+rofi.color-normal:  #071820, #AAAFB2, #071820, #3E4970, #C2C2B0
+rofi.color-active:  #8BA388, #000000, #8BA388, #CEB5CE, #ffffff
+rofi.color-urgent:  #071820, #AAAFB2, #071820, #3E4970, #924650
+
+! Set the desired separator style
+rofi.separator-style: solid
