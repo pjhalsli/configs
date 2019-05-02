@@ -133,6 +133,8 @@ super + shift + {Left,Down,Up,Right}
 alt + e
 	bspc node @/ -R 90
 
+alt + s
+    bspc node -s "$(xorg-choose-window aoeuhtns)" --follow
 
 
 [PERSONAL SHIT]

@@ -1,6 +1,6 @@
 !URXVT SETTINGS
 
-URxvt*font: xft:OfficeCodeProD:size=10
+URxvt*font: xft::Anka/Coder:Regular:size=11
 URxvt.internalBorder: 10
 URxvt.scrollBar: false
 URxvt.geometry: 55x15
@@ -8,11 +8,9 @@ URxvt.saveLines: 0
 URxvt.scrollWithBuffer: false
 URxvt*skipScroll: true
 URxvt*.scrollBar: false
-!URxvt*.font:    xft:TamzenForPowerline:pixelsize:14
-!URxvt*font      xft:TamzenForPowerline:pixelsize=13
 
 ! DPI/Font
-!Xft.dpi: 102
+Xft.dpi: 92 
 Xft.autohint: 0
 Xft.antialias: 1
 Xft.hinting: true
@@ -20,42 +18,70 @@ Xft.hintstyle: hintslight
 Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
 
-! special
-*.foreground:   #aebec5
-*.background:   #0d0e11
-*.cursorColor:  #aebec5
+*.foreground:   #98d1ce
+*.background:   #0a0f14
+*.cursorColor:  #98d1ce
+
+*.color0:       #0a0f14
+*.color8:       #10151b
+
+*.color1:       #c33027
+*.color9:       #d26939
+
+*.color2:       #26a98b
+*.color10:      #081f2d
+
+*.color3:       #edb54b
+*.color11:      #245361
+
+*.color4:       #195465
+*.color12:      #093748
+
+*.color5:       #4e5165
+*.color13:      #888ba5
+
+*.color6:       #33859d
+*.color14:      #599caa
+
+*.color7:       #98d1ce
+*.color15:      #d3ebe9
+
+!! special
+!*.foreground:   #d8dee9
+!*.background:   #e23440
+!*.cursorColor:  #d8dee9
 
 ! black
-*.color0:       #0d0e11
-*.color8:       #798589
+!*.color0:       #3b4252
+!*.color8:       #4c566a
 
 ! red
-*.color1:       #384750
-*.color9:       #384750
+!*.color1:       #bf616a
+!*.color9:       #bf616a
 
 ! green
-*.color2:       #3b5067
-*.color10:      #3b5067
+!*.color2:       #a3be8c
+!*.color10:      #a3be8c
 
 ! yellow
-*.color3:       #4d5d68
-*.color11:      #4d5d68
+!*.color3:       #ebcb8b
+!*.color11:      #ebcb8b
 
 ! blue
-*.color4:       #994047
-*.color12:      #994047
+!*.color4:       #81a1c1
+!*.color12:      #81a1c1
 
 ! magenta
-*.color5:       #395d86
-*.color13:      #395d86
+!*.color5:       #b48ead
+!*.color13:      #b48ead
 
 ! cyan
-*.color6:       #637887
-*.color14:      #637887
+!*.color6:       #88c0d0
+!*.color14:      #8fbcbb
 
 ! white
-*.color7:       #aebec5
-*.color15:      #aebec5
+!*.color7:       #e5e9f0
+!*.color15:      #eceff4
 
 ! Xclock colors.
 XClock*foreground: #C9BEB4
@@ -68,6 +94,7 @@ XClock*secondColor: rgba:c9/be/b4/ff
 
 ! Set depth to make transparency work.
 URxvt*depth: 32
+
 
 ! ROFI
 ! "Enabled modi" Set from: Default
@@ -359,3 +386,7 @@ rofi.color-window: #0e0e10, #000000, #832757
 #include ".Xresources.d/colors"
 !include ".Xresources.d/colors"
 !#include ".Xresources.d/colors"
+
+
+!#include ".Xresources.d/colors"
+#include ".Xresources.d/colors"
