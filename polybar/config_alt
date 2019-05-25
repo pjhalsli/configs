@@ -24,8 +24,8 @@ black = #000000
 ;fg = #DDE3EB
 ;fg-alt = #A9ABB0
 
-bg = #242C2D 
-fg = #CEC6BA
+bg = #181818
+fg = #C3C7BF
 
 
 acolor = #FFFFFF
@@ -67,10 +67,10 @@ blue-gray = #546e7a
 ;==========================================================
 
 [bar/def]
-width = 100%
+width = 98%
 height = 30
-offset-x = 0%
-offset-y = 0%
+offset-x = 1%
+offset-y = 1%
 bottom = false
 fixed-center = true
 line-size = 1
@@ -86,10 +86,10 @@ border-size = 0
 ;border-color = #B34F63
 
 ;==========================================================
-font-1 = "Gohufont Regular:pixelsize=9;2"
-font-2 = "Iosevka Nerd Font:pixelsize=10;2"
-font-0 = "icomoon:pixelsize=8;2"
-
+font-0 = curie Regular:pixelsize=9;3
+font-1 =  "undefined medium:pixelsize=8;1"
+font-2 = "Iosevka Nerd Font:pixelsize=9;3"
+font-3 = "icomoon:pixelsize=13;3"
 ;==========================================================
 
 cursor-click = pointer
@@ -161,9 +161,9 @@ label-urgent-padding = 1
 label-occupied-padding = 1
 
 label-empty-foreground = #444444
-label-focused-foreground = #E2E0DC
-label-urgent-foreground = #6F8F9B
-label-occupied-foreground = #918E8A
+label-focused-foreground = #C3C7BF
+label-urgent-foreground = #808391
+label-occupied-foreground = #87979C
 
 
 ;==========================================================
