@@ -1,5 +1,5 @@
 [colors]
-# personal take on solarized
+#  solarized
 # special
 foreground      = #d9dad4
 foreground_bold = #d9dad4
