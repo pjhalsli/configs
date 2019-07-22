@@ -18,125 +18,106 @@ dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
 
-font = envypn Regular 10 
-#font = CodingFontTobi Regular 12
-#font = Spleen Regular 10
-#font =  monofur for Powerline Regular 10 
-#font =  iA Writer Duo S Regular 10
-#font = Gomme Regular 10
-#font = cherry Regular 10
-#font = bitocra13 Regular 10
-#font = undefined medium 10
-#font = GohuFont Regular 10 
-#font = curie Regular 10
-#font = Crisp Regular 12
-#font = Anka/Coder Condensed 10
-#font = Mensch Regular 9
-#font = hermit light Regular 10
-#font = PragmataPro Regular 10
-#font = Operator Mono Light Italic 10
-#font = TamzenForPowerline Regular 12
-#font = Office Code Pro D Regular 10
+
+font = Anka/Coder Condensed 10
 #font = UW Ttyp0 Regular 10
-#font = ProFont for Powerline Light 10
-#font = Monofur for Powerline 10
-#font = HackNerdFont Regular 10
+
 
 scrollback_lines = 10000
 search_wrap = true
 filter_unmatched_urls = true
 
-[hint]
+#[hint]
 
 #highlight = #4c566a
 
 
 
-[colors]
+#[colors]
 # W I P
 # special
-foreground      = #f3f3f3
-foreground_bold = #f3f3f3
-cursor          = #f3f3f3
-background      = #161821
+#foreground      = #f3f3f3
+#foreground_bold = #f3f3f3
+#cursor          = #f3f3f3
+#background      = #161821
 
 # black
-color0  = #161821
-color8  = #5d5d5d
+#color0  = #161821
+#color8  = #5d5d5d
 
 # red
-color1  = #a9176f
-color9  = #bd2b83
+#color1  = #a9176f
+#color9  = #bd2b83
 
 # green
-color2  = #166b8c
-color10 = #2a7fa0
+#color2  = #166b8c
+#color10 = #2a7fa0
 
 # yellow
-color3  = #7b4f85
-color11 = #8f6399
+#color3  = #7b4f85
+#color11 = #8f6399
 
 # blue
-color4  = #008486
-color12 = #06989a
+#color4  = #008486
+#color12 = #06989a
 
 # magenta
-color5  = #c781d1
-color13 = #db95e5
+#color5  = #c781d1
+#color13 = #db95e5
 
 # cyan
-color6  = #90839c
-color14 = #a497b0
+#color6  = #90839c
+#color14 = #a497b0
 
 # white
-color7  = #dddddd
-color15 = #f8f8f8
-
+#color7  = #dddddd
+#color15 = #f8f8f8
 
 
 
 
 
 highlight = #6b7089
-#[colors]
+
+[colors]
 # ICEBERG
 # special
-#foreground      = #d2d4de
-#foreground_bold = #d2d4de
-#cursor          = #d2d4de
-#background      = #161821
+foreground      = #d2d4de
+foreground_bold = #d2d4de
+cursor          = #d2d4de
+background      = #161821
 
 # black
-#color0  = #161821
-#color8  = #6b7089
+color0  = #161821
+color8  = #6b7089
 
 # red
-#color1  = #e27878
-#color9  = #e98989
+color1  = #e27878
+color9  = #e98989
 
 # green
-#color2  = #b4be82
-#color10 = #c0ca8e
+color2  = #b4be82
+color10 = #c0ca8e
 
 # yellow
-#color3  = #e2a478
-#color11 = #e9b189
+color3  = #e2a478
+color11 = #e9b189
 
 # blue
-#color4  = #84a0c6
-#color12 = #91acd1
+color4  = #84a0c6
+color12 = #91acd1
 
 # magenta
-#color5  = #a093c7
-#color13 = #ada0d3
+color5  = #a093c7
+color13 = #ada0d3
 
 # cyan
-#color6  = #89b8c2
-#color14 = #95c4ce
+color6  = #89b8c2
+color14 = #95c4ce
 
 # white
-#color7  = #c6c8d1
-#color15 = #d2d4de
+color7  = #c6c8d1
+color15 = #d2d4de
 
 
 # Gotham color scheme
