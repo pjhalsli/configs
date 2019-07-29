@@ -19,9 +19,14 @@ trans = #00000000
 white = #dddddd
 black = #000000
 
-bg = #222222
-fg = #C2C2B0
-fg-alt = #A9ABB0
+
+;bg = #101010
+;fg = #DDE3EB
+;fg-alt = #A9ABB0
+
+bg = #161821
+;#fg = #d2d4de
+fg = #dddddd
 
 acolor = #FFFFFF
 curgent = #EF5350
@@ -62,10 +67,10 @@ blue-gray = #546e7a
 ;==========================================================
 
 [bar/def]
-width = 98%
+width = 100%
 height = 30
-offset-x = 1%
-offset-y = 1%
+offset-x = 0%
+offset-y = 0%
 bottom = false
 fixed-center = true
 line-size = 1
@@ -76,10 +81,14 @@ wm-restack = bspwm
 background = ${color.bg}
 foreground = ${color.fg}
 
-;==========================================================
+border-size = 0
+;border-top-size = 1
+;border-color = #B34F63
 
-font-0 = "Fantasque Sans Mono:pixelsize=10;3"
-font-1 = "Iosevka Nerd Font:pixelsize=13;3"
+;==========================================================
+font-1 = "Gohufont Regular:pixelsize=9;2"
+font-2 = "Iosevka Nerd Font:pixelsize=10;2"
+font-0 = "icomoon:pixelsize=8;2"
 
 ;==========================================================
 
@@ -104,7 +113,7 @@ type = custom/text
 content = 
 ;alt icons = 
 content-padding = 2
-content-background = ${color.shade1}
+content-background = ${color.bg}
 content-foreground = ${color.fg}
 click-left = rmenu_1
 click-right = rmenu_wi_1
@@ -141,20 +150,20 @@ icon-default = 
 format = <label-state>
 ;format-background = ${color.bg}
 label-background =${color.shade1}
-label-focused = 
-label-occupied = 
-label-urgent = 
-label-empty = 
+label-focused = ●
+label-occupied = ●
+label-urgent = ●
+label-empty = ●
 
 label-empty-padding = 1
 label-focused-padding = 1
 label-urgent-padding = 1
 label-occupied-padding = 1
 
-label-empty-foreground = #666666
-label-focused-foreground = #BA9864
-label-urgent-foreground = #924650
-label-occupied-foreground = #777777
+label-empty-foreground = #444444
+label-focused-foreground #95C4CE
+label-urgent-foreground = #E98989
+label-occupied-foreground = #ADA0D3
 
 
 ;==========================================================
