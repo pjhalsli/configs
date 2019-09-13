@@ -121,7 +121,7 @@ rofi.lines:                          15
 ! "Number of columns" Set from: Default
 rofi.columns:                        1
 ! "Font to use" Set from: Default
-rofi.font:                          Anka/Coder 12
+rofi.font:                          Anka/Coder 10
  "Border width" Set from: Default
 rofi.bw:                            8
 ! "Location on screen" Set from: Default
@@ -385,20 +385,13 @@ rofi.scrollbar-width:                0
 ! "Accept hovered row with custom action" Set from: Default
 ! rofi.me-accept-custom:               Control+MouseDPrimary
 
-! DRACULAi colors
-!true.color-enabled: true
+true.color-enabled: true
 !                      bg,       fg,       bgalt,        hlbg,   hlfg
-!rofi.color-normal:  #212221, #e6e6e6,  argb:ff1e1f29, #BD93F9,#000000
-!rofi.color-urgent:  #212221, #e6e6e6,  argb:ff1e1f29, #b44136,#000000
-!rofi.color-active:  #212221, ##80A0FF, argb:ff1e1f29, #ff79c6,#000000
-!rofi.color-window:  #212221, #bebebe,#bebebe
+rofi.color-normal:  #102029, #e6e6e6,    #C9647E,     #C9647E, #000000
+rofi.color-urgent:  #102029, #e6e6e6,    #C9647E,     #C9647E, #000000
+rofi.color-active:  #102029, ##80A0FF,   #C9647E,     #C9647E6,#000000
+rofi.color-window:  #102029, #102029,#102029
 
-!rofi.color-normal: #00000000, #a9a9a9, #00000000, #00000000, #b9b9b9
-!rofi.color-urgent: #00000000, #a9a9a9, #00000000, #00000000, #b9b9b9
-!rofi.color-active: #00000000, #1c1c23, #00000000, #00000000, #b9b9b9
-!rofi.color-window: #CC101010
-!rofi.color-normal: argb:00000000, #a5c3bb, argb:00000000, #12252d, #a5c3bb
-!rofi.color-window: #0e0e10, #000000, #832757
 
-!!include ".Xresources.d/colors"
+!include ".Xresources.d/colors"
 
