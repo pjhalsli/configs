@@ -55,7 +55,7 @@ visualizer_output_name = "my_fifo"
 ##
 ## If you set format to 44100:16:2, make it 'yes'.
 ##
-visualizer_in_stereo = yes
+visualizer_in_stereo = no
 #
 ##
 ## Note: Below parameter defines how often ncmpcpp has to "synchronize"
@@ -76,9 +76,18 @@ visualizer_sync_interval = 30
 visualizer_type = spectrum
 #
 #visualizer_look = "◾◾"
-visualizer_look = "|"
+visualizer_look = "|●"
 #visualizer_look = ""
-visualizer_color = blue, red, cyan, yellow, magenta, blue
+#visualizer_look = "▀▋"
+#visualizer_look = "▋▋"
+#visualizer_look = "◆▋"
+#visualizer_look = "◈◈"
+#visualizer_look = "││"
+#visualizer_look = "▀▋"
+#visualizer_look = "▀○"
+#visualizer_look = "█▋"
+#visualizer_look = "██"
+visualizer_color = blue, red, blue, yellow, cyan, magenta, yellow, red
 #
 ## Alternative subset of 256 colors for terminals that support it.
 ##
@@ -177,7 +186,7 @@ visualizer_color = blue, red, cyan, yellow, magenta, blue
 ##
 #
 #song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
-song_list_format = $5%t  $R$6%a
+song_list_format = $7%t  $R$5%a
 #
 song_status_format = {{%a{ "%b"{ (%y)}} - }{%t}}|{%f}
 #
@@ -195,7 +204,7 @@ current_item_inactive_column_prefix = $(magenta)$r
 #
 current_item_inactive_column_suffix = $/r$(end)
 #
-now_playing_prefix = "$b$3»$5»$2» "
+now_playing_prefix = "  $b$3»$5»$2» "
 #
 now_playing_suffix = $/b
 #
@@ -265,8 +274,10 @@ song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)
 ## Note: Custom command that will be executed each time song changes. Useful for
 ## notifications etc.
 ##
-#execute_on_song_change = notify-send " "Now Playing ♫" (mpc current)"
-execute_on_song_change = notify-send "Now Playing " "$(mpc current)"
+#execute_on_song_change = notify-send "Now Playing ♫" "$(mpc current)"
+#execute_on_song_change = notify-send "Now Playing " "$(mpc current)"
+
+
 #
 ##
 ## Note: Custom command that will be executed each time player state
@@ -313,7 +324,12 @@ centered_cursor = no
 ## Note: You can specify third character which will be used to build 'empty'
 ## part of progressbar.
 ##
-progressbar_look = ━━─
+
+
+progressbar_look = "---"
+#progressbar_look = ━━─
+#progressbar_look = "▃▃▃"
+#progressbar_look = ●●●
 #
 ## Available values: database, playlist.
 ##
@@ -522,9 +538,10 @@ color1 = white
 
 color2 = green
 #
-progressbar_color = black:b
+progressbar_color  = "black:b"
 #
-progressbar_elapsed_color = green:b
+progressbar_elapsed_color = "yellow:b"
+
 #
 statusbar_color = default
 #
