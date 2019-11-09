@@ -1,160 +1,60 @@
-#   ██                              ██   ██          
-#  ░██                             ░░   ░██          
-# ██████  █████  ██████ ██████████  ██ ██████  █████ 
-#░░░██░  ██░░░██░░██░░█░░██░░██░░██░██░░░██░  ██░░░██
-#  ░██  ░███████ ░██ ░  ░██ ░██ ░██░██  ░██  ░███████
-#  ░██  ░██░░░░  ░██    ░██ ░██ ░██░██  ░██  ░██░░░░ 
-#  ░░██ ░░██████░███    ███ ░██ ░██░██  ░░██ ░░██████
-#   ░░   ░░░░░░ ░░░    ░░░  ░░  ░░ ░░    ░░   ░░░░░░ 
-#
+###   MISC   ###
 
 [options]
-scroll_on_output = false
-scroll_on_keystroke = true
-audible_bell = false
-mouse_autohide = false
 allow_bold = true
-dynamic_title = true
-urgent_on_bell = true
 clickable_url = true
 
-
-font = Anka/Coder Condensed 10
-#font = UW Ttyp0 Regular 10
-
+mouse_autohide = true 
+scroll_on_keystroke = true
 
 scrollback_lines = 10000
-search_wrap = true
-filter_unmatched_urls = true
 
-#[hint]
-
-#highlight = #4c566a
+browser = qutebrowser
 
 
+#---   appearance   ---
+#highlight = #2f2f2f
 
-#[colors]
-# W I P
-# special
-#foreground      = #f3f3f3
-#foreground_bold = #f3f3f3
-#cursor          = #f3f3f3
-#background      = #161821
-
-# black
-#color0  = #161821
-#color8  = #5d5d5d
-
-# red
-#color1  = #a9176f
-#color9  = #bd2b83
-
-# green
-#color2  = #166b8c
-#color10 = #2a7fa0
-
-# yellow
-#color3  = #7b4f85
-#color11 = #8f6399
-
-# blue
-#color4  = #008486
-#color12 = #06989a
-
-# magenta
-#color5  = #c781d1
-#color13 = #db95e5
-
-# cyan
-#color6  = #90839c
-#color14 = #a497b0
-
-# white
-#color7  = #dddddd
-#color15 = #f8f8f8
-
-
-
-
-
-highlight = #6b7089
+font = lemon Medium 9
 
 [colors]
-# ICEBERG
+# CHERRY
 # special
-foreground      = #d2d4de
-foreground_bold = #d2d4de
-cursor          = #d2d4de
-background      = #161821
+foreground      = #edeef0
+foreground_bold = #edeef0
+cursor          = #edeef0
+background      = #102029
 
 # black
-color0  = #161821
-color8  = #6b7089
+color0  = #102029
+color8  = #0e374b
 
 # red
-color1  = #e27878
-color9  = #e98989
+color1  = #c9647e
+color9  = #d87e8f
 
 # green
-color2  = #b4be82
-color10 = #c0ca8e
+color2  = #7caba3
+color10 = #add4cf
 
 # yellow
-color3  = #e2a478
-color11 = #e9b189
+color3  = #c7c8b7
+color11 = #ebdecd
 
 # blue
-color4  = #84a0c6
-color12 = #91acd1
+color4  = #71aac5
+color12 = #a7cbe3
 
 # magenta
-color5  = #a093c7
-color13 = #ada0d3
+color5  = #f4adb1
+color13 = #f8cbce
 
 # cyan
-color6  = #89b8c2
-color14 = #95c4ce
+color6  = #7cbbc0
+color14 = #a5d3d9
 
 # white
-color7  = #c6c8d1
-color15 = #d2d4de
+color7  = #d9dbe3
+color15 = #edeef0
 
-
-# Gotham color scheme
-#[colors]
-#foreground      = #98d1ce
-#foreground_bold = #98d1ce
-#cursor          = #98d1ce
-#background      = #0a0f14
-
-# black
-#color0  = #0a0f14
-#color8  = #10151b
-
-# red
-#color1  = #c33027
-#color9  = #d26939
-
-# green
-#color2  = #26a98b
-#color10 = #081f2d
-
-# yellow
-#color3  = #edb54b
-#color11 = #245361
-
-# blue
-#color4  = #195465
-#color12 = #093748
-
-# magenta
-#color5  = #4e5165
-#color13 = #888ba5
-
-# cyan
-#color6  = #33859d
-#color14 = #599caa
-
-#white
-#color7  = #98d1ce
-#color15 = #d3ebe9
+#cherry

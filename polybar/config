@@ -24,9 +24,9 @@ black = #000000
 ;fg = #DDE3EB
 ;fg-alt = #A9ABB0
 
-bg = #161821
-;#fg = #d2d4de
-fg = #dddddd
+bg = #102029
+;#fg = #d2d2d2
+fg = #D9DBE3
 
 acolor = #FFFFFF
 curgent = #EF5350
@@ -100,7 +100,7 @@ scroll-down = i3wm-wsprev
 
 ;== Module Location ========================================================
 
-modules-left = arch xwindow
+modules-left = arch battery xwindow
 modules-center = bspwm
 modules-right = mpd volume xbacklight wlan date
  
@@ -161,8 +161,8 @@ label-urgent-padding = 1
 label-occupied-padding = 1
 
 label-empty-foreground = #444444
-label-focused-foreground #95C4CE
-label-urgent-foreground = #E98989
+label-focused-foreground = #95C4CE
+label-urgent-foreground = #FF190A
 label-occupied-foreground = #ADA0D3
 
 
@@ -179,7 +179,7 @@ format-online-padding = 2
 
 icon-play = 喇
 icon-pause = 
-i
+
 label-song-maxlen = 35
 label-song-ellipsis = true
 
@@ -197,7 +197,7 @@ tail = true
 type = internal/battery
 full-at = 99
 time-format = %H:%M
-battery = BAT1
+battery = BAT0
 adapter = AC
 format-charging = <animation-charging> <label-charging>
 format-charging-background = ${color.bg}

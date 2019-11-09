@@ -1,120 +1,16 @@
+! C H E R R Y
 
 
-! "Enabled modi" Set from: Default
-! rofi.modi:                           window,run
-! "Window width" Set from: Default
-! rofi.width:                          100%
-! "Number of lines" Set from: Default
-! rofi.lines:                          10
-! "Number of columns" Set from: Default
-! rofi.columns:                        2
-! "Font to use" Set from: Default
-! rofi.font:                           GohuFontRegular 10
-! "Border width" Set from: Default
-! rofi.bw:                             0
-! "Location on screen" Set from: Default
-! rofi.location:                       0
-! "Padding" Set from: Default
-! rofi.padding:                        650
-! "Y-offset relative to location" Set from: Default
-! rofi.yoffset:                        0
-! "X-offset relative to location" Set from: Default
-! rofi.xoffset:                        0
-! "Always show number of lines" Set from: Default
-! rofi.fixed-num-lines:                true
-! "Whether to load and show icons" Set from: Default
-! rofi.show-icons:                     false
-! "Terminal to use" Set from: Default
-! rofi.terminal:                       rofi-sensible-terminal
-! "Ssh client to use" Set from: Default
-! rofi.ssh-client:                     ssh
-! "Ssh command to execute" Set from: Default
-! rofi.ssh-command:                    {terminal} -e {ssh-client} {host}
-! "Run command to execute" Set from: Default
-! rofi.run-command:                    {cmd}
-! "Command to get extra run targets" Set from: Default
-! rofi.run-list-command:               
-! "Run command to execute that runs in shell" Set from: Default
-! rofi.run-shell-command:              {terminal} -e {cmd}
-! "Command executed on accep-entry-custom for window modus" Set from: Default
-! rofi.window-command:                 xkill -id {window}
-! "Window fields to match in window mode" Set from: Default
-! rofi.window-match-fields:            all
-! "Theme to use to look for icons" Set from: Default
-! rofi.icon-theme:                     
-! "Desktop entry fields to match in drun" Set from: Default
-! rofi.drun-match-fields:              name,generic,exec,categories
-! "Desktop entry show actions." Set from: Default
-! rofi.drun-show-actions:              false
-! "DRUN format string. (Supports: generic,name,comment,exec,categories)" Set from: Default
-! rofi.drun-display-format:            {name} [<span weight='light' size='small'><i>({generic})</i></span>]
-! "Disable history in run/ssh" Set from: Default
-! rofi.disable-history:                false
-! "Use sorting" Set from: Default
-! rofi.sort:                           false
-! "Choose the strategy used for sorting: normal (levenshtein) or fzf." Set from: Default
-! rofi.sorting-method:                 
-! "Set case-sensitivity" Set from: Default
-! rofi.case-sensitive:                 false
-! "Cycle through the results list" Set from: Default
-! rofi.cycle:                          true
-! "Enable sidebar-mode" Set from: Default
-! rofi.sidebar-mode:                   true
-! "Row height (in chars)" Set from: Default
-! rofi.eh:                             1
-! "Enable auto select mode" Set from: Default
-! rofi.auto-select:                    false
-! "Parse hosts file for ssh mode" Set from: Default
-! rofi.parse-hosts:                    false
-! "Parse known_hosts file for ssh mode" Set from: Default
-! rofi.parse-known-hosts:              true
-! "Set the modi to combine in combi mode" Set from: Default
-! rofi.combi-modi:                     window,run
-! "Set the matching algorithm. (normal, regex, glob, fuzzy)" Set from: Default
-! rofi.matching:                       normal
-! "Tokenize input string" Set from: Default
-! rofi.tokenize:                       true
-! "Monitor id to show on" Set from: Default
-! rofi.m:                              -5
-! "Margin between rows *DEPRECATED*" Set from: Default
-! rofi.line-margin:                    2
-! "Padding within rows *DEPRECATED*" Set from: Default
-! rofi.line-padding:                   1
-! "Pre-set filter" Set from: Default
-! rofi.filter:                         
-! "Separator style (none, dash, solid) *DEPRECATED*" Set from: File
-rofi.separator-style:                solid
-! "Hide scroll-bar *DEPRECATED*" Set from: Default
-! rofi.hide-scrollbar:                 true
-! "Fullscreen" Set from: Default
-! rofi.fullscreen:                     true
-! "Fake transparency *DEPRECATED*" Set from: Default
-! rofi.fake-transparency:              false
-! "DPI" Set from: Default
-! rofi.dpi:                            -1
-! "Threads to use for string matching" Set from: Default
-! rofi.threads:                        0
-! "Scrollbar width *DEPRECATED*" Set from: Default
-! rofi.scrollbar-width:                0
-! "Scrolling method. (0: Page, 1: Centered)" Set from: Default
-! rofi.scroll-method:                  0
-! "Background to use for fake transparency. (background or screenshot)" Set from: Default
-! rofi.fake-background:                screenshot
-! "Window Format. w (desktop name), t (title), n (name), r (role), c (class) *DEPRECATED*" Set from: Default
-! rofi.window-format:                  {w}    {i}{c}   {t}
-! "Click outside the window to exit" Set from: Default
-! rofi.click-to-exit:                  true
-! "Indicate how it match by underlining it." Set from: Default
-! rofi.show-match:                     true
-rofi-color-enabled: true
+! Enable the extended coloring options
+rofi.color-enabled: true
 
 ! Property Name     BG       Border   Separator
-rofi.color-window:  #161821, #161821, #161821
+rofi.color-window:  #102029, #102029, #102029
 
 ! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
-rofi.color-normal:  #161821, #adadad, #161821, #84A0C6, #000000
-rofi.color-active:  #161821, #adadad, #161621, #A093C7, #fffff0
-rofi.color-urgent:  #161821, #adadad, #161821 ,#161821, #7c7c7c
+rofi.color-normal:  #102029, #F4ADB1, #102029, #7CBBC0, #000000
+rofi.color-active:  #102029, #A5D3D9, #102029, #C7C8B7, #000000
+rofi.color-urgent:  #102029, #D87E8F, #102029, #C9647E, #ffffff
 
 ! Set the desired separator style
 rofi.separator-style: solid

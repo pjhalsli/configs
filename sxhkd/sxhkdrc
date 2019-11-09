@@ -4,9 +4,6 @@
 super + Return
 	termite
 
-# launch kupfer
-super + Delete
-        kupfer
 # launch rofi
 super + r
 	rofi -modi "run,window" -show run 
@@ -125,19 +122,21 @@ super + alt + shift + {j,k,i,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-# move a floating window
+# move a floating window faster
 super + shift + {Left,Down,Up,Right}
         bspc node -v {-50 0,0 50,0 -50,50 0}
+
 
 # rotate a window
 alt + e
 	bspc node @/ -R 90
-
+# hinting style
 alt + s
     bspc node -s "$(xorg-choose-window aoeuhtns)" --follow
 
 
 [PERSONAL SHIT]
+# This helpful script
 super + F1
     urxvt -geometry 170x30 -name urxvt_keys_help -e ~/.config/sxhkd/keybinds.sh
     
@@ -170,3 +169,7 @@ XF86AudioLowerVolume
 # lockscreen
 alt + shift + x
      i3lock-fancy -p -f Source-Code-Pro-Medium
+
+# weechat
+alt + shift + w 
+   exec termite -e tmux -c weechat
