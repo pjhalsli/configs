@@ -2,7 +2,7 @@
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
-    monitor = 0
+    monitor = 1
 
     # Display notification on focused monitor.  Possible modes are:
     #   mouse: follow mouse pointer
@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-20+60"
+    geometry = "300x40-20+40"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -43,29 +43,28 @@
     # present (e.g. xcompmgr, compiz, etc.).
     transparency = 0
 
-
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
     # to the font height and padding.
-    notification_height = 75 
+    notification_height = 20
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 6
+    separator_height = 8
 
     # Padding between text and separator.
-    padding = 20 
+    padding = 6
 
     # Horizontal padding.
-    horizontal_padding = 8
+    horizontal_padding = 6 
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
     frame_width = 4
 
     # Defines color of the frame around the notification window.
-    frame_color = ""#C6C8D1
+    frame_color = "#D9DBE3"
 
     # Define a color for the separator.
     # possible values are:
@@ -81,16 +80,17 @@
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
     # Set to 0 to disable.
-    # Transient notifications ignore this setting.
+    # A client can set the 'transient' hint to bypass this. See the rules
+    # section for how to disable this if necessary
     idle_threshold = 120
 
     ### Text ###
 
-    font = Anka/Coder Regular 10 
+    font = Fira Code Regular 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
-    line_height = 2
+    line_height = 4
 
     # Possible values are:
     # full: Allow a small subset of html markup in notifications:
@@ -130,7 +130,7 @@
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = center
+    alignment = left
 
     # Show age of message if message is older than show_age_threshold
     # seconds.
@@ -141,17 +141,17 @@
     # geometry.
     word_wrap = yes
 
-    # When word_wrap is set to no, specify where to ellipsize long lines.
+    # When word_wrap is set to no, specify where to make an ellipsis in long lines.
     # Possible values are "start", "middle" and "end".
     ellipsize = middle
 
     # Ignore newlines '\n' in notifications.
     ignore_newline = no
 
-    # Merge multiple notifications with the same content
+    # Stack together notifications with the same content
     stack_duplicates = true
 
-    # Hide the count of merged notifications with the same content
+    # Hide the count of stacked notifications with the same content
     hide_duplicate_count = false
 
     # Display indicators for URLs (U) and actions (A).
@@ -160,7 +160,7 @@
     ### Icons ###
 
     # Align icons left/right/off
-    icon_position = left
+    icon_position = off
 
     # Scale larger icons down to this size, set to 0 to disable
     max_icon_size = 32
@@ -183,10 +183,10 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/qutebrowser -new-tab
+    browser = /usr/bin/opera -new-tab
 
     # Always run rule-defined scripts, even if the notification is suppressed
-    xalways_run_script = true
+    always_run_script = true
 
     # Define the title of the windows spawned by dunst
     title = Dunst
@@ -199,6 +199,22 @@
     # automatically after a crash.
     startup_notification = true
 
+    # Manage dunst's desire for talking
+    # Can be one of the following values:
+    #  crit: Critical features. Dunst aborts
+    #  warn: Only non-fatal warnings
+    #  mesg: Important Messages
+    #  info: all unimportant stuff
+    # debug: all less than unimportant stuff
+    verbosity = mesg
+
+    # Define the corner radius of the notification window
+    # in pixel size. If the radius is 0, you have no rounded
+    # corners.
+    # The radius will be automatically lowered if it exceeds half of the
+    # notification height to avoid clipping text and/or icons.
+    corner_radius = 10
+
     ### Legacy
 
     # Use the Xinerama extension instead of RandR for multi-monitor support.
@@ -210,6 +226,19 @@
     # is connected or disconnected which might break follow mode if the screen
     # layout changes.
     force_xinerama = false
+
+    ### mouse
+
+    # Defines action of mouse event
+    # Possible values are:
+    # * none: Don't do anything.
+    # * do_action: If the notification has exactly one action, or one is marked as default,
+    #              invoke it. If there are multiple and no default, open the context menu.
+    # * close_current: Close current notification.
+    # * close_all: Close all notifications.
+    mouse_left_click = close_current
+    mouse_middle_click = do_action
+    mouse_right_click = close_all
 
 # Experimental features that may or may not work correctly. Do not expect them
 # to have a consistent behaviour across releases.
@@ -238,1087 +267,151 @@
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1". Make sure this key actually exists on your keyboard layout,
     # e.g. check output of 'xmodmap -pke'
-    history = ctrl+grave
+    #history = ctrl+grave
 
     # Context menu.
     context = ctrl+shift+period
 
 [urgency_low]
-#    # IMPORTANT: colors have to be defined in quotation marks.
-#    # Otherwise the "#" and following would be interpreted as a comment.
-#    background = "#05040A"
-#    foreground = "#ffffff"
-#    timeout = 10
-#    # Icon for notifications with low urgency, uncomment to enable
-#    #icon = /path/to/icon
+    background = "#102029"
+    foreground = "#D9DBE3"
+    timeout = 10
 
 [urgency_normal]
-#    background = "#05040A"
-#    foreground = "#ffffff"
-#    timeout = 10
-#    # Icon for notifications with normal urgency, uncomment to enable
-#    #icon = /path/to/icon
+    background = "#102029"
+    foreground = "#D9DBE3"
+    timeout = 10
 
 [urgency_critical]
-#    background = "#05040A"
-#    foreground = "#ffffff"
-#    frame_color = "#353535"
-#    timeout = 0
-#    # Icon for notifications with critical urgency, uncomment to enable
-#    #icon = /path/to/icon
-
-
-# vim: ft=cfg
-
-frame_color = "#B34F63"
-separator_color = "#b9b9b9"
-
-frame_color = "#dddddd"
-separator_color = "#959DCB"
-
-frame_color = "#dddddd"
-separator_color = "#959DCB"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#EEFFFF"
-separator_color = "#EEFFFF"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#abb2bf"
-separator_color = "#abb2bf"
-
-frame_color = "#D0D0FA"
-separator_color = "#D0D0FA"
-
-frame_color = "#bcbabe"
-separator_color = "#bcbabe"
-
-frame_color = "#bcbabe"
-separator_color = "#bcbabe"
-
-frame_color = "#D0D0FA"
-separator_color = "#D0D0FA"
-
-frame_color = "#abb2bf"
-separator_color = "#abb2bf"
-
-frame_color = "#dcdccc"
-separator_color = "#dcdccc"
-
-frame_color = "#939599"
-separator_color = "#939599"
-
-frame_color = "#e9e9f4"
-separator_color = "#e9e9f4"
-
-frame_color = "#c1c1c1"
-separator_color = "#c1c1c1"
-
-frame_color = "#d0d0d0"
-separator_color = "#d0d0d0"
-
-frame_color = "#c5c8c6"
-separator_color = "#c5c8c6"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#b5b3aa"
-separator_color = "#b5b3aa"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#e9e9f4"
-separator_color = "#e9e9f4"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#095b67"
-separator_color = "#095b67"
-
-frame_color = "#e9e9f4"
-separator_color = "#e9e9f4"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#C7CCD1"
-separator_color = "#C7CCD1"
-
-frame_color = "#095b67"
-separator_color = "#095b67"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#dab997"
-separator_color = "#dab997"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#CDD3DE"
-separator_color = "#CDD3DE"
-
-frame_color = "#EEFFFF"
-separator_color = "#EEFFFF"
-
-frame_color = "#CDD3DE"
-separator_color = "#CDD3DE"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#EEFFFF"
-separator_color = "#EEFFFF"
-
-frame_color = "#dab997"
-separator_color = "#dab997"
-
-frame_color = "#CDD3DE"
-separator_color = "#CDD3DE"
-
-frame_color = "#d0d0d0"
-separator_color = "#d0d0d0"
-
-frame_color = "#A89984"
-separator_color = "#A89984"
-
-frame_color = "#b5b3aa"
-separator_color = "#b5b3aa"
-
-frame_color = "#e9e9f4"
-separator_color = "#e9e9f4"
-
-frame_color = "#EEFFFF"
-separator_color = "#EEFFFF"
-
-frame_color = "#EEFFFF"
-separator_color = "#EEFFFF"
-
-frame_color = "#B0BEC5"
-separator_color = "#B0BEC5"
-
-frame_color = "#EEFFFF"
-separator_color = "#EEFFFF"
-
-frame_color = "#abb2bf"
-separator_color = "#abb2bf"
-
-frame_color = "#D0D0FA"
-separator_color = "#D0D0FA"
-
-frame_color = "#c0c5ce"
-separator_color = "#c0c5ce"
-
-frame_color = "#C0C5CE"
-separator_color = "#C0C5CE"
-
-frame_color = "#383a42"
-separator_color = "#383a42"
-
-frame_color = "#a39e9b"
-separator_color = "#a39e9b"
-
-frame_color = "#b8bbc2"
-separator_color = "#b8bbc2"
-
-frame_color = "#5f574f"
-separator_color = "#5f574f"
-
-frame_color = "#e6e1dc"
-separator_color = "#e6e1dc"
-
-frame_color = "#d0d0d0"
-separator_color = "#d0d0d0"
-
-frame_color = "#f1eff8"
-separator_color = "#f1eff8"
-
-frame_color = "#d6d6d6"
-separator_color = "#d6d6d6"
-
-frame_color = "#eff0eb"
-separator_color = "#eff0eb"
-
-frame_color = "#A6AFB8"
-separator_color = "#A6AFB8"
-
-frame_color = "#102015"
-separator_color = "#102015"
-
-frame_color = "#a3a3a3"
-separator_color = "#a3a3a3"
-
-frame_color = "#D0D0D0"
-separator_color = "#D0D0D0"
-
-frame_color = "#4d4d4c"
-separator_color = "#4d4d4c"
-
-frame_color = "#c5c8c6"
-separator_color = "#c5c8c6"
-
-frame_color = "#d9d8d8"
-separator_color = "#d9d8d8"
-
-frame_color = "#a7a7a7"
-separator_color = "#a7a7a7"
-
-frame_color = "#bcbabe"
-separator_color = "#bcbabe"
-
-frame_color = "#cabcb1"
-separator_color = "#cabcb1"
-
-frame_color = "#939599"
-separator_color = "#939599"
-
-frame_color = "#dcdccc"
-separator_color = "#dcdccc"
-
-frame_color = "#a5a2a2"
-separator_color = "#a5a2a2"
-
-frame_color = "#81B5AC"
-separator_color = "#81B5AC"
-
-frame_color = "#C7CCD1"
-separator_color = "#C7CCD1"
-
-frame_color = "#8a8986"
-separator_color = "#8a8986"
-
-frame_color = "#b7b8b9"
-separator_color = "#b7b8b9"
-
-frame_color = "#f1eff8"
-separator_color = "#f1eff8"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#dab997"
-separator_color = "#dab997"
-
-frame_color = "#f1eff8"
-separator_color = "#f1eff8"
-
-frame_color = "#EEFFFF"
-separator_color = "#EEFFFF"
-
-frame_color = "#CDD3DE"
-separator_color = "#CDD3DE"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#464646"
-separator_color = "#464646"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#93a1a1"
-separator_color = "#93a1a1"
-
-frame_color = "#095b67"
-separator_color = "#095b67"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#abb2bf"
-separator_color = "#abb2bf"
-
-frame_color = "#f1eff8"
-separator_color = "#f1eff8"
-
-frame_color = "#dcdccc"
-separator_color = "#dcdccc"
-
-frame_color = "#939599"
-separator_color = "#939599"
-
-frame_color = "#cabcb1"
-separator_color = "#cabcb1"
-
-frame_color = "#bcbabe"
-separator_color = "#bcbabe"
-
-frame_color = "#a7a7a7"
-separator_color = "#a7a7a7"
-
-frame_color = "#c5c8c6"
-separator_color = "#c5c8c6"
-
-frame_color = "#4d4d4c"
-separator_color = "#4d4d4c"
-
-frame_color = "#d9d8d8"
-separator_color = "#d9d8d8"
-
-frame_color = "#D0D0D0"
-separator_color = "#D0D0D0"
-
-frame_color = "#a3a3a3"
-separator_color = "#a3a3a3"
-
-frame_color = "#93a1a1"
-separator_color = "#93a1a1"
-
-frame_color = "#A6AFB8"
-separator_color = "#A6AFB8"
-
-frame_color = "#93a1a1"
-separator_color = "#93a1a1"
-
-frame_color = "#eff0eb"
-separator_color = "#eff0eb"
-
-frame_color = "#102015"
-separator_color = "#102015"
-
-frame_color = "#d6d6d6"
-separator_color = "#d6d6d6"
-
-frame_color = "#e6e1dc"
-separator_color = "#e6e1dc"
-
-frame_color = "#e6e1dc"
-separator_color = "#e6e1dc"
-
-frame_color = "#d6d6d6"
-separator_color = "#d6d6d6"
-
-frame_color = "#d0d0d0"
-separator_color = "#d0d0d0"
-
-frame_color = "#5f574f"
-separator_color = "#5f574f"
-
-frame_color = "#d0d0d0"
-separator_color = "#d0d0d0"
-
-frame_color = "#b8bbc2"
-separator_color = "#b8bbc2"
-
-frame_color = "#a39e9b"
-separator_color = "#a39e9b"
-
-frame_color = "#a5a2a2"
-separator_color = "#a5a2a2"
-
-frame_color = "#81B5AC"
-separator_color = "#81B5AC"
-
-frame_color = "#C7CCD1"
-separator_color = "#C7CCD1"
-
-frame_color = "#7ea2b4"
-separator_color = "#7ea2b4"
-
-frame_color = "#8b8792"
-separator_color = "#8b8792"
-
-frame_color = "#a6a28c"
-separator_color = "#a6a28c"
-
-frame_color = "#929181"
-separator_color = "#929181"
-
-frame_color = "#a8a19f"
-separator_color = "#a8a19f"
-
-frame_color = "#ab9bab"
-separator_color = "#ab9bab"
-
-frame_color = "#8a8585"
-separator_color = "#8a8585"
-
-frame_color = "#87928a"
-separator_color = "#87928a"
-
-frame_color = "#8ca68c"
-separator_color = "#8ca68c"
-
-frame_color = "#979db4"
-separator_color = "#979db4"
-
-frame_color = "#8a8986"
-separator_color = "#8a8986"
-
-frame_color = "#c1c1c1"
-separator_color = "#c1c1c1"
-
-frame_color = "#b7b8b9"
-separator_color = "#b7b8b9"
-
-frame_color = "#e0e0e0"
-separator_color = "#e0e0e0"
-
-frame_color = "#4e5ab7"
-separator_color = "#4e5ab7"
-
-frame_color = "#6D828E"
-separator_color = "#6D828E"
-
-frame_color = "#d0d0d0"
-separator_color = "#d0d0d0"
-
-frame_color = "#a7a7a7"
-separator_color = "#a7a7a7"
-
-frame_color = "#D0D0D0"
-separator_color = "#D0D0D0"
-
-frame_color = "#9ea7a6"
-separator_color = "#9ea7a6"
-
-frame_color = "#8b8198"
-separator_color = "#8b8198"
-
-frame_color = "#404040"
-separator_color = "#404040"
-
-frame_color = "#A89984"
-separator_color = "#A89984"
-
-frame_color = "#e9e9f4"
-separator_color = "#e9e9f4"
-
-frame_color = "#d3d0c8"
-separator_color = "#d3d0c8"
-
-frame_color = "#A39A90"
-separator_color = "#A39A90"
-
-frame_color = "#e0e0e0"
-separator_color = "#e0e0e0"
-
-frame_color = "#333333"
-separator_color = "#333333"
-
-frame_color = "#c5c8c6"
-separator_color = "#c5c8c6"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#dab997"
-separator_color = "#dab997"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#cbd6e2"
-separator_color = "#cbd6e2"
-
-frame_color = "#b9b5b8"
-separator_color = "#b9b5b8"
-
-frame_color = "#b5b3aa"
-separator_color = "#b5b3aa"
-
-frame_color = "#d0d0d0"
-separator_color = "#d0d0d0"
-
-frame_color = "#CDD3DE"
-separator_color = "#CDD3DE"
-
-frame_color = "#EEFFFF"
-separator_color = "#EEFFFF"
-
-frame_color = "#EEFFFF"
-separator_color = "#EEFFFF"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#B0BEC5"
-separator_color = "#B0BEC5"
-
-frame_color = "#ffeeff"
-separator_color = "#ffeeff"
-
-frame_color = "#f8f8f2"
-separator_color = "#f8f8f2"
-
-frame_color = "#c0c5ce"
-separator_color = "#c0c5ce"
-
-frame_color = "#C0C5CE"
-separator_color = "#C0C5CE"
-
-frame_color = "#abb2bf"
-separator_color = "#abb2bf"
-
-frame_color = "#D0D0FA"
-separator_color = "#D0D0FA"
-
-frame_color = "#d0d0d0"
-separator_color = "#d0d0d0"
-
-frame_color = "#A89984"
-separator_color = "#A89984"
-
-frame_color = "#C7CCD1"
-separator_color = "#C7CCD1"
-
-frame_color = "#979db4"
-separator_color = "#979db4"
-
-frame_color = "#b7b8b9"
-separator_color = "#b7b8b9"
-
-frame_color = "#4e5ab7"
-separator_color = "#4e5ab7"
-
-frame_color = "#9ea7a6"
-separator_color = "#9ea7a6"
-
-frame_color = "#b9b5b8"
-separator_color = "#b9b5b8"
-
-frame_color = "#d9d8d8"
-separator_color = "#d9d8d8"
-
-frame_color = "#a3a3a3"
-separator_color = "#a3a3a3"
-
-frame_color = "#eff0eb"
-separator_color = "#eff0eb"
-
-frame_color = "#d6d6d6"
-separator_color = "#d6d6d6"
-
-frame_color = "#e6e1dc"
-separator_color = "#e6e1dc"
-
-frame_color = "#f1eff8"
-separator_color = "#f1eff8"
-
-frame_color = "#e9e9f4"
-separator_color = "#e9e9f4"
-
-frame_color = "#abb2bf"
-separator_color = "#abb2bf"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#C7CCD1"
-separator_color = "#C7CCD1"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#A89984"
-separator_color = "#A89984"
-
-frame_color = "#9ea7a6"
-separator_color = "#9ea7a6"
-
-frame_color = "#d3d0c8"
-separator_color = "#d3d0c8"
-
-frame_color = "#e0e0e0"
-separator_color = "#e0e0e0"
-
-frame_color = "#00bb00"
-separator_color = "#00bb00"
-
-frame_color = "#cbd6e2"
-separator_color = "#cbd6e2"
-
-frame_color = "#cbd6e2"
-separator_color = "#cbd6e2"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#C7CCD1"
-separator_color = "#C7CCD1"
-
-frame_color = "#A89984"
-separator_color = "#A89984"
-
-frame_color = "#cbd6e2"
-separator_color = "#cbd6e2"
-
-frame_color = "#4e5ab7"
-separator_color = "#4e5ab7"
-
-frame_color = "#cbd6e2"
-separator_color = "#cbd6e2"
-
-frame_color = "#4e5ab7"
-separator_color = "#4e5ab7"
-
-frame_color = "#4e5ab7"
-separator_color = "#4e5ab7"
-
-frame_color = "#d0d0d0"
-separator_color = "#d0d0d0"
-
-frame_color = "#e0e0e0"
-separator_color = "#e0e0e0"
-
-frame_color = "#bcbabe"
-separator_color = "#bcbabe"
-
-frame_color = "#eff0eb"
-separator_color = "#eff0eb"
-
-frame_color = "#abb2bf"
-separator_color = "#abb2bf"
-
-frame_color = "#d0d0d0"
-separator_color = "#d0d0d0"
-
-frame_color = "#5f574f"
-separator_color = "#5f574f"
-
-frame_color = "#b8bbc2"
-separator_color = "#b8bbc2"
-
-frame_color = "#D0D0FA"
-separator_color = "#D0D0FA"
-
-frame_color = "#b5b3aa"
-separator_color = "#b5b3aa"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#a5a2a2"
-separator_color = "#a5a2a2"
-
-frame_color = "#c1c1c1"
-separator_color = "#c1c1c1"
-
-frame_color = "#6D828E"
-separator_color = "#6D828E"
-
-frame_color = "#B0C5C8"
-separator_color = "#B0C5C8"
-
-frame_color = "#8b8198"
-separator_color = "#8b8198"
-
-frame_color = "#D0D0D0"
-separator_color = "#D0D0D0"
-
-frame_color = "#a7a7a7"
-separator_color = "#a7a7a7"
-
-frame_color = "#b9b5b8"
-separator_color = "#b9b5b8"
-
-frame_color = "#c0c0c0"
-separator_color = "#c0c0c0"
-
-frame_color = "#CDD3DE"
-separator_color = "#CDD3DE"
-
-frame_color = "#EEFFFF"
-separator_color = "#EEFFFF"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#C7CCD1"
-separator_color = "#C7CCD1"
-
-frame_color = "#6D828E"
-separator_color = "#6D828E"
-
-frame_color = "#B0C5C8"
-separator_color = "#B0C5C8"
-
-frame_color = "#d0d0d0"
-separator_color = "#d0d0d0"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#dab997"
-separator_color = "#dab997"
-
-frame_color = "#095b67"
-separator_color = "#095b67"
-
-frame_color = "#b5b3aa"
-separator_color = "#b5b3aa"
-
-frame_color = "#EEFFFF"
-separator_color = "#EEFFFF"
-
-frame_color = "#CDD3DE"
-separator_color = "#CDD3DE"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#c0c5ce"
-separator_color = "#c0c5ce"
-
-frame_color = "#dcdccc"
-separator_color = "#dcdccc"
-
-frame_color = "#cabcb1"
-separator_color = "#cabcb1"
-
-frame_color = "#bcbabe"
-separator_color = "#bcbabe"
-
-frame_color = "#a7a7a7"
-separator_color = "#a7a7a7"
-
-frame_color = "#4d4d4c"
-separator_color = "#4d4d4c"
-
-frame_color = "#c5c8c6"
-separator_color = "#c5c8c6"
-
-frame_color = "#93a1a1"
-separator_color = "#93a1a1"
-
-frame_color = "#d6d6d6"
-separator_color = "#d6d6d6"
-
-frame_color = "#D0D0FA"
-separator_color = "#D0D0FA"
-
-frame_color = "#abb2bf"
-separator_color = "#abb2bf"
-
-frame_color = "#C0C5CE"
-separator_color = "#C0C5CE"
-
-frame_color = "#B0BEC5"
-separator_color = "#B0BEC5"
-
-frame_color = "#bcbabe"
-separator_color = "#bcbabe"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#095b67"
-separator_color = "#095b67"
-
-frame_color = "#dcdccc"
-separator_color = "#dcdccc"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#c0c5ce"
-separator_color = "#c0c5ce"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#EEFFFF"
-separator_color = "#EEFFFF"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#dcdccc"
-separator_color = "#dcdccc"
-
-frame_color = "#81B5AC"
-separator_color = "#81B5AC"
-
-frame_color = "#C7CCD1"
-separator_color = "#C7CCD1"
-
-frame_color = "#a7a7a7"
-separator_color = "#a7a7a7"
-
-frame_color = "#A89984"
-separator_color = "#A89984"
-
-frame_color = "#e9e9f4"
-separator_color = "#e9e9f4"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#dab997"
-separator_color = "#dab997"
-
-frame_color = "#d5c4a1"
-separator_color = "#d5c4a1"
-
-frame_color = "#095b67"
-separator_color = "#095b67"
-
-frame_color = "#bcbabe"
-separator_color = "#bcbabe"
-
-frame_color = "#dcdccc"
-separator_color = "#dcdccc"
-
-frame_color = "#e9e9f4"
-separator_color = "#e9e9f4"
-
-frame_color = "#CDD3DE"
-separator_color = "#CDD3DE"
-
-frame_color = "#93a1a1"
-separator_color = "#93a1a1"
-
-frame_color = "#CDD3DE"
-separator_color = "#CDD3DE"
-
-frame_color = "#EEFFFF"
-separator_color = "#EEFFFF"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#095b67"
-separator_color = "#095b67"
-
-frame_color = "#c5c8c6"
-separator_color = "#c5c8c6"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#b5b3aa"
-separator_color = "#b5b3aa"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-frame_color = "#095b67"
-separator_color = "#095b67"
-
-frame_color = "#959DCB"
-separator_color = "#959DCB"
-
-frame_color = "#b9b9b9"
-separator_color = "#b9b9b9"
-
-frame_color = "#E5E9F0"
-separator_color = "#E5E9F0"
-
-[base16_low]
-    msg_urgency = low
-    background = "#161821"
+    background = "#102029"
+    foreground = "#ffffff"
+    frame_color = "#C9647E"
+    timeout = 0
+    # Icon for notifications with critical urgency, uncomment to enable
+    #icon = /path/to/icon
+
+[irc]
+    appname = "weechat"
+    format  = "%s: %b"
+    urgency = critical
+    background = "#1c1c23"
     foreground = "#ffffff"
 
-[base16_normal]
-    msg_urgency = normal
-    background = "#161821"
-    foreground = "#dddddd"
 
-[base16_critical]
-    msg_urgency = critical
-    background = "#161821"
-    foreground = "#aaaaaa"
+
+# Every section that isn't one of the above is interpreted as a rules to
+# override settings for certain messages.
+#
+# Messages can be matched by
+#    appname (discouraged, see desktop_entry)
+#    body
+#    category
+#    desktop_entry
+#    icon
+#    match_transient
+#    msg_urgency
+#    stack_tag
+#    summary
+#
+# and you can override the
+#    background
+#    foreground
+#    format
+#    frame_color
+#    fullscreen
+#    new_icon
+#    set_stack_tag
+#    set_transient
+#    timeout
+#    urgency
+#
+# Shell-like globbing will get expanded.
+#
+# Instead of the appname filter, it's recommended to use the desktop_entry filter.
+# GLib based applications export their desktop-entry name. In comparison to the appname,
+# the desktop-entry won't get localized.
+#
+# SCRIPTING
+# You can specify a script that gets run when the rule matches by
+# setting the "script" option.
+# The script will be called as follows:
+#   script appname summary body icon urgency
+# where urgency can be "LOW", "NORMAL" or "CRITICAL".
+#
+# NOTE: if you don't want a notification to be displayed, set the format
+# to "".
+# NOTE: It might be helpful to run dunst -print in a terminal in order
+# to find fitting options for rules.
+
+# Disable the transient hint so that idle_threshold cannot be bypassed from the
+# client
+#[transient_disable]
+#    match_transient = yes
+#    set_transient = no
+#
+# Make the handling of transient notifications more strict by making them not
+# be placed in history.
+#[transient_history_ignore]
+#    match_transient = yes
+#    history_ignore = yes
+
+# fullscreen values
+# show: show the notifications, regardless if there is a fullscreen window opened
+# delay: displays the new notification, if there is no fullscreen window active
+#        If the notification is already drawn, it won't get undrawn.
+# pushback: same as delay, but when switching into fullscreen, the notification will get
+#           withdrawn from screen again and will get delayed like a new notification
+#[fullscreen_delay_everything]
+#    fullscreen = delay
+#[fullscreen_show_critical]
+#    msg_urgency = critical
+#    fullscreen = show
+
+#[espeak]
+#    summary = "*"
+#    script = dunst_espeak.sh
+
+#[script-test]
+#    summary = "*script*"
+#    script = dunst_test.sh
+
+#[ignore]
+#    # This notification will not be displayed
+#    summary = "foobar"
+#    format = ""
+
+#[history-ignore]
+#    # This notification will not be saved in history
+#    summary = "foobar"
+#    history_ignore = yes
+
+#[skip-display]
+#    # This notification will not be displayed, but will be included in the history
+#    summary = "foobar"
+#    skip_display = yes
+
+#[signed_on]
+#    appname = Pidgin
+#    summary = "*signed on*"
+#    urgency = low
+#
+#[signed_off]
+#    appname = Pidgin
+#    summary = *signed off*
+#    urgency = low
+#
+#[says]
+#    appname = Pidgin
+#    summary = *says*
+#    urgency = critical
+#
+#[twitter]
+#    appname = Pidgin
+#    summary = *twitter.com*
+#    urgency = normal
+#
+#[stack-volumes]
+#    appname = "some_volume_notifiers"
+#    set_stack_tag = "volume"
+#
+# vim: ft=cfg

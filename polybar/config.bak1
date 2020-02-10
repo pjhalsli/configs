@@ -1,0 +1,393 @@
+;==========================================================
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;			https://github.com/polybar/polybar
+;==========================================================
+
+[color]
+
+trans = #00000000
+white = #dddddd
+black = #000000
+
+
+;bg = #101010
+;fg = #DDE3EB
+;fg-alt = #A9ABB0
+
+bg = #102029
+;#fg = #d2d2d2
+fg = #D9DBE3
+
+acolor = #FFFFFF
+curgent = #EF5350
+coccupied = #42A5F5
+
+shade1 = #212121
+shade2 = #2e3440
+shade3 = #616161
+shade4 = #757575
+shade5 = #9E9E9E
+shade6 = #BDBDBD
+shade7 = #D4D4D4
+shade8 = #EEEEEE
+ashade8 = #2C2C2C
+
+## Material Colors
+
+red = #e53935
+pink = #d81b60
+purple = #8e24aa
+deep-purple = #5e35b1
+indigo = #3949ab
+blue = #1e88e5
+light-blue = #039be5
+cyan = #00acc1
+teal = #00897b
+green = #43a047
+light-green = #7cb342
+lime = #c0ca33
+yellow = #fdd835
+amber = #ffb300
+orange = #fb8c00
+deep-orange = #f4511e
+brown = #6d4c41
+grey = #757575
+blue-gray = #546e7a
+
+[constants]
+padding = 1
+
+[bar/right]
+border-color          = ${color.fg}
+border-size           = 0
+border-transparent    = true
+bottom                = false
+cursor-click          = pointer
+cursor-scroll         = ns-resize
+fixed-center          = true
+background = ${color.bg}
+foreground = ${color.fg}
+height                = 30
+line-color            = #f00
+line-size             = 0
+module-margin-left    = 0
+module-margin-right   = 0
+offset-x              = 78%
+offset-y              = 0
+override-redirect     = true
+padding-left          = 0
+padding-right         = 0
+radius                = 21
+scroll-down           = i3wm-wsprev
+scroll-up             = i3wm-wsnext
+tray-position         = none
+width                 = 20%
+
+modules-center         = volume wlan xbacklight battery  
+modules-right = date
+
+;==========================================================
+font-1 = "Gohufont Regular:pixelsize=9;2"
+font-2 = "Iosevka Nerd Font:pixelsize=10;2"
+font-0 = "icomoon:pixelsize=8;2"
+
+;==========================================================
+
+[bar/middle]
+inherit = bar/right
+
+offset-x              = 40%
+offset-y              = 0
+width                 = 20%
+background = ${color.bg}
+modules-left        = 
+modules-center        = bspwm
+modules-right        = 
+;    _          _   _                
+;   | |__  __ _| |_| |_ ___ _ _ _  _ 
+;   | '_ \/ _` |  _|  _/ -_) '_| || |
+;   |_.__/\__,_|\__|\__\___|_|  \_, |
+;                               |__/ 
+
+[module/battery]
+type = internal/battery
+full-at = 99
+time-format = %H:%M
+battery = BAT0
+adapter = AC
+format-charging = <animation-charging> <label-charging>
+format-charging-background = ${color.bg}
+format-charging-padding = 2
+label-charging = %percentage%%
+label-charging-background = ${color.bg}
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-background = ${color.bg}
+format-discharging-padding = 2
+label-discharging = %percentage%% 
+format-full = <label-full>
+format-full-background = ${color.bg}
+label-padding = 2
+label-charging-padding = 2
+format-full-prefix = " "
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+
+ramp-capacity-0-foreground = ${color.red}
+ramp-capacity-1-foreground = ${color.red}
+ramp-capacity-foreground   = ${color.fg}
+bar-capacity-width = 10
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-6 = 
+
+animation-charging-framerate = 750
+
+;
+; BACKLIGHT
+;
+        
+[module/xbacklight]
+type = internal/xbacklight
+format = <label>
+format-foreground = ${color.fg}
+format-background = ${color.bg}
+;format-padding = 2
+label = " %percentage%"
+label-background = ${color.bg} 
+label-padding = 2
+
+;     _      _       
+;  __| |__ _| |_ ___ 
+; / _` / _` |  _/ -_)
+; \__,_\__,_|\__\___|
+                    
+[module/date]
+date                        = %D
+
+format                      = <label>
+
+format-font = 2
+interval                    = 30
+
+label                       = %time% 
+format-background            = ${color.bg}
+format-foreground = ${color.fg}
+
+time =  %H:%M
+time-alt =  %d-%m-%Y
+
+type                        = internal/date
+
+;   __ _ _                
+;  / _(_) |___ ____  _ ___
+; |  _| | / -_|_-< || (_-<
+; |_| |_|_\___/__/\_, /__/
+;                 |__/    
+
+[module/filesystem]
+fixed-values                = true
+
+format-mounted              = <label-mounted>
+format-mounted-foreground   = ${color.shade4}
+
+format-unmounted            = <label-unmounted>
+
+interval                    = 10
+
+label-mounted               =  %mountpoint% %percentage_used%%
+label-mounted-font          = 2
+
+label-unmounted             = %mountpoint%: not mounted
+label-unmounted-foreground  = #55
+
+mount-0                     = /
+mount-1                     = /mnt/sdb1
+mount-2                     = /mnt/sdb4
+
+spacing                     = 4
+
+type                        = internal/fs
+
+;                   
+;    __ _ _ __ _  _ 
+;   / _` | '_ \ || |
+;   \__, | .__/\_,_|
+;   |___/|_|        
+
+[module/gpu]
+exec                = system-nvidia-smi.sh
+
+format-foreground   = ${colors.shade7}
+format-label        = <label>
+format-padding      = ${constants.padding}
+interval            = 10
+
+label               = gpu %output% 
+label-font          = 2
+
+type                = custom/script
+
+;_             
+; BSPWM
+; 
+[module/bspwm]
+type = internal/bspwm
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+format-padding = 1
+
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
+ws-icon-8 = IX;
+ws-icon-9 = X;
+
+icon-default = 
+
+format = <label-state>
+;format-background = ${color.bg}
+label-background =${color.shade1}
+label-focused = ●
+label-occupied = ●
+label-urgent = ●
+label-empty = ●
+
+label-empty-padding = 1
+label-focused-padding = 1
+label-urgent-padding = 1
+label-occupied-padding = 1
+
+label-empty-foreground = #444444
+label-focused-foreground = #95C4CE
+label-urgent-foreground = #FF190A
+label-occupied-foreground = #ADA0D3
+
+
+
+;                   
+;    _ _ __ _ _ __  
+;   | '_/ _` | '  \ 
+;   |_| \__,_|_|_|_|
+;                   
+
+[module/memory]
+format-foreground   = ${colors.shade7}
+format-label        = <label>
+format-padding      = ${constants.padding}
+
+interval            = 2
+
+label               = ram %percentage_used%% 
+label-font          = 2
+
+type                = internal/memory
+
+;  _        _            _                 _   
+; | |_ __ _| |_____ __ _| |__ _ _ ___ __ _| |__
+; |  _/ _` | / / -_) _` | '_ \ '_/ -_) _` | / /
+;  \__\__,_|_\_\___\__,_|_.__/_| \___\__,_|_\_\
+                                              
+[module/takeabreak]
+click-left          = ~/bin/takeabreak/starttakeabreak.sh
+click-right         = ~/bin/takeabreak/stoptakeabreak.sh
+
+format              = ${env:TAKEABREAK_LABEL}
+format-font         = 0
+format-foreground   = ${color.fg}
+format-background   = ${color.shade1}
+format-prefix       = 
+
+hook-0              = cat ~/bin/takeabreak/sample
+hook-1              = echo " Time for a break! "
+hook-2              = echo " No timer running "
+
+initial             = 3
+
+type                = custom/ipc
+
+
+
+[module/volume]
+type = internal/alsa
+format-volume = <ramp-volume> <label-volume>
+format-volume-padding = 2
+format-volume-background = ${color.bg}
+format-volume-foreground = ${color.fg}
+label-volume = %percentage%%
+label-muted = "婢"
+label-muted-background = ${color.bg}
+label-muted-padding = 2
+
+ramp-volume-0 = 奄
+ramp-volume-1 = 奄
+ramp-volume-2 = 奔
+ramp-volume-3 = 奔
+ramp-volume-4 = 墳
+ramp-volume-5 = 墳
+ramp-volume-6 = 墳
+
+;           _           
+;   __ __ _| |__ _ _ _  
+;   \ V  V / / _` | ' \ 
+;    \_/\_/|_\__,_|_||_|
+;                       
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+format-connected-background = ${color.bg}
+format-padding = 2
+tail = true
+label-background =${color.shade3}
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid%
+label-connected-background = ${color.bg}
+;format-disconnected =
+ramp-signal-0 =
+label-connected-padding = 2
+
+;          _   _   _              
+;  ___ ___| |_| |_(_)_ _  __ _ ___
+; (_-</ -_)  _|  _| | ' \/ _` (_-<
+; /__/\___|\__|\__|_|_||_\__, /__/
+;                        |___/    
+                                      
+[settings]
+;compositing-background = screen
+;compositing-background = xor
+;compositing-border     = over
+;pseudo-transparency    = true
+compositing-foreground  = source
+screenchange-reload     = true
+
+[global/wm]
+
+; vim:ft        = dosini
+;  margin-bottom = 940
+;  margin-top    = 940

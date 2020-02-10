@@ -15,7 +15,7 @@
 sxhkd &
 compton &
 dunst &
-feh --bg-scale Bilder/wp/ss1.jpg
+feh --bg-scale Bilder/wp/wallhaven-757805.jpg
 $HOME/.config/polybar/launch.sh
 
 
