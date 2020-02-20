@@ -1,3 +1,10 @@
+#                           
+#     #              #          
+#   ### # # ##   ## ### ### ### 
+#   # # # # # #  #   #  #   #   
+#   ### ### # # ##   ## #   ###
+#
+
 [global]
     ### Display ###
 
@@ -86,7 +93,7 @@
 
     ### Text ###
 
-    font = Fira Code Regular 10
+    font = Anka/Coder Regular 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -273,18 +280,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#102029"
+    background = "#161821"
     foreground = "#D9DBE3"
     timeout = 10
 
 [urgency_normal]
-    background = "#102029"
+    background = "#161821"
     foreground = "#D9DBE3"
     timeout = 10
 
 [urgency_critical]
-    background = "#102029"
-    foreground = "#ffffff"
+    background = "#161821"
+    foreground = "#EDEEF0"
     frame_color = "#C9647E"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
