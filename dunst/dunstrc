@@ -36,7 +36,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x40-20+40"
+    geometry = "300x60-20+40"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -71,7 +71,7 @@
     frame_width = 4
 
     # Defines color of the frame around the notification window.
-    frame_color = "#D9DBE3"
+    frame_color = "#BBBBBB"
 
     # Define a color for the separator.
     # possible values are:
@@ -93,7 +93,7 @@
 
     ### Text ###
 
-    font = Anka/Coder Regular 10
+    font = Fira Code Regular 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -274,24 +274,24 @@
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1". Make sure this key actually exists on your keyboard layout,
     # e.g. check output of 'xmodmap -pke'
-    #history = ctrl+grave
+    history = ctrl+grave
 
     # Context menu.
     context = ctrl+shift+period
 
 [urgency_low]
     background = "#161821"
-    foreground = "#D9DBE3"
+    foreground = "#BBBBBB"
     timeout = 10
 
 [urgency_normal]
     background = "#161821"
-    foreground = "#D9DBE3"
+    foreground = "#BBBBBB"
     timeout = 10
 
 [urgency_critical]
     background = "#161821"
-    foreground = "#EDEEF0"
+    foreground = "#BBBBBB"
     frame_color = "#C9647E"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
@@ -421,4 +421,5 @@
 #    appname = "some_volume_notifiers"
 #    set_stack_tag = "volume"
 #
-# vim: ft=cfg
+# vim: ft=sh
+

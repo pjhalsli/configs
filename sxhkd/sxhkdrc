@@ -94,7 +94,7 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-# Send to a desktop and go to that desktop
+# Send to a desktop and follow 
 super + alt + {1-9,0}
         bspc node -d '^{1-9,10}' --follow
 
@@ -136,7 +136,7 @@ super + shift + {Left,Down,Up,Right}
         bspc node -v {-50 0,0 50,0 -50,50 0}
 
 
-# rotate a window
+# rotate desktop
 alt + e
 	bspc node @/ -R 90
 
@@ -182,3 +182,5 @@ alt + shift + x
 # weechat
 alt + shift + w 
    exec termite -e tmux -c weechat
+
+#vim: ft=sh  
