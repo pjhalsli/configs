@@ -1,1 +1,1 @@
-colorscheme base16-material-palenight
+colorscheme base16-material-darker
