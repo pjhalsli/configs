@@ -1,0 +1,125 @@
+#   ██                              ██   ██          
+#  ░██                             ░░   ░██          
+# ██████  █████  ██████ ██████████  ██ ██████  █████ 
+#░░░██░  ██░░░██░░██░░█░░██░░██░░██░██░░░██░  ██░░░██
+#  ░██  ░███████ ░██ ░  ░██ ░██ ░██░██  ░██  ░███████
+#  ░██  ░██░░░░  ░██    ░██ ░██ ░██░██  ░██  ░██░░░░ 
+#  ░░██ ░░██████░███    ███ ░██ ░██░██  ░░██ ░░██████
+#   ░░   ░░░░░░ ░░░    ░░░  ░░  ░░ ░░    ░░   ░░░░░░ 
+#
+
+[options]
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = false
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+
+font = Anka/Coder Regular 11
+#font = hermit light Regular 12
+#font = PragmataPro Regular 10
+#font = Operator Mono Light Italic 11
+#font = TamzenForPowerline Regular 12
+#font = Office Code Pro D Light 10
+#font = UW Ttyp0 Italic 12
+#font = ProFont for Powerline Light 12
+#font = Monofur for Powerline 12
+#font = HackNerdFont Regular 10
+
+
+scrollback_lines = 10000
+search_wrap = true
+filter_unmatched_urls = true
+
+[hint]
+
+
+
+
+[colors]
+# NORD -ish
+cursor = #d8dee9
+cursor_foreground = #2e3440
+foreground = #d8dee9
+foreground_bold = #d8dee9
+background  = rgba(48, 52, 64,  1.00)
+highlight = #4c566a
+
+color0  = #3b4252
+color1  = #bf616a
+color2  = #a3be8c
+color3  = #ebcb8b
+color4  = #81a1c1
+color5  = #b48ead
+color6  = #88c0d0
+color7  = #e5e9f0
+color8  = #4c566a
+color9  = #bf616a
+color10 = #a3be8c
+color11 = #ebcb8b
+color12 = #81a1c1
+color13 = #b48ead
+color14 = #8fbcbb
+color15 = #eceff4
+
+# Extra colors 
+color16 = #999999
+color17 = #5e5e5e
+color18 = #252525
+color19 = #464646
+color20 = #ababab
+color21 = #e3e3e3
+
+
+
+#[colors]
+# ARCH DARK
+# special
+#foreground      = #b9b9b9
+#foreground_bold = #b9b9b9
+#cursor          = #b9b9b9
+#background      = rgba(18, 21, 26,  1.00)
+#background    = #12151a
+
+# black
+#color0  = #12151a
+#color8  = #404040
+
+# red
+#color1  = #1793d1
+#color9  = #1793d1
+
+# green
+#color2  = #1793d1
+#color10 = #484848
+
+# yellow
+#color3  = #686868
+#color11 = #686868
+
+# blue
+#color4  = #8e8e8e
+#color12 = #8e8e8e
+
+# magenta
+#color5  = #1793d1
+#color13 = #1793d1
+
+# cyan
+#color6  = #675f5f
+#color14 = #675f5f
+
+# white
+#color7  = #b9b9b9
+#color15 = #c9c9c9
+
+
+# Extra colors
+#color16 = #999999
+#color17 = #5e5e5e
+#color18 = #252525
+#color19 = #464646
+#color20 = #ababab

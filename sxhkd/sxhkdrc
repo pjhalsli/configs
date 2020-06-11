@@ -1,3 +1,11 @@
+#
+#           #   #     #         
+#    ## # # ### # # ### ### ### 
+#    #   #  # # ##  # # #   #   
+#   ##  # # # # # # ### #   ###
+#
+
+
 [WM INDEPENDENT HOTKEYS]
 
 # terminal emulator
@@ -14,9 +22,9 @@ super + Escape
 
 
 [BSPWM HOTKEYS]
-# quit/restart bspwm normally
+# quit/restart bspwm
 super + alt + {q,r}
-	bspc {quit,wm -r}
+    bspc {quit,wm -r}
 
 # close and kill
 super + {_,shift + }w
@@ -50,7 +58,7 @@ super + alt + space
 	{smartsplit ; bspc node -i,\
 	for i in $(bspc query -N -n .leaf.!window.local); do bspc node $i -k; done}
 
-## Move window infront or behind other windows
+# Move window infront or behind other windows
 super + {_,shift} + v
 	bspc node -l {above,below}
 
@@ -59,10 +67,6 @@ super + {_,shift} + v
 # focus the node in the given direction
 super + {_,shift + }{j,k,i,l}
 	bspc node -{f,s} {west,south,north,east}
-
-## Move window infront or behind other windows
-super + {_,shift} + v
-	bspc node -l {above,below}
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
@@ -89,6 +93,11 @@ super + {o,i}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# Send to a desktop and follow 
+super + alt + {1-9,0}
+        bspc node -d '^{1-9,10}' --follow
+
 
 
 [PRESELECTION]
@@ -127,9 +136,10 @@ super + shift + {Left,Down,Up,Right}
         bspc node -v {-50 0,0 50,0 -50,50 0}
 
 
-# rotate a window
+# rotate desktop
 alt + e
 	bspc node @/ -R 90
+
 # hinting style
 alt + s
     bspc node -s "$(xorg-choose-window aoeuhtns)" --follow
@@ -143,7 +153,6 @@ super + F1
 # send time & battery status
 super + d
     notify-send "$(date "+%H:%M") /$(acpi | cut -d, -f2)"
-
 
 # screenshot
 Insert
@@ -173,3 +182,5 @@ alt + shift + x
 # weechat
 alt + shift + w 
    exec termite -e tmux -c weechat
+
+#vim: ft=sh  

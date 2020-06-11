@@ -1,0 +1,200 @@
+i#   ██                              ██   ██          
+#  ░██                             ░░   ░██          
+# ██████  █████  ██████ ██████████  ██ ██████  █████ 
+#░░░██░  ██░░░██░░██░░█░░██░░██░░██░██░░░██░  ██░░░██
+#  ░██  ░███████ ░██ ░  ░██ ░██ ░██░██  ░██  ░███████
+#  ░██  ░██░░░░  ░██    ░██ ░██ ░██░██  ░██  ░██░░░░ 
+#  ░░██ ░░██████░███    ███ ░██ ░██░██  ░░██ ░░██████
+#   ░░   ░░░░░░ ░░░    ░░░  ░░  ░░ ░░    ░░   ░░░░░░ 
+#
+
+[options]
+cursor_shape = underline
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = false
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+
+
+font =   Anka/Coder Regular 10
+
+scrollback_lines = 10000
+search_wrap = true
+filter_unmatched_urls = true
+
+[hint]
+
+
+
+
+
+#[colors]
+# M A R I N
+# special
+#foreground      = #edeef0
+#foreground_bold = #edeef0
+#cursor          = #edeef0
+#background      = #102029
+
+# black
+#color0  = #102029
+#color8  = #0e374b
+
+# red
+#color1  = #c9647e
+#color9  = #d87e8f
+
+# green
+#color2  = #7caba3
+#color10 = #add4cf
+
+# yellow
+#color3  = #c7c8b7
+#color11 = #ebdecd
+
+# blue
+#color4  = #71aac5
+#color12 = #a7cbe3
+
+# magenta
+#color5  = #f4adb1
+#color13 = #f8cbce
+
+# cyan
+#color6  = #7cbbc0
+#color14 = #a5d3d9
+
+# white
+#color7  = #d9dbe3
+#color15 = #edeef0
+
+
+[colors]
+
+# special
+foreground      = #9bbbc6
+foreground_bold = #9bbbc6
+cursor          = #9bbbc6
+background      = #1c1c23
+
+# black
+color0  = #323246
+color8  = #323246
+
+# red
+color1  = #5a7882
+color9  = #5a7882
+
+# green
+color2  = #8c8ca0
+color10 = #8c8ca0
+
+# yellow
+color3  = #1e828c
+color11 = #1e828c
+
+# blue
+color4  = #3c788c
+color12 = #3c788c
+
+# magenta
+color5  = #6ea0b4
+color13 = #6ea0b4
+
+# cyan
+color6  = #6e8ca0
+color14 = #6e8ca0
+
+# white
+color7  = #96bec8
+color15 = #96bec8
+
+
+#[colors]
+# special
+#foreground      = #a5a5a5
+#foreground_bold = #a5a5a5
+#cursor          = #a5a5a5
+#background      = #161616
+
+# black
+#color0  = #343434
+#color8  = #424242
+
+# red
+#color1  = #802828
+#color9  = #8a3232
+
+# green
+#color2  = #1e5673
+#color10 = #1e6a9a
+
+# yellow
+#color3  = #b27d12
+#color11 = #ddb62b
+
+# blue
+#color4  = #909737
+#color12 = #9ca554
+
+# magenta
+#color5  = #642337
+#color13 = #7d2d41
+
+# cyian
+#color6  = #196271
+#color14 = #197885
+
+# white
+#color7  = #b3b3b3
+#color15 = #b3b3b3
+
+
+
+
+
+
+#[colors]
+# I C E B E R G
+# special
+#foreground      = #d2d4de
+#foreground_bold = #d2d4de
+#cursor          = #d2d4de
+#background      = #161821
+
+# black
+#color0  = #161821
+#color8  = #6b7089
+
+# red
+#color1  = #e27878
+#color9  = #e98989
+
+# green
+#color2  = #b4be82
+#color10 = #c0ca8e
+
+# yellow
+#color3  = #e2a478
+#color11 = #e9b189
+
+# blue
+#color4  = #84a0c6
+#color12 = #91acd1
+
+# magenta
+#color5  = #a093c7
+#color13 = #ada0d3
+
+# cyan
+#color6  = #89b8c2
+#color14 = #95c4ce
+
+# white
+#color7  = #c6c8d1
+#color15 = #d2d4de
+:wq

@@ -1,17 +1,10 @@
-;==========================================================
-;
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
-;   Created By Aditya Shakya.
-;
-;==========================================================
+#                           
+#            #      #           
+#   ### ###  #  # # ###  ## ### 
+#   # # # #  #  ### # # # # #   
+#   ### ###  ##   # ### ### #   
+#   #           ###          
+#
 
 [color]
 
@@ -19,14 +12,13 @@ trans = #00000000
 white = #dddddd
 black = #000000
 
+## Iceberg
+#bg = #161821
+#fg = #C6C8D1
 
-;bg = #101010
-;fg = #DDE3EB
-;fg-alt = #A9ABB0
-
-bg = #102029
-;#fg = #d2d2d2
-fg = #D9DBE3
+## Cherry
+bg = #161821
+fg = #BBBBBB
 
 acolor = #FFFFFF
 curgent = #EF5350
@@ -68,7 +60,7 @@ blue-gray = #546e7a
 
 [bar/def]
 width = 100%
-height = 30
+height = 32
 offset-x = 0%
 offset-y = 0%
 bottom = false
@@ -86,9 +78,10 @@ border-size = 0
 ;border-color = #B34F63
 
 ;==========================================================
-font-1 = "Gohufont Regular:pixelsize=9;2"
-font-2 = "Iosevka Nerd Font:pixelsize=10;2"
-font-0 = "icomoon:pixelsize=8;2"
+
+font-0 = " Crisp Regular:pixelsize=8;2"
+font-1 = "Iosevka Nerd Font:pixelsize=8;2"
+font-2 = "icomoon:pixelsize=8;2"
 
 ;==========================================================
 
@@ -102,7 +95,7 @@ scroll-down = i3wm-wsprev
 
 modules-left = arch battery xwindow
 modules-center = bspwm
-modules-right = mpd volume xbacklight wlan date
+modules-right = mpd volume xbacklight wlan date powermenu
  
 ; xtra mods =    battery mail updates weather bitcoin
 
@@ -124,7 +117,7 @@ type = internal/xwindow
 label =  %title:0:25:...%
 label-padding = 2
 label-background = ${color.bg}
-;label-foreground = ${color.fg}
+label-foreground = ${color.fg}
 
 
 [module/bspwm]
@@ -301,10 +294,11 @@ time-alt =  %d-%m-%Y
 type = custom/text
 content = 襤
 content-padding = 2
-content-background = ${color.shade2}
+content-background = ${color.bg}
 content-foreground = ${color.fg}
 click-left = pmenu_1
 click-right = pmenu_1
 
 ;== EOF ========================================================
 
+# vim: ft=sh

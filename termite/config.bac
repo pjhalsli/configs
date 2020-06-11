@@ -1,0 +1,93 @@
+[options]
+allow_bold = true
+#audible_bell = false
+#bold_is_bright = true
+#cell_height_scale = 1.0
+#cell_width_scale = 1.0
+clickable_url = true
+#dynamic_title = true
+
+font = Anka/Coder Regular 10 
+#font = Mensch Regular 10
+#font = SourceCode Pro Regular 10
+#font = undefined medium 10
+#fullscreen = true
+#icon_name = terminal
+mouse_autohide = false
+#scroll_on_output = false
+scroll_on_keystroke = true
+# Length of the scrollback buffer, 0 disabled the scrollback buffer
+# and setting it to a negative value means "infinite scrollback"
+scrollback_lines = 10000
+#search_wrap = true
+#urgent_on_bell = true
+#hyperlinks = false
+
+# $BROWSER is used by default if set, with xdg-open as a fallback
+browser = opera
+
+# Hide links that are no longer valid in url select overlay mode
+#filter_unmatched_urls = true
+
+# Emit escape sequences for extra modified keys
+#modify_other_keys = false
+
+# set size hints for the window
+#size_hints = false
+
+# "off", "left" or "right"
+#scrollbar = off
+
+highlight = #2f2f2f
+
+#roundness = 2.0
+
+[colors]
+# Base16 Icy Dark
+# Author: icyphox (https://icyphox.ga)
+
+foreground          = #095b67
+foreground_bold     = #0c7c8c
+cursor              = #0c7c8c
+cursor_foreground   = #021012
+background          = rgba(2, 16, 18)
+
+# 16 color space
+
+# Black, Gray, Silver, White
+color0  = #021012
+color8  = #052e34
+color7  = #095b67
+color15 = #109cb0
+
+# Red
+color1  = #16c1d9
+color9  = #16c1d9
+
+# Green
+color2  = #4dd0e1
+color10 = #4dd0e1
+
+# Yellow
+color3  = #80deea
+color11 = #80deea
+
+# Blue
+color4  = #00bcd4
+color12 = #00bcd4
+
+# Purple
+color5  = #00acc1
+color13 = #00acc1
+
+# Teal
+color6  = #26c6da
+color14 = #26c6da
+
+# Extra colors
+color16 = #b3ebf2
+color17 = #0097a7
+color18 = #031619
+color19 = #041f23
+color20 = #064048
+color21 = #0c7c8c
