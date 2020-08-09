@@ -1,29 +1,11 @@
-#           #           
-#   ##   ## ### ### ### 
-#    #   #  # # #   #   
-#    ## ##  # # #   ### 
-#
-
-source $(dirname $(gem which colorls))/tab_complete.sh
-
-export NNN_PLUG='o:fzopen;p:mocplay;d:diffs;m:nmount;n:notes;v:imgviu;t:imgthumb'
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block, everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block, everything else may go below.
-#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-#fi
-
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:/home/penguin1/bin/
+
+eval "$(zoxide init zsh)"
+
+# one liner for 256 colorscheme
+#  for i in {0..255}; do print -Pn "%K{$i} %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%8)):#7}:+$'\n'}; done
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -31,10 +13,15 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="typewritten"
+
+
 
 # Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
@@ -47,8 +34,14 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -58,15 +51,16 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
+
+# autocorrection
 setopt correctall
 export CORRECT_IGNORE_FILE='.*'
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
@@ -75,7 +69,7 @@ COMPLETION_WAITING_DOTS="true"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
- HIST_STAMPS="dd.mm.yyyy"
+HIST_STAMPS="dd.mm.yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -85,18 +79,19 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(archlinux git jump themes )
+plugins=(git colored-man-pages)
+
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+#(cat ~/.cache/wal/sequences &)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
 
-# Import colorscheme from 'wal' asynchronously
-# &   
-# Run the process in the background.
-# ( ) 
-# Hide shell job control messages.
-#(cat ~/.cache/wal/sequences &)
+
+
+# User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -104,30 +99,105 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='mvim'
- fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
 
-# Personal Shit
-[ -f ~/.fzf.colors ] && source ~/.fzf.colors
+# Misc aliases
+# start some programs
+alias speedo="speedometer -r wlp3s0 -t wlp3s0"
+alias gtop="gotop -pbsi wlp3s0"
+alias slurm="slurm -i wlp3s0"
 
-alias lock="i3lock -i Bilder/wp/wallhaven-670048_1920x1080.png -p win -f Source-Code-Pro"
-alias lockp="i3lock-fancy -p -f Source-Code-Pro-Medium -t 'Back Soon'"
+alias lock="i3lock-fancy -p -f Source-Code-Pro-Medium -t 'Stay The Fuck Away'"
 alias cheeze="./scripts/cheeze"
-alias gcal='gcalcli --auth_host_name AUTH_HOST_NAME'
-alias checkup="./scripts/checkupdates-aurman.sh -o -c -t"
-alias aura="aura -n 'os user' -c 'c7 c5'" 
+alias grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+#alias aura="aura -n -c 'c7 c5'"
 alias eyes='cowsay -f eyes I Am Watching You'
 alias wttr='curl http://wttr.in trondheim'
-alias pb="curl -F 'f:1=@"
 alias ytv="youtube-dl"
+alias yey='LC_ALL=en_us yay'
 alias yta="youtube-dl --extract-audio --audio-format mp3 "
-alias slurm='slurm -i wlp3s0'
-alias rsfetch="rsfetch -PdeHklrstuwp pacman ; panes"
-alias cls="colorls"
+
+
+# Some aliases for ls for showing icons
+#alias ls='lsd'
+alias ls='ls --color=auto'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+alias redshift="redshift -b 1.0:0.8"
+alias wifi="sudo wifi-menu"
+alias keys=".config/sxhkd/keybinds.sh"
 alias up="pikaur -Syu"
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+alias yaorph='pacaur -Qtd'
+alias pacupg='pacaur -Syu --devel --needed --noedit'
+alias pacin='sudo pacman -S'
+alias pacinl='sudo pacman -U'
+alias pacre='sudo pacman -R'
+alias pacrem='sudo pacman -Rns'
+alias pacrep='sudo pacman -Si'
+alias pacreps='sudo pacman -Ss'
+alias pacloc='sudo pacman -Qi'
+alias paclocs='sudo pacman -Qs'
+alias paclstorphans='sudo pacman -Qdt'
+alias pacrmorphans='sudo pacman -Rns $(pacman -Qtdq)'
+alias weather='curl http://wttr.in/trondheim'
+alias edpaco='sudo vim /etc/pacman.conf'
+alias 256='curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/ | bash'
+
+# Function for extracting
+e() {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xjvf $1 ;;
+            *.tar.gz)    tar xzvf $1 ;;
+            *.tar.xz)    tar xJvf $1 ;;
+            *.bz2)       bunzip2 $1 ;;
+	    *.rar)       unrar xv $1 ;;
+            *.gz)        gunzip $1 ;;
+            *.tar)       tar xvf $1 ;;
+            *.tbz2)      tar xjvf $1 ;;
+            *.tgz)       tar xzvf $1 ;;
+            *.zip)       unzip $1 ;;
+            *.7z)        7z $1 ;;
+            *.xz)        xz -vd $1 ;;
+            *)           echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+
+function acp() {
+  git add .
+  git commit -m "latest update"
+  git push
+}
+
+
+# colored manpage
+#man() {
+#    LESS_TERMCAP_md=$'\e[01;31m' \
+#    LESS_TERMCAP_me=$'\e[0m' \
+#    LESS_TERMCAP_se=$'\e[0m' \
+#    LESS_TERMCAP_so=$'\e[01;44;33m' \
+#    LESS_TERMCAP_ue=$'\e[0m' \
+#    LESS_TERMCAP_us=$'\e[01;32m' \
+#    command man "$@"
+#}
+
+
+
+
+###---EOF
+[ -f ~/.fzf.colors ] && source ~/.fzf.colors
