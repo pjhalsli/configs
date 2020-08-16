@@ -1,0 +1,323 @@
+#                               
+#    #               #   #      
+#   ### ### ### ###     ### ### 
+#    #  ##  #   ###  #   #  ##  
+#    ## ### #   # #  ##  ## ### 
+#
+
+###   MISC   ###
+
+[options]
+allow_bold = true
+clickable_url = true
+
+mouse_autohide = true 
+scroll_on_keystroke = true
+
+scrollback_lines = 10000
+
+browser = qutebrowser
+
+
+#--- APPEARANCE --- 
+highlight = #2f2f2f
+
+
+font = Anka/Coder Regular 9
+
+#[colors]
+# CHERRY
+# special
+#foreground      = #edeef0
+#foreground_bold = #edeef0
+#cursor          = #edeef0
+#background      = #102029
+
+# black
+#color0  = #102029
+#color8  = #0e374b
+
+# red
+#color1  = #c9647e
+#color9  = #d87e8f
+
+# green
+#color2  = #7caba3
+#color10 = #add4cf
+
+# yellow
+#color3  = #c7c8b7
+#color11 = #ebdecd
+
+# blue
+#color4  = #71aac5
+#color12 = #a7cbe3
+
+# magenta
+#color5  = #f4adb1
+#color13 = #f8cbce
+
+# cyan
+#color6  = #7cbbc0
+#color14 = #a5d3d9
+
+# white
+#color7  = #d9dbe3
+#color15 = #edeef0
+
+
+#[colors]
+# pink & purple
+# special
+#foreground      = #afd7ff
+#foreground_bold = #afd7ff
+#cursor          = #afd7ff
+#background      = #1e1f29
+
+# black
+#color0  = #3c3836
+#color8  = #504945
+
+# red
+#color1  = #d15e85
+#color9  = #d15e85
+
+# green
+#color2  = #87ffff
+#color10 = #87ffff
+
+# yellow
+#color3  = #a1a6a8
+#color11 = #a1a6a8
+
+# blue
+#color4  = #5f87af
+#color12 = #5f87af
+
+# magenta
+#color5  = #af5faf
+#color13 = #8787af
+
+# cyan
+#color6  = #008787
+#color14 = #008787
+
+# white
+#color7  = #afd7d7
+#color15 = #afd7d7
+
+
+#[colors]
+# substrata
+# special
+#foreground      = #b5b4c9
+#foreground_bold = #b5b4c9
+#cursor          = #b5b4c9
+#background      = #191c25
+
+# black
+#color0  = #2e313d
+#color8  = #5b5f71
+
+# red
+#color1  = #cf8164
+#color9  = #fe9f7c
+
+# green
+#color2  = #76a065
+#color10 = #92c47e
+
+# yellow
+#color3  = #ab924c
+#color11 = #d2b45f
+
+# blue
+#color4  = #8296b0
+#color12 = #a0b9d8
+
+# magenta
+#color5  = #a18daf
+#color13 = #c6aed7
+
+# cyan
+#color6  = #659ea2
+#color14 = #14ffff
+
+# white
+#color7  = #b5b4c9
+#color15 = #f0ecfe
+
+
+
+
+#[colors]
+# J W R
+# special
+#foreground      = #ffffff
+#foreground_bold = #ffffff
+#cursor          = #ffffff
+#background      = #000000
+
+# black
+#color0  = #333333
+#color8  = #3d3d3d
+
+# red
+#color1  = #8c4665
+#color9  = #bf4d80
+
+# green
+#color2  = #287373
+#color10 = #53a6a6
+
+# yellow
+#color3  = #7c7c99
+#color11 = #9e9ecb
+
+# blue
+#color4  = #395573
+#color12 = #477ab3
+
+# magenta
+#color5  = #5e468c
+#color13 = #7e62b3
+
+# cyan
+#color6  = #31658c
+#color14 = #6096bf
+
+# white
+#color7  = #899ca1
+#color15 = #c0c0c0
+
+
+
+
+
+[colors]
+# ICEBERG
+# special
+foreground      = #c6c8d1
+foreground_bold = #c6c8d1
+cursor          = #c6c8d1
+background      = #161821
+#background      = rgba(22, 24, 33,  0.90)
+
+# black
+color0  = #161821
+color8  = #6b7089
+
+# red
+color1  = #e27878
+color9  = #e98989
+
+# green
+color2  = #b4be82
+color10 = #c0ca8e
+
+# yellow
+color3  = #e2a478
+color11 = #e9b189
+
+# blue
+color4  = #84a0c6
+color12 = #91acd1
+
+# magenta
+color5  = #a093c7
+color13 = #ada0d3
+
+# cyan
+color6  = #89b8c2
+color14 = #95c4ce
+
+# white
+color7  = #c6c8d1
+color15 = #d2d4de
+
+
+
+#[colors]
+# wal
+# special
+#foreground      = #d4d1d5
+#foreground_bold = #d4d1d5
+#cursor          = #d4d1d5
+#background      = #0e0f11
+
+# black
+#color0  = #0e0f11
+#color8  = #949295
+
+# red
+#color1  = #d5726b
+#color9  = #d5726b
+
+# green
+#color2  = #c7827a
+#color10 = #c7827a
+
+# yellow
+#color3  = #386b87
+#color11 = #386b87
+
+# blue
+#color4  = #4e7592
+#color12 = #4e7592
+
+# magenta
+#color5  = #6b8ba6
+#color13 = #6b8ba6
+
+# cyan
+#color6  = #9aa0b0
+#color14 = #9aa0b0
+
+# white
+#color7  = #d4d1d5
+#color15 = #d4d1d5
+
+
+
+
+#[colors]
+# R I G E L
+# special
+#foreground      = #e6e6dc
+#foreground_bold = #e6e6dc
+#cursor          = #e6e6dc
+#background      = #002635
+
+# black
+#color0  = #00384d
+#color8  = #517f8d
+
+# red
+#color1  = #c43061
+#color9  = #ff5a67
+
+# green
+#color2  = #7fc06e
+#color10 = #9cf087
+
+# yellow
+#color3  = #f08e48
+#color11 = #ffcc1b
+
+# blue
+#color4  = #1c8db2
+#color12 = #7eb2dd
+
+# magenta
+#color5  = #c694ff
+#color13 = #fb94ff
+
+# cyan
+#color6  = #00cccc
+#color14 = #00ffff
+
+# white
+#color7  = #77929e
+#color15 = #b7cff9
+
+# vim: ft=xdefaults
