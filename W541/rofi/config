@@ -1,0 +1,26 @@
+rofi.modi:                           window,run
+rofi.width:                          33
+rofi.lines:                          10
+rofi.font:                           PT Mono Regular 15
+rofi.bw:                             12
+rofi.location:                       0
+rofi.padding:                        50
+rofi.sidebar-mode:                   true
+rofi.separator-style:                dotted
+rofi.hide-scrollbar:                 true
+rofi.scrollbar-width:                0
+rofi.window-format:                  {w}    {c}   {t}
+rofi.click-to-exit:                  true
+rofi.show-match:                     true
+
+rofi.color-enabled: true
+
+! Property Name     BG       Border   Separator
+rofi.color-window:  #282a36, #f8f8f2, #282a36
+
+! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
+rofi.color-normal:  #282a36, #C6C8D1, #282a36, #BD93F9, #000000
+rofi.color-active:  #282a36, #FF79C6, #282a36, #FF79C6, #000000
+rofi.color-urgent:  #282a36, #FF5555, #282a36, #C9647E, #ffffff
+
+rofi.theme: /home/penguin1/.config/rofi/themes/dmenu.rasi

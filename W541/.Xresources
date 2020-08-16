@@ -1,0 +1,85 @@
+!                                          
+!   # # ### ###  ## ### # # ### ### ###  ## 
+!    #  #   ##   #  # # # # #   #   ##   #  
+!   # # #   ### ##  ### ### #   ### ### ##
+!
+
+!URXVT SETTINGS
+
+URxvt*font: xft:FiraCode Nerd Font Mono:size=12
+URxvt.internalBorder: 10
+URxvt.scrollBar: false
+URxvt.geometry: 55x15
+URxvt.saveLines: 0
+URxvt.scrollWithBuffer: false
+URxvt*skipScroll: true
+URxvt*.scrollBar: false
+
+! DPI/Font
+Xft.dpi: 100 
+Xft.autohint: 0
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+! Dracula Xresources palette
+!*.foreground: #F8F8F2
+!*.background: #282A36
+!*.cursorColor:  #282A36 
+!*.color0:     #000000
+!*.color8:     #4D4D4D
+!*.color1:     #FF5555
+!*.color9:     #FF6E67
+!*.color2:     #50FA7B
+!*.color10:    #5AF78E
+!*.color3:     #F1FA8C
+!*.color11:    #F4F99D
+!*.color4:     #BD93F9
+!*.color12:    #CAA9FA
+!*.color5:     #FF79C6
+!*.color13:    #FF92D0
+!*.color6:     #8BE9FD
+!*.color14:    #9AEDFE
+!*.color7:     #BFBFBF
+!*.color15:    #E6E6E6
+
+!special
+! I C E B E R G
+*.background:  #161821
+*.foreground:  #c6c8d1
+*.cursorColor: #c6c8d1
+*.color0:      #22262e
+*.color8:      #6b7089
+*.color1:      #e27878
+*.color9:      #e98989
+*.color2:      #b4be82
+*.color10:     #c0ca8e
+*.color3:      #e2a478
+*.color11:     #e9b189
+*.color4:      #84a0c6
+*.color12:     #91acd1
+*.color5:      #a093c7
+*.color13:     #ada0d3
+*.color6:      #89b8c2
+*.color14:     #95c4ce
+*.color7:      #c6c8d1
+*.color15:     #d2d4de
+
+
+! Xclock colors.
+XClock*foreground: #C9BEB4
+XClock*background: #272e38
+XClock*majorColor:  rgba:c9/be/b4/ff
+XClock*minorColor:  rgba:c9/be/b4/ff
+XClock*hourColor:   rgba:c9/be/b4/ff
+XClock*minuteColor: rgba:c9/be/b4/ff
+XClock*secondColor: rgba:c9/be/b4/ff
+
+! Set depth to make transparency work.
+!URxvt*depth: 32
+
+
+!include ".Xresources.d/colors"
+
