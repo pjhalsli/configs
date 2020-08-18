@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/penguin1/git-stuff/bspwm/examples/receptacles'
+let g:netrw_dirhist_7='/home/penguin1/.oh-my-zsh/custom/themes/typewritten'
+let g:netrw_dirhist_6='/home/penguin1'
+let g:netrw_dirhist_5='/home'
+let g:netrw_dirhist_4='/'
+let g:netrw_dirhist_3='/home'
+let g:netrw_dirhist_2='/home/penguin1'
+let g:netrw_dirhist_1='/home/penguin1/.oh-my-zsh'
+let g:netrw_dirhist_0='/home/penguin1/.oh-my-zsh/custom'
+let g:netrw_dirhist_9='/home/penguin1/.oh-my-zsh/custom/themes'
