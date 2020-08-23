@@ -1,0 +1,89 @@
+[options]
+
+allow_bold = true
+audible_bell = true
+browser = firefox
+clickable_url = true
+geometry = 480x280
+icon_name = terminal
+modify_other_keys = false
+mouse_autohide = true
+scroll_on_output = false
+scroll_on_keystroke = true
+scrollback_lines = 15000
+scrollbar = off
+size_hints = false
+search_wrap = true
+urgent_on_bell = true
+highlight = #30343e
+
+font = FuraCode Nerd Font Regular 10
+#font = M+ 2m regular 10
+#font = FiraCode Nerd Font Mono Regular 10
+#font = Roboto Mono For Powerline Regular 9
+# font  = Iosevka Nerd Font Regular 10
+#font = CozetteVector Regular 9 
+#font = cherry Regular 9
+
+color1  = #FF1744
+
+[colors]
+
+foreground          = #EEFFFF
+
+color8  = #4A4A4A
+color15 = #FFFFFF
+color1  = #F07178
+
+color3  = #FFCB6B
+color4  = #82AAFF
+
+[colors]
+# Base16 Material Darker
+# Author: Nate Peterson
+
+foreground          = #EEFFFF
+foreground_bold     = #EEFFFF
+cursor              = #EEFFFF
+cursor_foreground   = #212121
+background          = rgba(33, 33, 33)
+
+# 16 color space
+
+# Black, Gray, Silver, White
+color0  = #212121
+color8  = #4A4A4A
+color7  = #EEFFFF
+color15 = #FFFFFF
+
+# Red
+color1  = #F07178
+color9  = #F07178
+
+# Green
+color2  = #C3E88D
+color10 = #C3E88D
+
+# Yellow
+color3  = #FFCB6B
+color11 = #FFCB6B
+
+# Blue
+color4  = #82AAFF
+color12 = #82AAFF
+
+# Purple
+color5  = #C792EA
+color13 = #C792EA
+
+# Teal
+color6  = #89DDFF
+color14 = #89DDFF
+
+# Extra colors
+color16 = #F78C6C
+color17 = #FF5370
+color18 = #303030
+color19 = #353535
+color20 = #B2CCD6
+color21 = #EEFFFF

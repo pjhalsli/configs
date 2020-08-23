@@ -1,0 +1,1 @@
+/home/penguin1/.vimrc
