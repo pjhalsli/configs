@@ -26,7 +26,7 @@ kernel=$(uname -r)
 pkgs=$(pacman -Qqs | wc -l)
 #wm=$(awk '/ssh/ { printf $2 }' ~/.xinitrc)
 #wm=$(awk '/exec/ { printf $4 }' ~/.xinitrc)
-font=$(fc-match monospace | awk '{printf $2$3$4}')
+font=$(grep font $HOME/.config/termite/config | head -1 | cut -d "=" -f 2 | tail -c +2)
 shell=$(basename "$SHELL")
 uptime=$(uptime -p | sed 's/up //')
 term=$TERMINAL
