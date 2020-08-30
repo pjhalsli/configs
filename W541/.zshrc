@@ -121,11 +121,9 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.colors ] && source ~/.fzf.colors
 alias 256='curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/ | bash'
 alias lock="i3lock -i Bilder/wp/wallhaven-670048_1920x1080.png -p win -f Source-Code-Pro"
-alias lockp="i3lock-fancy -p -f Source-Code-Pro-Medium -t 'Back Soon'"
-alias cheeze="./scripts/cheeze"
+#alias lockp="i3lock-fancy -p -f Source-Code-Pro-Medium -t 'Back Soon'"
+#alias cheeze="./scripts/cheeze"
 alias gcal='gcalcli --auth_host_name AUTH_HOST_NAME'
-alias checkup="./scripts/checkupdates-aurman.sh -o -c -t"
-alias aura="aura -n 'os user' -c 'c7 c5'" 
 alias eyes='cowsay -f eyes I Am Watching You'
 alias wttr='curl http://wttr.in trondheim'
 alias pb="curl -F 'f:1=@"
