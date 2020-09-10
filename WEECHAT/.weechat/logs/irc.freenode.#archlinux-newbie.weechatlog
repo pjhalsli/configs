@@ -1,0 +1,71 @@
+2020-04-12 17:35:07	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #archlinux-newbie
+2020-04-12 17:35:07	●	Topic for #archlinux-newbie is "Welcome to the Arch Linux community. This is a space to learn and try new things, without fear of ridicule. | RULES: https://archlinux-newbie.github.io/rules/ | The Arch community expects users to do the research before asking questions, please check the wiki and news before posting here. | libxfont is no longer in the repos, remove it from your system"
+2020-04-12 17:35:07	●	Topic set by halosghost on fr., 23 mars 2018 21:04:21
+2020-04-12 17:35:07	●	Channel #archlinux-newbie: 88 nicks (0 ops, 3 voices, 85 normals)
+2020-04-12 17:35:09	●	Channel created on to., 28 feb. 2013 04:13:33
+2020-04-12 17:44:22	>>	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::35ff) has joined #archlinux-newbie
+2020-04-12 17:50:02	<<	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::35ff) has quit (Quit: See you another time!)
+2020-04-12 17:50:28	>>	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::35ff) has joined #archlinux-newbie
+2020-04-12 18:17:45	●	irc: disconnected from server
+2020-04-12 19:13:05	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #archlinux-newbie
+2020-04-12 19:13:05	●	Topic for #archlinux-newbie is "Welcome to the Arch Linux community. This is a space to learn and try new things, without fear of ridicule. | RULES: https://archlinux-newbie.github.io/rules/ | The Arch community expects users to do the research before asking questions, please check the wiki and news before posting here. | libxfont is no longer in the repos, remove it from your system"
+2020-04-12 19:13:05	●	Topic set by halosghost on fr., 23 mars 2018 21:04:21
+2020-04-12 19:13:05	●	Channel #archlinux-newbie: 90 nicks (0 ops, 3 voices, 87 normals)
+2020-04-12 19:13:07	●	Channel created on to., 28 feb. 2013 04:13:33
+2020-04-12 19:18:13	<<	sangoma (~zeus@154.226.181.55) has quit (Ping timeout: 264 seconds)
+2020-04-12 19:21:59	<<	Guest38836 (~darrell@node-1w7jra254gnalbc86gnk6kqny.ipv6.telus.net) has quit (Remote host closed the connection)
+2020-04-12 19:24:12	>>	causasui (~causasui@wikipedia/causa-sui) has joined #archlinux-newbie
+2020-04-12 19:33:12	>>	Vitek (~vitek@dyn-49-140.newit-lan.ru) has joined #archlinux-newbie
+2020-04-12 19:33:53	<<	Vitek (~vitek@dyn-49-140.newit-lan.ru) has quit (Client Quit)
+2020-04-12 19:43:38	<<	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::64bf) has quit (Quit: See you another time!)
+2020-04-12 19:44:48	>>	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::64bf) has joined #archlinux-newbie
+2020-04-12 19:45:04	>>	elgatov (~elgatov@139.47.103.183) has joined #archlinux-newbie
+2020-04-12 19:48:11	<<	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::64bf) has quit (Client Quit)
+2020-04-12 19:49:35	>>	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::64bf) has joined #archlinux-newbie
+2020-04-12 19:53:33	<<	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::64bf) has quit (Client Quit)
+2020-04-12 19:53:58	>>	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::64bf) has joined #archlinux-newbie
+2020-04-12 19:54:13	<<	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::64bf) has quit (Client Quit)
+2020-04-12 19:54:55	>>	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::64bf) has joined #archlinux-newbie
+2020-04-12 19:55:16	<<	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::64bf) has quit (Client Quit)
+2020-04-12 19:58:28	>>	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::eddc) has joined #archlinux-newbie
+2020-04-12 19:58:53	<<	noctavian (~noctavian@gateway/tor-sasl/noctavian) has quit (Remote host closed the connection)
+2020-04-12 19:59:09	>>	noctavian (~noctavian@gateway/tor-sasl/noctavian) has joined #archlinux-newbie
+2020-04-12 20:01:17	<<	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::eddc) has quit (Client Quit)
+2020-04-12 20:01:55	>>	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::eddc) has joined #archlinux-newbie
+2020-04-12 20:02:00	>>	sangoma (~zeus@154.226.181.55) has joined #archlinux-newbie
+2020-04-12 20:03:31	<<	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::eddc) has quit (Client Quit)
+2020-04-12 20:04:03	>>	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::eddc) has joined #archlinux-newbie
+2020-04-12 20:04:37	<<	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::eddc) has quit (Client Quit)
+2020-04-12 20:05:12	>>	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::eddc) has joined #archlinux-newbie
+2020-04-12 20:25:57	<<	ellcs (~ellcs@200116b868835d006b0bb50cb0657304.dip.versatel-1u1.de) has quit (Ping timeout: 260 seconds)
+2020-04-12 20:38:33	>>	ellcs (~ellcs@200116b868835d00ebabf213393bbcd2.dip.versatel-1u1.de) has joined #archlinux-newbie
+2020-04-12 20:47:17	<<	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::eddc) has quit (Ping timeout: 246 seconds)
+2020-04-12 20:48:36	>>	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::64bf) has joined #archlinux-newbie
+2020-04-12 20:49:04	>>	MightyUnderTaker (~suren@185.8.1.222) has joined #archlinux-newbie
+2020-04-12 20:58:45	<<	Neele (uid424041@gateway/web/irccloud.com/x-knxmpbhqchopkftr) has quit (Quit: Connection closed for inactivity)
+2020-04-12 21:26:03	<<	MightyUnderTaker (~suren@185.8.1.222) has quit (Quit: WeeChat 2.8)
+2020-04-12 21:29:34	<<	HEX0 (~HEX0@unaffiliated/hex0) has quit (Quit: WeeChat 2.8)
+2020-04-12 21:58:48	>>	anasr (~adham@102.184.12.116) has joined #archlinux-newbie
+2020-04-12 21:59:20	<<	anasr (~adham@102.184.12.116) has quit (Read error: Connection reset by peer)
+2020-04-12 21:59:34	>>	anasr (~adham@102.184.12.116) has joined #archlinux-newbie
+2020-04-12 22:04:40	>>	Boohbah (~Boohbah@gateway/tor-sasl/boohbah) has joined #archlinux-newbie
+2020-04-12 22:08:02	<<	ellcs (~ellcs@200116b868835d00ebabf213393bbcd2.dip.versatel-1u1.de) has quit (Ping timeout: 260 seconds)
+2020-04-12 22:08:24	>>	HEX0 (~HEX0@unaffiliated/hex0) has joined #archlinux-newbie
+2020-04-12 22:19:25	<<	Boohbah (~Boohbah@gateway/tor-sasl/boohbah) has quit (Quit: Lost terminal)
+2020-04-12 22:22:50	<<	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::64bf) has quit (Ping timeout: 246 seconds)
+2020-04-12 22:24:11	>>	MonoMonkey (~MonoMonke@2a02:810d:a33f:f6c0::8d53) has joined #archlinux-newbie
+2020-04-12 22:25:35	>>	ellcs (~ellcs@i577BC8B9.versanet.de) has joined #archlinux-newbie
+2020-04-12 22:32:22	<<	elgatov (~elgatov@139.47.103.183) has quit (Read error: Connection reset by peer)
+2020-04-12 22:33:40	>>	elgatov (~elgatov@139.47.103.183) has joined #archlinux-newbie
+2020-04-12 22:35:22	>>	Boohbah (~Boohbah@gateway/tor-sasl/boohbah) has joined #archlinux-newbie
+2020-04-12 22:51:54	<<	mkoskar (~mkoskar@unaffiliated/mkoskar) has quit (Quit: mkoskar)
+2020-04-12 22:52:33	>>	mkoskar (~mkoskar@unaffiliated/mkoskar) has joined #archlinux-newbie
+2020-04-12 22:52:36	●	irc: disconnected from server
+2020-07-12 16:50:39	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #archlinux-newbie
+2020-07-12 16:50:39	●	Topic for #archlinux-newbie is "Welcome to the Arch Linux community. This is a space to learn and try new things, without fear of ridicule. | RULES: https://archlinux-newbie.github.io/rules/ | The Arch community expects users to do the research before asking questions, please check the wiki and news before posting here."
+2020-07-12 16:50:39	●	Topic set by Khorne on lø., 25 april 2020 19:55:46
+2020-07-12 16:50:39	●	Channel #archlinux-newbie: 92 nicks (0 ops, 4 voices, 88 normals)
+2020-07-12 16:50:41	●	Channel created on to., 28 feb. 2013 04:13:33
+2020-07-12 16:50:55	●	Nicks #archlinux-newbie: [+gehidore +Khorne +meskarune +yar a-ng al AmShaegar andreas303 AntiComposite archwizard56 avapxia balkamos blahdodo Bodenhaltung bookworm Brian-hmn cachinnate caltlgin causasui ccntrq- coderobe CrypticSquared daekdroom dawidi demize denisse deschutron elibrokeit elonus_ eschwartz EuphOria evilop FFY00 freswa funnel gargantua_kerr[m gate32[m] glats GoldenBear HER0_01 HEX0 hoek hourensou inglor Iolo j605 Jikan jmfabrega jvb Ka-52 KeiraT kerberizer kewl_fft LambdaComplex ldh__ loser main Meikk99_ mhayden mikki_ mkoskar moppy Nact Neele noctavian NoobAlice penguin1 phrik Pidgeotto piri promach3 qguv returntrip rustbuck1 sangoma sevvie shoelaces siqueira skreech StathisA Stry_ svetlemodry SysGhost Szybet TheSilentLink Tiedemann tijara totte tugrik tyzoid user1TT WheelchairArtist]
+2020-07-12 16:50:55	●	Channel #archlinux-newbie: 92 nicks (0 ops, 4 voices, 88 normals)
+2020-07-12 16:51:38	●	irc: disconnected from server

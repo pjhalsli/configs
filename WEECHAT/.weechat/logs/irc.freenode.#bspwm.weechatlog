@@ -1,0 +1,152 @@
+2019-09-16 19:39:16	▶	penguin1 (~penguin1@unaffiliated/penguin1) has joined #bspwm
+2019-09-16 19:39:16	●	Topic for #bspwm is ""BSPWM support channel""
+2019-09-16 19:39:16	●	Topic set by earsplit (~sunn@pool-96-246-172-70.nwrknj.fios.verizon.net) on on., 06 nov. 2013 18:12:02
+2019-09-16 19:39:16	●	Channel #bspwm: 45 nicks (0 ops, 0 voices, 45 normals)
+2019-09-16 19:39:16	●	PvNotice(ChanServ): "Welcome to the bspwm support channel. Mailing list:'bspwm at librelist.com', Tutorial: 'https://github.com/windelicato/dotfiles/wiki/bspwm-for-dummies'"
+2019-09-16 19:39:16	●	URL for #bspwm: https://github.com/baskerville/bspwm
+2019-09-16 19:39:18	●	Channel created on on., 06 nov. 2013 17:59:37
+2019-09-16 19:51:10	▶	towhatend (~towhatend@155.4.89.210) has joined #bspwm
+2019-09-16 19:53:39	▶	andril (~andril@2601:586:8480:a0:6af8:a94:20e9:f5a1) has joined #bspwm
+2019-09-16 20:41:53	◀	andril (~andril@2601:586:8480:a0:6af8:a94:20e9:f5a1) has quit (Ping timeout: 276 seconds)
+2019-09-16 20:55:18	▶	absolutejam1 (~absolutej@185.182.53.86) has joined #bspwm
+2019-09-16 21:41:00	▶	wildtrees (~wildtrees@unaffiliated/wildtrees) has joined #bspwm
+2019-09-16 22:35:18	◀	towhatend (~towhatend@155.4.89.210) has quit (Quit: towhatend)
+2019-09-16 22:54:14	▶	gagbo (~gagbo@unaffiliated/gagbo) has joined #bspwm
+2019-09-16 22:56:28	◀	solitudesf (~solitudes@195.114.147.135) has quit (Ping timeout: 265 seconds)
+2019-09-16 22:56:28	▶	andril (~andril@2601:586:8480:a0:72ca:8e5d:49e1:625) has joined #bspwm
+2019-09-16 23:25:29	◀	andril (~andril@2601:586:8480:a0:72ca:8e5d:49e1:625) has quit (Quit: WeeChat 2.6)
+2019-09-17 00:32:45	●	irc: disconnected from server
+2019-09-25 13:16:49	▶	penguin1 (~penguin1@unaffiliated/penguin1) has joined #bspwm
+2019-09-25 13:16:49	●	Topic for #bspwm is ""BSPWM support channel""
+2019-09-25 13:16:49	●	Topic set by earsplit (~sunn@pool-96-246-172-70.nwrknj.fios.verizon.net) on on., 06 nov. 2013 18:12:02
+2019-09-25 13:16:49	●	Channel #bspwm: 47 nicks (0 ops, 0 voices, 47 normals)
+2019-09-25 13:16:49	●	PvNotice(ChanServ): "Welcome to the bspwm support channel. Mailing list:'bspwm at librelist.com', Tutorial: 'https://github.com/windelicato/dotfiles/wiki/bspwm-for-dummies'"
+2019-09-25 13:16:49	●	URL for #bspwm: https://github.com/baskerville/bspwm
+2019-09-25 13:16:52	●	Channel created on on., 06 nov. 2013 17:59:37
+2019-09-25 13:20:28	◀	sdsddsd (~sdsddsd@sdsddsd.powered.by.lunarbnc.net) has quit (Ping timeout: 264 seconds)
+2019-09-25 13:28:11	▶	sdsddsd (~sdsddsd@sdsddsd.powered.by.lunarbnc.net) has joined #bspwm
+2019-09-25 13:48:37	◀	sdsddsd (~sdsddsd@sdsddsd.powered.by.lunarbnc.net) has quit (Ping timeout: 250 seconds)
+2019-09-25 14:00:08	▶	sdsddsd (~sdsddsd@sdsddsd.powered.by.lunarbnc.net) has joined #bspwm
+2019-09-25 14:52:32	◀	andril (~andril@2601:586:8480:a0:6af8:a94:20e9:f5a1) has quit (Ping timeout: 276 seconds)
+2019-09-25 17:01:14	▶	andril (~andril@2601:586:8480:a0:6af8:a94:20e9:f5a1) has joined #bspwm
+2019-09-25 18:01:15	◀	andril (~andril@2601:586:8480:a0:6af8:a94:20e9:f5a1) has quit (Ping timeout: 250 seconds)
+2019-09-25 19:02:08	▶	wildtrees (~wildtrees@unaffiliated/wildtrees) has joined #bspwm
+2019-09-25 19:49:39	▶	novum (~novumsens@gateway/tor-sasl/novumsensum) has joined #bspwm
+2019-09-25 19:49:48	novum	what is point of pseudotiling mode? anyone use it?
+2019-09-25 20:57:14	◀	novum (~novumsens@gateway/tor-sasl/novumsensum) has quit (Quit: :xa)
+2019-09-25 21:18:05	◀	sdsddsd (~sdsddsd@sdsddsd.powered.by.lunarbnc.net) has quit (Remote host closed the connection)
+2019-09-25 21:19:55	▶	sdsddsd (~sdsddsd@sdsddsd.powered.by.lunarbnc.net) has joined #bspwm
+2019-09-25 21:21:04	▶	cd (~cd@unaffiliated/cd) has joined #bspwm
+2019-09-25 21:25:54	▶	towhatend (~towhatend@85.24.253.35) has joined #bspwm
+2019-09-25 22:14:40	▶	notis (~notis@213.16.177.164.dsl.dyn.forthnet.gr) has joined #bspwm
+2019-09-25 22:15:24	●	irc: disconnected from server
+2019-09-26 22:48:13	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #bspwm
+2019-09-26 22:48:13	●	Topic for #bspwm is ""BSPWM support channel""
+2019-09-26 22:48:13	●	Topic set by earsplit (~sunn@pool-96-246-172-70.nwrknj.fios.verizon.net) on on., 06 nov. 2013 18:12:02
+2019-09-26 22:48:13	●	Channel #bspwm: 48 nicks (0 ops, 0 voices, 48 normals)
+2019-09-26 22:48:13	●	PvNotice(ChanServ): "Welcome to the bspwm support channel. Mailing list:'bspwm at librelist.com', Tutorial: 'https://github.com/windelicato/dotfiles/wiki/bspwm-for-dummies'"
+2019-09-26 22:48:13	●	URL for #bspwm: https://github.com/baskerville/bspwm
+2019-09-26 22:48:16	●	Channel created on on., 06 nov. 2013 17:59:37
+2019-09-26 22:58:51	>>	cd (~cd@unaffiliated/cd) has joined #bspwm
+2019-09-26 23:34:10	<<	solitudesf (~solitudes@195.114.147.123) has quit (Ping timeout: 268 seconds)
+2019-09-26 23:48:49	>>	andril (~andril@2601:586:8480:a0:6af8:a94:20e9:f5a1) has joined #bspwm
+2019-09-27 00:15:27	<<	gagbo (~gagbo@unaffiliated/gagbo) has quit (Ping timeout: 245 seconds)
+2019-09-27 00:41:52	<<	anon2135a2 (~anon@gateway/tor-sasl/anon2135a2) has quit (Ping timeout: 260 seconds)
+2019-09-27 00:43:52	>>	anon2135a2 (~anon@gateway/tor-sasl/anon2135a2) has joined #bspwm
+2019-09-27 01:12:58	●	irc: disconnected from server
+2019-09-27 18:22:48	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #bspwm
+2019-09-27 18:22:48	●	Topic for #bspwm is ""BSPWM support channel""
+2019-09-27 18:22:48	●	Topic set by earsplit (~sunn@pool-96-246-172-70.nwrknj.fios.verizon.net) on on., 06 nov. 2013 18:12:02
+2019-09-27 18:22:48	●	Channel #bspwm: 45 nicks (0 ops, 0 voices, 45 normals)
+2019-09-27 18:22:48	●	PvNotice(ChanServ): "Welcome to the bspwm support channel. Mailing list:'bspwm at librelist.com', Tutorial: 'https://github.com/windelicato/dotfiles/wiki/bspwm-for-dummies'"
+2019-09-27 18:22:48	●	URL for #bspwm: https://github.com/baskerville/bspwm
+2019-09-27 18:22:49	●	Channel created on on., 06 nov. 2013 17:59:37
+2019-09-27 18:36:15	>>	wildtrees (~wildtrees@unaffiliated/wildtrees) has joined #bspwm
+2019-09-27 20:04:19	●	irc: disconnected from server
+2019-09-28 19:42:34	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #bspwm
+2019-09-28 19:42:34	●	Topic for #bspwm is ""BSPWM support channel""
+2019-09-28 19:42:34	●	Topic set by earsplit (~sunn@pool-96-246-172-70.nwrknj.fios.verizon.net) on on., 06 nov. 2013 18:12:02
+2019-09-28 19:42:34	●	Channel #bspwm: 45 nicks (0 ops, 0 voices, 45 normals)
+2019-09-28 19:42:34	●	PvNotice(ChanServ): "Welcome to the bspwm support channel. Mailing list:'bspwm at librelist.com', Tutorial: 'https://github.com/windelicato/dotfiles/wiki/bspwm-for-dummies'"
+2019-09-28 19:42:34	●	URL for #bspwm: https://github.com/baskerville/bspwm
+2019-09-28 19:42:36	●	Channel created on on., 06 nov. 2013 17:59:37
+2019-09-28 19:42:51	<<	wildtrees (~wildtrees@unaffiliated/wildtrees) has quit (Max SendQ exceeded)
+2019-09-28 19:43:26	>>	wildtrees (~wildtrees@unaffiliated/wildtrees) has joined #bspwm
+2019-09-28 19:44:09	>>	andril (~andril@2601:586:8480:a0::1004) has joined #bspwm
+2019-09-28 19:45:24	<<	wildtrees (~wildtrees@unaffiliated/wildtrees) has quit (Client Quit)
+2019-09-28 19:57:13	<<	neeasade (~neeasade@68.205.11.152) has quit (Remote host closed the connection)
+2019-09-28 21:01:46	>>	neeasade (~neeasade@68.205.11.152) has joined #bspwm
+2019-09-28 21:01:57	>>	wildtrees (~wildtrees@unaffiliated/wildtrees) has joined #bspwm
+2019-09-28 21:17:07	●	irc: disconnected from server
+2019-10-08 10:25:33	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #bspwm
+2019-10-08 10:25:33	●	Topic for #bspwm is ""BSPWM support channel""
+2019-10-08 10:25:33	●	Topic set by earsplit (~sunn@pool-96-246-172-70.nwrknj.fios.verizon.net) on on., 06 nov. 2013 18:12:02
+2019-10-08 10:25:33	●	Channel #bspwm: 47 nicks (0 ops, 0 voices, 47 normals)
+2019-10-08 10:25:33	●	PvNotice(ChanServ): "Welcome to the bspwm support channel. Mailing list:'bspwm at librelist.com', Tutorial: 'https://github.com/windelicato/dotfiles/wiki/bspwm-for-dummies'"
+2019-10-08 10:25:33	●	URL for #bspwm: https://github.com/baskerville/bspwm
+2019-10-08 10:25:36	●	Channel created on on., 06 nov. 2013 17:59:37
+2019-10-08 11:16:37	<<	absolutejam4 (~absolutej@213.249.128.34) has quit (Ping timeout: 240 seconds)
+2019-10-08 11:28:33	●	irc: disconnected from server
+2019-10-08 18:02:28	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #bspwm
+2019-10-08 18:02:28	●	Topic for #bspwm is ""BSPWM support channel""
+2019-10-08 18:02:28	●	Topic set by earsplit (~sunn@pool-96-246-172-70.nwrknj.fios.verizon.net) on on., 06 nov. 2013 18:12:02
+2019-10-08 18:02:28	●	Channel #bspwm: 47 nicks (0 ops, 0 voices, 47 normals)
+2019-10-08 18:02:28	●	PvNotice(ChanServ): "Welcome to the bspwm support channel. Mailing list:'bspwm at librelist.com', Tutorial: 'https://github.com/windelicato/dotfiles/wiki/bspwm-for-dummies'"
+2019-10-08 18:02:28	●	URL for #bspwm: https://github.com/baskerville/bspwm
+2019-10-08 18:02:31	●	Channel created on on., 06 nov. 2013 17:59:37
+2019-10-08 18:19:35	●	irc: disconnected from server
+2019-10-12 19:56:36	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #bspwm
+2019-10-12 19:56:36	●	Topic for #bspwm is ""BSPWM support channel""
+2019-10-12 19:56:36	●	Topic set by earsplit (~sunn@pool-96-246-172-70.nwrknj.fios.verizon.net) on on., 06 nov. 2013 18:12:02
+2019-10-12 19:56:36	●	Channel #bspwm: 50 nicks (0 ops, 0 voices, 50 normals)
+2019-10-12 19:56:38	●	Channel created on on., 06 nov. 2013 17:59:37
+2019-10-12 19:56:46	●	PvNotice(ChanServ): "Welcome to the bspwm support channel. Mailing list:'bspwm at librelist.com', Tutorial: 'https://github.com/windelicato/dotfiles/wiki/bspwm-for-dummies'"
+2019-10-12 19:56:46	●	URL for #bspwm: https://github.com/baskerville/bspwm
+2019-10-12 20:07:48	●	irc: disconnected from server
+2020-03-19 18:09:22	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #bspwm
+2020-03-19 18:09:24	●	Topic for #bspwm is "A tiling window manager based on binary space partitioning | GitHub: https://github.com/baskerville/bspwm | Tutorial: https://github.com/windelicato/dotfiles/wiki/bspwm-for-dummies"
+2020-03-19 18:09:24	●	Topic set by sdk on fr., 07 feb. 2020 23:37:17
+2020-03-19 18:09:24	●	Channel #bspwm: 52 nicks (1 op, 0 voices, 51 normals)
+2020-03-19 18:09:24	●	URL for #bspwm: https://github.com/baskerville/bspwm
+2020-03-19 18:09:27	●	Channel created on on., 06 nov. 2013 17:59:37
+2020-03-19 18:22:05	>>	WinterStar (~WinterSta@dhcp-077-249-227-200.chello.nl) has joined #bspwm
+2020-03-19 18:42:52	<<	anon21351 (~anon@gateway/tor-sasl/anon2135a2) has quit (Remote host closed the connection)
+2020-03-19 18:43:54	>>	anon21351 (~anon@gateway/tor-sasl/anon2135a2) has joined #bspwm
+2020-03-19 19:03:46	●	irc: disconnected from server
+2020-04-12 17:32:47	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #bspwm
+2020-04-12 17:32:48	●	Topic for #bspwm is "A tiling window manager based on binary space partitioning | GitHub: https://github.com/baskerville/bspwm | Tutorial: https://github.com/windelicato/dotfiles/wiki/bspwm-for-dummies"
+2020-04-12 17:32:48	●	Topic set by sdk on fr., 07 feb. 2020 23:37:17
+2020-04-12 17:32:48	●	Channel #bspwm: 55 nicks (1 op, 0 voices, 54 normals)
+2020-04-12 17:32:48	●	URL for #bspwm: https://github.com/baskerville/bspwm
+2020-04-12 17:32:49	●	Channel created on on., 06 nov. 2013 17:59:37
+2020-04-12 17:40:20	<<	andril (~andril@2601:586:8400:a::1002) has quit (Ping timeout: 265 seconds)
+2020-04-12 18:17:45	●	irc: disconnected from server
+2020-04-12 19:13:15	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #bspwm
+2020-04-12 19:13:15	●	Topic for #bspwm is "A tiling window manager based on binary space partitioning | GitHub: https://github.com/baskerville/bspwm | Tutorial: https://github.com/windelicato/dotfiles/wiki/bspwm-for-dummies"
+2020-04-12 19:13:15	●	Topic set by sdk on fr., 07 feb. 2020 23:37:17
+2020-04-12 19:13:15	●	Channel #bspwm: 55 nicks (1 op, 0 voices, 54 normals)
+2020-04-12 19:13:15	●	URL for #bspwm: https://github.com/baskerville/bspwm
+2020-04-12 19:13:17	●	Channel created on on., 06 nov. 2013 17:59:37
+2020-04-12 19:38:32	sokan	which file browser do you people usually use?
+2020-04-12 19:38:42	sokan	ranger, dolphin, something else?
+2020-04-12 19:41:26	>>	andril (~andril@2601:586:8400:a:488e:8cac:da17:904) has joined #bspwm
+2020-04-12 19:48:02	<<	andril (~andril@2601:586:8400:a:488e:8cac:da17:904) has quit (Ping timeout: 260 seconds)
+2020-04-12 19:48:18	<<	notis1 (~notis@85.203.44.72) has quit (Ping timeout: 256 seconds)
+2020-04-12 19:57:32	@sdk	sokan: vifm
+2020-04-12 19:59:36	sokan	I presumt is a fm with vim keybindings? :P
+2020-04-12 20:03:26	>>	alexherbo2 (~alexherbo@aputeaux-552-1-8-147.w86-249.abo.wanadoo.fr) has joined #bspwm
+2020-04-12 20:06:02	>>	waleee-cl (uid373333@gateway/web/irccloud.com/x-ejlahkhqgzgwsnel) has joined #bspwm
+2020-04-12 20:08:24	@sdk	Yep. And it's also a two-panes fm like midnight commander
+2020-04-12 20:09:09	sokan	seems cool
+2020-04-12 20:09:28	sokan	I'm still too into typical gui FM and I feel unsage with TUI :(
+2020-04-12 20:09:32	sokan	need to get out of that habbit
+2020-04-12 20:30:23	sokan	sdk: ty for th recommendation :)
+2020-04-12 20:50:44	<<	MarcinWieczorek (~marcin@77-253-195-134.adsl.inetia.pl) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2020-04-12 21:39:31	>>	bluesfreak72 (~scott@162-237-38-49.lightspeed.toldoh.sbcglobal.net) has joined #bspwm
+2020-04-12 21:43:47	<<	bluesfreak72 (~scott@162-237-38-49.lightspeed.toldoh.sbcglobal.net) has quit (Client Quit)
+2020-04-12 21:48:56	@sdk	np ;)
+2020-04-12 22:13:08	<<	behelit (~behelit@93.170.230.158) has quit (Quit: Lost terminal)
+2020-04-12 22:31:35	>>	andril (~andril@2601:586:8400:a:488e:8cac:da17:904) has joined #bspwm
+2020-04-12 22:32:14	>>	cd (~cd@unaffiliated/cd) has joined #bspwm
+2020-04-12 22:50:30	>>	notis (~notis@185.51.134.229) has joined #bspwm
+2020-04-12 22:52:36	●	irc: disconnected from server

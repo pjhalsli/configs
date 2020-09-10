@@ -1,0 +1,227 @@
+2019-09-28 19:41:40	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #vim
+2019-09-28 19:41:40	●	Topic for #vim is "Can't talk? Register https://freenode.net/kb/answer/registration | Vim 8.1.1467 http://www.vim.org | Don't ask to ask! | Use :help and :helpgrep | WIKI: http://vim.wikia.com | PASTE: http://vpaste.net/?ft=vim | https://www.vi-improved.org"
+2019-09-28 19:41:40	●	Topic set by phy1729 on on., 05 juni 2019 19:23:57
+2019-09-28 19:41:40	●	Channel #vim: 1120 nicks (0 ops, 0 voices, 1120 normals)
+2019-09-28 19:41:42	●	Channel created on sø., 26 nov. 2006 07:42:44
+2019-09-28 19:41:46	>>	APLU (~mulx@eva.aplu.fr) has joined #vim
+2019-09-28 19:41:47	●	PvNotice(ChanServ): vim discussion .. www.vim.org, vim.sf.net, :help
+2019-09-28 19:41:47	●	URL for #vim: http://vi-improved.org
+2019-09-28 19:43:12	>>	nomn (~nomn@119.98.113.78.rev.sfr.net) has joined #vim
+2019-09-28 19:44:27	<<	onosendi (~onosendi@ip70-190-11-35.ph.ph.cox.net) has quit (Ping timeout: 240 seconds)
+2019-09-28 19:44:59	>>	Exuma (~Exuma@75-111-9-101.erkacmtk05.res.dyn.suddenlink.net) has joined #vim
+2019-09-28 19:46:28	<<	viuuulentemente (~mac@194.31.54.4) has quit (Read error: Connection reset by peer)
+2019-09-28 19:46:53	>>	m1dnight_ (~m1dnight@78-22-11-99.access.telenet.be) has joined #vim
+2019-09-28 19:48:20	>>	firas (~firas@94.141.215.60) has joined #vim
+2019-09-28 19:48:20	<<	firas (~firas@94.141.215.60) has quit (Changing host)
+2019-09-28 19:48:20	>>	firas (~firas@unaffiliated/firas) has joined #vim
+2019-09-28 19:50:08	<<	ensamvarg (~ensamvarg@ip92343a27.dynamic.kabel-deutschland.de) has quit (Ping timeout: 276 seconds)
+2019-09-28 19:52:08	<<	kunningd (~kunningdr@unaffiliated/kunningdruger) has quit (Remote host closed the connection)
+2019-09-28 19:54:27	<<	puremourning (~ben@cpc82603-woki8-2-0-cust974.6-2.cable.virginm.net) has quit (Ping timeout: 240 seconds)
+2019-09-28 19:55:00	<<	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has quit (Quit: WeeChat 2.6)
+2019-09-28 19:56:27	>>	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has joined #vim
+2019-09-28 19:59:42	<<	nerosnm (~alrakis@cpc1-bath8-2-0-cust148.18-1.cable.virginm.net) has quit (Ping timeout: 265 seconds)
+2019-09-28 20:01:02	●	captain_morgan9 is now known as captain_morgan
+2019-09-28 20:01:48	>>	tdy1 (~tdy@unaffiliated/tdy) has joined #vim
+2019-09-28 20:02:57	<<	viddi (~viddi@136.56.38.43) has quit (Ping timeout: 240 seconds)
+2019-09-28 20:03:17	<<	tdy (~tdy@unaffiliated/tdy) has quit (Ping timeout: 240 seconds)
+2019-09-28 20:06:34	>>	onosendi (~onosendi@ip70-190-11-35.ph.ph.cox.net) has joined #vim
+2019-09-28 20:07:01	<<	drap3r (~drap3r@c-73-15-142-51.hsd1.ca.comcast.net) has quit (Remote host closed the connection)
+2019-09-28 20:07:31	>>	dsdeiz_ (~dsdeiz@45.76.148.109) has joined #vim
+2019-09-28 20:08:47	<<	dsdeiz (~dsdeiz@drupal.org/user/447770/view) has quit (Ping timeout: 245 seconds)
+2019-09-28 20:09:26	>>	DVS[1] (~r3-s0urce@185.3.145.212) has joined #vim
+2019-09-28 20:09:42	>>	bashtux (~bashtux@8ta-250-0-110.telkomadsl.co.za) has joined #vim
+2019-09-28 20:10:12	<<	Fernando-Basso (~FernandoB@131.221.12.102) has quit (Remote host closed the connection)
+2019-09-28 20:11:38	>>	tdy2 (~tdy@unaffiliated/tdy) has joined #vim
+2019-09-28 20:11:45	<<	motte (~weechat@unaffiliated/motte) has quit (Ping timeout: 268 seconds)
+2019-09-28 20:12:08	>>	grobi (~rtng@unaffiliated/grobi) has joined #vim
+2019-09-28 20:12:16	<<	onosendi (~onosendi@ip70-190-11-35.ph.ph.cox.net) has quit (Ping timeout: 265 seconds)
+2019-09-28 20:12:58	<<	tdy1 (~tdy@unaffiliated/tdy) has quit (Ping timeout: 268 seconds)
+2019-09-28 20:13:15	>>	motte (~weechat@unaffiliated/motte) has joined #vim
+2019-09-28 20:13:49	>>	mbandeir (~quassel@177.126.10.88) has joined #vim
+2019-09-28 20:13:52	>>	kunningd (~kunningdr@unaffiliated/kunningdruger) has joined #vim
+2019-09-28 20:14:41	<<	bashtux (~bashtux@8ta-250-0-110.telkomadsl.co.za) has quit (Ping timeout: 265 seconds)
+2019-09-28 20:15:16	>>	apollo (~apollo@unaffiliated/apollo) has joined #vim
+2019-09-28 20:15:23	<<	DVS[1] (~r3-s0urce@185.3.145.212) has quit (Read error: Connection reset by peer)
+2019-09-28 20:15:55	<<	kunningd (~kunningdr@unaffiliated/kunningdruger) has quit (Remote host closed the connection)
+2019-09-28 20:16:31	<<	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-09-28 20:16:57	>>	kunningd (~kunningdr@unaffiliated/kunningdruger) has joined #vim
+2019-09-28 20:17:28	<<	a_west (~a_west@82-183-13-131.customers.ownit.se) has quit (Read error: Connection reset by peer)
+2019-09-28 20:17:41	>>	a_west (~a_west@82-183-13-131.customers.ownit.se) has joined #vim
+2019-09-28 20:17:51	>>	nerosnm (~alrakis@cpc1-bath8-2-0-cust148.18-1.cable.virginm.net) has joined #vim
+2019-09-28 20:17:54	>>	onosendi (~onosendi@ip70-190-11-35.ph.ph.cox.net) has joined #vim
+2019-09-28 20:18:33	<<	Gihar_81 (~zaytseff@185.246.130.63) has quit (Ping timeout: 265 seconds)
+2019-09-28 20:19:40	>>	DVS[1] (~r3-s0urce@185.3.145.212) has joined #vim
+2019-09-28 20:19:46	<<	dsdeiz_ (~dsdeiz@45.76.148.109) has quit (Ping timeout: 268 seconds)
+2019-09-28 20:20:07	>>	xcm (~xcm@ipa210.225.tellas.gr) has joined #vim
+2019-09-28 20:23:30	>>	karokann (~karokann@146.0.136.20) has joined #vim
+2019-09-28 20:24:50	<<	mbandeir (~quassel@177.126.10.88) has quit (Ping timeout: 265 seconds)
+2019-09-28 20:25:17	<<	elios (~tba@unaffiliated/elios) has quit (Ping timeout: 240 seconds)
+2019-09-28 20:27:32	<<	arz (~arz@116.230.214.171) has quit (Ping timeout: 245 seconds)
+2019-09-28 20:28:42	<<	onosendi (~onosendi@ip70-190-11-35.ph.ph.cox.net) has quit (Ping timeout: 265 seconds)
+2019-09-28 20:30:45	>>	puremourning (~ben@cpc82603-woki8-2-0-cust974.6-2.cable.virginm.net) has joined #vim
+2019-09-28 20:31:04	<<	Exuma (~Exuma@75-111-9-101.erkacmtk05.res.dyn.suddenlink.net) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2019-09-28 20:32:12	>>	sunjon (~sunjon@c-4a9471d5.043-400-73746f39.bbcust.telenor.se) has joined #vim
+2019-09-28 20:34:27	<<	karokann (~karokann@146.0.136.20) has quit (Ping timeout: 240 seconds)
+2019-09-28 20:34:59	<<	queip (~queip@unaffiliated/rezurus) has quit (Ping timeout: 276 seconds)
+2019-09-28 20:35:29	>>	Mattiaslndstrm (~Mattiasln@84-55-91-203.customers.ownit.se) has joined #vim
+2019-09-28 20:37:48	<<	kunningd (~kunningdr@unaffiliated/kunningdruger) has quit (Remote host closed the connection)
+2019-09-28 20:39:58	>>	queip (~queip@unaffiliated/rezurus) has joined #vim
+2019-09-28 20:41:01	<<	gearloose (~gearloose@p200300DE7F2C1801710346B80A7F1200.dip0.t-ipconnect.de) has quit (Quit: WeeChat 2.6)
+2019-09-28 20:42:48	<<	Singmyr (~Singmyr@c83-253-123-62.bredband.comhem.se) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-09-28 20:43:10	<<	Mattiaslndstrm (~Mattiasln@84-55-91-203.customers.ownit.se) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-09-28 20:44:12	<<	Speranskiy (~Speranza@128-68-109-61.broadband.corbina.ru) has quit (Ping timeout: 245 seconds)
+2019-09-28 20:44:25	<<	grobi (~rtng@unaffiliated/grobi) has quit (Quit: WeeChat 2.3)
+2019-09-28 20:44:25	<<	mandarin (~karlek@51.15.43.195) has quit (Ping timeout: 268 seconds)
+2019-09-28 20:44:36	>>	Speranskiy (~Speranza@128-68-109-61.broadband.corbina.ru) has joined #vim
+2019-09-28 20:44:51	>>	onosendi (~onosendi@ip70-190-11-35.ph.ph.cox.net) has joined #vim
+2019-09-28 20:46:47	>>	Mattiaslndstrm (~Mattiasln@84-55-91-203.customers.ownit.se) has joined #vim
+2019-09-28 20:46:54	<<	dga (~dga@2601:204:c580:3127:f987:5efb:a96b:7ca2) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-09-28 20:49:27	>>	plexigras (plexigras@gateway/vpn/privateinternetaccess/plexigras) has joined #vim
+2019-09-28 20:50:05	>>	gareppa (~gareppa@unaffiliated/gareppa) has joined #vim
+2019-09-28 20:52:23	<<	flokuehn (~flokuehn@mue-88-130-50-244.dsl.tropolys.de) has quit (Ping timeout: 265 seconds)
+2019-09-28 20:53:54	>>	m_ben (~m_ben@unaffiliated/m-ben/x-5917362) has joined #vim
+2019-09-28 20:54:30	>>	tdy3 (~tdy@unaffiliated/tdy) has joined #vim
+2019-09-28 20:55:10	>>	kunningd (~kunningdr@unaffiliated/kunningdruger) has joined #vim
+2019-09-28 20:55:39	gxt	I'm looking for a way to collaboratively edit files with Vim and just found https://github.com/FredKSchott/CoVim but it's archived and the last commit was 2 years ago, are there maintained alternatives?
+2019-09-28 20:55:42	>>	im0nde- (~im0nde@2a0a-a546-2f5a-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has joined #vim
+2019-09-28 20:55:47	<<	im0nde_ (~im0nde@2a0a-a546-f76e-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has quit (Ping timeout: 276 seconds)
+2019-09-28 20:56:04	>>	dsdeiz (~dsdeiz@49.147.183.85) has joined #vim
+2019-09-28 20:56:04	<<	dsdeiz (~dsdeiz@49.147.183.85) has quit (Changing host)
+2019-09-28 20:56:04	>>	dsdeiz (~dsdeiz@drupal.org/user/447770/view) has joined #vim
+2019-09-28 20:56:27	<<	tdy2 (~tdy@unaffiliated/tdy) has quit (Ping timeout: 240 seconds)
+2019-09-28 20:56:32	romainl	look at its forks
+2019-09-28 20:57:21	romainl	being archived doesn't mean it doesn't work
+2019-09-28 20:58:21	>>	sdu (~doo@80.107.74.202) has joined #vim
+2019-09-28 20:58:39	<<	therue (~rue@2001-b011-1000-15de-5026-1209-c937-0e9d.dynamic-ip6.hinet.net) has quit (Quit: WeeChat 2.6)
+2019-09-28 20:59:18	>>	arz (~arz@116.230.214.171) has joined #vim
+2019-09-28 21:00:07	gxt	Duh ok, could have thought of that myself :P I'm gonna go with https://github.com/Jacotsu/CoVim-Neovim/tree/neovim it is the most recent and I use nvim anyways.
+2019-09-28 21:01:05	<<	dsdeiz (~dsdeiz@drupal.org/user/447770/view) has quit (Ping timeout: 265 seconds)
+2019-09-28 21:02:32	>>	aborazmeh (~aborazmeh@85.102.238.196) has joined #vim
+2019-09-28 21:02:32	<<	aborazmeh (~aborazmeh@85.102.238.196) has quit (Changing host)
+2019-09-28 21:02:32	>>	aborazmeh (~aborazmeh@unaffiliated/aborazmeh) has joined #vim
+2019-09-28 21:03:27	<<	maximusin9 (~maximusin@alsvid.from.sh) has quit (Remote host closed the connection)
+2019-09-28 21:03:37	<<	elphe (~cockatoo@124.191.70.116) has quit (Ping timeout: 240 seconds)
+2019-09-28 21:03:39	<<	arz (~arz@116.230.214.171) has quit (Ping timeout: 240 seconds)
+2019-09-28 21:04:18	m_ben	than why aren't you asking in #neovim?
+2019-09-28 21:04:20	m_ben	smh
+2019-09-28 21:04:27	m_ben	s/than/then
+2019-09-28 21:05:54	>>	karokann (~karokann@146.0.136.20) has joined #vim
+2019-09-28 21:06:32	>>	elphe (~cockatoo@124.191.70.116) has joined #vim
+2019-09-28 21:11:17	<<	elphe (~cockatoo@124.191.70.116) has quit (Ping timeout: 240 seconds)
+2019-09-28 21:12:19	>>	dga (~dga@2601:204:c580:3127:f987:5efb:a96b:7ca2) has joined #vim
+2019-09-28 21:12:25	<<	Ferus (~anonymous@qutebrowser/user/Ferus) has quit (Remote host closed the connection)
+2019-09-28 21:13:18	<<	dga (~dga@2601:204:c580:3127:f987:5efb:a96b:7ca2) has quit (Client Quit)
+2019-09-28 21:14:17	<<	ahmed_elgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has quit (Ping timeout: 240 seconds)
+2019-09-28 21:15:54	>>	AlchemiA (~RogueBuff@S0106a84e3fe88253.vn.shawcable.net) has joined #vim
+2019-09-28 21:16:52	>>	Nokurn (~Nokurn@cpe-108-185-62-246.socal.res.rr.com) has joined #vim
+2019-09-28 21:17:07	●	irc: disconnected from server
+2019-10-12 10:37:25	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #vim
+2019-10-12 10:37:25	●	Topic for #vim is "Can't talk? Register https://freenode.net/kb/answer/registration | Vim 8.1.2115 http://www.vim.org | Don't ask to ask! | Use :help and :helpgrep | WIKI: http://vim.wikia.com | PASTE: http://vpaste.net/?ft=vim | https://www.vi-improved.org"
+2019-10-12 10:37:25	●	Topic set by jamessan on sø., 06 okt. 2019 03:44:16
+2019-10-12 10:37:25	●	Channel #vim: 1090 nicks (0 ops, 0 voices, 1090 normals)
+2019-10-12 10:37:25	●	PvNotice(ChanServ): vim discussion .. www.vim.org, vim.sf.net, :help
+2019-10-12 10:37:25	●	URL for #vim: http://vi-improved.org
+2019-10-12 10:37:27	●	Channel created on sø., 26 nov. 2006 07:42:44
+2019-10-12 10:38:42	●	irc: disconnected from server
+2019-10-12 12:48:49	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #vim
+2019-10-12 12:48:49	●	Topic for #vim is "Can't talk? Register https://freenode.net/kb/answer/registration | Vim 8.1.2115 http://www.vim.org | Don't ask to ask! | Use :help and :helpgrep | WIKI: http://vim.wikia.com | PASTE: http://vpaste.net/?ft=vim | https://www.vi-improved.org"
+2019-10-12 12:48:49	●	Topic set by jamessan on sø., 06 okt. 2019 03:44:16
+2019-10-12 12:48:49	●	Channel #vim: 1095 nicks (0 ops, 0 voices, 1095 normals)
+2019-10-12 12:48:49	●	PvNotice(ChanServ): vim discussion .. www.vim.org, vim.sf.net, :help
+2019-10-12 12:48:49	●	URL for #vim: http://vi-improved.org
+2019-10-12 12:48:51	●	Channel created on sø., 26 nov. 2006 07:42:44
+2019-10-12 12:49:40	>>	Raichvent_ (~Raichvent@sb-217-129-112-18.netvisao.pt) has joined #vim
+2019-10-12 12:50:16	<<	ahmed_elgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has quit (Ping timeout: 268 seconds)
+2019-10-12 12:50:20	<<	Raichvent (~Raichvent@sb-217-129-112-18.netvisao.pt) has quit (Ping timeout: 265 seconds)
+2019-10-12 12:50:36	penguin1	anyone know how to change colorshceme used in :term?
+2019-10-12 12:50:38	●	Raichvent_ is now known as Raichvent
+2019-10-12 12:50:49	<<	yidhra (~yidhra@162-217-213-87.pool.dsl.nctc.com) has quit (Quit: leaving)
+2019-10-12 12:50:54	>>	ahmed_elgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has joined #vim
+2019-10-12 12:51:08	>>	yidhra (~yidhra@162-217-213-87.pool.dsl.nctc.com) has joined #vim
+2019-10-12 12:52:23	<<	ahmedelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has quit (Read error: Connection reset by peer)
+2019-10-12 12:52:34	>>	drap3r (~drap3r@c-73-15-142-51.hsd1.ca.comcast.net) has joined #vim
+2019-10-12 12:53:25	<<	drap3r (~drap3r@c-73-15-142-51.hsd1.ca.comcast.net) has quit (Client Quit)
+2019-10-12 12:54:22	>>	causasui (~causasui@wikipedia/causa-sui) has joined #vim
+2019-10-12 12:57:56	<<	Volgaar (~volgaar@104.66.13.93.rev.sfr.net) has quit (Ping timeout: 240 seconds)
+2019-10-12 13:01:49	<<	djmoch (~djmoch@hoplift.danielmoch.com) has quit (Quit: ZNC 1.7.4 - https://znc.in)
+2019-10-12 13:02:54	>>	nokdoot (~nokdoot@211.205.207.39) has joined #vim
+2019-10-12 13:05:43	<<	divesh (~diveshutt@2409:4052:221a:8dc1:3beb:c959:cf79:36bf) has quit (Ping timeout: 245 seconds)
+2019-10-12 13:06:17	>>	djmoch (~djmoch@hoplift.danielmoch.com) has joined #vim
+2019-10-12 13:07:57	<<	waveframe (~waveframe@51.15.86.78) has quit (Quit: ZNC 1.6.1 - http://znc.in)
+2019-10-12 13:11:15	>>	waveframe (~waveframe@51.15.86.78) has joined #vim
+2019-10-12 13:11:52	lopid	there is a colorscheme used in :term?
+2019-10-12 13:12:37	t2mkn	ponyrider if :source myenv/bin/activate is used, thats not working eather
+2019-10-12 13:13:03	<<	synthmeat (~synthmeat@unaffiliated/synthmeat) has quit (Remote host closed the connection)
+2019-10-12 13:13:48	>>	synthmeat (~synthmeat@unaffiliated/synthmeat) has joined #vim
+2019-10-12 13:14:53	currybullen	djmoch: sometimes, if i want something simple like move the cursor one character left or right, i think its easier to do that without leaving insert mode
+2019-10-12 13:16:48	>>	chalkmonster (~chalkmons@unaffiliated/chalkmonster) has joined #vim
+2019-10-12 13:17:24	>>	aborazmeh (~aborazmeh@78.173.165.215) has joined #vim
+2019-10-12 13:17:24	<<	aborazmeh (~aborazmeh@78.173.165.215) has quit (Changing host)
+2019-10-12 13:17:24	>>	aborazmeh (~aborazmeh@unaffiliated/aborazmeh) has joined #vim
+2019-10-12 13:19:50	>>	Night-Shade (~TimF@co-lo.night-shade.org.uk) has joined #vim
+2019-10-12 13:20:18	<<	sunjon (~sunjon@c-4a9471d5.043-400-73746f39.bbcust.telenor.se) has quit (Ping timeout: 245 seconds)
+2019-10-12 13:24:32	penguin1	lopid: I guess so - are you saying there's not?
+2019-10-12 13:24:45	lopid	i didn't think there was
+2019-10-12 13:24:52	penguin1	ok
+2019-10-12 13:25:00	lopid	rather, i didn't think the terminal used vim's colorscheme
+2019-10-12 13:25:08	>>	diveshuttam (~diveshutt@2409:4052:221a:8dc1:3beb:c959:cf79:36bf) has joined #vim
+2019-10-12 13:25:41	>>	IceLight (WinterStar@gateway/vpn/mullvad/winterstar) has joined #vim
+2019-10-12 13:25:54	penguin1	It doesn't follow the vim colorscheme no - that's why I asked in the first place.  If there is some wqy to change the colors used
+2019-10-12 13:27:03	lopid	looks like it's using the normal terminal colours
+2019-10-12 13:27:41	<<	WinterStar (~WinterSta@dhcp-077-249-227-200.chello.nl) has quit (Ping timeout: 250 seconds)
+2019-10-12 13:27:45	penguin1	lol what is normal terminal colors?  Have not used a normal terminal in years
+2019-10-12 13:27:48	>>	nomn (~nomn@94-238-2-95.abo.bbox.fr) has joined #vim
+2019-10-12 13:28:20	<<	ph0x (~ph0x@static-74-41-114-178.dsl1.kgm.az.frontiernet.net) has quit (Remote host closed the connection)
+2019-10-12 13:28:41	lopid	open a [gtk based?] terminal and see if it looks the same
+2019-10-12 13:28:50	>>	isomari_ (~isomari@197.210.163.212) has joined #vim
+2019-10-12 13:29:46	lopid	i see it's using the the bg colour as the colorscheme
+2019-10-12 13:30:11	penguin1	well it kinda looks like a default tty -but you can change tty's colorscheme too.  
+2019-10-12 13:30:31	lopid	change it and see if it's reflected in :term
+2019-10-12 13:30:40	penguin1	it is not
+2019-10-12 13:30:49	>>	sunjon (~sunjon@c-4a9471d5.043-400-73746f39.bbcust.telenor.se) has joined #vim
+2019-10-12 13:30:57	penguin1	I tried before I came here
+2019-10-12 13:31:04	lopid	shrug. i don't use it so i dno't know, sorry
+2019-10-12 13:31:15	<<	diveshuttam (~diveshutt@2409:4052:221a:8dc1:3beb:c959:cf79:36bf) has quit (Ping timeout: 264 seconds)
+2019-10-12 13:31:16	penguin1	np  :)
+2019-10-12 13:31:35	lopid	well i'm glad that's not a problem
+2019-10-12 13:31:55	>>	lprd (~jon@aaubervilliers-652-1-243-146.w86-198.abo.wanadoo.fr) has joined #vim
+2019-10-12 13:32:17	<<	Night-Shade (~TimF@co-lo.night-shade.org.uk) has quit (Ping timeout: 240 seconds)
+2019-10-12 13:34:20	<<	yoker (~Thunderbi@82.22.254.29) has quit (Quit: yoker)
+2019-10-12 13:34:48	>>	paidhi (~paidhi@84-114-239-56.cable.dynamic.surfer.at) has joined #vim
+2019-10-12 13:35:10	>>	ahmedelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has joined #vim
+2019-10-12 13:35:18	>>	sklv1 (~sklv@gateway/tor-sasl/sklv) has joined #vim
+2019-10-12 13:37:05	>>	rufito_regalon (~Phil@191.126.0.193) has joined #vim
+2019-10-12 13:37:45	<<	ahmed_elgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has quit (Ping timeout: 268 seconds)
+2019-10-12 13:37:55	>>	aelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has joined #vim
+2019-10-12 13:38:18	penguin1	:quit
+2019-10-12 13:38:24	●	irc: disconnected from server
+2019-10-12 19:56:23	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #vim
+2019-10-12 19:56:23	●	Topic for #vim is "Can't talk? Register https://freenode.net/kb/answer/registration | Vim 8.1.2115 http://www.vim.org | Don't ask to ask! | Use :help and :helpgrep | WIKI: http://vim.wikia.com | PASTE: http://vpaste.net/?ft=vim | https://www.vi-improved.org"
+2019-10-12 19:56:23	●	Topic set by jamessan on sø., 06 okt. 2019 03:44:16
+2019-10-12 19:56:23	●	Channel #vim: 1108 nicks (0 ops, 0 voices, 1108 normals)
+2019-10-12 19:56:23	●	PvNotice(ChanServ): vim discussion .. www.vim.org, vim.sf.net, :help
+2019-10-12 19:56:23	●	URL for #vim: http://vi-improved.org
+2019-10-12 19:56:25	●	Channel created on sø., 26 nov. 2006 07:42:44
+2019-10-12 19:56:26	>>	gh0st1649 (~gh0st1649@unaffiliated/gh0st1649) has joined #vim
+2019-10-12 19:57:27	>>	apollo (~apollo@unaffiliated/apollo) has joined #vim
+2019-10-12 19:57:44	Houl	pr3d4t0r: and try  https://github.com/Houl/ExplainPattern-vim  ...
+2019-10-12 20:02:28	>>	jguddas-tr (~jguddas-t@p5B0DC899.dip0.t-ipconnect.de) has joined #vim
+2019-10-12 20:03:19	<<	dbz_ (~dbz@c-73-241-148-146.hsd1.ca.comcast.net) has quit (Ping timeout: 250 seconds)
+2019-10-12 20:04:31	<<	simlay (~simlay@gateway/tor-sasl/simlay) has quit (Remote host closed the connection)
+2019-10-12 20:04:44	>>	simlay (~simlay@gateway/tor-sasl/simlay) has joined #vim
+2019-10-12 20:04:53	<<	apollo (~apollo@unaffiliated/apollo) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2019-10-12 20:04:56	>>	is_null (~jpic@pdpc/supporter/professional/is-null) has joined #vim
+2019-10-12 20:05:01	<<	daniel_gc (~daniel_gc@200-28-141-2.baf.movistar.cl) has quit (Ping timeout: 268 seconds)
+2019-10-12 20:06:41	<<	jguddas-tr (~jguddas-t@p5B0DC899.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2019-10-12 20:06:48	<<	akemrir (~akemrir@89.200.156.169.internetia.net.pl) has quit (Quit: WeeChat 2.6)
+2019-10-12 20:07:23	>>	apollo (~apollo@unaffiliated/apollo) has joined #vim
+2019-10-12 20:07:48	●	irc: disconnected from server
+2020-03-14 00:38:22	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #vim
+2020-03-14 00:38:22	●	Topic for #vim is "Can't talk? Register https://freenode.net/kb/answer/registration | Vim 8.2 http://www.vim.org | Don't ask to ask! | Use :help and :helpgrep | WIKI: http://vim.wikia.com | PASTE: http://vpaste.net/?ft=vim | https://www.vi-improved.org"
+2020-03-14 00:38:22	●	Topic set by jamessan on fr., 13 des. 2019 04:14:14
+2020-03-14 00:38:22	●	Channel #vim: 1081 nicks (0 ops, 0 voices, 1081 normals)
+2020-03-14 00:38:22	●	PvNotice(ChanServ): vim discussion .. www.vim.org, vim.sf.net, :help
+2020-03-14 00:38:22	●	URL for #vim: http://vi-improved.org
+2020-03-14 00:38:24	●	Channel created on sø., 26 nov. 2006 07:42:44
+2020-03-14 00:38:38	<<	penguin1 (~penguin1@unaffiliated/penguin1) has left #vim
+2020-03-14 00:38:59	●	irc: disconnected from server

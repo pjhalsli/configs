@@ -1,0 +1,280 @@
+2020-03-14 13:12:58	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #neovim
+2020-03-14 13:12:58	●	Topic for #neovim is "Register with NickServ to talk | Vim fork focused on extensibility and usability -- https://github.com/neovim/neovim -- Help sustain Neovim: https://salt.bountysource.com/teams/neovim -- Gitter: https://gitter.im/neovim/neovim"
+2020-03-14 13:12:58	●	Topic set by jamessan (~jamessan@debian/developer/jamessan) on to., 27 sep. 2018 03:36:33
+2020-03-14 13:12:58	●	Channel #neovim: 1225 nicks (0 ops, 0 voices, 1225 normals)
+2020-03-14 13:13:00	●	Channel created on fr., 31 jan. 2014 17:44:47
+2020-03-14 13:23:25	>>	cotko (~cotko@93-103-115-77.dynamic.t-2.net) has joined #neovim
+2020-03-14 13:27:24	BjrnLinseGitter[	@puremourning 1: no, 2: yes and yes
+2020-03-14 13:28:18	>>	ellcs (~ellcs@200116b868569a0062f677fffebe55f5.dip.versatel-1u1.de) has joined #neovim
+2020-03-14 13:28:24	<<	ellcs (~ellcs@200116b868569a0062f677fffebe55f5.dip.versatel-1u1.de) has quit (Max SendQ exceeded)
+2020-03-14 13:28:38	BenJacksonGitter	thanks
+2020-03-14 13:29:16	pippobaldo[m]	No and no (at least yet)
+2020-03-14 13:29:47	BenJacksonGitter	i'm gathering feedback for my vimscript debugger (https://github.com/puremourning/vim-debug-adapter) ; it's going to need a lot of vim code changes, so i will need buyin from Bram. planning to write an RFC soon.
+2020-03-14 13:30:10	⚡	BjrnLinseGitter[ is now curious how a debugger interacts with something like `if v:false | let x = ) | endif`
+2020-03-14 13:30:55	BenJacksonGitter	the way vim internally does it isn't great. it just works on line numbers and function stack levels
+2020-03-14 13:31:07	BenJacksonGitter	but, that's better than zip.
+2020-03-14 13:31:09	<<	tofulm (~tofulm@195.174.185.81.rev.sfr.net) has quit (Remote host closed the connection)
+2020-03-14 13:31:16	BenJacksonGitter	and i'm improving quite a lot of it
+2020-03-14 13:31:52	BenJacksonGitter	https://github.com/puremourning/vim/tree/debugger if you're curious what i've been up to
+2020-03-14 13:31:58	BjrnLinseGitter[	will it cover both vimscript1 and vimscript9 ?
+2020-03-14 13:33:05	BjrnLinseGitter[	(hmm why cannot github get into "compare changes" from a commit?)
+2020-03-14 13:34:23	BenJacksonGitter	https://github.com/vim/vim/compare/master...puremourning:debugger
+2020-03-14 13:34:55	BenJacksonGitter	bfredl: yes it will (eventually) support vim9 script, though for now it doesn't because it's harder, and because vim9 script is still quite... unfinished
+2020-03-14 13:35:27	BenJacksonGitter	strictly speaking, that's not true : i havent testing vim9 script; i don't know what it does with SOURCING_LNUM
+2020-03-14 13:36:14	BjrnLinseGitter[	hmm I got the feeling that vim9 was "mostly done", except that bram won't want to commit to things being stable until 9.0 is releases.
+2020-03-14 13:36:24	BjrnLinseGitter[	but maybe there is still a lotta bugs and edge cases and shit
+2020-03-14 13:37:01	BjrnLinseGitter[	ahyes, he promised an interface/class system in the design document
+2020-03-14 13:38:00	BenJacksonGitter	there's a number of things, and a number of basic stuff that doesn't work yet. i actually tried to write my debugger vimscript-land parts in vim9 to learn/test it,  ut it wasn't usable
+2020-03-14 13:38:28	BenJacksonGitter	or it was, but the (set of things that work) and the (set of things that don't) weren't clear enough yet
+2020-03-14 13:38:31	<<	Kaivo_ (~Kaivo@ec2-15-222-231-32.ca-central-1.compute.amazonaws.com) has quit (Quit: WeeChat 2.7.1)
+2020-03-14 13:38:42	BenJacksonGitter	like :echo <expr> works, but echom <expr> doesn't
+2020-03-14 13:38:57	BenJacksonGitter	becaus :echo's expr was compiled, but :echom's wasn't
+2020-03-14 13:39:42	BenJacksonGitter	so i noped out of it and wrote the nub in normal vimscript (version 4() https://github.com/puremourning/vim-debug-adapter/blob/master/runtime/nub.vim
+2020-03-14 13:41:48	BenJacksonGitter	of course, i have paid no attention to the myriad #ifdefs, so nothing works https://travis-ci.org/github/puremourning/vim/builds/662368478?utm_medium=notification&utm_source=email
+2020-03-14 13:42:10	BjrnLinseGitter[	aha, so ex commands that references locals do not work? (if the ex command is not compiled)
+2020-03-14 13:47:03	BjrnLinseGitter[	It is the real main reason we choose to use lua instead. We don't have the manpower to both maintain a language runtime and an editor :P
+2020-03-14 13:47:22	BjrnLinseGitter[	still if the zyx-i experiment had played out it would have been nice. But alas, we can't get all the nice things.
+2020-03-14 13:48:22	BenJacksonGitter	i think it's only ex-commands that take expr1
+2020-03-14 13:48:31	BenJacksonGitter	which isn't _that_ many iirc
+2020-03-14 13:48:40	>>	ahmedelgabri (~ahmedelga@2a02:a446:d88a:0:897f:bff:be98:b88f) has joined #neovim
+2020-03-14 13:48:56	BenJacksonGitter	though i haven't studied it in detail
+2020-03-14 13:49:57	BjrnLinseGitter[	I guess it would still work if you only use `g:` variables or constants ?
+2020-03-14 13:52:15	BenJacksonGitter	https://github.com/vim/vim/issues/5670
+2020-03-14 13:52:31	BenJacksonGitter	https://github.com/vim/vim/issues/5671
+2020-03-14 13:52:45	BenJacksonGitter	after the 3rd or 4th such bug i gave up
+2020-03-14 13:53:07	>>	ellcs (~ellcs@200116b868569a0062f677fffebe55f5.dip.versatel-1u1.de) has joined #neovim
+2020-03-14 13:54:40	BjrnLinseGitter[	ayhes, vim9script can into generics, like `let var : list<list<int>>`. Reminds me of using java arrays for the first time.
+2020-03-14 13:55:57	BenJacksonGitter	i thinkt typing the language explicitly is a good thing, though it's likely to put off a lot of bad or novice programmers who think otherwise
+2020-03-14 13:56:22	BenJacksonGitter	it's modelled i guess on typescript-style, so i guess bad programmers are used to it
+2020-03-14 13:56:54	>>	alexherbo27 (~alexherbo@astlambert-651-1-88-102.w90-43.abo.wanadoo.fr) has joined #neovim
+2020-03-14 13:56:54	BenJacksonGitter	for novice programmers, i guess explicit typeing is optional, so maybe it's a good balance
+2020-03-14 13:57:15	<<	Carp (~rue@1-162-48-42.dynamic-ip.hinet.net) has quit (Ping timeout: 240 seconds)
+2020-03-14 13:58:03	<<	xelxebar_ (~xelxebar@gateway/tor-sasl/xelxebar) has quit (Ping timeout: 240 seconds)
+2020-03-14 13:58:15	BenJacksonGitter	wow, it's been like N minutes we've been discussing vim9 script (very grown-uply) and the hoards havent started a flamewar
+2020-03-14 13:58:17	<<	alexherbo2 (~alexherbo@astlambert-651-1-88-102.w90-43.abo.wanadoo.fr) has quit (Ping timeout: 258 seconds)
+2020-03-14 13:58:18	●	alexherbo27 is now known as alexherbo2
+2020-03-14 13:58:21	BenJacksonGitter	very very refreshing, thanks.
+2020-03-14 13:58:42	>>	Carp (~rue@1-162-48-42.dynamic-ip.hinet.net) has joined #neovim
+2020-03-14 13:58:56	>>	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has joined #neovim
+2020-03-14 13:59:16	BjrnLinseGitter[	just needs to get the execution model right. `let val : list<int> = []` failed at first, because `[]` has type `list<any>`
+2020-03-14 13:59:32	BjrnLinseGitter[	(what is Hindley-Milner?)
+2020-03-14 14:00:26	>>	linarcx (~linarcx@151.241.50.31) has joined #neovim
+2020-03-14 14:00:41	BjrnLinseGitter[	aren't much hoards in here
+2020-03-14 14:01:38	BjrnLinseGitter[	sometimes one or two uncivilized intruders get in, but they typically leave on their own if they can't behave.
+2020-03-14 14:01:55	BjrnLinseGitter[	it is more like:
+2020-03-14 14:02:33	BjrnLinseGitter[	N.N: why are you using C and lua, you should use a real modern language like rust
+2020-03-14 14:02:35	BjrnLinseGitter[	[N.N has left the room]
+2020-03-14 14:03:23	<<	ahmedelgabri (~ahmedelga@2a02:a446:d88a:0:897f:bff:be98:b88f) has quit (Ping timeout: 272 seconds)
+2020-03-14 14:04:31	<<	oFrog (~pavlo.bla@78-10-229-167.static.ip.netia.com.pl) has quit (Ping timeout: 265 seconds)
+2020-03-14 14:07:39	<<	cotko (~cotko@93-103-115-77.dynamic.t-2.net) has quit (Ping timeout: 240 seconds)
+2020-03-14 14:08:32	<<	mkoskar (~mkoskar@unaffiliated/mkoskar) has quit (Quit: mkoskar)
+2020-03-14 14:09:29	<<	bvdw (~bas@static.181.139.9.5.clients.your-server.de) has quit (Read error: Connection reset by peer)
+2020-03-14 14:09:51	>>	bvdw (~bas@static.181.139.9.5.clients.your-server.de) has joined #neovim
+2020-03-14 14:12:43	BenJacksonGitter	rolleyes
+2020-03-14 14:14:39	BjrnLinseGitter[	though remacs is not so different from (early) neovim. They remove C code and replace it with rust. We just removed a lot of C code :)
+2020-03-14 14:15:57	BenJacksonGitter	personally find it much faster to write c than lua
+2020-03-14 14:16:38	BenJacksonGitter	not least because i'm not super familiar with lua, but i find the tooling for statically typed languages is way better. iirc i was unable to find any good tooling for lua
+2020-03-14 14:17:29	BenJacksonGitter	plus i can confidently refactor compiled, statically typed code; wheras refactoring dynamic code is super scary
+2020-03-14 14:17:40	>>	xelxebar_ (~xelxebar@gateway/tor-sasl/xelxebar) has joined #neovim
+2020-03-14 14:18:04	BenJacksonGitter	my general development approach is: write the hackiest thing you can think of that teaches you more about the problem; then compress; then goto 0;
+2020-03-14 14:18:24	<<	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has quit (Remote host closed the connection)
+2020-03-14 14:18:29	>>	aliss (~ypm@183.red-83-55-99.dynamicip.rima-tde.net) has joined #neovim
+2020-03-14 14:18:51	BenJacksonGitter	very regrettably, what we teach in schools is: design an object model, bunch of interfaces, APIs and abstractions before you learned anything about the problem space
+2020-03-14 14:19:03	BenJacksonGitter	it's backwards
+2020-03-14 14:20:13	BjrnLinseGitter[	hmm I don't feel I have much problems with dynamic languages. I develop at the REPL, and then turn it into scripts/functions.
+2020-03-14 14:20:46	BjrnLinseGitter[	though it it is a matter of scale of couse. as soon as you delevop huge codebases, you want statistically typed interfaces.
+2020-03-14 14:20:55	BenJacksonGitter	exactly
+2020-03-14 14:21:08	BenJacksonGitter	vim, emacs, they're huge codebases
+2020-03-14 14:21:28	BenJacksonGitter	huge meaning anything more than about 1 or 2 screens of code
+2020-03-14 14:22:14	BenJacksonGitter	then again, i write a lot of stuff in python, which is one of the worst offenders to type systems
+2020-03-14 14:22:25	BenJacksonGitter	and i do that by choice, so stfu puremourning
+2020-03-14 14:22:53	BjrnLinseGitter[	well it is a matter of structure also. LIke the LSP lua client have a small core, and most code are method specific stuff.
+2020-03-14 14:23:24	BjrnLinseGitter[	like the different methods don't interact with each other or define interfaces (rather consume a JSON interface, so your static type system won't help you :)
+2020-03-14 14:24:21	BjrnLinseGitter[	then the fun part is when we use lua code to generate C code, like for all RPC methods.
+2020-03-14 14:24:40	BjrnLinseGitter[	still for python, jedi works amazingly well given the language design.
+2020-03-14 14:25:35	>>	cotko (~cotko@93-103-115-77.dynamic.t-2.net) has joined #neovim
+2020-03-14 14:26:11	<<	aliss (~ypm@183.red-83-55-99.dynamicip.rima-tde.net) has quit (Quit: WeeChat 2.7.1)
+2020-03-14 14:26:36	BjrnLinseGitter[	it does a lot of useful guesstimation. like if an object attribute is only assigned in one method, it assumes that has happened, even if it cannot prove that assignment has been called inside another method.
+2020-03-14 14:26:46	>>	cschneid (~cschneid@c-73-78-144-189.hsd1.co.comcast.net) has joined #neovim
+2020-03-14 14:26:57	BjrnLinseGitter[	(source: I code python in my phd studies every day :)
+2020-03-14 14:27:43	<<	cschneid_ (~cschneid@c-73-78-144-189.hsd1.co.comcast.net) has quit (Ping timeout: 255 seconds)
+2020-03-14 14:27:59	<<	gavlee (~gav@unaffiliated/gavlee) has quit (Ping timeout: 260 seconds)
+2020-03-14 14:29:22	BenJacksonGitter	 yeah jedi is voodoo; works great ; use it every day (you know i manintain YCM right)
+2020-03-14 14:29:44	BenJacksonGitter	haven't found a good LSP python server tho
+2020-03-14 14:29:56	BenJacksonGitter	we still use jedi api directly in YCM
+2020-03-14 14:30:35	BjrnLinseGitter[	I still just use vim-jedi :P
+2020-03-14 14:30:44	BjrnLinseGitter[	only annoyance is that the signature popup is sloow sometimes
+2020-03-14 14:30:53	BjrnLinseGitter[	when it needs to read in all of tensorflow, or something
+2020-03-14 14:31:01	BenJacksonGitter	does it still use that super dodgy "conceal" hack?
+2020-03-14 14:31:48	BenJacksonGitter	jedi-vim used to do this thing with the syntax file and buffer changes that was jsut super ick
+2020-03-14 14:32:05	BenJacksonGitter	in YCM, we use popups
+2020-03-14 14:32:18	BjrnLinseGitter[	haha yes. "one day" i will migrate to python-LSP which will use floaty windows thing :]
+2020-03-14 14:32:54	●	irc: disconnected from server
+2020-03-19 18:08:50	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #neovim
+2020-03-19 18:08:50	●	Topic for #neovim is "Register with NickServ to talk | Vim fork focused on extensibility and usability -- https://github.com/neovim/neovim -- Help sustain Neovim: https://salt.bountysource.com/teams/neovim -- Gitter: https://gitter.im/neovim/neovim"
+2020-03-19 18:08:50	●	Topic set by jamessan (~jamessan@debian/developer/jamessan) on to., 27 sep. 2018 03:36:33
+2020-03-19 18:08:52	●	Channel #neovim: 1246 nicks (0 ops, 0 voices, 1246 normals)
+2020-03-19 18:08:52	jaawerth[m]	yeah. a unified tool is nice but thankfully plenty of nix wm's are super scriptable
+2020-03-19 18:08:54	●	Channel created on fr., 31 jan. 2014 17:44:47
+2020-03-19 18:09:33	smolckGitter[m]	"nix wm's"?
+2020-03-19 18:10:00	smolckGitter[m]	I mean, I guess I use Nix to conf sway, but are there nix specific ones?
+2020-03-19 18:10:06	jaawerth[m]	 * yeah. a unified tool is nice but thankfully plenty of linux wm's are super scriptable
+2020-03-19 18:10:08	jaawerth[m]	I meant to write nix but should have just said linux, lol
+2020-03-19 18:10:36	jaawerth[m]	oh right, plus `*` gets all italicizy in clients, heh
+2020-03-19 18:11:18	<<	tuan041 (~tuan041@2001:ee0:5013:6b40:14dc:7ebf:19c5:b7b7) has quit (Quit: Leaving)
+2020-03-19 18:11:39	jaawerth[m]	but yeah, didn't mean nix as in nixpkg or nixos
+2020-03-19 18:11:43	>>	ohyash (~Thunderbi@49.15.187.2) has joined #neovim
+2020-03-19 18:11:48	smolckGitter[m]	Oh okay lol
+2020-03-19 18:12:06	smolckGitter[m]	But . . . you're kind of right ;)
+2020-03-19 18:12:40	smolckGitter[m]	With home-manager, my entire config for sway is written in a Nix expr which outputs the actual config file
+2020-03-19 18:13:09	<<	aliss (~ypm@202.red-83-55-39.dynamicip.rima-tde.net) has quit (Quit: WeeChat 2.7.1)
+2020-03-19 18:13:11	jaawerth[m]	that is pretty cool. I definitely have to start tinkering with nix and/or guix
+2020-03-19 18:13:27	<<	oFrog (~pavlo.bla@78-10-229-167.static.ip.netia.com.pl) has quit (Read error: Connection reset by peer)
+2020-03-19 18:14:02	>>	oFrog (~pavlo.bla@78-10-229-167.static.ip.netia.com.pl) has joined #neovim
+2020-03-19 18:14:28	>>	alexherbo27 (~alexherbo@10.247.204.77.rev.sfr.net) has joined #neovim
+2020-03-19 18:16:24	<<	ohyash (~Thunderbi@49.15.187.2) has quit (Ping timeout: 250 seconds)
+2020-03-19 18:20:21	>>	sfvm (~sfvm@37.228.247.184) has joined #neovim
+2020-03-19 18:21:14	>>	tuan041 (~tuan041@2001:ee0:5013:6b40:14dc:7ebf:19c5:b7b7) has joined #neovim
+2020-03-19 18:21:21	<<	tuan041 (~tuan041@2001:ee0:5013:6b40:14dc:7ebf:19c5:b7b7) has quit (Max SendQ exceeded)
+2020-03-19 18:23:32	<<	acardace (~acardace@host73-49-dynamic.55-79-r.retail.telecomitalia.it) has quit (Remote host closed the connection)
+2020-03-19 18:25:03	>>	ohyash (~Thunderbi@49.15.187.2) has joined #neovim
+2020-03-19 18:29:00	>>	sunjon (~sunjon@37-247-17-246.customers.ownit.se) has joined #neovim
+2020-03-19 18:29:12	>>	tuan041 (~tuan041@2001:ee0:5013:6b40:b583:bafb:7522:67d0) has joined #neovim
+2020-03-19 18:29:59	<<	mflayer (~mflayer@178-191-146-141.adsl.highway.telekom.at) has quit (Quit: mflayer)
+2020-03-19 18:30:49	<<	tuan041 (~tuan041@2001:ee0:5013:6b40:b583:bafb:7522:67d0) has quit (Client Quit)
+2020-03-19 18:31:17	>>	tuan041 (~tuan041@2001:ee0:5013:6b40:b583:bafb:7522:67d0) has joined #neovim
+2020-03-19 18:33:46	<<	sunjon (~sunjon@37-247-17-246.customers.ownit.se) has quit (Ping timeout: 256 seconds)
+2020-03-19 18:34:05	<<	ahmedelgabri (~ahmedelga@2a02:a446:d88a:0:8402:1732:d1e1:422b) has quit (Ping timeout: 246 seconds)
+2020-03-19 18:37:57	<<	tuan041 (~tuan041@2001:ee0:5013:6b40:b583:bafb:7522:67d0) has quit (Quit: Quit)
+2020-03-19 18:38:52	<<	ohyash (~Thunderbi@49.15.187.2) has quit (Quit: Internet issue)
+2020-03-19 18:39:07	>>	ohyash (~Thunderbi@49.15.187.2) has joined #neovim
+2020-03-19 18:39:45	<<	oFrog (~pavlo.bla@78-10-229-167.static.ip.netia.com.pl) has quit (Ping timeout: 265 seconds)
+2020-03-19 18:40:03	>>	cschneid_ (~cschneid@c-73-78-144-189.hsd1.co.comcast.net) has joined #neovim
+2020-03-19 18:40:11	<<	cschneid (~cschneid@c-73-78-144-189.hsd1.co.comcast.net) has quit (Ping timeout: 260 seconds)
+2020-03-19 18:44:12	>>	ellcs (~ellcs@200116b868a9900008fe6e7de507f24d.dip.versatel-1u1.de) has joined #neovim
+2020-03-19 18:46:37	>>	alerque1 (~caleb@213.153.138.205) has joined #neovim
+2020-03-19 18:50:47	>>	TheFuzzball (~TheFuzzba@149.22.7.223) has joined #neovim
+2020-03-19 18:52:39	<<	ohyash (~Thunderbi@49.15.187.2) has quit (Ping timeout: 246 seconds)
+2020-03-19 18:56:17	>>	alexherbo275 (~alexherbo@astlambert-651-1-88-102.w90-43.abo.wanadoo.fr) has joined #neovim
+2020-03-19 18:57:34	<<	alexherbo27 (~alexherbo@10.247.204.77.rev.sfr.net) has quit (Ping timeout: 256 seconds)
+2020-03-19 19:03:46	●	irc: disconnected from server
+2020-04-12 17:36:44	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #neovim
+2020-04-12 17:36:44	●	Topic for #neovim is "Register with NickServ to talk | Vim fork focused on extensibility and usability -- https://github.com/neovim/neovim -- Help sustain Neovim: https://salt.bountysource.com/teams/neovim -- Gitter: https://gitter.im/neovim/neovim"
+2020-04-12 17:36:44	●	Topic set by jamessan (~jamessan@debian/developer/jamessan) on to., 27 sep. 2018 03:36:33
+2020-04-12 17:36:44	●	Channel #neovim: 1198 nicks (0 ops, 0 voices, 1198 normals)
+2020-04-12 17:36:46	●	Channel created on fr., 31 jan. 2014 17:44:47
+2020-04-12 17:37:16	>>	jalalsfs (~jalalsfs@unaffiliated/jalalsfs) has joined #neovim
+2020-04-12 17:39:49	>>	jalalsfs_ (~jalalsfs@unaffiliated/jalalsfs) has joined #neovim
+2020-04-12 17:40:13	>>	manomama7 (~manomama7@78-63-209-0.static.zebra.lt) has joined #neovim
+2020-04-12 17:42:03	<<	jalalsfs (~jalalsfs@unaffiliated/jalalsfs) has quit (Ping timeout: 260 seconds)
+2020-04-12 17:44:13	<<	claes-magnus (~claes-mag@c80-217-8-29.bredband.comhem.se) has quit (Ping timeout: 258 seconds)
+2020-04-12 17:52:39	<<	rtur (~rtur@p200300E8471C2101B400E79C0CBA9550.dip0.t-ipconnect.de) has quit (Ping timeout: 246 seconds)
+2020-04-12 17:57:02	>>	raichoo (~raichoo@dslb-188-100-244-171.188.100.pools.vodafone-ip.de) has joined #neovim
+2020-04-12 18:02:54	<<	cotko_ (~cotko@93-103-115-77.dynamic.t-2.net) has quit (Ping timeout: 240 seconds)
+2020-04-12 18:09:30	>>	ahmed_elgabri (~ahmedelga@2a02:a446:d88a:0:759d:4506:3006:8929) has joined #neovim
+2020-04-12 18:14:02	<<	aasutossh (~aasutossh@27.34.104.66) has quit (Ping timeout: 264 seconds)
+2020-04-12 18:17:45	●	irc: disconnected from server
+2020-04-12 19:13:25	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #neovim
+2020-04-12 19:13:25	●	Topic for #neovim is "Register with NickServ to talk | Vim fork focused on extensibility and usability -- https://github.com/neovim/neovim -- Help sustain Neovim: https://salt.bountysource.com/teams/neovim -- Gitter: https://gitter.im/neovim/neovim"
+2020-04-12 19:13:25	●	Topic set by jamessan (~jamessan@debian/developer/jamessan) on to., 27 sep. 2018 03:36:33
+2020-04-12 19:13:25	●	Channel #neovim: 1192 nicks (0 ops, 0 voices, 1192 normals)
+2020-04-12 19:13:25	<<	logicp (~logicp@otwaon1073w-grc-04-184-144-79-188.dsl.bell.ca) has quit (Ping timeout: 264 seconds)
+2020-04-12 19:13:27	●	Channel created on fr., 31 jan. 2014 17:44:47
+2020-04-12 19:13:48	>>	e^x (~~@april-fools/2013/runnerup/ex) has joined #neovim
+2020-04-12 19:20:27	>>	deevus (~simon@101.114.139.94) has joined #neovim
+2020-04-12 19:21:28	>>	cjpbirkbeck (~Thunderbi@198.13.188.9) has joined #neovim
+2020-04-12 19:22:26	>>	claes-magnus (~claes-mag@c80-217-8-29.bredband.comhem.se) has joined #neovim
+2020-04-12 19:24:06	>>	eldritch (~eldritch@unaffiliated/eldritch) has joined #neovim
+2020-04-12 19:25:50	DheepakKrishnamu	If I use `local floating_window_scaling_factor = api.nvim_get_var("lazygit_floating_window_scaling_factor")` to get an option set in vimscript, if the value is a integer (i.e. `1`) I get a number `1` in lua, but if the value is `0.9` in vimscript, I get a table with `true` and `false` as keys and values `3` and `0.9`? Why do I get a table for vimscript options that are floating point? what is the true and false in
+2020-04-12 19:25:51	DheepakKrishnamu	the table supposed to mean? and is there a cleaner way to get an option that might be integer or floating point from vimscript into lua?
+2020-04-12 19:28:59	>>	ahmed_elgabri (~ahmedelga@2a02:a446:d88a:0:759d:4506:3006:8929) has joined #neovim
+2020-04-12 19:30:53	>>	raichoo (~raichoo@dslb-188-100-244-171.188.100.pools.vodafone-ip.de) has joined #neovim
+2020-04-12 19:32:50	>>	rtur (~rtur@p200300E8471C2101B400E79C0CBA9550.dip0.t-ipconnect.de) has joined #neovim
+2020-04-12 19:33:26	<<	ahmed_elgabri (~ahmedelga@2a02:a446:d88a:0:759d:4506:3006:8929) has quit (Ping timeout: 246 seconds)
+2020-04-12 19:37:24	>>	kedare (~kedare@frgrv1-mse1-osi.piou.ovh) has joined #neovim
+2020-04-12 19:38:28	>>	Map (~u@159.65.95.130) has joined #neovim
+2020-04-12 19:38:52	●	Map is now known as Guest59502
+2020-04-12 19:49:22	<<	narimiran (~miran@unaffiliated/miran) has quit (Quit: leaving)
+2020-04-12 19:51:07	>>	logicp (~logicp@otwaon1073w-grc-04-184-144-79-188.dsl.bell.ca) has joined #neovim
+2020-04-12 19:51:08	<<	marz (~marz@49.145.75.105) has quit (Ping timeout: 256 seconds)
+2020-04-12 20:01:38	>>	ahmed_elgabri (~ahmedelga@2a02:a446:d88a:0:759d:4506:3006:8929) has joined #neovim
+2020-04-12 20:02:13	<<	linarcx (~linarcx@151.241.53.4) has quit (Quit: WeeChat 2.8)
+2020-04-12 20:03:52	>>	alexherbo2 (~alexherbo@aputeaux-552-1-8-147.w86-249.abo.wanadoo.fr) has joined #neovim
+2020-04-12 20:06:08	<<	xikkub (talia@2600:3c03::f03c:91ff:fe56:8030) has quit (Ping timeout: 245 seconds)
+2020-04-12 20:07:44	<<	ahmed_elgabri (~ahmedelga@2a02:a446:d88a:0:759d:4506:3006:8929) has quit (Ping timeout: 246 seconds)
+2020-04-12 20:12:23	<<	cjpbirkbeck (~Thunderbi@198.13.188.9) has quit (Quit: cjpbirkbeck)
+2020-04-12 20:12:38	>>	cjpbirkbeck (~Thunderbi@198.13.188.9) has joined #neovim
+2020-04-12 20:22:06	>>	ATuin (~atuin@unaffiliated/atuin) has joined #neovim
+2020-04-12 20:25:57	<<	ellcs (~ellcs@200116b868835d006b0bb50cb0657304.dip.versatel-1u1.de) has quit (Ping timeout: 260 seconds)
+2020-04-12 20:34:06	<<	cjpbirkbeck (~Thunderbi@198.13.188.9) has quit (Quit: cjpbirkbeck)
+2020-04-12 20:38:01	<<	meck (~meck@li1809-18.members.linode.com) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2020-04-12 20:38:05	>>	_sunn_ (sunn@gateway/vpn/privateinternetaccess/sunn) has joined #neovim
+2020-04-12 20:38:33	>>	ellcs (~ellcs@200116b868835d00ebabf213393bbcd2.dip.versatel-1u1.de) has joined #neovim
+2020-04-12 20:38:33	>>	meck (~meck@li1809-18.members.linode.com) has joined #neovim
+2020-04-12 20:40:27	>>	darkstardevx (~darkstard@2601:1c2:300:c8a0::47c2) has joined #neovim
+2020-04-12 20:47:49	>>	ahmed_elgabri (~ahmedelga@2a02:a446:d88a:0:759d:4506:3006:8929) has joined #neovim
+2020-04-12 20:52:32	<<	ahmed_elgabri (~ahmedelga@2a02:a446:d88a:0:759d:4506:3006:8929) has quit (Ping timeout: 246 seconds)
+2020-04-12 20:55:02	<<	Mossepo (~Mossepo@185.204.1.205) has quit (Quit: WeeChat 2.8)
+2020-04-12 20:56:22	>>	cjpbirkbeck (~Thunderbi@198.13.188.9) has joined #neovim
+2020-04-12 21:05:31	<<	ATuin (~atuin@unaffiliated/atuin) has quit (Ping timeout: 260 seconds)
+2020-04-12 21:06:38	>>	kuzyn (~kuzyn@cpc126836-lewi25-2-0-cust185.2-4.cable.virginm.net) has joined #neovim
+2020-04-12 21:07:30	>>	astronavt (~astronavt@unaffiliated/astronavt) has joined #neovim
+2020-04-12 21:07:49	>>	MinHyeokBaeGitte (gitterbmh8@gateway/shell/matrix.org/x-nhscbpyvbhbhvuxr) has joined #neovim
+2020-04-12 21:11:58	<<	_sunn_ (sunn@gateway/vpn/privateinternetaccess/sunn) has quit (Quit: WeeChat 2.6)
+2020-04-12 21:13:58	>>	brtastic (~Thunderbi@2a02:a315:413a:7580:879e:25b4:92ae:7858) has joined #neovim
+2020-04-12 21:16:25	<<	kuzyn (~kuzyn@cpc126836-lewi25-2-0-cust185.2-4.cable.virginm.net) has quit (Ping timeout: 264 seconds)
+2020-04-12 21:28:30	>>	ahmed_elgabri (~ahmedelga@2a02:a446:d88a:0:759d:4506:3006:8929) has joined #neovim
+2020-04-12 21:33:08	<<	ahmed_elgabri (~ahmedelga@2a02:a446:d88a:0:759d:4506:3006:8929) has quit (Ping timeout: 246 seconds)
+2020-04-12 21:35:42	<<	cottoneyejim (~cottoneye@95.155.56.31) has quit (Ping timeout: 265 seconds)
+2020-04-12 21:36:51	>>	ATuin (~atuin@unaffiliated/atuin) has joined #neovim
+2020-04-12 21:40:22	>>	cotko_ (~cotko@93-103-115-77.dynamic.t-2.net) has joined #neovim
+2020-04-12 21:43:50	>>	ahmed_elgabri (~ahmedelga@2a02:a446:d88a:0:759d:4506:3006:8929) has joined #neovim
+2020-04-12 21:48:18	>>	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has joined #neovim
+2020-04-12 21:49:35	<<	brtastic (~Thunderbi@2a02:a315:413a:7580:879e:25b4:92ae:7858) has quit (Ping timeout: 246 seconds)
+2020-04-12 21:52:54	<<	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has quit (Client Quit)
+2020-04-12 21:55:30	>>	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has joined #neovim
+2020-04-12 22:04:20	<<	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has quit (Quit: WeeChat 2.8)
+2020-04-12 22:04:53	>>	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has joined #neovim
+2020-04-12 22:04:54	<<	blackbeard420 (~blackbear@duros.mom.thc420.xyz) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2020-04-12 22:07:55	>>	brtastic (~Thunderbi@89-64-26-223.dynamic.chello.pl) has joined #neovim
+2020-04-12 22:08:02	<<	ellcs (~ellcs@200116b868835d00ebabf213393bbcd2.dip.versatel-1u1.de) has quit (Ping timeout: 260 seconds)
+2020-04-12 22:08:46	>>	_sunn_ (sunn@gateway/vpn/privateinternetaccess/sunn) has joined #neovim
+2020-04-12 22:12:06	<<	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has quit (Quit: WeeChat 2.8)
+2020-04-12 22:14:51	>>	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has joined #neovim
+2020-04-12 22:17:57	<<	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has quit (Client Quit)
+2020-04-12 22:18:23	>>	Mossepo (~Mossepo@185.204.1.205) has joined #neovim
+2020-04-12 22:18:27	>>	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has joined #neovim
+2020-04-12 22:20:21	<<	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has quit (Client Quit)
+2020-04-12 22:20:37	>>	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has joined #neovim
+2020-04-12 22:24:17	<<	claes-magnus (~claes-mag@c80-217-8-29.bredband.comhem.se) has quit (Remote host closed the connection)
+2020-04-12 22:25:35	>>	ellcs (~ellcs@i577BC8B9.versanet.de) has joined #neovim
+2020-04-12 22:28:07	>>	paulmcquad (~gamer@78.17.242.181) has joined #neovim
+2020-04-12 22:31:59	<<	raichoo (~raichoo@dslb-188-100-244-171.188.100.pools.vodafone-ip.de) has quit (Quit: Lost terminal)
+2020-04-12 22:33:27	>>	cheetypants (~cheet@modemcable108.173-22-96.mc.videotron.ca) has joined #neovim
+2020-04-12 22:33:35	<<	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has quit (Quit: WeeChat 2.8)
+2020-04-12 22:33:55	>>	david2 (~david2@212-186-25-215.cable.dynamic.surfer.at) has joined #neovim
+2020-04-12 22:34:00	<<	cheet (~cheet@modemcable108.173-22-96.mc.videotron.ca) has quit (Ping timeout: 256 seconds)
+2020-04-12 22:35:31	>>	SkaarjSPL (~SkaarjSPL@p5DDF18D7.dip0.t-ipconnect.de) has joined #neovim
+2020-04-12 22:35:40	<<	SkaarjSPL (~SkaarjSPL@p5DDF18D7.dip0.t-ipconnect.de) has quit (Client Quit)
+2020-04-12 22:36:02	<<	rtur (~rtur@p200300E8471C2101B400E79C0CBA9550.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-04-12 22:36:51	>>	ahmedelgabri (~ahmedelga@2a02:a446:d88a:0:f500:9a7d:22a4:3f64) has joined #neovim
+2020-04-12 22:37:58	<<	cheetypants (~cheet@modemcable108.173-22-96.mc.videotron.ca) has quit (Ping timeout: 256 seconds)
+2020-04-12 22:38:57	<<	ahmed_elgabri (~ahmedelga@2a02:a446:d88a:0:759d:4506:3006:8929) has quit (Ping timeout: 260 seconds)
+2020-04-12 22:39:59	>>	cheet (~cheet@modemcable108.173-22-96.mc.videotron.ca) has joined #neovim
+2020-04-12 22:41:53	<<	Mossepo (~Mossepo@185.204.1.205) has quit (Quit: WeeChat 2.8)
+2020-04-12 22:51:54	<<	mkoskar (~mkoskar@unaffiliated/mkoskar) has quit (Quit: mkoskar)
+2020-04-12 22:52:33	>>	mkoskar (~mkoskar@unaffiliated/mkoskar) has joined #neovim
+2020-04-12 22:52:36	●	irc: disconnected from server
+2020-07-15 21:50:32	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #neovim
+2020-07-15 21:50:32	●	Topic for #neovim is "Vim fork focused on extensibility and usability -- https://github.com/neovim/neovim -- Help sustain Neovim: https://salt.bountysource.com/teams/neovim -- Gitter: https://gitter.im/neovim/neovim"
+2020-07-15 21:50:32	●	Topic set by mhi^ (~mhi^@unaffiliated/mhi/x-9993184) on sø., 21 juni 2020 14:43:10
+2020-07-15 21:50:33	●	Channel #neovim: 1238 nicks (0 ops, 0 voices, 1238 normals)
+2020-07-15 21:50:34	●	Channel created on fr., 31 jan. 2014 17:44:47
+2020-07-15 21:51:15	KillTheMuleGitte	Impressive happenings in the lsp world, thanks to you kicking it off way back then <3
+2020-07-15 21:51:25	<<	opal (~wowaname@volatile/founder/wowaname) has quit (Remote host closed the connection)
+2020-07-15 21:53:00	>>	opal (~wowaname@volatile/founder/wowaname) has joined #neovim
+2020-07-15 21:54:02	TJDeVriesGitter[	bigger shoutout to norcalli for actually finishing it ;)
+2020-07-15 21:57:21	<<	flex14 (~flex14@2601:280:c780:7ea0:6198:aed6:a074:32ee) has quit (Quit: Leaving, lenovo notebook life (sorry, maybe my battery died?))
+2020-07-15 21:57:36	<<	Maxattax (~max@50-195-160-193-static.hfc.comcastbusiness.net) has quit (Quit: WeeChat 2.8)
+2020-07-15 21:57:48	<<	chimay (~chimay@unaffiliated/chimay) has quit (Ping timeout: 256 seconds)
+2020-07-15 22:12:34	●	irc: disconnected from server
