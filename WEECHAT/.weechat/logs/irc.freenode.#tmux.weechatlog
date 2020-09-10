@@ -1,0 +1,464 @@
+2019-09-24 11:36:31	▶	penguin1 (~penguin1@unaffiliated/penguin1) has joined #tmux
+2019-09-24 11:36:31	●	Topic for #tmux is "tmux is a terminal multiplexer | http://tmux.github.io/ | https://groups.google.com/forum/#!forum/tmux-users | Man page: http://man.openbsd.org/OpenBSD-current/man1/tmux.1"
+2019-09-24 11:36:31	●	Topic set by nicm (~nicholas@84.13.197.0) on fr., 01 april 2016 00:37:07
+2019-09-24 11:36:31	●	Channel #tmux: 297 nicks (0 ops, 0 voices, 297 normals)
+2019-09-24 11:36:34	●	Channel created on to., 11 juni 2009 21:16:11
+2019-09-24 11:37:18	penguin1	hi is there a way to make tmux follow terminal colors and other settings in terminal?
+2019-09-24 11:47:15	◀	jamesd (~james@d207-81-166-69.bchsia.telus.net) has quit (Ping timeout: 240 seconds)
+2019-09-24 11:58:06	nicm	what do you mean?
+2019-09-24 11:58:21	▶	jamesd (~james@205.250.246.63) has joined #tmux
+2019-09-24 12:08:54	penguin1	if I use vim in tmux it doesn't show the same colors as if I use in a terminal
+2019-09-24 12:10:01	nicm	what is TERM inside tmux?
+2019-09-24 12:11:12	penguin1	what do you mean?
+2019-09-24 12:11:43	nicm	what does "echo $TERM" show inside tmux?
+2019-09-24 12:12:05	penguin1	echo $TERM
+2019-09-24 12:12:17	penguin1	like that?
+2019-09-24 12:12:20	nicm	right
+2019-09-24 12:12:53	▶	comerijn (~merijn@83-160-49-249.ip.xs4all.nl) has joined #tmux
+2019-09-24 12:13:46	penguin1	also my prompt is messed up
+2019-09-24 12:13:48	penguin1	https://imgur.com/a/Mkra9RC
+2019-09-24 12:14:00	penguin1	tmux on top
+2019-09-24 12:14:18	nicm	...
+2019-09-24 12:15:02	◀	merijn (~merijn@83-160-49-249.ip.xs4all.nl) has quit (Ping timeout: 245 seconds)
+2019-09-24 12:16:25	▶	hightower2 (~hightower@unaffiliated/hightower2) has joined #tmux
+2019-09-24 12:18:08	penguin1	but it shows nice at bottow
+2019-09-24 12:18:12	penguin1	https://imgur.com/a/lYd8xhF
+2019-09-24 12:18:24	nicm	none of these show echo $TERM?
+2019-09-24 12:19:03	penguin1	I don't get it- shall I type echo $TERM in tmux?
+2019-09-24 12:19:06	nicm	right
+2019-09-24 12:19:22	penguin1	echo $TERM
+2019-09-24 12:19:37	penguin1	so...
+2019-09-24 12:20:37	▶	mkoskar (~mkoskar@unaffiliated/mkoskar) has joined #tmux
+2019-09-24 12:20:44	avih	at the shell, not in irc, like in your first screenshot
+2019-09-24 12:21:07	penguin1	aaah   lol
+2019-09-24 12:21:43	penguin1	I could have told you xterm-termite
+2019-09-24 12:22:42	penguin1	when I do it in tmux it says screen
+2019-09-24 12:23:42	nicm	so what if you put this in .tmux.conf: set -g default-terminal "screen-256color"
+2019-09-24 12:23:51	nicm	then "tmux kill-server" then restart tmux
+2019-09-24 12:24:01	mkoskar	Is there a way to set *session* env variable for newly created session? had to resort to smt hacky like this https://0x0.st/ztdj.txt
+2019-09-24 12:25:44	penguin1	nicm  will try that. busy right now but will try it in an hour or so, thx for help   :)
+2019-09-24 12:36:42	●	irc: disconnected from server
+2019-09-26 20:55:37	▶	penguin1 (~penguin1@unaffiliated/penguin1) has joined #tmux
+2019-09-26 20:55:37	●	Topic for #tmux is "tmux is a terminal multiplexer | http://tmux.github.io/ | https://groups.google.com/forum/#!forum/tmux-users | Man page: http://man.openbsd.org/OpenBSD-current/man1/tmux.1"
+2019-09-26 20:55:37	●	Topic set by nicm (~nicholas@84.13.197.0) on fr., 01 april 2016 00:37:07
+2019-09-26 20:55:37	●	Channel #tmux: 310 nicks (0 ops, 0 voices, 310 normals)
+2019-09-26 20:55:39	●	Channel created on to., 11 juni 2009 21:16:11
+2019-09-26 20:56:16	▶	gareppa (~gareppa@unaffiliated/gareppa) has joined #tmux
+2019-09-26 20:57:13	◀	gareppa (~gareppa@unaffiliated/gareppa) has quit (Client Quit)
+2019-09-26 20:58:11	▶	TreyHarris (~trey@lopsa/foundingmember/TreyHarris) has joined #tmux
+2019-09-26 21:09:19	▶	ntqz (~ntqz@71-38-191-134.lsv2.qwest.net) has joined #tmux
+2019-09-26 21:09:19	◀	ahmedelgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has quit (Ping timeout: 276 seconds)
+2019-09-26 21:12:16	◀	perrier-1 (~perrier-j@modemcable012.251-130-66.mc.videotron.ca) has quit (Quit: WeeChat 2.6)
+2019-09-26 21:13:47	◀	tdy (~tdy@unaffiliated/tdy) has quit (Ping timeout: 245 seconds)
+2019-09-26 21:19:03	◀	atlas (atlas@unaffiliated/atlas-) has quit (Ping timeout: 245 seconds)
+2019-09-26 21:20:31	▶	atlas (atlas@unaffiliated/atlas-) has joined #tmux
+2019-09-26 21:25:33	◀	jlf (~user@pdpc/supporter/active/jlf) has quit (Ping timeout: 265 seconds)
+2019-09-26 21:27:35	◀	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-09-26 21:28:17	▶	xcm (~xcm@ipa210.225.tellas.gr) has joined #tmux
+2019-09-26 21:28:30	▶	perrier-1 (~perrier-j@modemcable012.251-130-66.mc.videotron.ca) has joined #tmux
+2019-09-26 21:30:21	▶	ahmed_elgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has joined #tmux
+2019-09-26 21:34:28	◀	L0j1k (~L0j1k@unaffiliated/l0j1k) has quit (Quit: heaven is a place on earth)
+2019-09-26 21:37:31	◀	perrier-1 (~perrier-j@modemcable012.251-130-66.mc.videotron.ca) has quit (Quit: WeeChat 2.6)
+2019-09-26 21:40:10	▶	gareppa (~gareppa@unaffiliated/gareppa) has joined #tmux
+2019-09-26 21:44:50	▶	plexigras (plexigras@gateway/vpn/privateinternetaccess/plexigras) has joined #tmux
+2019-09-26 21:46:17	◀	xcm (~xcm@ipa210.225.tellas.gr) has quit (Read error: Connection reset by peer)
+2019-09-26 21:46:43	▶	xcm (~xcm@ipa210.225.tellas.gr) has joined #tmux
+2019-09-26 21:50:51	◀	rruizt (~rruizt@83-84-23-124.cable.dynamic.v4.ziggo.nl) has quit (Ping timeout: 240 seconds)
+2019-09-26 21:50:55	▶	akiva (~akiva@d50-92-125-120.bchsia.telus.net) has joined #tmux
+2019-09-26 21:51:56	▶	rruizt (~rruizt@83-84-23-124.cable.dynamic.v4.ziggo.nl) has joined #tmux
+2019-09-26 21:58:05	▶	L0j1k (~L0j1k@unaffiliated/l0j1k) has joined #tmux
+2019-09-26 22:01:00	◀	xcm (~xcm@ipa210.225.tellas.gr) has quit (Read error: Connection reset by peer)
+2019-09-26 22:01:37	▶	xcm (~xcm@ipa210.225.tellas.gr) has joined #tmux
+2019-09-26 22:02:04	penguin1	@nicm you gave me a tip yesterday but my tmux disconnected so now I can't scroll back. Do you remember what oyu said I should writee in my .tmux.conf
+2019-09-26 22:07:02	●	irc: disconnected from server
+2019-09-26 22:10:44	▶	penguin1 (~penguin1@unaffiliated/penguin1) has joined #tmux
+2019-09-26 22:10:44	●	Topic for #tmux is "tmux is a terminal multiplexer | http://tmux.github.io/ | https://groups.google.com/forum/#!forum/tmux-users | Man page: http://man.openbsd.org/OpenBSD-current/man1/tmux.1"
+2019-09-26 22:10:44	●	Topic set by nicm (~nicholas@84.13.197.0) on fr., 01 april 2016 00:37:07
+2019-09-26 22:10:44	●	Channel #tmux: 312 nicks (0 ops, 0 voices, 312 normals)
+2019-09-26 22:10:46	●	Channel created on to., 11 juni 2009 21:16:11
+2019-09-26 22:12:40	◀	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-09-26 22:13:13	▶	xcm (~xcm@ipa210.225.tellas.gr) has joined #tmux
+2019-09-26 22:22:09	▶	ahmedelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has joined #tmux
+2019-09-26 22:25:00	◀	ahmed_elgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has quit (Ping timeout: 265 seconds)
+2019-09-26 22:26:51	◀	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-09-26 22:27:25	▶	ahmed_elgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has joined #tmux
+2019-09-26 22:29:12	◀	ahmedelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has quit (Ping timeout: 245 seconds)
+2019-09-26 22:29:17	▶	aelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has joined #tmux
+2019-09-26 22:29:25	●	irc: disconnected from server
+2019-09-26 22:31:13	▶	penguin1 (~penguin1@unaffiliated/penguin1) has joined #tmux
+2019-09-26 22:31:13	●	Topic for #tmux is "tmux is a terminal multiplexer | http://tmux.github.io/ | https://groups.google.com/forum/#!forum/tmux-users | Man page: http://man.openbsd.org/OpenBSD-current/man1/tmux.1"
+2019-09-26 22:31:13	●	Topic set by nicm (~nicholas@84.13.197.0) on fr., 01 april 2016 00:37:07
+2019-09-26 22:31:13	●	Channel #tmux: 312 nicks (0 ops, 0 voices, 312 normals)
+2019-09-26 22:31:15	●	Channel created on to., 11 juni 2009 21:16:11
+2019-09-26 22:32:40	●	irc: disconnected from server
+2019-09-26 22:46:56	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #tmux
+2019-09-26 22:46:56	●	Topic for #tmux is "tmux is a terminal multiplexer | http://tmux.github.io/ | https://groups.google.com/forum/#!forum/tmux-users | Man page: http://man.openbsd.org/OpenBSD-current/man1/tmux.1"
+2019-09-26 22:46:56	●	Topic set by nicm (~nicholas@84.13.197.0) on fr., 01 april 2016 00:37:07
+2019-09-26 22:46:56	●	Channel #tmux: 309 nicks (0 ops, 0 voices, 309 normals)
+2019-09-26 22:46:58	●	Channel created on to., 11 juni 2009 21:16:11
+2019-09-26 22:51:43	>>	L0j1k (~L0j1k@unaffiliated/l0j1k) has joined #tmux
+2019-09-26 22:52:40	<<	L0j1k (~L0j1k@unaffiliated/l0j1k) has quit (Client Quit)
+2019-09-26 22:54:05	<<	TauPan (~taupan@p4FC5FBAB.dip0.t-ipconnect.de) has quit (Ping timeout: 268 seconds)
+2019-09-26 22:54:35	>>	L0j1k (~L0j1k@unaffiliated/l0j1k) has joined #tmux
+2019-09-26 22:55:57	<<	jkwki (~jkwki@p200300CD474F93001E1BB5FFFE7A47F7.dip0.t-ipconnect.de) has quit (Ping timeout: 246 seconds)
+2019-09-26 22:56:42	<<	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-09-26 22:57:26	>>	xcm (~xcm@ipa210.225.tellas.gr) has joined #tmux
+2019-09-26 22:58:51	>>	cd (~cd@unaffiliated/cd) has joined #tmux
+2019-09-26 23:06:02	<<	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has quit (Quit: WeeChat 2.1)
+2019-09-26 23:20:02	<<	derk0pf (~derk0pf@p5497B80C.dip0.t-ipconnect.de) has quit (Ping timeout: 245 seconds)
+2019-09-26 23:24:23	<<	L0j1k (~L0j1k@unaffiliated/l0j1k) has quit (Quit: heaven is a place on earth)
+2019-09-26 23:25:18	>>	L0j1k (~L0j1k@unaffiliated/l0j1k) has joined #tmux
+2019-09-26 23:26:33	<<	L0j1k (~L0j1k@unaffiliated/l0j1k) has quit (Client Quit)
+2019-09-26 23:27:32	>>	derk0pf (~derk0pf@p5497B80C.dip0.t-ipconnect.de) has joined #tmux
+2019-09-26 23:30:17	>>	L0j1k (~L0j1k@unaffiliated/l0j1k) has joined #tmux
+2019-09-26 23:32:23	<<	L0j1k (~L0j1k@unaffiliated/l0j1k) has quit (Client Quit)
+2019-09-26 23:33:14	>>	L0j1k (~L0j1k@unaffiliated/l0j1k) has joined #tmux
+2019-09-26 23:33:39	<<	derk0pf (~derk0pf@p5497B80C.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2019-09-26 23:39:53	>>	perrier-1 (~perrier-j@modemcable012.251-130-66.mc.videotron.ca) has joined #tmux
+2019-09-26 23:41:04	>>	ahmed_elgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has joined #tmux
+2019-09-26 23:42:24	>>	aelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has joined #tmux
+2019-09-26 23:42:51	<<	ahmedelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has quit (Ping timeout: 240 seconds)
+2019-09-26 23:44:25	<<	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-09-26 23:45:16	<<	ahmed_elgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has quit (Ping timeout: 240 seconds)
+2019-09-26 23:45:26	<<	perrier-jouet (~perrier-j@modemcable012.251-130-66.mc.videotron.ca) has quit (Quit: WeeChat 2.6)
+2019-09-26 23:45:37	>>	xcm (~xcm@ipa210.225.tellas.gr) has joined #tmux
+2019-09-26 23:47:44	<<	aelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has quit (Ping timeout: 268 seconds)
+2019-09-26 23:48:41	>>	Jackneill (~Jackneill@unaffiliated/jackneill) has joined #tmux
+2019-09-26 23:48:55	>>	aelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has joined #tmux
+2019-09-26 23:54:56	<<	aelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has quit (Ping timeout: 240 seconds)
+2019-09-26 23:57:04	>>	aelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has joined #tmux
+2019-09-26 23:57:43	>>	tdy (~tdy@unaffiliated/tdy) has joined #tmux
+2019-09-27 00:02:29	>>	derk0pf (~derk0pf@p5497B80C.dip0.t-ipconnect.de) has joined #tmux
+2019-09-27 00:04:30	<<	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-09-27 00:05:18	<<	Jackneill (~Jackneill@unaffiliated/jackneill) has quit (Remote host closed the connection)
+2019-09-27 00:05:43	>>	xcm (~xcm@ipa210.225.tellas.gr) has joined #tmux
+2019-09-27 00:05:54	>>	Fernando-Basso (~FernandoB@131.221.12.11) has joined #tmux
+2019-09-27 00:07:57	<<	derk0pf (~derk0pf@p5497B80C.dip0.t-ipconnect.de) has quit (Ping timeout: 265 seconds)
+2019-09-27 00:07:58	<<	epony (epony@unaffiliated/epony) has quit (Ping timeout: 245 seconds)
+2019-09-27 00:15:49	<<	L0j1k (~L0j1k@unaffiliated/l0j1k) has quit (Quit: heaven is a place on earth)
+2019-09-27 00:16:44	>>	L0j1k (~L0j1k@unaffiliated/l0j1k) has joined #tmux
+2019-09-27 00:17:05	<<	za1b1tsu (~za1b1tsu@86.124.145.254) has quit (Remote host closed the connection)
+2019-09-27 00:30:39	<<	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-09-27 00:31:18	>>	xcm (~xcm@ipa210.225.tellas.gr) has joined #tmux
+2019-09-27 00:37:20	>>	ahmedelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has joined #tmux
+2019-09-27 00:39:12	<<	aelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has quit (Ping timeout: 245 seconds)
+2019-09-27 00:53:03	>>	ahmed_elgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has joined #tmux
+2019-09-27 00:55:14	<<	ahmedelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has quit (Ping timeout: 240 seconds)
+2019-09-27 01:08:20	>>	epony (epony@unaffiliated/epony) has joined #tmux
+2019-09-27 01:12:58	●	irc: disconnected from server
+2019-09-27 18:21:08	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #tmux
+2019-09-27 18:21:08	●	Topic for #tmux is "tmux is a terminal multiplexer | http://tmux.github.io/ | https://groups.google.com/forum/#!forum/tmux-users | Man page: http://man.openbsd.org/OpenBSD-current/man1/tmux.1"
+2019-09-27 18:21:08	●	Topic set by nicm (~nicholas@84.13.197.0) on fr., 01 april 2016 00:37:07
+2019-09-27 18:21:08	●	Channel #tmux: 306 nicks (0 ops, 0 voices, 306 normals)
+2019-09-27 18:21:10	●	Channel created on to., 11 juni 2009 21:16:11
+2019-09-27 18:30:16	>>	gareppa (~gareppa@unaffiliated/gareppa) has joined #tmux
+2019-09-27 18:43:58	>>	comerijn (~merijn@83-160-49-249.ip.xs4all.nl) has joined #tmux
+2019-09-27 18:46:43	<<	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-09-27 18:47:28	>>	xcm (~xcm@ipa210.225.tellas.gr) has joined #tmux
+2019-09-27 18:47:48	<<	gxt (~gxt@gateway/tor-sasl/gxt) has quit (Ping timeout: 260 seconds)
+2019-09-27 18:48:22	<<	comerijn (~merijn@83-160-49-249.ip.xs4all.nl) has quit (Ping timeout: 245 seconds)
+2019-09-27 19:01:00	<<	perrier-jouet (~perrier-j@modemcable012.251-130-66.mc.videotron.ca) has quit (Quit: WeeChat 2.6)
+2019-09-27 19:05:14	<<	Darcidride (~Darcidrid@77.59.212.138) has quit (Ping timeout: 268 seconds)
+2019-09-27 19:06:15	>>	derk0pf (~derk0pf@p5497B80C.dip0.t-ipconnect.de) has joined #tmux
+2019-09-27 19:09:08	>>	akiva (~akiva@d50-92-125-120.bchsia.telus.net) has joined #tmux
+2019-09-27 19:16:12	>>	kchz (~dschulz@168.195.227.98) has joined #tmux
+2019-09-27 19:18:59	<<	kchz (~dschulz@168.195.227.98) has quit (Client Quit)
+2019-09-27 19:19:00	>>	bsd4me (~bsduser@216-67-113-166-radius.dynamic.acsalaska.net) has joined #tmux
+2019-09-27 19:27:55	<<	tcunha_ (~tiago@unaffiliated/tcunha) has quit (Remote host closed the connection)
+2019-09-27 19:49:39	>>	lnds (~lnds@2-106-50-91-dynamic.dk.customer.tdc.net) has joined #tmux
+2019-09-27 19:49:57	>>	epony (epony@unaffiliated/epony) has joined #tmux
+2019-09-27 19:51:24	<<	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2019-09-27 19:53:22	>>	ahmedelgabri (~ahmedelga@94.242.228.111) has joined #tmux
+2019-09-27 19:56:14	<<	ahmed_elgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has quit (Ping timeout: 276 seconds)
+2019-09-27 20:01:47	>>	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has joined #tmux
+2019-09-27 20:02:27	>>	ahmed_elgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has joined #tmux
+2019-09-27 20:04:19	●	irc: disconnected from server
+2019-09-28 02:10:21	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #tmux
+2019-09-28 02:10:21	●	Topic for #tmux is "tmux is a terminal multiplexer | http://tmux.github.io/ | https://groups.google.com/forum/#!forum/tmux-users | Man page: http://man.openbsd.org/OpenBSD-current/man1/tmux.1"
+2019-09-28 02:10:21	●	Topic set by nicm (~nicholas@84.13.197.0) on fr., 01 april 2016 00:37:07
+2019-09-28 02:10:21	●	Channel #tmux: 302 nicks (0 ops, 0 voices, 302 normals)
+2019-09-28 02:10:24	●	Channel created on to., 11 juni 2009 21:16:11
+2019-09-28 02:11:32	<<	StathisA (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 265 seconds)
+2019-09-28 02:18:37	<<	lidl_ (~lidl@vzw.pix.net) has quit (Read error: Connection reset by peer)
+2019-09-28 02:18:41	>>	lidl (~lidl@2001:470:e254:10:b1bc:73e4:cfee:2eac) has joined #tmux
+2019-09-28 02:18:57	>>	rkta_ (~kt@62.113.246.111) has joined #tmux
+2019-09-28 02:21:02	<<	Oclair_ (~Oclair@www.aventia.pw) has quit (Ping timeout: 276 seconds)
+2019-09-28 02:21:31	>>	Oclair (~Oclair@www.aventia.pw) has joined #tmux
+2019-09-28 02:22:20	<<	rkta (~kt@62.113.246.111) has quit (Ping timeout: 276 seconds)
+2019-09-28 02:22:20	<<	cliluw (~cliluw@unaffiliated/cliluw) has quit (Ping timeout: 276 seconds)
+2019-09-28 02:22:21	●	rkta_ is now known as rkta
+2019-09-28 02:22:35	>>	cliluw (~cliluw@unaffiliated/cliluw) has joined #tmux
+2019-09-28 02:27:32	<<	trd (~trd@unaffiliated/trd) has quit (Ping timeout: 276 seconds)
+2019-09-28 02:30:02	<<	diniwed (~gavron@ool-182c80a4.dyn.optonline.net) has quit (Ping timeout: 245 seconds)
+2019-09-28 02:31:00	>>	diniwed (~gavron@185.253.99.98) has joined #tmux
+2019-09-28 02:33:39	>>	trd (~trd@unaffiliated/trd) has joined #tmux
+2019-09-28 02:36:37	<<	Keridos (~Keridos@static.56.72.76.144.clients.your-server.de) has quit (Quit: ZNC - http://znc.in)
+2019-09-28 02:37:22	>>	Keridos (~Keridos@static.56.72.76.144.clients.your-server.de) has joined #tmux
+2019-09-28 02:40:56	>>	jlf (~user@pdpc/supporter/active/jlf) has joined #tmux
+2019-09-28 02:45:03	>>	merijn (~merijn@83-160-49-249.ip.xs4all.nl) has joined #tmux
+2019-09-28 02:49:15	<<	merijn (~merijn@83-160-49-249.ip.xs4all.nl) has quit (Ping timeout: 240 seconds)
+2019-09-28 02:53:01	<<	Zapme (~Zapme@stjhnf011fw-159-2-28-238.dhcp-dynamic.fibreop.nl.bellaliant.net) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2019-09-28 02:57:32	>>	tdy (~tdy@unaffiliated/tdy) has joined #tmux
+2019-09-28 03:00:25	>>	perrier-jouet (~perrier-j@modemcable012.251-130-66.mc.videotron.ca) has joined #tmux
+2019-09-28 03:01:25	>>	tdy1 (~tdy@unaffiliated/tdy) has joined #tmux
+2019-09-28 03:03:56	<<	tdy (~tdy@unaffiliated/tdy) has quit (Ping timeout: 276 seconds)
+2019-09-28 03:04:20	<<	Boohbah (~Boohbah@gateway/tor-sasl/boohbah) has quit (Ping timeout: 260 seconds)
+2019-09-28 03:08:57	●	tdy1 is now known as tdy
+2019-09-28 03:14:22	<<	tdy (~tdy@unaffiliated/tdy) has quit (Ping timeout: 265 seconds)
+2019-09-28 03:20:11	<<	jlf (~user@pdpc/supporter/active/jlf) has quit (Ping timeout: 276 seconds)
+2019-09-28 03:22:11	>>	xeon (~quassel@218.241.236.34) has joined #tmux
+2019-09-28 03:25:13	xeon	Hi, new tmux user here. vim is not working properly inside tmux. ESC does not work. Insert mode does not work.
+2019-09-28 03:28:25	<<	tm (~sinnlos@unaffiliated/tm) has quit (Ping timeout: 268 seconds)
+2019-09-28 03:31:13	>>	Boohbah (~Boohbah@gateway/tor-sasl/boohbah) has joined #tmux
+2019-09-28 03:31:49	>>	tm (~sinnlos@unaffiliated/tm) has joined #tmux
+2019-09-28 03:51:08	xeon	when in INSERT mode in vim, newline always displayed as ^M
+2019-09-28 03:53:14	>>	Kryptron (~Kryptron@unaffiliated/kryptron) has joined #tmux
+2019-09-28 03:55:17	<<	Kryptron_ (~Kryptron@unaffiliated/kryptron) has quit (Ping timeout: 240 seconds)
+2019-09-28 03:56:35	<<	diniwed (~gavron@185.253.99.98) has quit (Ping timeout: 276 seconds)
+2019-09-28 04:00:48	<<	gxt (~gxt@gateway/tor-sasl/gxt) has quit (Ping timeout: 260 seconds)
+2019-09-28 04:07:26	>>	jlf (~user@pdpc/supporter/active/jlf) has joined #tmux
+2019-09-28 04:12:49	>>	elphe (~cockatoo@124.191.70.116) has joined #tmux
+2019-09-28 04:12:51	>>	diniwed (~gavron@85.203.20.41) has joined #tmux
+2019-09-28 04:17:02	<<	ahmed_elgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has quit (Read error: Connection reset by peer)
+2019-09-28 04:17:13	>>	ahmedelgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has joined #tmux
+2019-09-28 04:17:41	<<	ahmedelgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has quit (Client Quit)
+2019-09-28 04:18:20	<<	ih8wndz (jwpierce3@000.srv.trnkmstr.com) has quit (Read error: Connection reset by peer)
+2019-09-28 04:21:36	>>	ih8wndz (jwpierce3@000.srv.trnkmstr.com) has joined #tmux
+2019-09-28 04:22:49	<<	bsd4me (~bsduser@216-67-113-166-radius.dynamic.acsalaska.net) has quit (Quit: Lost terminal)
+2019-09-28 04:35:57	>>	jrm2 (~jrm@freebsd/developer/jrm) has joined #tmux
+2019-09-28 04:36:51	●	jrm2 is now known as jrm
+2019-09-28 04:42:20	<<	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has quit (Ping timeout: 260 seconds)
+2019-09-28 04:42:50	<<	mkoskar (~mkoskar@unaffiliated/mkoskar) has quit (Quit: mkoskar)
+2019-09-28 04:43:40	>>	xelxebar (~xelxebar@gateway/tor-sasl/xelxebar) has joined #tmux
+2019-09-28 04:44:57	>>	merijn (~merijn@83-160-49-249.ip.xs4all.nl) has joined #tmux
+2019-09-28 04:45:16	<<	jrm (~jrm@freebsd/developer/jrm) has quit (Quit: ciao)
+2019-09-28 04:47:10	<<	cd (~cd@unaffiliated/cd) has quit (Quit: cd)
+2019-09-28 04:49:37	<<	merijn (~merijn@83-160-49-249.ip.xs4all.nl) has quit (Ping timeout: 245 seconds)
+2019-09-28 04:53:21	>>	jrm (~jrm@freebsd/developer/jrm) has joined #tmux
+2019-09-28 04:57:22	<<	cobreadmonster (uid150434@haskell/developer/breadmonster) has quit (Quit: Connection closed for inactivity)
+2019-09-28 05:26:08	>>	gxt (~gxt@gateway/tor-sasl/gxt) has joined #tmux
+2019-09-28 05:33:15	<<	Vonter_ (~Vonter@124.123.105.240) has quit (Quit: WeeChat 2.6)
+2019-09-28 05:35:56	>>	Vonter (~Vonter@124.123.105.240) has joined #tmux
+2019-09-28 05:36:02	<<	akiva (~akiva@d50-92-125-120.bchsia.telus.net) has quit (Ping timeout: 276 seconds)
+2019-09-28 06:16:54	>>	gordonfish (~gordonfis@unaffiliated/gordonfish) has joined #tmux
+2019-09-28 06:28:53	>>	xall (~xall@ppp-223-24-161-39.revip6.asianet.co.th) has joined #tmux
+2019-09-28 06:29:20	<<	elphe (~cockatoo@124.191.70.116) has quit (Ping timeout: 276 seconds)
+2019-09-28 06:30:58	R2robot	xeon: which terminal and what TERM settings etc
+2019-09-28 06:31:38	<<	xall (~xall@ppp-223-24-161-39.revip6.asianet.co.th) has quit (Client Quit)
+2019-09-28 06:50:25	xeon	R2robot: it is a xfce4-terminal sshed into ubuntu server. not sure what TERM is. I did this the other day now it is inaccessible.
+2019-09-28 06:51:21	R2robot	oh.. well can't troubleshoot if you can't get to it :D
+2019-09-28 06:52:57	xeon	i am trying to install tmux locally in opensuse but unsuccessful
+2019-09-28 06:58:04	R2robot	never used opensuse.. so not sure how to help there
+2019-09-28 07:00:27	<<	jaeckel (~jaeckel@unaffiliated/jaeckel) has quit (Ping timeout: 245 seconds)
+2019-09-28 07:03:07	>>	elphe (~cockatoo@124.191.70.116) has joined #tmux
+2019-09-28 07:20:52	<<	elphe (~cockatoo@124.191.70.116) has quit (Ping timeout: 245 seconds)
+2019-09-28 07:22:38	<<	diniwed (~gavron@85.203.20.41) has quit (Ping timeout: 276 seconds)
+2019-09-28 07:24:52	>>	jaeckel (~jaeckel@unaffiliated/jaeckel) has joined #tmux
+2019-09-28 07:26:54	<<	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-09-28 07:28:58	>>	xcm (~xcm@ipa210.225.tellas.gr) has joined #tmux
+2019-09-28 07:33:35	<<	cliluw (~cliluw@unaffiliated/cliluw) has quit (Read error: Connection reset by peer)
+2019-09-28 07:37:17	>>	elphe (~cockatoo@124.191.70.116) has joined #tmux
+2019-09-28 07:37:19	xeon	R2robot: now tmux installed locally. xfce4-terminal, TERM=xterm-256color. still same issue with vim
+2019-09-28 07:38:00	R2robot	have you tried with somethign other than xfce terminal?
+2019-09-28 07:41:54	xeon	tried xterm. same thing.
+2019-09-28 07:42:55	xeon	both have issue with linereturn. ENTER does not work unless NUMLOCK is on
+2019-09-28 07:44:13	xeon	the issue disappear if exited from tmux
+2019-09-28 08:00:07	xeon	R2robot: just tried 'screen' does not have this issue.
+2019-09-28 08:00:32	<<	crose (~weechat@2001:41d0:fe1d:5300:3512:16d2:5d96:3072) has quit (Quit: WeeChat 2.6-dev)
+2019-09-28 08:00:39	xeon	so 'screen' is more builtin than tmux
+2019-09-28 08:00:52	xeon	i guess it is keymapping issue?
+2019-09-28 08:09:57	R2robot	try screen-256color for your TERM setting
+2019-09-28 08:10:04	R2robot	just out of curiosity
+2019-09-28 08:24:37	<<	elphe (~cockatoo@124.191.70.116) has quit (Ping timeout: 245 seconds)
+2019-09-28 08:31:07	>>	gareppa (~gareppa@unaffiliated/gareppa) has joined #tmux
+2019-09-28 08:34:18	>>	elphe (~cockatoo@124.191.70.116) has joined #tmux
+2019-09-28 08:42:37	>>	tdy1 (~tdy@unaffiliated/tdy) has joined #tmux
+2019-09-28 08:52:07	<<	elphe (~cockatoo@124.191.70.116) has quit (Ping timeout: 245 seconds)
+2019-09-28 08:53:02	>>	tdy2 (~tdy@unaffiliated/tdy) has joined #tmux
+2019-09-28 08:54:12	<<	tdy1 (~tdy@unaffiliated/tdy) has quit (Ping timeout: 245 seconds)
+2019-09-28 09:04:51	<<	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-09-28 09:05:32	<<	Boohbah (~Boohbah@gateway/tor-sasl/boohbah) has quit (Ping timeout: 260 seconds)
+2019-09-28 09:05:35	>>	xcm (~xcm@ipa210.225.tellas.gr) has joined #tmux
+2019-09-28 09:05:51	>>	plexigras (plexigras@gateway/vpn/privateinternetaccess/plexigras) has joined #tmux
+2019-09-28 09:12:21	>>	elphe (~cockatoo@124.191.70.116) has joined #tmux
+2019-09-28 09:28:57	<<	elphe (~cockatoo@124.191.70.116) has quit (Ping timeout: 240 seconds)
+2019-09-28 09:30:05	●	tdy2 is now known as tdy
+2019-09-28 09:33:44	whereistejas	Hey, folks! I am using irssi inside tmux. However, I am unable to scroll in irssi, since pressing page up or page down changes windows in tmux
+2019-09-28 09:33:56	whereistejas	Can someone tell me how to unbind those keys?
+2019-09-28 09:45:57	xeon	R2robot: same
+2019-09-28 09:46:03	whereistejas	Hey, I figured it out
+2019-09-28 09:46:12	whereistejas	the command is /window hidelevel
+2019-09-28 09:46:34	whereistejas	oops... wrong channel
+2019-09-28 09:46:40	whereistejas	sorry, folks!
+2019-09-28 09:50:44	>>	elphe (~cockatoo@124.191.70.116) has joined #tmux
+2019-09-28 09:51:27	whereistejas	I tried the following settings:
+2019-09-28 09:51:27	whereistejas	unbind Pageup
+2019-09-28 09:51:28	whereistejas	unbind Pagedown
+2019-09-28 09:51:41	whereistejas	But, it doesn't seem to work
+2019-09-28 09:54:17	R2robot	xeon: do you have default terminal set in your tmux config as well?
+2019-09-28 09:54:56	R2robot	set -g default-terminal "screen-256color"
+2019-09-28 09:56:37	<<	plexigras (plexigras@gateway/vpn/privateinternetaccess/plexigras) has quit (Ping timeout: 240 seconds)
+2019-09-28 09:56:49	xeon	R2robot: i dont have a tmux config file
+2019-09-28 09:57:01	R2robot	O_O
+2019-09-28 09:57:12	xeon	where is it?
+2019-09-28 09:57:18	R2robot	~/.tmux.conf
+2019-09-28 09:57:44	xeon	maybe that is the reason
+2019-09-28 09:58:01	xeon	where can i get a default copy?
+2019-09-28 09:58:13	R2robot	for now just create one and put that line in it
+2019-09-28 10:00:28	xeon	same
+2019-09-28 10:00:59	R2robot	did you restart tmux?
+2019-09-28 10:01:04	xeon	yes
+2019-09-28 10:01:17	R2robot	how?
+2019-09-28 10:01:26	xeon	quit tmux
+2019-09-28 10:01:33	xeon	then tmux again
+2019-09-28 10:01:48	whereistejas	xeon: You will have to do "tmux kill-server"
+2019-09-28 10:02:59	xeon	whereistejas: it is the only instance/client, if quit, the server should quit also.
+2019-09-28 10:03:17	xeon	there is no tmux after exiting the last tmux window
+2019-09-28 10:03:42	whereistejas	Yes, but tmux kill-server buries all doubts
+2019-09-28 10:03:48	R2robot	^
+2019-09-28 10:04:06	>>	Fats (fats@gateway/vpn/privateinternetaccess/fats) has joined #tmux
+2019-09-28 10:04:26	xeon	did that. it says "no server running on /run/tmux/1000/default"
+2019-09-28 10:05:15	R2robot	well the only thing I can suggest at this point is experimenting with term settings until you find one that works
+2019-09-28 10:05:37	xeon	what are the possible term settings?
+2019-09-28 10:05:58	R2robot	you'd have to check  your terminfo
+2019-09-28 10:06:01	whereistejas	screen, tmux, screen-256color, tmux-256color
+2019-09-28 10:08:23	<<	jlf (~user@pdpc/supporter/active/jlf) has quit (Ping timeout: 276 seconds)
+2019-09-28 10:08:35	>>	tdy1 (~tdy@unaffiliated/tdy) has joined #tmux
+2019-09-28 10:09:39	<<	tdy (~tdy@unaffiliated/tdy) has quit (Ping timeout: 240 seconds)
+2019-09-28 10:10:29	xeon	upto now, i tried screen, tmux, screen-256color, tmux-256color, xterm, xterm-256color
+2019-09-28 10:11:16	xeon	R2robot: how to check terminfo?
+2019-09-28 10:11:23	whereistejas	xeon: Which terminal are you using?
+2019-09-28 10:11:38	whereistejas	You can find in the ~/.local folder
+2019-09-28 10:11:40	whereistejas	I think
+2019-09-28 10:11:42	xeon	xfce4-terminal
+2019-09-28 10:12:00	whereistejas	why not just try that?
+2019-09-28 10:12:13	whereistejas	But, don't set it from your tmux.conf
+2019-09-28 10:12:20	whereistejas	try setting it from your bashrc
+2019-09-28 10:12:43	whereistejas	(which, btw, I know is the improper way to do it)
+2019-09-28 10:13:34	whereistejas	you can do something like TERM="xfce4-terminal" in your bashrc
+2019-09-28 10:13:37	whereistejas	and source it
+2019-09-28 10:13:43	R2robot	xeon: depends on your system, but if you can list the files that are in your ncurses package, you should see a terminfo directory
+2019-09-28 10:16:42	R2robot	https://termbin.com/uggg   shows options I have
+2019-09-28 10:17:06	R2robot	in my ncurses terminfo
+2019-09-28 10:18:09	xeon	ah xterm-256color works.
+2019-09-28 10:18:21	R2robot	boom
+2019-09-28 10:18:54	R2robot	but you had that set earlier though
+2019-09-28 10:18:56	xeon	the last time i tested with setting TERM shell variable, not changing the line in .tmux.conf
+2019-09-28 10:19:03	R2robot	ahh
+2019-09-28 10:19:12	R2robot	so setting it in tmux.conf worked?
+2019-09-28 10:19:16	xeon	yes
+2019-09-28 10:19:17	R2robot	cool
+2019-09-28 10:19:29	xeon	thank you guys
+2019-09-28 10:19:40	R2robot	（ ^_^）o自自o（^_^ ）
+2019-09-28 10:26:44	whereistejas	xeon: great news!
+2019-09-28 10:26:53	>>	derk0pf (~derk0pf@p5497B80C.dip0.t-ipconnect.de) has joined #tmux
+2019-09-28 10:32:49	xeon	so is there a good .tmux.config i can copy from?
+2019-09-28 10:38:17	avih	start with a simple one. i suggest enabling mouse (set -g mouse on) and possibly adjusting the prefix to your liking, and maybe some colors. it's better to do that yourself after reading the docs than cargo culting stuff you don't understand or need/
+2019-09-28 10:40:33	R2robot	i believe tmux distributes an example config that you could cherry pick from
+2019-09-28 10:41:11	guardian	do you guys know why it takes ~4 seconds to launch tmux -f /dev/null under Cygwin, Windows 10 with 32GB or RAM running on a core i7
+2019-09-28 10:41:51	R2robot	https://imgur.com/KCiYJWp
+2019-09-28 10:42:20	avih	guardian: probably because tmux doesn't delete its socket files after it exits, and on startup if some exist then it takes longer to start, lus probably cygwin inherent slowness in some areas (fork, etc)
+2019-09-28 10:43:03	avih	you can try rm -rf /tmp/tmux-* before you start tmux if you're sure a server is not currently running
+2019-09-28 10:43:37	avih	s/lus/plus/
+2019-09-28 10:44:30	guardian	avih: this is it, thansk!
+2019-09-28 10:44:46	avih	deleted the tmp dir?
+2019-09-28 10:44:54	guardian	rm -rf * :D
+2019-09-28 10:44:59	guardian	yep rm -rf /tmp/tmux*
+2019-09-28 10:45:06	avih	cool
+2019-09-28 10:45:07	R2robot	lol
+2019-09-28 10:45:10	guardian	them tmux -f /dev/null is mostly instant
+2019-09-28 10:45:14	R2robot	rm -rf * ftw!
+2019-09-28 10:45:16	R2robot	:P
+2019-09-28 10:45:39	guardian	so, why doesn't tmux delete its socket file on exit?
+2019-09-28 10:45:54	guardian	I bet there's a sound reason that explains it
+2019-09-28 10:46:09	avih	because it's a hard problem to solve without introducing races on all edge \cases
+2019-09-28 10:47:29	guardian	and what does tmux do with existing socket files if they exist? can't it just ignore them?
+2019-09-28 10:49:29	●	tdy1 is now known as tdy
+2019-09-28 10:49:40	avih	not sure. i guess it reuses them?
+2019-09-28 10:49:57	<<	rkta (~kt@62.113.246.111) has quit (Remote host closed the connection)
+2019-09-28 10:50:15	>>	rkta (~kt@62.113.246.111) has joined #tmux
+2019-09-28 10:50:24	>>	p3pp3rb0x (1976353@unaffiliated/p3pp3rb0x) has joined #tmux
+2019-09-28 10:50:49	<<	rkta (~kt@62.113.246.111) has quit (Remote host closed the connection)
+2019-09-28 10:52:34	guardian	I don't know, will try to read the code
+2019-09-28 10:52:49	guardian	anyways, it feels good starting the day learning something
+2019-09-28 10:52:51	guardian	thank you!
+2019-09-28 10:52:58	avih	guardian: fwiw, not sure which version is supplied by cygwin packages, but tmux build cleanly on cygwin and new tmux versions add useful features and fixes.
+2019-09-28 10:53:17	guardian	it's 2.6
+2019-09-28 10:53:38	avih	pretty old. i recomment switching to master or some RC or tag
+2019-09-28 10:53:53	guardian	I'm curious whether "we" know the marketshare of different versions of tmux running in the wild
+2019-09-28 10:54:39	avih	there's no telemetry if that's what you're asking :) but a safe base bet would be to check the version supplied with debian stable maybe?
+2019-09-28 10:54:48	guardian	Ubuntu 18.04LTS (which is imho a reference) has 2.6.3
+2019-09-28 10:55:52	guardian	debian stretch-backports (old stable backports) and buster (stable) have 2.8
+2019-09-28 10:56:06	avih	anyway, 2.9+ (and ongoing) are considerably better is subtle and less subtle things, i recommend building a more recent version yourself if you're comfortable with building things and you use tmux a lot
+2019-09-28 10:56:09	guardian	I don't really know the BSDs
+2019-09-28 10:56:39	guardian	oh I am comfortable with building. It's just that I share my conf with other people and they use different versions :)
+2019-09-28 10:56:40	avih	s/is/in/
+2019-09-28 10:57:15	avih	well, unless you sync your tmux version, you're going to have incompatibilities anyway... because occasionally there are breaking config changes
+2019-09-28 10:59:17	avih	re 2.6 on cygwin, i think that once 3.0 is out of the door cygwin should update their package. they should have with 2.8, but.. well.. they didn't :)
+2019-09-28 11:00:42	<<	p3pp3rb0x (1976353@unaffiliated/p3pp3rb0x) has quit (Quit: bla)
+2019-09-28 11:23:38	>>	cd (~cd@unaffiliated/cd) has joined #tmux
+2019-09-28 11:24:12	>>	tdy1 (~tdy@unaffiliated/tdy) has joined #tmux
+2019-09-28 11:26:23	<<	tdy (~tdy@unaffiliated/tdy) has quit (Ping timeout: 276 seconds)
+2019-09-28 11:40:18	<<	kstolen (~kStolen@2a00:fa40:2aaa:1::539:82de) has quit (Ping timeout: 245 seconds)
+2019-09-28 11:43:38	>>	rkta (~kt@62.113.246.111) has joined #tmux
+2019-09-28 11:54:32	<<	rkta (~kt@62.113.246.111) has quit (Remote host closed the connection)
+2019-09-28 11:54:54	>>	rkta (~kt@62.113.246.111) has joined #tmux
+2019-09-28 11:58:27	<<	rruizt (~rruizt@83-84-23-124.cable.dynamic.v4.ziggo.nl) has quit (Ping timeout: 240 seconds)
+2019-09-28 12:00:32	>>	ahmedelgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has joined #tmux
+2019-09-28 12:00:42	>>	TauPan (~taupan@p4FC5F3A6.dip0.t-ipconnect.de) has joined #tmux
+2019-09-28 12:05:57	>>	rruizt (~rruizt@83-84-23-124.cable.dynamic.v4.ziggo.nl) has joined #tmux
+2019-09-28 12:08:00	<<	cnsvc (~cnsvc@gateway/tor-sasl/cnsvc) has quit (Ping timeout: 260 seconds)
+2019-09-28 12:11:00	>>	cnsvc (~cnsvc@gateway/tor-sasl/cnsvc) has joined #tmux
+2019-09-28 12:13:08	<<	gxt (~gxt@gateway/tor-sasl/gxt) has quit (Ping timeout: 260 seconds)
+2019-09-28 12:14:08	>>	gxt (~gxt@gateway/tor-sasl/gxt) has joined #tmux
+2019-09-28 12:14:29	<<	xeon (~quassel@218.241.236.34) has quit (Ping timeout: 276 seconds)
+2019-09-28 12:16:27	<<	ahmedelgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has quit (Ping timeout: 240 seconds)
+2019-09-28 12:19:07	>>	ahmedelgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has joined #tmux
+2019-09-28 12:20:27	<<	elphe (~cockatoo@124.191.70.116) has quit (Ping timeout: 240 seconds)
+2019-09-28 12:24:54	>>	elphe (~cockatoo@124.191.70.116) has joined #tmux
+2019-09-28 12:30:04	>>	Fernando-Basso (~FernandoB@131.221.12.60) has joined #tmux
+2019-09-28 12:42:08	<<	immediateVeto (~immediate@165.22.251.151) has quit (Ping timeout: 245 seconds)
+2019-09-28 13:09:29	>>	immediateVeto (~immediate@165.22.251.151) has joined #tmux
+2019-09-28 13:10:32	<<	gxt (~gxt@gateway/tor-sasl/gxt) has quit (Ping timeout: 260 seconds)
+2019-09-28 13:16:17	<<	ahmedelgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has quit (Ping timeout: 240 seconds)
+2019-09-28 13:17:02	>>	ahmedelgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has joined #tmux
+2019-09-28 13:21:04	<<	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-09-28 13:21:58	>>	xcm (~xcm@ipa210.225.tellas.gr) has joined #tmux
+2019-09-28 13:23:17	<<	ahmedelgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has quit (Ping timeout: 240 seconds)
+2019-09-28 13:28:08	>>	ahmedelgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has joined #tmux
+2019-09-28 13:28:43	<<	perrier-jouet (~perrier-j@modemcable012.251-130-66.mc.videotron.ca) has quit (Quit: WeeChat 2.6)
+2019-09-28 13:33:13	>>	ahmed_elgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has joined #tmux
+2019-09-28 13:35:44	<<	ahmedelgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has quit (Ping timeout: 276 seconds)
+2019-09-28 13:38:31	guardian	speaking about 3.0, is it around the corner?
+2019-09-28 13:47:39	<<	tdy1 (~tdy@unaffiliated/tdy) has quit (Ping timeout: 240 seconds)
+2019-09-28 13:51:58	>>	xeon (~quassel@218.241.236.34) has joined #tmux
+2019-09-28 14:15:26	>>	jkwki (~jkwki@p200300CD474F93001E1BB5FFFE7A47F7.dip0.t-ipconnect.de) has joined #tmux
+2019-09-28 14:32:29	>>	perrier-jouet (~perrier-j@modemcable012.251-130-66.mc.videotron.ca) has joined #tmux
+2019-09-28 14:49:13	<<	elphe (~cockatoo@124.191.70.116) has quit (Ping timeout: 268 seconds)
+2019-09-28 14:51:00	<<	jkwki (~jkwki@p200300CD474F93001E1BB5FFFE7A47F7.dip0.t-ipconnect.de) has quit (Quit: WeeChat 2.6)
+2019-09-28 14:57:48	>>	ahmedelgabri (ahmedelgab@gateway/vpn/privateinternetaccess/gabri) has joined #tmux
+2019-09-28 14:58:13	●	irc: disconnected from server
+2019-09-28 19:41:27	>>	penguin1 (~penguin1@unaffiliated/penguin1) has joined #tmux
+2019-09-28 19:41:27	●	Topic for #tmux is "tmux is a terminal multiplexer | http://tmux.github.io/ | https://groups.google.com/forum/#!forum/tmux-users | Man page: http://man.openbsd.org/OpenBSD-current/man1/tmux.1"
+2019-09-28 19:41:27	●	Topic set by nicm (~nicholas@84.13.197.0) on fr., 01 april 2016 00:37:07
+2019-09-28 19:41:27	●	Channel #tmux: 306 nicks (0 ops, 0 voices, 306 normals)
+2019-09-28 19:41:30	●	Channel created on to., 11 juni 2009 21:16:11
+2019-09-28 20:01:54	>>	tdy1 (~tdy@unaffiliated/tdy) has joined #tmux
+2019-09-28 20:03:17	<<	tdy (~tdy@unaffiliated/tdy) has quit (Ping timeout: 240 seconds)
+2019-09-28 20:07:23	>>	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has joined #tmux
+2019-09-28 20:10:12	<<	Fernando-Basso (~FernandoB@131.221.12.102) has quit (Remote host closed the connection)
+2019-09-28 20:11:45	>>	tdy2 (~tdy@unaffiliated/tdy) has joined #tmux
+2019-09-28 20:12:58	<<	tdy1 (~tdy@unaffiliated/tdy) has quit (Ping timeout: 268 seconds)
+2019-09-28 20:16:31	<<	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2019-09-28 20:19:52	<<	Boohbah (~Boohbah@gateway/tor-sasl/boohbah) has quit (Ping timeout: 260 seconds)
+2019-09-28 20:20:05	>>	xcm (~xcm@ipa210.225.tellas.gr) has joined #tmux
+2019-09-28 20:49:47	>>	plexigras (plexigras@gateway/vpn/privateinternetaccess/plexigras) has joined #tmux
+2019-09-28 20:50:10	>>	gareppa (~gareppa@unaffiliated/gareppa) has joined #tmux
+2019-09-28 20:54:37	>>	tdy3 (~tdy@unaffiliated/tdy) has joined #tmux
+2019-09-28 20:56:27	<<	tdy2 (~tdy@unaffiliated/tdy) has quit (Ping timeout: 240 seconds)
+2019-09-28 21:03:37	<<	elphe (~cockatoo@124.191.70.116) has quit (Ping timeout: 240 seconds)
+2019-09-28 21:06:33	>>	elphe (~cockatoo@124.191.70.116) has joined #tmux
+2019-09-28 21:11:17	<<	elphe (~cockatoo@124.191.70.116) has quit (Ping timeout: 240 seconds)
+2019-09-28 21:14:17	<<	ahmed_elgabri (~ahmedelga@ip4da4ec59.direct-adsl.nl) has quit (Ping timeout: 240 seconds)
+2019-09-28 21:16:52	>>	Nokurn (~Nokurn@cpe-108-185-62-246.socal.res.rr.com) has joined #tmux
+2019-09-28 21:17:07	●	irc: disconnected from server

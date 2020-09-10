@@ -1,0 +1,472 @@
+2018-12-19 23:07:47		New key binding (context "default"): meta-meta-OQ => /bar scroll buflist * e
+2018-12-19 23:07:47		New key binding (context "default"): meta-meta-OP => /bar scroll buflist * b
+2018-12-19 23:07:47		New key binding (context "default"): meta-OQ => /bar scroll buflist * +100%
+2018-12-19 23:07:47		New key binding (context "default"): meta-OP => /bar scroll buflist * -100%
+2018-12-19 23:07:47		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, tcl, trigger, xfer
+2018-12-19 23:08:10		fifo: pipe closed
+2019-01-07 01:11:22		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, tcl, trigger, xfer
+2019-01-07 01:11:45	=!=	irc: unable to add temporary server "freenode.org" because the addition of temporary servers with command /connect is currently disabled
+2019-01-07 01:11:45	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2019-01-07 01:12:02	=!=	Too few arguments for command "/server add" (help on command: /help server)
+2019-01-07 01:12:12		[irc]  /server  list|listfull [<name>]
+2019-01-07 01:12:12		                add <name> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2019-01-07 01:12:12		                copy|rename <name> <new_name>
+2019-01-07 01:12:12		                reorder <name> [<name>...]
+2019-01-07 01:12:12		                open <name>|-all [<name>...]
+2019-01-07 01:12:12		                del|keep <name>
+2019-01-07 01:12:12		                deloutq|jump|raw
+2019-01-07 01:12:12		list, add or remove IRC servers
+2019-01-07 01:12:12		    list: list servers (without argument, this list is displayed)
+2019-01-07 01:12:12		listfull: list servers with detailed info for each server
+2019-01-07 01:12:12		     add: add a new server
+2019-01-07 01:12:12		    name: server name, for internal and display use; this name is used to connect to the server (/connect name) and to set server options: irc.server.name.xxx
+2019-01-07 01:12:12		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2019-01-07 01:12:12		   -temp: add a temporary server (not saved)
+2019-01-07 01:12:12		  option: set option for server (for boolean option, value can be omitted)
+2019-01-07 01:12:12		nooption: set boolean option to 'off' (for example: -nossl)
+2019-01-07 01:12:12		    copy: duplicate a server
+2019-01-07 01:12:12		  rename: rename a server
+2019-01-07 01:12:12		 reorder: reorder list of servers
+2019-01-07 01:12:12		    open: open the server buffer without connecting
+2019-01-07 01:12:12		    keep: keep server in config file (for temporary servers only)
+2019-01-07 01:12:12		     del: delete a server
+2019-01-07 01:12:12		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2019-01-07 01:12:12		    jump: jump to server buffer
+2019-01-07 01:12:12		     raw: open buffer with raw IRC data
+2019-01-07 01:12:12		Examples:
+2019-01-07 01:12:12		  /server listfull
+2019-01-07 01:12:12		  /server add freenode chat.freenode.net
+2019-01-07 01:12:12		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2019-01-07 01:12:12		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2019-01-07 01:12:12		  /server copy freenode freenode-test
+2019-01-07 01:12:12		  /server rename freenode-test freenode2
+2019-01-07 01:12:12		  /server reorder freenode2 freenode
+2019-01-07 01:12:12		  /server del freenode
+2019-01-07 01:12:12		  /server deloutq
+2019-01-07 01:12:43		No server
+2019-01-07 01:12:49		No server
+2019-01-07 01:13:18	=!=	Too few arguments for command "/server add" (help on command: /help server)
+2019-01-07 01:38:24		fifo: pipe closed
+2019-01-08 08:24:07		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, tcl, trigger, xfer
+2019-01-08 08:24:11	=!=	irc: unable to add temporary server "chat.freenode.net" because the addition of temporary servers with command /connect is currently disabled
+2019-01-08 08:24:11	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2019-01-08 08:24:39	=!=	Too few arguments for command "/server add" (help on command: /help server)
+2019-01-08 08:25:09		irc: server example added
+2019-01-08 08:25:34		irc: server freenode added
+2019-01-08 08:28:48		Option changed: irc.server.freenode.autoconnect = on  (default if null: off)
+2019-01-08 08:29:02		fifo: pipe closed
+2019-01-08 08:29:05		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, tcl, trigger, xfer
+2019-01-08 08:29:35		fifo: pipe closed
+2019-01-08 09:29:52		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, tcl, trigger, xfer
+2019-01-08 09:30:47		fifo: pipe closed
+2019-01-08 09:30:50		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, tcl, trigger, xfer
+2019-01-08 09:49:01		fifo: pipe closed
+2019-01-08 20:43:47		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, tcl, trigger, xfer
+2019-01-08 23:38:41		fifo: pipe closed
+2019-09-16 19:26:47		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-17 00:32:45		fifo: pipe closed
+2019-09-17 00:33:27		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-18 01:28:11		fifo: pipe closed
+2019-09-18 18:54:09		python scripts loaded: notify_send
+2019-09-18 18:54:09		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-18 19:01:53		python: scripts unloaded
+2019-09-18 19:01:53		fifo: pipe closed
+2019-09-24 11:35:19		python scripts loaded: notify_send
+2019-09-24 11:35:19		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-24 11:35:40	=!=	Error: unknown command "/jmsg" (type /help for help)
+2019-09-24 12:36:42		python: scripts unloaded
+2019-09-24 12:36:42		fifo: pipe closed
+2019-09-25 13:14:59		python scripts loaded: notify_send
+2019-09-25 13:14:59		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-25 22:15:24		python: scripts unloaded
+2019-09-25 22:15:24		fifo: pipe closed
+2019-09-26 20:55:02		python scripts loaded: notify_send
+2019-09-26 20:55:02		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-26 22:01:14	=!=	Error: unknown command "/nicm" (type /help for help)
+2019-09-26 22:01:34	=!=	Error: unknown command "/nicm" (type /help for help)
+2019-09-26 22:07:02		python: scripts unloaded
+2019-09-26 22:07:02		fifo: pipe closed
+2019-09-26 22:09:57		python scripts loaded: notify_send
+2019-09-26 22:09:57		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-26 22:29:17	=!=	Error: unknown command "/quir" (type /help for help)
+2019-09-26 22:29:25		python: scripts unloaded
+2019-09-26 22:29:25		fifo: pipe closed
+2019-09-26 22:29:58		python scripts loaded: notify_send
+2019-09-26 22:29:58		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-26 22:32:40		python: scripts unloaded
+2019-09-26 22:32:40		fifo: pipe closed
+2019-09-26 22:46:11		python scripts loaded: notify_send
+2019-09-26 22:46:11		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-27 01:12:58		python: scripts unloaded
+2019-09-27 01:12:58		fifo: pipe closed
+2019-09-27 18:20:43		python scripts loaded: notify_send
+2019-09-27 18:20:43		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-27 20:04:19		python: scripts unloaded
+2019-09-27 20:04:19		fifo: pipe closed
+2019-09-28 02:08:58		python scripts loaded: notify_send
+2019-09-28 02:08:58		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-28 14:58:13		python: scripts unloaded
+2019-09-28 14:58:13		fifo: pipe closed
+2019-09-28 14:58:43		python scripts loaded: notify_send
+2019-09-28 14:58:43		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-28 14:59:09		python: scripts unloaded
+2019-09-28 14:59:09		fifo: pipe closed
+2019-09-28 14:59:23		python scripts loaded: notify_send
+2019-09-28 14:59:23		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-28 15:10:22		python: scripts unloaded
+2019-09-28 15:10:22		fifo: pipe closed
+2019-09-28 19:27:08		python scripts loaded: notify_send
+2019-09-28 19:27:08		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-28 19:28:50		python: scripts unloaded
+2019-09-28 19:28:50		fifo: pipe closed
+2019-09-28 19:39:31		python scripts loaded: notify_send
+2019-09-28 19:39:31		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-28 21:17:07		python: scripts unloaded
+2019-09-28 21:17:07		fifo: pipe closed
+2019-09-30 21:28:14		python scripts loaded: notify_send
+2019-09-30 21:28:14		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-09-30 23:37:33		python: scripts unloaded
+2019-09-30 23:37:33		fifo: pipe closed
+2019-10-01 04:01:40		python scripts loaded: notify_send
+2019-10-01 04:01:40		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-01 13:02:24		python: scripts unloaded
+2019-10-01 13:02:24		fifo: pipe closed
+2019-10-04 18:08:35		python scripts loaded: notify_send
+2019-10-04 18:08:35		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-04 18:32:30		python: scripts unloaded
+2019-10-04 18:32:30		fifo: pipe closed
+2019-10-04 18:32:57		python scripts loaded: notify_send
+2019-10-04 18:32:57		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-04 21:27:54		python: scripts unloaded
+2019-10-04 21:27:54		fifo: pipe closed
+2019-10-06 21:35:04		python scripts loaded: notify_send
+2019-10-06 21:35:04		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-07 00:13:24		python: scripts unloaded
+2019-10-07 00:13:24		fifo: pipe closed
+2019-10-07 12:19:43		python scripts loaded: notify_send
+2019-10-07 12:19:43		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-07 12:43:05		python: scripts unloaded
+2019-10-07 12:43:05		fifo: pipe closed
+2019-10-07 16:03:57		python scripts loaded: notify_send
+2019-10-07 16:03:57		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-07 16:50:58		python: scripts unloaded
+2019-10-07 16:50:58		fifo: pipe closed
+2019-10-08 10:20:42		python scripts loaded: notify_send
+2019-10-08 10:20:42		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-08 10:22:24		python: stdout/stderr (notify_send): Failed to send the notification via notify-send (reason: "CalledProcessError: Command '['notify-send', '--app-name', 'weechat', '--icon', '/usr/share/icons/hicolor/32x32/apps/weechat.png', '--hint', 'string:desktop-entry:weechat', '--expire-time', '5000', '--hint', 'int:transient:1', '--urgency', 'normal', '--', 'freenode', 'NickServ: NickServ (NickServ@services.): You are already logged in a[..]']' died with <Signals.SIGTERM: 15>."). Ensure that you have notify-send installed in your system.
+2019-10-08 10:22:24		python: scripts unloaded
+2019-10-08 10:22:24		fifo: pipe closed
+2019-10-08 10:23:38		python scripts loaded: notify_send
+2019-10-08 10:23:38		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-08 11:28:33		python: scripts unloaded
+2019-10-08 11:28:33		fifo: pipe closed
+2019-10-08 18:00:23		python scripts loaded: notify_send
+2019-10-08 18:00:23		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-08 18:19:35		python: scripts unloaded
+2019-10-08 18:19:35		fifo: pipe closed
+2019-10-09 00:28:56		python scripts loaded: notify_send
+2019-10-09 00:28:56		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-09 00:29:09		python: scripts unloaded
+2019-10-09 00:29:09		fifo: pipe closed
+2019-10-09 00:29:26		python scripts loaded: notify_send
+2019-10-09 00:29:26		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-09 00:29:40		python: scripts unloaded
+2019-10-09 00:29:40		fifo: pipe closed
+2019-10-09 11:22:56		python scripts loaded: notify_send
+2019-10-09 11:22:56		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-09 11:23:58		python: scripts unloaded
+2019-10-09 11:23:58		fifo: pipe closed
+2019-10-09 11:24:06		python scripts loaded: notify_send
+2019-10-09 11:24:06		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-09 11:27:16		python: scripts unloaded
+2019-10-09 11:27:16		fifo: pipe closed
+2019-10-09 11:27:32		python scripts loaded: notify_send
+2019-10-09 11:27:32		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-09 11:32:39		python: scripts unloaded
+2019-10-09 11:32:39		fifo: pipe closed
+2019-10-09 16:53:39		python scripts loaded: notify_send
+2019-10-09 16:53:39		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-09 16:53:51		python: scripts unloaded
+2019-10-09 16:53:51		fifo: pipe closed
+2019-10-09 16:55:12		python scripts loaded: notify_send
+2019-10-09 16:55:12		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-09 16:55:54		python: scripts unloaded
+2019-10-09 16:55:54		fifo: pipe closed
+2019-10-12 10:36:46		python scripts loaded: notify_send
+2019-10-12 10:36:46		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-12 10:38:05	⚠	Error: unknown command "/how" (type /help for help)
+2019-10-12 10:38:15	⚠	Error: unknown command "/how" (type /help for help)
+2019-10-12 10:38:32	⚠	Error: unknown command "/how" (type /help for help)
+2019-10-12 10:38:42		python: scripts unloaded
+2019-10-12 10:38:42		fifo: pipe closed
+2019-10-12 12:46:01		python scripts loaded: notify_send
+2019-10-12 12:46:01		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-12 13:38:24		python: scripts unloaded
+2019-10-12 13:38:24		fifo: pipe closed
+2019-10-12 19:52:59		python scripts loaded: notify_send
+2019-10-12 19:52:59		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-12 20:07:48		python: scripts unloaded
+2019-10-12 20:07:48		fifo: pipe closed
+2019-10-13 10:26:01		python scripts loaded: notify_send
+2019-10-13 10:26:01		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-13 10:26:11		python: scripts unloaded
+2019-10-13 10:26:11		fifo: pipe closed
+2019-10-13 10:26:20		python scripts loaded: notify_send
+2019-10-13 10:26:20		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-13 10:32:02		python: scripts unloaded
+2019-10-13 10:32:02		fifo: pipe closed
+2019-10-16 01:46:14		python scripts loaded: notify_send
+2019-10-16 01:46:14		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-16 01:46:40		python: scripts unloaded
+2019-10-16 01:46:40		fifo: pipe closed
+2019-10-29 13:02:05		python scripts loaded: notify_send
+2019-10-29 13:02:05		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-29 13:09:36		python: scripts unloaded
+2019-10-29 13:09:36		fifo: pipe closed
+2019-10-30 15:13:22		python scripts loaded: notify_send
+2019-10-30 15:13:22		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-30 15:20:01		python: scripts unloaded
+2019-10-30 15:20:01		fifo: pipe closed
+2019-10-30 15:24:45		python scripts loaded: notify_send
+2019-10-30 15:24:45		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-30 16:03:22		python: scripts unloaded
+2019-10-30 16:03:22		fifo: pipe closed
+2019-10-31 15:02:50		python scripts loaded: notify_send
+2019-10-31 15:02:50		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-10-31 15:25:42		python: scripts unloaded
+2019-10-31 15:25:42		fifo: pipe closed
+2019-11-01 01:28:49		python scripts loaded: notify_send
+2019-11-01 01:28:49		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-11-01 01:42:54		python: scripts unloaded
+2019-11-01 01:42:54		fifo: pipe closed
+2019-11-01 01:45:12		python scripts loaded: notify_send
+2019-11-01 01:45:12		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2019-11-01 01:50:30		python: scripts unloaded
+2019-11-01 01:50:30		fifo: pipe closed
+2019-11-16 20:32:02		python scripts loaded: notify_send
+2019-11-16 20:32:02		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2019-11-16 20:47:57		python: scripts unloaded
+2019-11-16 20:47:57		fifo: pipe closed
+2019-11-17 13:22:09		python scripts loaded: notify_send
+2019-11-17 13:22:09		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2019-11-17 14:01:37		python: scripts unloaded
+2019-11-17 14:01:37		fifo: pipe closed
+2019-11-19 12:55:17		python scripts loaded: notify_send
+2019-11-19 12:55:17		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-01-31 12:43:43	⚠	Warning: /home/penguin1/.weechat/irc.conf, line 91: unknown option for section "network": channel_encode = off
+2020-01-31 12:43:43		python scripts loaded: notify_send
+2020-01-31 12:43:43		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-01-31 21:42:24		python: scripts unloaded
+2020-01-31 21:42:24		fifo: pipe closed
+2020-02-03 17:11:48		python scripts loaded: notify_send
+2020-02-03 17:11:48		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-02-03 20:00:48		python: scripts unloaded
+2020-02-03 20:00:48		fifo: pipe closed
+2020-02-06 11:51:41		python scripts loaded: notify_send
+2020-02-06 11:51:41		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-02-06 12:08:03		python: scripts unloaded
+2020-02-06 12:08:03		fifo: pipe closed
+2020-02-08 15:45:56		python scripts loaded: notify_send
+2020-02-08 15:45:56		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-02-08 16:11:58		python: scripts unloaded
+2020-02-08 16:11:59		fifo: pipe closed
+2020-02-08 17:02:20		python scripts loaded: notify_send
+2020-02-08 17:02:20		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-02-08 20:43:21		python: scripts unloaded
+2020-02-08 20:43:21		fifo: pipe closed
+2020-02-11 17:22:51		python scripts loaded: notify_send
+2020-02-11 17:22:51		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-02-11 17:29:19		python: scripts unloaded
+2020-02-11 17:29:19		fifo: pipe closed
+2020-02-15 15:10:11		python scripts loaded: notify_send
+2020-02-15 15:10:11		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-02-15 15:31:34		python: scripts unloaded
+2020-02-15 15:31:34		fifo: pipe closed
+2020-02-18 17:43:13		python scripts loaded: notify_send
+2020-02-18 17:43:13		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-02-18 17:59:21		python: scripts unloaded
+2020-02-18 17:59:22		fifo: pipe closed
+2020-02-19 20:00:32		python scripts loaded: notify_send
+2020-02-19 20:00:32		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-02-19 22:28:15		python: scripts unloaded
+2020-02-19 22:28:15		fifo: pipe closed
+2020-02-28 22:40:01		python scripts loaded: notify_send
+2020-02-28 22:40:01		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-02-28 23:01:55		python: scripts unloaded
+2020-02-28 23:01:55		fifo: pipe closed
+2020-02-29 12:51:28		python scripts loaded: notify_send
+2020-02-29 12:51:28		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-02-29 12:51:39		python: scripts unloaded
+2020-02-29 12:51:39		fifo: pipe closed
+2020-03-06 23:18:22		python scripts loaded: notify_send
+2020-03-06 23:18:22		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-03-06 23:24:49		python: scripts unloaded
+2020-03-06 23:24:49		fifo: pipe closed
+2020-03-06 23:24:54		python scripts loaded: notify_send
+2020-03-06 23:24:54		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-03-06 23:48:22		python: scripts unloaded
+2020-03-06 23:48:22		fifo: pipe closed
+2020-03-12 13:46:52		python scripts loaded: notify_send
+2020-03-12 13:46:52		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-03-13 10:03:04		python: scripts unloaded
+2020-03-13 10:03:05		fifo: pipe closed
+2020-03-14 00:34:49		python scripts loaded: notify_send
+2020-03-14 00:34:49		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-03-14 00:37:17	⚠	Error: unknown command "/#vim" (type /help for help)
+2020-03-14 00:37:23		[core]
+2020-03-14 00:37:23		  away     buffer   command  debug    filter   history  key      mouse    plugin   proxy    reload   save     set      upgrade  version  window 
+2020-03-14 00:37:23		  bar      color    cursor   eval     help     input    layout   mute     print    quit     repeat   secure   unset    uptime   wait   
+2020-03-14 00:37:23		[lua]
+2020-03-14 00:37:23		  lua
+2020-03-14 00:37:23		[logger]
+2020-03-14 00:37:23		  logger
+2020-03-14 00:37:23		[fset]
+2020-03-14 00:37:23		  fset
+2020-03-14 00:37:23		[trigger]
+2020-03-14 00:37:23		  trigger
+2020-03-14 00:37:23		[relay]
+2020-03-14 00:37:23		  relay
+2020-03-14 00:37:23		[guile]
+2020-03-14 00:37:23		  guile
+2020-03-14 00:37:23		[spell]
+2020-03-14 00:37:23		  spell
+2020-03-14 00:37:23		[alias]
+2020-03-14 00:37:23		  AAWAY    AME      ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MSGBUF   N        REDRAW   SIGNOFF  UB       V        WC       WII    
+2020-03-14 00:37:23		  alias    AMSG     BEEP     C        CL       EXIT     J        KB       M        MUB      Q        SAY      T        UMODE    W        WI       WW     
+2020-03-14 00:37:23		[ruby]
+2020-03-14 00:37:23		  ruby
+2020-03-14 00:37:23		[fifo]
+2020-03-14 00:37:23		  fifo
+2020-03-14 00:37:23		[tcl]
+2020-03-14 00:37:23		  tcl
+2020-03-14 00:37:23		[exec]
+2020-03-14 00:37:23		  exec
+2020-03-14 00:37:23		[python]
+2020-03-14 00:37:23		  python
+2020-03-14 00:37:23		[script]
+2020-03-14 00:37:23		  script
+2020-03-14 00:37:23		[buflist]
+2020-03-14 00:37:23		  buflist
+2020-03-14 00:37:23		[perl]
+2020-03-14 00:37:23		  perl
+2020-03-14 00:37:23		[irc]
+2020-03-14 00:37:23		  admin       connect     devoice     invite      links       motd        op          quiet       sajoin      service     time        users       whois     
+2020-03-14 00:37:23		  allchan     ctcp        die         ison        list        msg         oper        quote       samode      servlist    topic       version     whowas    
+2020-03-14 00:37:23		  allpv       cycle       disconnect  join        lusers      names       part        reconnect   sanick      squery      trace       voice     
+2020-03-14 00:37:23		  allserv     dcc         halfop      kick        map         nick        ping        rehash      sapart      squit       unban       wallchops 
+2020-03-14 00:37:23		  ban         dehalfop    ignore      kickban     me          notice      pong        remove      saquit      stats       unquiet     wallops   
+2020-03-14 00:37:23		  cap         deop        info        kill        mode        notify      query       restart     server      summon      userhost    who       
+2020-03-14 00:37:23		[charset]
+2020-03-14 00:37:23		  charset
+2020-03-14 00:37:23		[xfer]
+2020-03-14 00:37:23		  me  xfer
+2020-03-14 00:38:59		python: scripts unloaded
+2020-03-14 00:38:59		fifo: pipe closed
+2020-03-14 13:12:03		python scripts loaded: notify_send
+2020-03-14 13:12:03		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-03-14 14:32:54		python: scripts unloaded
+2020-03-14 14:32:54		fifo: pipe closed
+2020-03-19 18:01:06		python scripts loaded: notify_send
+2020-03-19 18:01:06		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-03-19 18:07:18		python: scripts unloaded
+2020-03-19 18:07:18		fifo: pipe closed
+2020-03-19 18:07:23		python scripts loaded: notify_send
+2020-03-19 18:07:23		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-03-19 19:03:46		python: scripts unloaded
+2020-03-19 19:03:46		fifo: pipe closed
+2020-03-23 03:10:29		python scripts loaded: notify_send
+2020-03-23 03:10:29		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-03-23 04:15:49		python: scripts unloaded
+2020-03-23 04:15:49		fifo: pipe closed
+2020-04-08 10:59:33		python scripts loaded: notify_send
+2020-04-08 10:59:33		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
+2020-04-08 10:59:52		python: scripts unloaded
+2020-04-08 10:59:52		fifo: pipe closed
+2020-04-10 22:58:37		python scripts loaded: notify_send
+2020-04-10 22:58:37		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-04-11 01:45:39		python: scripts unloaded
+2020-04-11 01:45:39		fifo: pipe closed
+2020-04-12 17:31:03		python scripts loaded: notify_send
+2020-04-12 17:31:03		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-04-12 18:17:45		python: scripts unloaded
+2020-04-12 18:17:45		fifo: pipe closed
+2020-04-12 19:11:27		python scripts loaded: notify_send
+2020-04-12 19:11:27		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/plugins.conf"
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/xfer.conf"
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/charset.conf"
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/irc.conf"
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/perl.conf"
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/buflist.conf"
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/script.conf"
+2020-04-12 22:52:36		python: scripts unloaded
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/python.conf"
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/exec.conf"
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/tcl.conf"
+2020-04-12 22:52:36		fifo: pipe closed
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/fifo.conf"
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/ruby.conf"
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/alias.conf"
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/guile.conf"
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/relay.conf"
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/trigger.conf"
+2020-04-12 22:52:36	⚠	Error writing configuration file "/home/penguin1/.weechat/fset.conf"
+2020-05-09 15:19:48		python scripts loaded: notify_send
+2020-05-09 15:19:48		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-05-09 15:25:01		python: scripts unloaded
+2020-05-09 15:25:01		fifo: pipe closed
+2020-05-10 11:58:28		python scripts loaded: notify_send
+2020-05-10 11:58:28		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-05-10 12:00:15		python: scripts unloaded
+2020-05-10 12:00:15		fifo: pipe closed
+2020-05-10 12:00:31		python scripts loaded: notify_send
+2020-05-10 12:00:31		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-05-10 12:06:25		python: scripts unloaded
+2020-05-10 12:06:25		fifo: pipe closed
+2020-05-10 12:10:08		python scripts loaded: notify_send
+2020-05-10 12:10:08		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-05-10 12:10:59		python: scripts unloaded
+2020-05-10 12:10:59		fifo: pipe closed
+2020-05-10 12:11:39		python scripts loaded: notify_send
+2020-05-10 12:11:39		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-05-10 12:12:36		python: scripts unloaded
+2020-05-10 12:12:36		fifo: pipe closed
+2020-07-12 16:49:19		python scripts loaded: notify_send
+2020-07-12 16:49:19		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-07-12 16:51:38		python: scripts unloaded
+2020-07-12 16:51:38		fifo: pipe closed
+2020-07-15 21:49:05		python scripts loaded: notify_send
+2020-07-15 21:49:05		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-07-15 22:12:34		python: scripts unloaded
+2020-07-15 22:12:34		fifo: pipe closed
+2020-07-21 12:40:29		New key binding (context "default"): meta-B => /buflist toggle
+2020-07-21 12:40:29		python scripts loaded: notify_send
+2020-07-21 12:40:29		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-07-21 12:40:55		python: scripts unloaded
+2020-07-21 12:40:55		fifo: pipe closed
+2020-07-21 12:45:34		python scripts loaded: notify_send
+2020-07-21 12:45:34		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-07-21 12:46:11		python: scripts unloaded
+2020-07-21 12:46:11		fifo: pipe closed
+2020-07-21 12:46:21		python scripts loaded: notify_send
+2020-07-21 12:46:21		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-07-21 12:47:42		python: scripts unloaded
+2020-07-21 12:47:42		fifo: pipe closed
+2020-07-21 12:57:42		python scripts loaded: notify_send
+2020-07-21 12:57:42		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-07-21 12:58:02		python: scripts unloaded
+2020-07-21 12:58:02		fifo: pipe closed
+2020-07-21 23:27:13		python scripts loaded: notify_send
+2020-07-21 23:27:13		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-08-12 23:57:09		python scripts loaded: notify_send
+2020-08-12 23:57:09		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-08-12 23:59:01		python: scripts unloaded
+2020-08-12 23:59:01		fifo: pipe closed
+2020-08-22 17:31:06		python scripts loaded: notify_send
+2020-08-22 17:31:06		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-08-22 17:35:51		python: scripts unloaded
+2020-08-22 17:35:51		fifo: pipe closed
+2020-09-10 03:37:18		python scripts loaded: notify_send
+2020-09-10 03:37:18		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-09-10 03:37:29		python: scripts unloaded
+2020-09-10 03:37:29		fifo: pipe closed

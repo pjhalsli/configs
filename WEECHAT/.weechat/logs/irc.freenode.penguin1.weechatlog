@@ -1,0 +1,8 @@
+2019-09-17 01:25:51	penguin1	 /set trigger.trigger.beep.command "/print -beep;/exec -bg notify-send -i '/usr/share/icons/hicolor/32x32/apps/weechat.png' 'IRC Notification' "${tg_tag_nick}: ${tg_message_nocolor}""
+2019-09-17 01:25:51	penguin1	 /set trigger.trigger.beep.command "/print -beep;/exec -bg notify-send -i '/usr/share/icons/hicolor/32x32/apps/weechat.png' 'IRC Notification' "${tg_tag_nick}: ${tg_message_nocolor}""
+2019-09-18 01:28:11	●	irc: disconnected from server
+2019-09-26 22:32:15	penguin1	he
+2019-09-26 22:32:15	penguin1	he
+2019-09-26 22:32:22	penguin1	er
+2019-09-26 22:32:22	penguin1	er
+2019-09-26 22:32:40	●	irc: disconnected from server
