@@ -1,2 +1,0 @@
-#!/usr/bin/env sh
-updates=$(pacman -Quq | wc -l); echo "%{F#DE9DAC} %{F-} $updates"
