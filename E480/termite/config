@@ -16,13 +16,82 @@ scroll_on_keystroke = true
 urgent_on_bell = true
 scrollback_lines = 10000
 cursor_shape = underline
-browser = qutebrowser
+browser = Firefox
 
 #--- APPEARANCE --- 
 highlight = #2f2f2f
 
 
-font = M+ 1mn bold 10
+
+font = SFMono Nerd Font Regular 10
+
+
+#[colors]
+# mg
+# special
+#foreground      = #f0f0f0
+#foreground_bold = #f0f0f0
+#cursor          = #f0f0f0
+#background      = #1c1b1d
+# black
+#color0  = #303030
+#color8  = #3D3D3D
+# red
+#color1  = #D5BBBC
+#color9  = #DCC7C8
+# green
+#color2  = #BBD5BE
+#color10 = #C7DCCA
+# yellow
+#color3  = #D5D5BB
+#color11 = #C8C7DC
+# blue
+#color4  = #BCBBD5
+#color12 = #C8C7DB
+# magenta
+#color5  = #D5BBD3
+#color13 = #DCC7DB
+# cyan
+#color6  = #BBD5B4
+#color14 = #C7DCDC
+# white
+#color7  = #E7E7E7
+#color15 = #F0F0F0
+
+
+
+
+#[colors]
+# sd
+# special
+#foreground      = #ffffff
+#foreground_bold = #ffffff
+#cursor          = #ffffff
+#background      = #262729
+# black
+#color0  = #686868
+#color8  = #454545
+# red
+#color1  = #eb7685
+#color9  = #eb465c
+# green
+#color2  = #46aab8
+#color10 = #148e9e
+# yellow
+#color3  = #e6bea3
+#color11 = #eb9c67
+# blue
+#color4  = #a3bee6
+#color12 = #4770ad
+# magenta
+#color5  = #a3a3e6
+#color13 = #6c6cb3
+# cyan
+#color6  = #a3cae6
+#color14 = #6c96b3
+# white
+#color7  = #d4d5d9
+#color15 = #b3b4b8
 
 
 
@@ -32,7 +101,7 @@ font = M+ 1mn bold 10
 foreground      = #f0d3c9
 foreground_bold = #f0d3c9
 cursor          = #f0d3c9
-background      = #1C1B1D
+background      = #1c1b1d
 # black
 color0  = #262727
 color8  = #393b3b
@@ -60,129 +129,80 @@ color15 = #f0d3c9
 
 
 
+
 #[colors]
-# Mountaineer
+# PINK delight
+# special
+#foreground      = #f5f5f5
+#foreground_bold = #f5f5f5
+#cursor          = #f5f5f5
+#background      = #28243a
+
+# black
+#color0  = #28243a
+#color8  = #5e5e69
+
+# red
+#color1  = #df7191
+#color9  = #e17291
+
+# green
+#color2  = #81a2be
+#color10 = #81a2be
+
+# yellow
+#color3  = #ad5770
+#color11 = #ad5770
+
+# blue
+#color4  = #81a2be
+#color12 = #81a2be
+
+# magenta
+#color5  = #e17291
+#color13 = #e17291
+
+# cyan
+#color6  = #8abeb7
+#color14 = #8abeb7
+
+# white
+#color7  = #5e5e69
+#color15 = #f5f5f5
+
+
+
+#[colors]
+# mountaineer
 # special
 #foreground      = #f0f0f0
 #foreground_bold = #f0f0f0
 #cursor          = #f0f0f0
 #background      = #050505
-
 # black
 #color0  = #050505
-#color8  = #191919
-
+#color8  = #4D4D4D
 # red
-#color1  = #ac8a8c
-#color9  = #c49ea0
-
+#color1  = #AC8A8C
+#color9  = #C49EA0
 # green
-#color2  = #8aac8b
-#color10 = #9ec49f
-
+#color2  = #8AAC8B
+#color10 = #9EC49F
 # yellow
-#color3  = #aca98a
-#color11 = #c4c19e
-
+#color3  = #ACA98A
+#color11 = #C4C19E
 # blue
-#color4  = #8f8aac
-#color12 = #a39ec4
-
+#color4  = #8F8AAC
+#color12 = #A19FB1
 # magenta
-#color5  = #ac8aac
-#color13 = #c49ec4
-
+#color5  = #AC8AAC
+#color13 = #B19DAB
 # cyan
-#color6  = #8aabac
-#color14 = #9ec3c4
-
+#color6  = #8AABAC
+#color14 = #C49EC4
 # white
 #color7  = #f0f0f0
 #color15 = #fafafa
-
-
-#[colors]
-# GRUVBOX
-# special
-#foreground      = #ebdbb2
-#foreground_bold = #ebdbb2
-#cursor          = #ebdbb2
-#background      = #282828
-
-# black
-#color0  = #282828
-#color8  = #928374
-
-# red
-#color1  = #cc241d
-#color9  = #fb4934
-
-# green
-#color2  = #98971a
-#color10 = #b8bb26
-
-# yellow
-#color3  = #d79921
-#color11 = #fabd2f
-
-# blue
-#color4  = #458588
-#color12 = #83a598
-
-# magenta
-#color5  = #b16286
-#color13 = #d3869b
-
-# cyan
-#color6  = #689d6a
-#color14 = #8ec07c
-
-# white
-#color7  = #a89984
-#color15 = #ebdbb2
-
-
-
-
-#[colors]
-# yuno
-# special
-#foreground      = #c1cada
-#foreground_bold = #c1cada
-#cursor          = #c1cada
-#background      = #080b0f
-
-# black
-#color0  = #161f28
-#color8  = #303d4b
-
-# red
-#color1  = #b34f63
-#color9  = #f4718c
-
-# green
-#color2  = #3e5266
-#color10 = #7097ba
-
-# yellow
-#color3  = #4d6982
-#color11 = #598ab8
-
-# blue
-#color4  = #567ca4
-#color12 = #8dabc8
-
-# magenta
-#color5  = #4c607d
-#color13 = #53769d
-
-# cyan
-#color6  = #a9bdd5
-#color14 = #8093aa
-
-# white
-#color7  = #dde3eb
-#color15 = #dde3eb
 
 
 
@@ -265,89 +285,6 @@ color15 = #f0d3c9
 
 
 #[colors]
-
-# special
-#foreground      = #deded6
-#foreground_bold = #deded6
-#cursor          = #deded6
-#background      = #121417
-
-# black
-#color0  = #2b3135
-#color8  = #4c5356
-
-# red
-#color1  = #8fa1b3
-#color9  = #8fa1b3
-
-# green
-#color2  = #769070
-#color10 = #769070
-
-# yellow
-#color3  = #4f5b66
-#color11 = #4f5b66
-
-# blue
-#color4  = #607a86
-#color12 = #607a86
-
-# magenta
-#color5  = #80757e
-#color13 = #80757e
-
-# cyan
-#color6  = #60867f
-#color14 = #60867f
-
-# white
-#color7  = #deded6
-#color15 = #deded6
-
-
-#[colors]
-# future funk
-# special
-#foreground      = #e1bcc8
-#foreground_bold = #e1bcc8
-#cursor          = #e1bcc8
-#background      = #161219
-
-# black
-#color0  = #1d2c47
-#color8  = #1d2c47
-
-# red
-#color1  = #d2275a
-#color9  = #ff2f6d
-
-# green
-#color2  = #8752ba
-#color10 = #b66efb
-
-# yellow
-#color3  = #e15581
-#color11 = #fb5f90
-
-# blue
-#color4  = #1e59aa
-#color12 = #2c84fc
-
-# magenta
-#color5  = #8752ba
-#color13 = #b56efa
-
-# cyan
-#color6  = #4b76b8
-#color14 = #67a2fd
-
-# white
-#color7  = #e95986
-#color15 = #fb89ad
-
-
-
-#[colors]
 # CHERRY
 # special
 #foreground      = #edeef0
@@ -414,41 +351,6 @@ color15 = #f0d3c9
 # white
 #color7  = #c6c8d1
 #color15 = #d2d4de
-
-
-
-#[colors]
-# mountain solitutde
-# special
-#foreground      = #c6c8d1
-#foreground_bold = #c6c8d1
-#cursor          = #c6c8d1
-#background      = #0B182A
-#background      =rgba(11, 24, 42, 0.8)
-# black
-#color0  = #111111
-#color8  = #111111
-# red
-#color1  = #BA7C7C
-#color9  = #BA7C7C
-# green
-#color2  = #84BA7C
-#color10 = #84BA7C
-# yellow
-#color3  = #C2C978
-#color11 = #C2C978
-# blue
-#color4  = #7C87BA
-#color12 = #7C87BA
-# magenta
-#color5  = #86629B
-#color13 = #86629B
-# cyan
-#color6  = #7CBAAB
-#color14 = #7CBAAB
-# white
-#color7  = #CB86AB
-#color15 = #CB86AB
 
 
 
