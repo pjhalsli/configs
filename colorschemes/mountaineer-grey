@@ -1,0 +1,31 @@
+[colors]
+# mountaneer-grey
+# special
+foreground      = #f0f0f0
+foreground_bold = #f0f0f0
+cursor          = #f0f0f0
+background      = #1c1b1d
+# black
+color0  = #303030
+color8  = #3D3D3D
+# red
+color1  = #D5BBBC
+color9  = #DCC7C8
+# green
+color2  = #BBD5BE
+color10 = #C7DCCA
+# yellow
+color3  = #D5D5BB
+color11 = #C8C7DC
+# blue
+color4  = #BCBBD5
+color12 = #C8C7DB
+# magenta
+color5  = #D5BBD3
+color13 = #DCC7DB
+# cyan
+color6  = #BBD5B4
+color14 = #C7DCDC
+# white
+color7  = #E7E7E7
+color15 = #F0F0F0
