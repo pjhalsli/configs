@@ -1,0 +1,4 @@
+#!/bin/sh
+status="$(mpc status 2>/dev/null | grep -oP '(pause|playing)')"
+[ "$status" = "playing" ] &&
+	echo " %{F#28243A}%{T2}░▒▓█%{T-}%{F-}%{B#28243A}%{F#f0f0f0}   %{F-} $(mpc current)  %{B-}%{F#28243A}%{T2}█▓▒░%{T-}%{F-} "
