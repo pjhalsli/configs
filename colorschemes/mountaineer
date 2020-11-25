@@ -1,0 +1,31 @@
+[colors]
+# mountaineer
+# special
+foreground      = #f0f0f0
+foreground_bold = #f0f0f0
+cursor          = #f0f0f0
+background      = #050505
+# black
+color0  = #050505
+color8  = #4D4D4D
+# red
+color1  = #AC8A8C
+color9  = #C49EA0
+# green
+color2  = #8AAC8B
+color10 = #9EC49F
+# yellow
+color3  = #ACA98A
+color11 = #C4C19E
+# blue
+color4  = #8F8AAC
+color12 = #A19FB1
+# magenta
+color5  = #AC8AAC
+color13 = #B19DAB
+# cyan
+color6  = #8AABAC
+color14 = #C49EC4
+# white
+color7  = #f0f0f0
+color15 = #fafafa
