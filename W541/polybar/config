@@ -7,22 +7,22 @@
 ; ░██     ░░██████  ███  ██     ░██████ ░░████████░███
 ; ░░       ░░░░░░  ░░░  ░░      ░░░░░    ░░░░░░░░ ░░░
 
-;=========;
-; ICEBERG ;
-;=========;
-[colors]
 
-bg = #161821
-fg = ${xrdb:foreground}
-bg-alt = #161821
-fg-alt = ${xrdb:color15}
+
+[colors]
+bg = #00000000
+fg = #F0D3C9
+bg-alt = #1A2026
+fg-alt = #F0D3C9
 secondary = ${xrdb:color4}
 urgent = #FF79C6
 
 [fonts]
-font-0 = "Hack Nerd Font:pixelsize=12;2"
+
+font-0 = "VictorMono Nerd Font:pixelsize=13;2"
 ; For separator
-font-1 = "cherry Regular:pixelsize=13;2"
+font-1 = "Hack Nerd Font:pixelsize=10;2"
+
 
 ;==============;
 ; Bar Settings ;
@@ -30,13 +30,14 @@ font-1 = "cherry Regular:pixelsize=13;2"
 [bar/def]
 monitor = ${env:MONITOR:}
 width = 100%
-height = 30
+height = 36
 fixed-center = true
 
-background = ${colors.bg}
-foreground = ${colors.fg}
+background = #001A2026
+foreground = #F0D3C9 
 
 overline-size = 2
+underline-size = 2
 
 padding-left = 0
 padding-right = 0
@@ -46,9 +47,9 @@ module-margin-right = 0
 
 inherit = fonts
 
-modules-left = bspwm left
+modules-left = rofi bspwm left
 modules-center = mpd
-modules-right = right pkg volume xbacklight network wired-network battery date powermenu
+modules-right = right pkg volume xbacklight network battery date powermenu
 
 
 
@@ -96,26 +97,26 @@ format = <label-state><label-mode>
 
 label-focused = %name%
 
-label-focused-foreground = ${colors.secondary}
-label-focused-background = ${xrdb:color0}
+label-focused-foreground = #ffffff
+label-focused-background = #1A2026
 
-label-focused-overline = ${colors.secondary}
+label-focused-overline = #FB3696
 label-focused-padding = 1
 
 label-occupied = %name%
 label-occupied-padding = 1
-label-occupied-background = ${colors.bg-alt}
-label-occupied-foreground = ${colors.secondary}
+label-occupied-background = #1A2026
+label-occupied-foreground = #94CF95 
 
 label-urgent = %name%
 label-urgent-padding = 1
-label-urgent-background = ${colors.bg-alt}
-label-urgent-foreground = ${colors.urgent}
+label-urgent-background = #FB3696
+label-urgent-foreground = #ffffff
 
 label-empty = %name%
 label-empty-padding = 1
-label-empty-background = ${colors.bg-alt}
-; label-empty-foreground = ${colors.fg-alt}
+label-empty-background = #1A2026
+label-empty-foreground = #777777
 
 
 [module/mpd]
@@ -130,7 +131,7 @@ exec = ~/.config/polybar/mpd
 [module/xbacklight]
 type = internal/xbacklight
 format = <label>
-label = %{F#84A0C6}%{F-} %percentage%%
+label = %{F#F692B2}%{F-} %percentage%%
 
 format-background = ${colors.bg-alt}
 format-padding = 1
@@ -152,8 +153,8 @@ format-disconnected = <label-disconnected>
 format-connected-background = ${colors.bg-alt}
 format-disconnected-background = ${colors.bg-alt}
 
-label-connected = %{F#84A0C6}直  %{F-}%essid%
-label-disconnected = %{F#84A0C6}睊 %{F-}disconnected
+label-connected = %{F#6EC1D6}直  %{F-}%essid%
+label-disconnected = %{F#6EC1D6}睊 %{F-}disconnected
 
 
 ;==============;
@@ -164,8 +165,8 @@ type = internal/date
 interval = 1
 label =  %time%
 
-time = %{F#84A0C6} %{F-} %H:%M
-time-alt = %{F#84A0C6} %{F-} %d-%m-%Y
+time = %{F#7FE4D2} %{F-} %H:%M
+time-alt = %{F#7FE4D2} %{F-} %d-%m-%Y
 
 format-padding = 1
 format-background = ${colors.bg-alt}
@@ -177,13 +178,13 @@ format-background = ${colors.bg-alt}
 type = internal/alsa
 format-volume = <ramp-volume> <label-volume>
 format-muted = <label-muted>
-ramp-volume-foreground = ${colors.secondary}
+ramp-volume-foreground = #7FE4D2
 format-volume-padding = 1
 format-muted-padding = 1
 format-volume-background = ${colors.bg-alt}
-format-muted-background = ${colors.bg-alt}
+format-muted-background = #6998B3
 
-format-muted-prefix = "%{F#84A0C6}婢 %{F-} "
+format-muted-prefix = "%{F#9DDEAF}婢 %{F-} "
 ramp-volume-0 = " "
 ramp-volume-1 = "墳 "
 ramp-volume-2 = " "
@@ -202,9 +203,9 @@ adapter = AC
 full-at = 98
 bar-capacity-width = 10
 
-format-charging    = %{F#84A0C6}<animation-charging>%{F-} <label-charging>
-format-discharging = %{F#84A0C6}<ramp-capacity>%{F-} <label-discharging>
-format-full        = %{F#84A0C6}<ramp-capacity>%{F-} <label-full>
+format-charging    = %{F#AF9DDE}<animation-charging>%{F-} <label-charging>
+format-discharging = %{F#AF9DDE}<ramp-capacity>%{F-} <label-discharging>
+format-full        = %{F#B16286}<ramp-capacity>%{F-} <label-full>
 
 format-full-padding = 1
 format-charging-padding = 1
@@ -241,20 +242,20 @@ animation-charging-framerate = 750
 [module/powermenu]
 type = custom/script
 exec = echo ""
-format-foreground = ${colors.secondary}
+format-foreground = #CD84C8 
 format-background = ${colors.bg-alt}
 click-left = ~/.config/polybar/pmenu.sh
 format-padding = 1
+;exec ~/.config/polybar/pmenu.sh
 
-;=====;
-; pkg ;
+
 ;=====;
 [module/pkg]
 type = custom/script
-format-foreground = ${colors.fg}
+format-foreground = #FB6396
 exec = ~/.config/polybar/pkg
 click-left = ~/.local/bin/update
-format-background = ${colors.bg-alt}
+format-background = #1A2026
 format-padding = 1
 
 ; vim:ft=dosini

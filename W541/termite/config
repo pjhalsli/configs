@@ -16,48 +16,390 @@ scroll_on_keystroke = true
 urgent_on_bell = true
 scrollback_lines = 10000
 cursor_shape = underline
+cursor_blink = on 
 browser = qutebrowser
 
 #--- APPEARANCE --- 
-highlight = #2f2f2f
+#highlight = #2f2f2f
 
-font = SpaceMono Nerd Font Regular 13
-#font = JetBrainsMono Nerd Font Mono Regular 13
-#font = FiraCode Nerd Font Mono Regular 12
+
+font = Cousine Nerd Font Bold 15
+
+#[colors]
+# bliss
+# special
+#foreground      = #f0d3c9
+#foreground_bold = #f0d3c9
+#cursor          = #f0d3c9
+#background      = #1C1B1D
+# black
+#color0  = #262727
+#color8  = #393b3b
+# red
+#color1  = #de9dac
+#color9  = #deaf9d
+# green
+#color2  = #9ddeaf
+#color10 = #9dded0
+# yellow
+#color3  = #ded09d
+#color11 = #ded09d
+# blue
+#color4  = #9dacde
+#color12 = #af9dde
+# magenta
+#color5  = #af9dde
+#color13 = #d09dde
+# cyan
+#color6  = #9dccde
+#color14 = #9dccde
+# white
+#color7  = #434545
+#color15 = #f0d3c9
+
+
 
 
 [colors]
+# E L L Y
+# special
+foreground      = #c0c7ca
+foreground_bold = #c0c7ca
+cursor          = #c0c7ca
+background      = #111a1f
+
+# black
+color0  = #111a1f
+color8  = #868b8d
+
+# red
+color1  = #8d7856
+color9  = #8d7856
+
+# green
+color2  = #798362
+color10 = #798362
+
+# yellow
+color3  = #9b9257
+color11 = #9b9257
+
+# blue
+color4  = #63768a
+color12 = #63768a
+
+# magenta
+color5  = #738c9c
+color13 = #738c9c
+
+# cyan
+color6  = #6998b3
+color14 = #6998b3
+
+# white
+color7  = #c0c7ca
+color15 = #c0c7ca
+
+
+
+
+#[colors]
+# dark
+# special
+#foreground      = #f9f9f9
+#foreground_bold = #f9f9f9
+#cursor          = #f9f9f9
+#background      = #373e4d
+
+# black
+#color0  = #434c5e
+#color8  = #4c566a
+
+# red
+#color1  = #fa5aa4
+#color9  = #fa74b2
+
+# green
+#color2  = #2be491
+#color10 = #44eb9f
+
+# yellow
+#color3  = #fa946e
+#color11 = #faa687
+
+# blue
+#color4  = #63c5ea
+#color12 = #7acbea
+
+# magenta
+#color5  = #cf8ef4
+#color13 = #d8a6f4
+
+# cyan
+#color6  = #89ccf7
+#color14 = #a1d5f7
+
+# white
+#color7  = #f9f9f9
+#color15 = #ffffff
+
+
+
+
+#[colors]
+# amarena wip
+# special
+#foreground      = #ffffff
+#foreground_bold = #ffffff
+#cursor          = #ffffff
+#background      = #1a2026
+
+# black
+#color0  = #242d35
+#color8  = #526170
+
+# red
+#color1  = #fb6396
+#color9  = #f92d72
+
+# green
+#color2  = #94cf95
+#color10 = #6ccb6e
+
+# yellow
+#color3  = #f692b2
+#color11 = #f26190
+
+# blue
+#color4  = #6ec1d6
+#color12 = #4cb9d6
+
+# magenta
+#color5  = #cd84c8
+#color13 = #c269bc
+
+# cyan
+#color6  = #7fe4d2
+#color14 = #58d6bf
+
+# white
+#color7  = #ffffff
+#color15 = #f4f5f2
+
+
+
+#[colors]
+# JWR
+# special
+#foreground      = #ffffff
+#foreground_bold = #ffffff
+#cursor          = #ffffff
+#background      = #1a2026
+
+# black
+#color0  = #333333
+#color8  = #3d3d3d
+
+# red
+#color1  = #8c4665
+#color9  = #bf4d80
+
+# green
+#color2  = #287373
+#color10 = #53a6a6
+
+# yellow
+#color3  = #7c7c99
+#color11 = #9e9ecb
+
+# blue
+#color4  = #395573
+#color12 = #477ab3
+
+# magenta
+#color5  = #5e468c
+#color13 = #7e62b3
+
+# cyan
+#color6  = #31658c
+#color14 = #6096bf
+
+# white
+#color7  = #899ca1
+#color15 = #c0c0c0
+
+
+#[colors]
+# Mountaineer
+# special
+#foreground      = #f0f0f0
+#foreground_bold = #f0f0f0
+#cursor          = #f0f0f0
+#background      = #1a2026
+
+# black
+#color0  = #050505
+#color8  = #191919
+# red
+#color1  = #ac8a8c
+#color9  = #c49ea0
+# green
+#color2  = #8aac8b
+#color10 = #9ec49f
+# yellow
+#color3  = #aca98a
+#color11 = #c4c19e
+# blue
+#color4  = #8f8aac
+#color12 = #a39ec4
+# magenta
+#color5  = #ac8aac
+#color13 = #c49ec4
+# cyan
+#color6  = #8aabac
+#color14 = #9ec3c4
+# white
+#color7  = #f0f0f0
+#color15 = #fafafa
+
+
+
+#[colors]
+# DARKMACHINE
+# special
+#foreground      = #c0c0c0
+#foreground_bold = #c0c0c0
+#cursor          = #c0c0c0
+#background      = #121212
+
+# black
+#color0  = #080808
+#color8  = #36393f
+# red
+#color1  = #515978
+#color9  = #778099
+# green
+#color2  = #3ea28d
+#color10 = #71c4ba
+# yellow
+#color3  = #4dc5ce
+#color11 = #5e767f
+# blue
+#color4  = #6ea2a5
+#color12 = #6abdc1
+# magenta
+#color5  = #a8a8a8
+#color13 = #4e4d80
+# cyan
+#color6  = #558188
+#color14 = #4fc8ce
+# white
+#color7  = #c0c0c0
+#color15 = #a6a8aa
+
+
+
+#[colors]
+# frost
+# special
+#foreground      = #9bbbc6
+#foreground_bold = #9bbbc6
+#cursor          = #9bbbc6
+#background      = #1c1c23
+
+# black
+#color0  = #323246
+#color8  = #323246
+# red
+#color1  = #5a7882
+#color9  = #5a7882
+# green
+#color2  = #8c8ca0
+#color10 = #8c8ca0
+# yellow
+#color3  = #1e828c
+#color11 = #1e828c
+# blue
+#color4  = #3c788c
+#color12 = #3c788c
+# magenta
+#color5  = #6ea0b4
+#color13 = #6ea0b4
+# cyan
+#color6  = #6e8ca0
+##color14 = #6e8ca0
+# white
+#color7  = #96bec8
+#color15 = #96bec8
+
+
+#[colors]
+# CHERRY
+# special
+#foreground      = #edeef0
+#foreground_bold = #edeef0
+#cursor          = #edeef0
+#background      = #102029
+# black
+#color0  = #102029
+#color8  = #0e374b
+# red
+#color1  = #c9647e
+#color9  = #d87e8f
+# green
+#color2  = #7caba3
+#color10 = #add4cf
+# yellow
+#color3  = #c7c8b7
+#color11 = #ebdecd
+# blue
+#color4  = #71aac5
+#color12 = #a7cbe3
+# magenta
+#color5  = #f4adb1
+#color13 = #f8cbce
+# cyan
+#color6  = #7cbbc0
+#color14 = #a5d3d9
+# white
+#color7  = #d9dbe3
+#color15 = #edeef0
+
+
+
+
+#[colors]
 #  I C E B E R G
 # special
-foreground      = #c6c8d1
-foreground_bold = #c6c8d1
-cursor          = #c6c8d1
-background      = #161821
+#foreground      = #c6c8d1
+#foreground_bold = #c6c8d1
+#cursor          = #c6c8d1
+#background      = #161821
 #background      =rgba(22, 24, 33, 0.7)
 # black
-color0  = #161821
-color8  = #6b7089
+#color0  = #22262e
+#color8  = #6b7089
 # red
-color1  = #e27878
-color9  = #e98989
+#color1  = #e27878
+#color9  = #e98989
 # green
-color2  = #b4be82
-color10 = #c0ca8e
+#color2  = #b4be82
+#color10 = #c0ca8e
 # yellow
-color3  = #e2a478
-color11 = #e9b189
+#color3  = #e2a478
+#color11 = #e9b189
 # blue
-color4  = #84a0c6
-color12 = #91acd1
+#color4  = #84a0c6
+#color12 = #91acd1
 # magenta
-color5  = #a093c7
-color13 = #ada0d3
+#color5  = #a093c7
+#color13 = #ada0d3
 # cyan
-color6  = #89b8c2
-color14 = #95c4ce
+#color6  = #89b8c2
+#color14 = #95c4ce
 # white
-color7  = #c6c8d1
-color15 = #d2d4de
+#color7  = #c6c8d1
+#color15 = #d2d4de
 
 
 

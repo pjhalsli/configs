@@ -16,7 +16,8 @@ $HOME/.config/polybar/launch.sh
 
 # Wallpaper
 #hsetroot -solid '#4d5a60' &
-feh --bg-fill Bilder/wp/stones.png
+feh --bg-fill Bilder/wp/wall.jpg
+#nitrogen --restore &
 #bwall &
 
 
@@ -25,7 +26,12 @@ xset +fp ~/.local/share/fonts &
 xset fp rehash &
 xset fp+ /usr/share/fonts/bitmap &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d  I II III IV V VI VII VIII IX X
+
+#bspc monitor -d I 
+#bspc monitor DP2-1 II III IV 
+#bspc monitor DP2-2 V VI VII
+#bspc monitor DVI VIII IX X
 
 # appearance  
 bspc config border_width 4
