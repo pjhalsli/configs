@@ -1,8 +1,0 @@
-VteTerminal, vte-terminal {
-padding: 2px;
-}
-.termite {
-  padding: 8px;
-}
-
-@import 'colors.css';

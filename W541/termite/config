@@ -9,19 +9,36 @@
 
 [options]
 allow_bold = true
+audible_bell = false
+bold_is_bright = true
+browser = firefox
 clickable_url = true
 
-mouse_autohide = true 
+cursor_shape = underline
+cursor_blink = on 
+cell_height_scale = 1.0
+cell_width_scale = 1.0
+dynamic_title = true
+
+fullscreen = true
+filter_unmatched_urls = true
+highlight = #30343e
+hyperlinks = false
+icon_name = terminal
+
+mouse_autohide = true
 scroll_on_keystroke = true
 urgent_on_bell = true
 scrollback_lines = 10000
-cursor_shape = underline
-cursor_blink = on 
-browser = qutebrowser
+scroll_on_output = false
+
+search_wrap = true
+size_hints = false
+scrollbar = off
+visual_bell = true
+
 
 #--- APPEARANCE --- 
-#highlight = #2f2f2f
-
 
 font = Cousine Nerd Font Bold 15
 
