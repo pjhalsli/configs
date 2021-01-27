@@ -1,0 +1,31 @@
+#[colors]
+# dogrun
+# special
+#foreground      = #9ea3c0
+#foreground_bold = #9ea3c0
+#cursor          = #9ea3c0
+#background      = #232323
+# black
+#color0  = #000000
+#color8  = #5d6872
+# red
+#color1  = #ff6e67
+#color9  = #d5635e
+# green
+#color2  = #7cbe8c
+#color10 = #6ca97a
+# yellow
+#color3  = #f4f99d
+#color11 = #b3c580
+# blue
+#color4  = #929be5
+#color12 = #838cd6
+# magenta
+#color5  = #ff92d0
+#color13 = #ff92d0
+# cyan
+#color6  = #2aacbd
+#color14 = #2aacbd
+# white
+#color7  = #c7c7c7
+#color15 = #ffffff

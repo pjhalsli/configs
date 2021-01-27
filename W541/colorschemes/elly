@@ -1,40 +1,32 @@
-[colors]
-
+#[colors]
+# E L L Y
 # special
-foreground      = #c0c7ca
-foreground_bold = #c0c7ca
-cursor          = #c0c7ca
-background      = #111a1f
-
+#foreground      = #c0c7ca
+#foreground_bold = #c0c7ca
+#cursor          = #c0c7ca
+#background      = #111a1f
 # black
-color0  = #111a1f
-color8  = #738c9c
-
+#color0  = #111a1f
+#color8  = #868b8d
 # red
-color1  = #8d7856
-color9  = #8d7856
-
+#color1  = #8d7856
+#color9  = #8d7856
 # green
-color2  = #6998b3
-color10 = #6998b3
-
+#color2  = #798362
+#color10 = #798362
 # yellow
-color3  = #8d7856
-color11 = #8d7856
-
+#color3  = #9b9257
+#color11 = #9b9257
 # blue
-color4  = #3e4b59
-color12 = #3e4b59
-
+#color4  = #63768a
+#color12 = #63768a
 # magenta
-color5  = #2d3640
-color13 = #2d3640
-
+#color5  = #738c9c
+#color13 = #738c9c
 # cyan
-color6  = #9b9257
-color14 = #9b9257
-
+#color6  = #6998b3
+#color14 = #6998b3
 # white
-color7  = #8d7856
-color15 = #798362
+#color7  = #c0c7ca
+#color15 = #c0c7ca
 

@@ -1,32 +1,32 @@
-[colors]
+#[colors]
 # bliss
 # special
-foreground      = #f0d3c9
-foreground_bold = #f0d3c9
-cursor          = #f0d3c9
-background      = #1C1B1D
+#foreground      = #f0d3c9
+#foreground_bold = #f0d3c9
+#cursor          = #f0d3c9
+#background      = #1C1B1D
 # black
-color0  = #262727
-color8  = #393b3b
+#color0  = #262727
+#color8  = #393b3b
 # red
-color1  = #de9dac
-color9  = #deaf9d
+#color1  = #de9dac
+#color9  = #deaf9d
 # green
-color2  = #9ddeaf
-color10 = #9dded0
+#color2  = #9ddeaf
+#color10 = #9dded0
 # yellow
-color3  = #ded09d
-color11 = #ded09d
+#color3  = #ded09d
+#color11 = #ded09d
 # blue
-color4  = #9dacde
-color12 = #af9dde
+#color4  = #9dacde
+#color12 = #af9dde
 # magenta
-color5  = #af9dde
-color13 = #d09dde
+#color5  = #af9dde
+#color13 = #d09dde
 # cyan
-color6  = #9dccde
-color14 = #9dccde
+#color6  = #9dccde
+#color14 = #9dccde
 # white
-color7  = #434545
-color15 = #f0d3c9
+#color7  = #434545
+#color15 = #f0d3c9
 

@@ -1,31 +1,32 @@
-[colors]
-# mountaineer
+#[colors]
+# Mountaineer
 # special
-foreground      = #f0f0f0
-foreground_bold = #f0f0f0
-cursor          = #f0f0f0
-background      = #050505
+#foreground      = #f0f0f0
+#foreground_bold = #f0f0f0
+#cursor          = #f0f0f0
+#background      = #050505
+
 # black
-color0  = #050505
-color8  = #4D4D4D
+#color0  = #050505
+#color8  = #191919
 # red
-color1  = #AC8A8C
-color9  = #C49EA0
+#color1  = #ac8a8c
+#color9  = #c49ea0
 # green
-color2  = #8AAC8B
-color10 = #9EC49F
+#color2  = #8aac8b
+#color10 = #9ec49f
 # yellow
-color3  = #ACA98A
-color11 = #C4C19E
+#color3  = #aca98a
+#color11 = #c4c19e
 # blue
-color4  = #8F8AAC
-color12 = #A19FB1
+#color4  = #8f8aac
+#color12 = #a39ec4
 # magenta
-color5  = #AC8AAC
-color13 = #B19DAB
+#color5  = #ac8aac
+#color13 = #c49ec4
 # cyan
-color6  = #8AABAC
-color14 = #C49EC4
+#color6  = #8aabac
+#color14 = #9ec3c4
 # white
-color7  = #f0f0f0
-color15 = #fafafa
+#color7  = #f0f0f0
+#color15 = #fafafa

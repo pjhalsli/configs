@@ -1,0 +1,31 @@
+#[colors]
+# hydrangea
+# special
+#foreground      = #aeb8c5
+#foreground_bold = #aeb8c5
+#cursor          = #aeb8c5
+#background      = #1e222c
+# black
+#color0  = #1f2329
+#color8  = #34393f
+# red
+#color1  = #823e3e
+#color9  = #b05353
+# green
+#color2  = #698038
+#color10 = #a0bc65
+# yellow
+#color3  = #a88c24
+#color11 = #e4c374
+# blue
+#color4  = #416d97
+#color12 = #7aa4c9
+# magenta
+#color5  = #5f5484
+#color13 = #887cb2
+# cyan
+#color6  = #53857d
+#color14 = #88b8b0
+# white
+#color7  = #818994
+#color15 = #aeb8c5
