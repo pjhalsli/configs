@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/penguin1/.config/nvim/colors'
 let g:netrw_dirhist_6='/home/penguin1/.config/bashtop/themes'
 let g:netrw_dirhist_5='/home/penguin1/.config/termite'
 let g:netrw_dirhist_4='/home/penguin1/.config/bspwm'

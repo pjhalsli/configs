@@ -4,10 +4,10 @@
  * Copyright: Dave Davenport
  */
 * {
-    background-color:      #282a36;
+    background-color:      #212121;
     border-color:          White;
     text-color:           White;
-    font:            "cherry  13";
+    font:            "VictorMono Nerd Font 15";
 }
 
 #window {
@@ -38,6 +38,6 @@
     padding: 0px 5px;
 }
 #element selected {
-    background-color: #ff5555;
-text-color:     #ffffff;
+    background-color: #E57373;
+text-color:     #000000;
 }

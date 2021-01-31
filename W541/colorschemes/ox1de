@@ -1,0 +1,31 @@
+[colors]
+# OXIDE
+# special
+foreground      = #c8c5ce
+foreground_bold = #c0c5ce
+cursor          = #c0c5ce
+background      = #1c1c1c
+# black
+color0  = #212121
+color8  = #5c5c5c
+# red
+color1  = #e57373
+color9  = #e57373
+# green
+color2  = #a6bc69
+color10 = #a6bc69
+# yellow
+color3  = #fac863
+color11 = #fac863
+# blue
+color4  = #6699cc
+color12 = #6699cc
+# magenta
+color5  = #c594c5
+color13 = #c594c5
+# cyan
+color6  = #5fb3b3
+color14 = #5fb3b3
+# white
+color7  = #c0c5ce
+color15 = #E1D8B

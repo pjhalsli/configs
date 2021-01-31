@@ -1,7 +1,7 @@
 rofi.modi:                           window,run
 rofi.width:                          33
 rofi.lines:                          10
-rofi.font:                           PT Mono Regular 15
+rofi.font:                           VictorMono Nerd Font 15
 rofi.bw:                             12
 rofi.location:                       0
 rofi.padding:                        50
@@ -16,11 +16,11 @@ rofi.show-match:                     true
 rofi.color-enabled: true
 
 ! Property Name     BG       Border   Separator
-rofi.color-window:  #282a36, #f8f8f2, #282a36
+rofi.color-window:  #111a1f, #f8f8f2, #111A1F
 
 ! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
-rofi.color-normal:  #282a36, #C6C8D1, #282a36, #BD93F9, #000000
-rofi.color-active:  #282a36, #FF79C6, #282a36, #FF79C6, #000000
-rofi.color-urgent:  #282a36, #FF5555, #282a36, #C9647E, #ffffff
+rofi.color-normal:  #111A1F, #C6C8D1, #111A1F, #BD93F9, #000000
+rofi.color-active:  #111A1F, #FF79C6, #111A1F, #FF79C6, #000000
+rofi.color-urgent:  #111A1F, #FF5555, #111A1F, #C9647E, #ffffff
 
 rofi.theme: /home/penguin1/.config/rofi/themes/dmenu.rasi

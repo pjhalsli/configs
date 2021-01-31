@@ -1,0 +1,20 @@
+configuration {
+	modi: "window,run";
+	width: 33;
+	lines: 12;
+	font: "VictorMono Nerd Font 15";
+	show-icons: true;
+	bw: 12;
+	location: 0;
+	padding: 50;
+	sidebar-mode: true;
+	separator-style: "dotted";
+	hide-scrollbar: true;
+	scrollbar-width: 0;
+	window-format: "{w}    {c}   {t}";
+	click-to-exit: true;
+	show-match: true;
+	theme: "oxide";
+	display-window: "Window";
+	display-drun: "Search";
+}
