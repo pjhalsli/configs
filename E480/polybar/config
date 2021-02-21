@@ -35,7 +35,7 @@ width = 100%
 height = 28
 fixed-center = true
 
-background = #00000000
+background = #001c1b1d
 foreground = #F0D3C9 
 
 overline-size = 2
